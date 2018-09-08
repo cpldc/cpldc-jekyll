@@ -1,0 +1,58 @@
+<div class="sidebar" id="sidebar-toplevel">
+    <div class="sidebar-header">
+        <div class="sidebar-header-text clearfix">
+            Digital Collections
+            <div class="sidebar-header-button float-right">H</div>
+        </div>
+    </div>
+    <div class="sidebar-list">
+        <p>Browse by Subject</p>
+        <ul>
+            {% assign subject_links = site.data.sidebar | where: 'type', 'subj' %}
+            {% for item in subject_links %}
+                <li>
+                    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="sidebar-list">
+        <p>Browse by Location</p>
+        <ul>
+            {% assign location_links = site.data.sidebar | where: 'type', 'loc' %}
+            {% for item in location_links %}
+                <li>
+                    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="sidebar-list">
+        <p>Related Links</p>
+        <ul>
+            <li>
+                <a href="http://www.chipublib.org/archives-collections/" class="sidebar-links">Archival Collections</a>
+            </li>
+            <li>
+                <a href="http://www.chipublib.org/browse/chicago-history/" class="sidebar-links">Chicago History</a>
+            </li>
+            <li>
+                <a href="https://www.chipublib.org/resources/history/" class="sidebar-links">Online Resources: History &amp; Social Science</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-list">
+        <p>External Resources</p>
+        <ul>
+            <li>
+                <a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a>
+            </li>
+            <li>
+                <a href="https://dp.la/" class="sidebar-links">Digital Public Library of America</a>
+            </li>
+            <li>
+                <a href="http://explore.chicagocollections.org/" class="sidebar-links">Explore Chicago Collections</a>
+            </li>
+        </ul>
+    </div>
+</div>

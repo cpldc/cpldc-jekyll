@@ -1,0 +1,8 @@
+{% for item in site.data.cards %}
+<div class="card grid-item">
+    <a href="" style="background: url({{ item.cardpicurl }}); background-size: {{ item.cardpicpicsize }}; background-position: {{ item.cardpicposition }}; height: {{ item.cardpicpicheight }}"></a>
+    <p class="card-subj">{{ item.category }}</p>
+    <p class="card-title">{{ item.name }}</p>
+    <p class="card-text">{{ item.cardtext }}</p>  
+</div>
+{% endfor %}

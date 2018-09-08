@@ -1,0 +1,45 @@
+- name: Home
+  link: /
+  type: base
+- name: About
+  link: /about.htm
+  type: footer
+- name: All
+  link: /about.htm
+  type: base
+- name: African Americans
+  link: Afam
+  type: subj
+- name: Civil War
+  link: Civialwar
+  type: subj
+- name: Harold Washington
+  link: Rhwc
+  type: subj
+- name: Libraries & Education
+  link: Libed
+  type: subj
+- name: Neighborhoods
+  link: Neigh
+  type: subj
+- name: Newspapers
+  link: News
+  type: subj
+- name: Parks
+  link: Parks
+  type: subj
+- name: Theater
+  link: Theater
+  type: subj
+- name: Vivian G. Harsh Collection
+  link: https://cdm16818.contentdm.oclc.org/customizations/global/pages/content.php?id=Harsh
+  type: loc
+- name: Municipal Reference Collection
+  link: https://cdm16818.contentdm.oclc.org/customizations/global/pages/content.php?id=MRC
+  type: loc
+- name: Northside Neighborhood History Collection
+  link: https://cdm16818.contentdm.oclc.org/customizations/global/pages/content.php?id=NNHC
+  type: loc
+- name: Special Collections at HWLC
+  link: https://cdm16818.contentdm.oclc.org/customizations/global/pages/content.php?id=HWLCSC
+  type: loc

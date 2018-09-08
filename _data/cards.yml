@@ -1,0 +1,104 @@
+- name: Chicago Park District Records&#58; Photographs
+  cardtext: Photographs from the Chicago Park District document how the city’s parks have grown, changed and been enjoyed for more than a century.
+  category: Parks
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg
+  cardpicpicheight: 250px
+  cardpicsize: 250%
+  cardpicposition: 87% 47%
+  cardpicalt: undefined
+- name: Philip David Sang Collection
+  cardtext: The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.
+  category: African Americans | Civil War
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg
+  cardpicpicheight: 300px
+  cardpicsize: 190%
+  cardpicposition: 20% 25%
+  cardpicalt: Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.
+- name: Chicago Theater
+  cardtext: Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.
+  category:
+  cardpicurl: theater-cardpic.png
+  cardpicpicheight: 250px
+  cardpicsize: auto 225%
+  cardpicposition: 45% 60%
+  cardpicalt: A black and white drawing depicts a woman looking through a monocle. Her hair is styled into a high bun.
+- name: Millennium Park U.S. Equities Realty Collection
+  cardtext: See a rail yard transform into a dynamic urban park.
+  category: Parks
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg
+  cardpicpicheight: 240px
+  cardpicsize: 130%
+  cardpicposition: 35% 50%
+  cardpicalt: Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. The tall buildings of Michigan Avenue are visible behind the sculpture.
+- name: Remembering Harold Washington
+  cardtext: Chicago’s first African American mayor served from 1983 to 1987, and his legacy endures.
+  category: African Americans
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg
+  cardpicpicheight: 250px
+  cardpicsize: 200%
+  cardpicposition: 75% 40%
+  cardpicalt: Mayor Washington smiles and points to the crowd while riding on the back of a convertible.
+- name: Civil War&#58; Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections
+  cardtext: Camp equipment, weaponry and uniforms used on the homefront and the battlefield.
+  category: Civil War
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg
+  cardpicpicheight: 280px
+  cardpicsize: 110%
+  cardpicposition: 50% 40%
+  cardpicalt: undefined
+- name: Chicago Examiner
+  cardtext: Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.
+  category: Newspapers
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg
+  cardpicpicheight: 19rem
+  cardpicsize: 110% auto
+  cardpicposition: 50% -15px
+  cardpicalt: undefined
+- name: Chicago Renaissance
+  cardtext: African American community leaders, performers, artists, writers and activists on Chicago’s South Side, 1930-1950.
+  category: African Americans
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg
+  cardpicpicheight: 20rem
+  cardpicsize: 100%
+  cardpicposition: auto
+  cardpicalt: Margaret Walker's face, smiling
+- name: Robert W. Krueger Photograph Collection
+  cardtext: Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings and people.
+  category: Neighborhoods
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg
+  cardpicpicheight: 210px
+  cardpicsize: 100%
+  cardpicposition: 50% 50%
+  cardpicalt: The front of a two-story duplex viewed from the street.  Two people sit at the entrance to one of the homes.
+- name: Henry D. Green Photograph Collection
+  cardtext: Photographs by Henry Green of businesses, community groups, neighborhood celebrations and school events on Chicago’s North Side, 1943-1951.
+  category: Neighborhoods
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg
+  cardpicpicheight: 250px
+  cardpicsize: 110%
+  cardpicposition: 50% 50%
+  cardpicalt: Five men from the fire department pose with a fire engine. Three are standing, and two are riding in the vehicle. One of the men has a white shirt and tie. Part of the fire house and two neighboring houses are pictured in the background
+- name: Esther A. Barlow Collection
+  cardtext: Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.
+  category: Libraries & Education
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg
+  cardpicpicheight: 20rem
+  cardpicsize: 110%
+  cardpicposition: auto
+  cardpicalt: Esther Barlow as a young woman.
+- name: Chicago Public Library Archives
+  cardtext: Photographs trace CPL’s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.
+  category: Libraries & Education
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg
+  cardpicpicheight: 200px;
+  cardpicsize: 100%
+  cardpicposition: 50% -20px
+  cardpicalt: View of Michigan Avenue and Washington Street sides of the original Chicago Public Library Central Library.
+- name: Chicago Sewers Collection
+  cardtext: Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.
+  category: Neighborhoods
+  cardpicurl: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg
+  cardpicpicheight: 200px
+  cardpicsize: 120%
+  cardpicposition: 50% -20px
+  cardpicalt: Three men working on an unfinished sewer.
