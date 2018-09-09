@@ -1,9 +1,30 @@
-<div class="sidebar" id="sidebar-toplevel">
+<div class="sidebar-header-button" style="display: none; position: absolute; z-index: 20" id="showSidebar">
+    <i class="fa fa-bars"></i>
+</div>
+<div id="sidebar-toplevel">
     <div class="sidebar-header">
         <div class="sidebar-header-text clearfix">
             Digital Collections
-            <div class="sidebar-header-button float-right">H</div>
+            <div class="sidebar-header-button float-right" style="z-index: 2" id="hideSidebar">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
+        <script>
+                $( "#hideSidebar" ).click(function() {
+                    $('#sidebar-toplevel').hide();
+                    $('#showSidebar').show();
+                    // $('.grid').width('100%');
+                    $('.main-container').css('padding-left', '5px');
+                });
+                $( "#showSidebar" ).click(function() {
+                    $('#sidebar-toplevel').show();
+                    $('#showSidebar').hide();
+                    $('.main-container').css('padding-left', '235px');
+                });
+        </script>
+    </div>
+    <div class="sidebar-all">
+        View All Collections 
     </div>
     <div class="sidebar-list">
         <p>Browse by Subject</p>

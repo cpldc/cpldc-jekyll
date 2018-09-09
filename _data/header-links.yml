@@ -1,0 +1,36 @@
+- name: Books
+  link: http://www.chipublib.org/browse/books/
+  group: format
+- name: eBooks
+  link: http://www.chipublib.org/browse/ebooks/
+  group: format
+- name: Audiobooks
+  link: http://www.chipublib.org/browse/audiobooks/
+  group: format
+- name: Movies &amp; TV
+  link: http://www.chipublib.org/browse/movies/
+  group: format
+- name: Music
+  link: http://www.chipublib.org/browse/music/
+  group: format
+- name: Kids
+  link: http://www.chipublib.org/browse/kids/
+  group: aud
+- name: Teens
+  link: http://www.chipublib.org/browse/teens/
+  group: aud
+- name: Online Resources
+  link: http://www.chipublib.org/online-resources/
+  group: more
+- name: Jobs &amp; Small Business
+  link: http://www.chipublib.org/browse/jobs-small-business/
+  group: more
+- name: Chicago History
+  link: http://www.chipublib.org/browse/chicago-history/
+  group: more
+- name: Archival Collections
+  link: http://www.chipublib.org/archives-collections/
+  group: more
+- name: One Book, One Chicago
+  link: https://www.chipublib.org/browse_program/one-book-one-chicago/
+  group: more

@@ -1,19 +1,85 @@
 <header>
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col" id="header-left">
-                <a href="https://www.chipublib.org/">
-                    <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
-                </a>
-                <h2>Digital Collections</h2>
-            </div>
-            <div class="col float-right" id="header-search">
-                Search
+    <script>
+        function expandSearch(){
+            $('#search-input').show().focus();
+            $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
+        }
+        function expandBrowseDropdown(){
+            $('#browseDropdown').toggle();
+        }
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col header-left">
+                        <a href="https://www.chipublib.org/">
+                            <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
+                        </a>
+                        <h2>Digital Collections</h2>
+                    </div>
+                    <div class="col header-right">
+                        <div class="search float-right" onclick="expandSearch()" tabindex="0">
+                            <span class="search-text">Search</span>
+                            <input type="text" id="search-input">
+                            <i class="search-icon-white fa fa-search" id="search-icon"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <button class="header-button" id="browse-button">Browse</button>
-            <button class="header-button" id="events-button">Events</button>
+        <div class="row header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="header-button" id="browse-button" onclick="expandBrowseDropdown()" tabindex="0">Browse<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div class="header-button" id="events-button" onclick="" tabindex="0">
+                        <a href="https://chipublib.bibliocommons.com/events/search/index">
+                            <i class="fa fa-calendar"></i>
+                            Events
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</header>
+    <section class="browse-dropdown-toplevel"  id="browseDropdown" onclick="expandBrowseDropdown()">
+        <div class="container browse-dropdown">
+            <div class="row">
+                <div class="browse-dropdown-header">Browse</div>
+                <div class="browse-dropdown-middlelist">
+                    <span class="browse-dropdown-list browse-dropdown-list-header">By Format</span>
+                    <ul>
+                        {% assign format_links = site.data.header-links | where: 'group', 'format' %}
+                        {% for item in format_links %}
+                        <li>
+                            <a href="{{ item.link }}">{{ item.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="browse-dropdown-middlelist">
+                    <span class="browse-dropdown-list browse-dropdown-list-header">By Audience</span>
+                    <ul>
+                        {% assign aud_links = site.data.header-links | where: 'group', 'aud' %}
+                        {% for item in aud_links %}
+                        <li>
+                            <a href="{{ item.link }}">{{ item.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="browse-dropdown-list">
+                    <span class="browse-dropdown-list-header">More</span>
+                    <ul>
+                        {% assign more_links = site.data.header-links | where: 'group', 'more' %}
+                        {% for item in more_links %}
+                        <li>
+                            <a href="{{ item.link }}">{{ item.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul></div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </section>
+    </header>

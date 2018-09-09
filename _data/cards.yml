@@ -17,7 +17,7 @@
 - name: Chicago Theater
   cardtext: Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.
   category:
-  cardpicurl: theater-cardpic.png
+  cardpicurl: https://cdm16818.contentdm.oclc.org/customizations/global/pages/theater-cardpic.png
   cardpicpicheight: 250px
   cardpicsize: auto 225%
   cardpicposition: 45% 60%
