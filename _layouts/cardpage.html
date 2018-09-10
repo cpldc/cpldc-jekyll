@@ -18,20 +18,15 @@
 <body>
     {% include header.html %}
     <main>
-
-        <div class="float-left sidebar">
+        <div class="{% if page.url == index.html %}float-left {% endif %}sidebar">
             {% include sidebar.html %}
         </div>
         <div class="main-container">
-            <!-- <div class="row"> -->
-                <div class="grid">
-                    <!-- <div class="card-columns"> -->
-                        {% include cards.html %}
-                        <!-- </div> -->
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </main>
+            <div class="grid">
+                {% include cards.html %}
+            </div>
+        </div>
+    </main>
     {% include footer.html %}
     <script>
         var $grid = $('.grid').masonry({
@@ -43,6 +38,6 @@
         $grid.imagesLoaded().progress( function() {
             $grid.masonry('layout');
         });
-        </script>
-        </body>
+    </script>
+</body>
 </html>
