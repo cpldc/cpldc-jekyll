@@ -17,6 +17,7 @@
 <!-- <script src="imagesloaded.pkgd.min.js"></script> -->
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="/assets/js/cpldc.js"></script>
+<link rel="stylesheet" href="/assets/css/styles.css">
 <!-- <link rel="stylesheet" href="cpldc.css" > -->
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
@@ -24,187 +25,11 @@
         /* div {
             border: 1px solid black;
         } */
-        body {
-            font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-        }
-        button {
-            background-color: rgba(0,0,0,0);
-            border-color: rgba(0,0,0,0);
-        }
-        header {
-            margin-bottom: 15px;
-        }
-        header, .browse-dropdown-toplevel {
-            box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
-        }
-        .header-left {
-            padding: 15px 0 0 0;
-            /* font-size: 1rem; */
-        }
-        .header-left img {
-            margin: 0 0 8px 0;
-            max-height: 65px;
-        }
-        .header-left h2 {
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 18px;
-        }
-        .header-right {
-            position: relative;
-        }
-        .header-bottom {
-            height: 50px;
-            line-height: 18px;
-            background-color: #000;
-        }
-        .header-button {
-            padding: 16px 20px;
-        }
-        .header-bottom i {
-            padding: 0 3px;
-        }
-        .header-button {
-            border: 0;
-            padding: 16px 20px;
-            cursor: pointer;
-            background-color: #000;
-            color: #fff;
-        }
-        .header-button a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .header-button:hover {
-            background-color: #fff;
-            color: #000;
-        }
-        .search {
-            padding: 8px;
-            font-family: "Open Sans", Arial, sans-serif;
-            font-weight: 600;
-            font-size: 1.08rem;
-            position: absolute;
-            top: calc(50% - 26px);
-            right: 0;
-            margin: auto 0;
-            cursor: pointer;
-        }
-        .search:active {
-            box-shadow: inset 2px 4px 1px rgba(0,0,0,.05);
-        }
-        .search-icon-white {
-            color: #000;
-            font-size: 2rem;
-            padding: 0 0 0 10px;
-            background-color: #fff;
-        }
-        .search-icon-black {
-            color: #fff;
-            font-size: 1.5rem;
-            padding: 4px 8px 6px 8px;
-            background-color: #000;
-        }
-        #search-input {
-            display: none;
-            border: 1px solid #ccc;
-            height: 34px;
-            position: relative;
-            padding: 5px;
-            margin-left: 5px; 
-            top: -3px;
-            right: -4px;
-        }
-        .browse-dropdown-toplevel {
-            display: none;
-            width: 100%;
-            position: absolute;
-            background-color: #f8f8f8;
-            z-index: 3;
-        }
-        .browse-dropdown {
-            padding: 30px 0 0 0;
-            color: #3f4344;
-        }
-        .browse-dropdown-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 65px;
-            padding-left: 10px;
-        }
-        .browse-dropdown ul, .sidebar ul {
-            list-style-type: none;
-            padding-inline-start: 0;
-        }
-        .browse-dropdown, .browse-dropdown li {
-            padding-top: 16px;
-            line-height: 20px;
-        }
-        .browse-dropdown a {
-            color: #3f4344;
-            font-size: 14px;
-            line-height: 21px;
-        }
-        .browse-dropdown-list-header {
-            color: #3f4344;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .browse-dropdown-header, .browse-dropdown-list {
-            margin-top: 30px;
-        }
-        .browse-dropdown-middlelist {
-            margin: 30px 30px 30px 0;
-            padding-right: 30px;
-            border-right: 1px solid #ccc;
-        }
-        .main-container {
-            padding-left: 235px;
-        }
-        .grid {
-            margin: 0 auto;
-        }
-        .grid-item {
-            margin-bottom: 20px;
-            box-shadow: 4px 3px 5px -4.5px #3f4344;
-        }
-        .sidebar {
-            max-width: 230px;
-            background-color: #000;
-            color: #fff;
-        }
-        .sidebar-header, .sidebar-all, .sidebar-list {
-            font-size: 1.05rem;
-            padding-left: 30px;
-            min-height: 50px;
-            padding-top: 13px;
-        }
-        .sidebar-header, .sidebar-all, .sidebar-list {
-            border-bottom: 1px solid #fff;
-        }
-        .sidebar-all {
-            border-bottom: 1px dashed #fff;
-        }
-        .sidebar-list a {
-            color: inherit;
-        }
-        .current {
-            text-decoration: underline;
-        }
+        
     </style>
 </head>
 <body>
     <header>
-    <script>
-        function expandSearch(){
-            $('#search-input').show().focus();
-            $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
-        }
-        function expandBrowseDropdown(){
-            $('#browseDropdown').toggle();
-        }
-    </script>
     <div class="container-fluid">
         <div class="row">
             <div class="container">
@@ -213,13 +38,13 @@
                         <a href="https://www.chipublib.org/">
                             <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                         </a>
-                        <h2>Digital Collections</h2>
+                        <h2><a href="https://digital.chipublib.org/">Digital Collections</a></h2>
                     </div>
                     <div class="col header-right">
                         <div class="search float-right" onclick="expandSearch()" tabindex="0">
                             <span class="search-text">Search</span>
                             <input type="text" id="search-input">
-                            <i class="search-icon-white fa fa-search" id="search-icon"></i>
+                            <i onclick="searchContent()" class="search-icon-white fa fa-search" id="search-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -316,30 +141,22 @@
             </div>
         </section>
     </header>
-    <div class="float-left sidebar">
-        <div class="sidebar-header-button" style="display: none; position: absolute; z-index: 20" id="showSidebar">
-    <i class="fa fa-bars"></i>
+    <main>
+
+        <div class="float-left sidebar">
+            <div class="sidebar-header-button sidebar-header-button-show"  id="showSidebar">
+    <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
 </div>
 <div id="sidebar-toplevel">
     <div class="sidebar-header">
         <div class="sidebar-header-text clearfix">
-            Digital Collections
-            <div class="sidebar-header-button float-right" style="z-index: 2" id="hideSidebar">
-                <i class="fa fa-bars"></i>
+            <a href="https://digital.chipublib.org/">Digital Collections</a>
+            <div class="sidebar-header-button sidebar-header-button-hide float-right" style="z-index: 2" id="hideSidebar">
+                <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
             </div>
         </div>
         <script>
-                $( "#hideSidebar" ).click(function() {
-                    $('#sidebar-toplevel').hide();
-                    $('#showSidebar').show();
-                    // $('.grid').width('100%');
-                    $('.main-container').css('padding-left', '5px');
-                });
-                $( "#showSidebar" ).click(function() {
-                    $('#sidebar-toplevel').show();
-                    $('#showSidebar').hide();
-                    $('.main-container').css('padding-left', '235px');
-                });
+
         </script>
     </div>
     <div class="sidebar-all">
@@ -436,196 +253,328 @@
         </ul>
     </div>
 </div>
-    </div>
-    <div class="main-container">
-        <!-- <div class="row"> -->
-            <div class="grid">
-                <!-- <div class="card-columns"> -->
-                    
+        </div>
+        <div class="main-container">
+            <!-- <div class="row"> -->
+                <div class="grid">
+                    <!-- <div class="card-columns"> -->
+                        
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg); background-size: 250%; background-position: 87% 47%; height: 250px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Parks</p>
-    <a href="">
-        <p class="card-title">Chicago Park District Records&#58; Photographs</p>
-    </a>
-    <p class="card-text">Photographs from the Chicago Park District document how the city’s parks have grown, changed and been enjoyed for more than a century.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Parks</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Chicago Park District Records&#58; Photographs</h2>
+        </a>
+        <span class="card-text">Photographs from the Chicago Park District document how the city’s parks have grown, changed and been enjoyed for more than a century.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg); background-size: 190%; background-position: 20% 25%; height: 300px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">African Americans | Civil War</p>
-    <a href="">
-        <p class="card-title">Philip David Sang Collection</p>
-    </a>
-    <p class="card-text">The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">African Americans | Civil War</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Philip David Sang Collection</h2>
+        </a>
+        <span class="card-text">The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/customizations/global/pages/theater-cardpic.png); background-size: auto 225%; background-position: 45% 60%; height: 250px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj"></p>
-    <a href="">
-        <p class="card-title">Chicago Theater</p>
-    </a>
-    <p class="card-text">Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.</p>  
+    <div class="card-bottom">
+        
+        <a href="">
+            <h2 class="card-title">Chicago Theater</h2>
+        </a>
+        <span class="card-text">Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg); background-size: 130%; background-position: 35% 50%; height: 240px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Parks</p>
-    <a href="">
-        <p class="card-title">Millennium Park U.S. Equities Realty Collection</p>
-    </a>
-    <p class="card-text">See a rail yard transform into a dynamic urban park.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Parks</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Millennium Park U.S. Equities Realty Collection</h2>
+        </a>
+        <span class="card-text">See a rail yard transform into a dynamic urban park.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg); background-size: 200%; background-position: 75% 40%; height: 250px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">African Americans</p>
-    <a href="">
-        <p class="card-title">Remembering Harold Washington</p>
-    </a>
-    <p class="card-text">Chicago’s first African American mayor served from 1983 to 1987, and his legacy endures.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">African Americans</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Remembering Harold Washington</h2>
+        </a>
+        <span class="card-text">Chicago’s first African American mayor served from 1983 to 1987, and his legacy endures.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg); background-size: 110%; background-position: 50% 40%; height: 280px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Civil War</p>
-    <a href="">
-        <p class="card-title">Civil War&#58; Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections</p>
-    </a>
-    <p class="card-text">Camp equipment, weaponry and uniforms used on the homefront and the battlefield.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Civil War</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Civil War&#58; Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections</h2>
+        </a>
+        <span class="card-text">Camp equipment, weaponry and uniforms used on the homefront and the battlefield.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg); background-size: 110% auto; background-position: 50% -15px; height: 19rem" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Newspapers</p>
-    <a href="">
-        <p class="card-title">Chicago Examiner</p>
-    </a>
-    <p class="card-text">Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Newspapers</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Chicago Examiner</h2>
+        </a>
+        <span class="card-text">Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg); background-size: 100%; background-position: auto; height: 20rem" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">African Americans</p>
-    <a href="">
-        <p class="card-title">Chicago Renaissance</p>
-    </a>
-    <p class="card-text">African American community leaders, performers, artists, writers and activists on Chicago’s South Side, 1930-1950.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">African Americans</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Chicago Renaissance</h2>
+        </a>
+        <span class="card-text">African American community leaders, performers, artists, writers and activists on Chicago’s South Side, 1930-1950.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg); background-size: 100%; background-position: 50% 50%; height: 210px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Neighborhoods</p>
-    <a href="">
-        <p class="card-title">Robert W. Krueger Photograph Collection</p>
-    </a>
-    <p class="card-text">Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings and people.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Neighborhoods</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Robert W. Krueger Photograph Collection</h2>
+        </a>
+        <span class="card-text">Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings and people.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg); background-size: 110%; background-position: 50% 50%; height: 250px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Neighborhoods</p>
-    <a href="">
-        <p class="card-title">Henry D. Green Photograph Collection</p>
-    </a>
-    <p class="card-text">Photographs by Henry Green of businesses, community groups, neighborhood celebrations and school events on Chicago’s North Side, 1943-1951.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Neighborhoods</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Henry D. Green Photograph Collection</h2>
+        </a>
+        <span class="card-text">Photographs by Henry Green of businesses, community groups, neighborhood celebrations and school events on Chicago’s North Side, 1943-1951.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg); background-size: 110%; background-position: auto; height: 20rem" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Libraries & Education</p>
-    <a href="">
-        <p class="card-title">Esther A. Barlow Collection</p>
-    </a>
-    <p class="card-text">Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Libraries & Education</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Esther A. Barlow Collection</h2>
+        </a>
+        <span class="card-text">Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg); background-size: 100%; background-position: 50% -20px; height: 200px;" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Libraries & Education</p>
-    <a href="">
-        <p class="card-title">Chicago Public Library Archives</p>
-    </a>
-    <p class="card-text">Photographs trace CPL’s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Libraries & Education</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Chicago Public Library Archives</h2>
+        </a>
+        <span class="card-text">Photographs trace CPL’s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.</span>  
+    </div>
 </div>
 
 <div class="card" style="width: 20rem">
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg); background-size: 120%; background-position: 50% -20px; height: 200px" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">Neighborhoods</p>
-    <a href="">
-        <p class="card-title">Chicago Sewers Collection</p>
-    </a>
-    <p class="card-text">Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.</p>  
+    <div class="card-bottom">
+        
+            <span class="card-subj">Neighborhoods</span>
+            <br />
+        
+        <a href="">
+            <h2 class="card-title">Chicago Sewers Collection</h2>
+        </a>
+        <span class="card-text">Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.</span>  
+    </div>
 </div>
 
-                <!-- </div> -->
-            </div>
-        <!-- </div> -->
-    </div>
-    <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul>
-                    <li>social list</li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>local list</li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>cpl list</li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>contact info</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <ul>
-                    <li>foundation</li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>copyright</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                        <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </main>
+    <footer class="">
+	<section class="footer-top" role="navigation">
+		<div class="container">
+			<div class="row align-items-top">
+				<div class="col-md-1">
+					<div class="footer-list footer-social">
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/pages/Chicago-Public-Library/35447572453">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-fb"></i>
+										<i class="fa fa-stack-1x fa-facebook footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/chipublib">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-tw"></i>
+										<i class="fa fa-stack-1x fa-twitter footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/chicagopubliclibrary/">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-ig"></i>
+										<i class="fa fa-stack-1x fa-instagram footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-cc" ></i>
+										<i class="fa fa-stack-1x fa-newspaper-o footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-list">
+						<h2>Digital Collections</h2>
+						<ul>
+							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
+							<li><a href="http://digital.chipublib.org/digital/search">Browse All</a></li>
+							<li><a href="content.php?id=Takedown">Copyright &amp; Takedown</a></li>
+							<li><a href="content.php?id=About">About</a></li>
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-list footer-floatright">
+						<h2>Services</h2>
+						<ul>
+							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
+							<li><a href="https://www.chipublib.org/ask-a-librarian/">Ask a Librarian</a></li>
+							<li><a href="https://www.chipublib.org/order-a-photo-reproduction/">Order a Photo Reproduction</a></li>
+							
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-list footer-floatright">
+						<h2>Chicago Public Library</h2>
+						<ul>
+							<li><a href="https://www.chipublib.org/">CPL Home</a></li>
+							<li><a href="https://www.chipublib.org/archives-collections/">Archival Collections</a></li>
+							<li><a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">Sign Up for Email Updates</a></li>
+							<li><a href="https://www.chipublib.org/library-policies/website-accessibility-policy/">Website Accessibility Policy</a></li> 
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-contactinfo footer-floatright">
+						<address>
+							<strong>Contact Us</strong><br>
+							Chicago Public Library<br>
+							400 S. State Street<br>
+							Chicago, IL 60605<br>
+							(312) 747-4300
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="footer-bottom" role="copyright">
+		<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-md-4">
+						<div class="footer-logo-img"><a href="https://secure3.convio.net/cplf/site/Donation2?idb=330762243&DONATION_LEVEL_ID_SELECTED=1&df_id=2140&mfc_pref=T&2140.donation=form1&idb=0"><img src="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/02/CPLSupportCPLF_web_130x60.png?v=1505779744150575491515057548853" alt="" /></a></div>
+					</div>
+					<div class="col-md-4 offset-md-4">
+						<div class="footer-bottom-right footer-floatright">
+							<a href="http://www.cityofchicago.org/">City of Chicago</a>&nbsp;&copy; 2017 Chicago Public Library
+						</div>
+					</div>
+				</div>
+		</div>	
+	</section>
 </footer>
     <script>
         var $grid = $('.grid').masonry({

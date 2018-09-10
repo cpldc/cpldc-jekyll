@@ -3,10 +3,15 @@
     <a href="">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpicurl }}); background-size: {{ item.cardpicsize }}; background-position: {{ item.cardpicposition }}; height: {{ item.cardpicpicheight }}" class="card-img-top" alt="">
     </a>
-    <p class="card-subj">{{ item.category }}</p>
-    <a href="">
-        <p class="card-title">{{ item.name }}</p>
-    </a>
-    <p class="card-text">{{ item.cardtext }}</p>  
+    <div class="card-bottom">
+        {% if item.category  %}
+            <span class="card-subj">{{ item.category }}</span>
+            <br />
+        {% endif %}
+        <a href="">
+            <h2 class="card-title">{{ item.name }}</h2>
+        </a>
+        <span class="card-text">{{ item.cardtext }}</span>  
+    </div>
 </div>
 {% endfor %}

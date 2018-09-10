@@ -12,190 +12,26 @@
         /* div {
             border: 1px solid black;
         } */
-        body {
-            font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-        }
-        button {
-            background-color: rgba(0,0,0,0);
-            border-color: rgba(0,0,0,0);
-        }
-        header {
-            margin-bottom: 15px;
-        }
-        header, .browse-dropdown-toplevel {
-            box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
-        }
-        .header-left {
-            padding: 15px 0 0 0;
-            /* font-size: 1rem; */
-        }
-        .header-left img {
-            margin: 0 0 8px 0;
-            max-height: 65px;
-        }
-        .header-left h2 {
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 18px;
-        }
-        .header-right {
-            position: relative;
-        }
-        .header-bottom {
-            height: 50px;
-            line-height: 18px;
-            background-color: #000;
-        }
-        .header-button {
-            padding: 16px 20px;
-        }
-        .header-bottom i {
-            padding: 0 3px;
-        }
-        .header-button {
-            border: 0;
-            padding: 16px 20px;
-            cursor: pointer;
-            background-color: #000;
-            color: #fff;
-        }
-        .header-button a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .header-button:hover {
-            background-color: #fff;
-            color: #000;
-        }
-        .search {
-            padding: 8px;
-            font-family: "Open Sans", Arial, sans-serif;
-            font-weight: 600;
-            font-size: 1.08rem;
-            position: absolute;
-            top: calc(50% - 26px);
-            right: 0;
-            margin: auto 0;
-            cursor: pointer;
-        }
-        .search:active {
-            box-shadow: inset 2px 4px 1px rgba(0,0,0,.05);
-        }
-        .search-icon-white {
-            color: #000;
-            font-size: 2rem;
-            padding: 0 0 0 10px;
-            background-color: #fff;
-        }
-        .search-icon-black {
-            color: #fff;
-            font-size: 1.5rem;
-            padding: 4px 8px 6px 8px;
-            background-color: #000;
-        }
-        #search-input {
-            display: none;
-            border: 1px solid #ccc;
-            height: 34px;
-            position: relative;
-            padding: 5px;
-            margin-left: 5px; 
-            top: -3px;
-            right: -4px;
-        }
-        .browse-dropdown-toplevel {
-            display: none;
-            width: 100%;
-            position: absolute;
-            background-color: #f8f8f8;
-            z-index: 3;
-        }
-        .browse-dropdown {
-            padding: 30px 0 0 0;
-            color: #3f4344;
-        }
-        .browse-dropdown-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 65px;
-            padding-left: 10px;
-        }
-        .browse-dropdown ul, .sidebar ul {
-            list-style-type: none;
-            padding-inline-start: 0;
-        }
-        .browse-dropdown, .browse-dropdown li {
-            padding-top: 16px;
-            line-height: 20px;
-        }
-        .browse-dropdown a {
-            color: #3f4344;
-            font-size: 14px;
-            line-height: 21px;
-        }
-        .browse-dropdown-list-header {
-            color: #3f4344;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .browse-dropdown-header, .browse-dropdown-list {
-            margin-top: 30px;
-        }
-        .browse-dropdown-middlelist {
-            margin: 30px 30px 30px 0;
-            padding-right: 30px;
-            border-right: 1px solid #ccc;
-        }
-        .main-container {
-            padding-left: 235px;
-        }
-        .grid {
-            margin: 0 auto;
-        }
-        .grid-item {
-            margin-bottom: 20px;
-            box-shadow: 4px 3px 5px -4.5px #3f4344;
-        }
-        .sidebar {
-            max-width: 230px;
-            background-color: #000;
-            color: #fff;
-        }
-        .sidebar-header, .sidebar-all, .sidebar-list {
-            font-size: 1.05rem;
-            padding-left: 30px;
-            min-height: 50px;
-            padding-top: 13px;
-        }
-        .sidebar-header, .sidebar-all, .sidebar-list {
-            border-bottom: 1px solid #fff;
-        }
-        .sidebar-all {
-            border-bottom: 1px dashed #fff;
-        }
-        .sidebar-list a {
-            color: inherit;
-        }
-        .current {
-            text-decoration: underline;
-        }
+        
     </style>
 </head>
 <body>
     {% include header.html %}
-    <div class="float-left sidebar">
-        {% include sidebar.html %}
-    </div>
-    <div class="main-container">
-        <!-- <div class="row"> -->
-            <div class="grid">
-                <!-- <div class="card-columns"> -->
-                    {% include cards.html %}
-                <!-- </div> -->
-            </div>
-        <!-- </div> -->
-    </div>
+    <main>
+
+        <div class="float-left sidebar">
+            {% include sidebar.html %}
+        </div>
+        <div class="main-container">
+            <!-- <div class="row"> -->
+                <div class="grid">
+                    <!-- <div class="card-columns"> -->
+                        {% include cards.html %}
+                        <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </main>
     {% include footer.html %}
     <script>
         var $grid = $('.grid').masonry({

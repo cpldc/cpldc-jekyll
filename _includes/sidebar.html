@@ -1,26 +1,16 @@
-<div class="sidebar-header-button" style="display: none; position: absolute; z-index: 20" id="showSidebar">
-    <i class="fa fa-bars"></i>
+<div class="sidebar-header-button sidebar-header-button-show"  id="showSidebar">
+    <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
 </div>
 <div id="sidebar-toplevel">
     <div class="sidebar-header">
         <div class="sidebar-header-text clearfix">
-            Digital Collections
-            <div class="sidebar-header-button float-right" style="z-index: 2" id="hideSidebar">
-                <i class="fa fa-bars"></i>
+            <a href="https://digital.chipublib.org/">Digital Collections</a>
+            <div class="sidebar-header-button sidebar-header-button-hide float-right" style="z-index: 2" id="hideSidebar">
+                <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
             </div>
         </div>
         <script>
-                $( "#hideSidebar" ).click(function() {
-                    $('#sidebar-toplevel').hide();
-                    $('#showSidebar').show();
-                    // $('.grid').width('100%');
-                    $('.main-container').css('padding-left', '5px');
-                });
-                $( "#showSidebar" ).click(function() {
-                    $('#sidebar-toplevel').show();
-                    $('#showSidebar').hide();
-                    $('.main-container').css('padding-left', '235px');
-                });
+
         </script>
     </div>
     <div class="sidebar-all">

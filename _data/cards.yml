@@ -16,7 +16,7 @@
   cardpicalt: Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.
 - name: Chicago Theater
   cardtext: Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.
-  category:
+  # category:
   cardpicurl: https://cdm16818.contentdm.oclc.org/customizations/global/pages/theater-cardpic.png
   cardpicpicheight: 250px
   cardpicsize: auto 225%
