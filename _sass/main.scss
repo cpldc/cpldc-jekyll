@@ -13,7 +13,7 @@
             height: 100%;
             position: relative;
         }
-        button {
+        header button {
             background-color: rgba(0,0,0,0);
             border-color: rgba(0,0,0,0);
         }
@@ -151,11 +151,13 @@
             display: none;
         }
         .sidebar {
-            position: absolute;
-            max-width: 230px;
             color: #fff;
-            overflow: hidden;
+            // overflow: hidden;
             height: 100%;
+        }
+        .collapsable {
+            max-width: 230px;
+            position: absolute;
         }
         #sidebar-toplevel {
             height: 100%;
@@ -337,4 +339,53 @@
             line-height: 24px;
             font-size: 0.94rem;
             padding-right: 10px;
+        }
+    // center content
+        .page-title {
+            font-size: 28px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            color: #3f4344;
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 35px;
+        }
+        .lightbox-mainimage {
+            margin: auto;
+            padding: 15px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .lightbox-mainimage img {
+            height: 350px;
+            width: 100%;
+        }
+        .lightbox-thumbs {
+            height: 100px;
+        }
+        .lightbox-thumbs img {
+            width: 100%;
+            height: 100%;
+        }
+        .prosecontent {
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+        .center-button {
+            padding: 10px 15px 0 15px;
+        }
+        .textblock {
+            padding: 0 15px;
+        }
+        .textblock h3 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .textblock dt a {
+            color: #262626;
+        }
+        .textblock dl {
+            padding: 10px 15px 5px 40px;
         }

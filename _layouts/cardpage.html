@@ -18,9 +18,7 @@
 <body>
     {% include header.html %}
     <main>
-        <div class="{% if page.url == index.html %}float-left {% endif %}sidebar">
-            {% include sidebar.html %}
-        </div>
+        {% include sidebar.html %}
         <div class="main-container">
             <div class="grid">
                 {% include cards.html %}
