@@ -1,0 +1,115 @@
+---
+flag: '12'
+title: Chicago Public Library Archives
+coll: woop
+sortname: Chicago Public Library Archives
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg
+  pich: 200px;
+  size: 100%
+  pos: 50% -20px
+  alt: View of Michigan Avenue and Washington Street sides of the original Chicago
+    Public Library Central Library.
+category: Libraries &amp; Education
+textshort: Photographs trace CPL&rsquo;s history from a small water tank that survived
+  the Great Chicago Fire to the extensive network of neighborhood libraries that span
+  the city today.
+textlong: On January 1, 1873 the Chicago Public Library opened its doors in a water
+  tank that had survived the Great Chicago Fire of 1871. These photographs trace our
+  history from that small structure to the development of neighborhood libraries across
+  the city.
+textrich: <p>Explore CPL through those years, from that <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular
+  water tank</a>, to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery
+  stations</a> in the late 19th century, to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a>
+  in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild
+  Regional Library</a> in the 1970s. </p>
+mainimage:
+  url: '80'
+  text: Book room in the old water tank, circa 1873
+  size: cover
+  align: 50% 75%
+  alt: A woodcut print depicts people reading at tables and getting books from bookshelves
+    in the circular Book Room.
+thumbs:
+- url: '5'
+  text: English Book Donation bookplate given by Queen Victoria, 1871
+  size: cover
+  align: center
+  alt: 'The bookplate from a book donated by Queen Victoria reads: Presented to the
+    City of Chicago, toward the formation of a free library after the great fire of
+    1871, as a mark of English sympathy, by Her Majesty the Queen Victoria.'
+- url: '73'
+  text: Trailer service from Legler Regional Library, circa 1940
+  size: 150%
+  align: 100% 50%
+  alt: A trailer that reads &ldquo;The Chicago Public Library Bookmobile Traveling
+    Library Service&rdquo; is hitched to the back of a car.
+- url: '41'
+  text: Blackstone Memorial Branch Library, 1904
+  size: cover
+  align: '0% '
+  alt: The front of Blackstone Branch seen from 49th Street.
+- url: '74'
+  text: Traveling branch, circa 1960s
+  size: cover
+  align: center
+  alt: Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo;
+    with separate doors for Entrance and Exit.
+link: woop
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection

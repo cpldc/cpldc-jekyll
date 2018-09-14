@@ -1,0 +1,129 @@
+---
+flag: '6'
+title: 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic
+  and Civil War Collections'
+coll: wha
+sortname: 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic
+  and Civil War Collections'
+creditname: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil
+  War Collections
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg
+  pich: 280px
+  size: 110%
+  pos: 50% 40%
+category: Civil War
+textshort: Camp equipment, weaponry and uniforms used on the homefront and the battlefield.
+textlong: Camp equipment, weaponry and uniforms used on the homefront and the battlefield,
+  with a focus on the Illinois experience.
+textrich: '<p>Illinois supported the Union effort by sending hundreds of thousands
+  of troops into battle, but the Civil War was also fought on the homefront. </p><p>Examine
+  artifacts and photographs from both arenas. Highlights include <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/camp+life/field/subjeb/mode/all/conn/and/order/title/ad/asc">camp
+  life</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/small+arms/field/all/mode/exact/conn/and/order/nosort/ad/asc">swords</a>
+  and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/clothing/field/all/mode/exact/conn/and/order/nosort/ad/asc">uniforms</a>.</p> '
+rights: <p>The Wayne Whalen Digital Archive of the Grand Army of the Republic and
+  Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago
+  Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp;
+  Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil
+  War.</p>
+CPLRes:
+- a: https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/
+  dt: American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army
+    of the Republic Collections Finding Aid
+  dd: A large portion of this collection focuses on the experience of soldiers and
+    leaders from Illinois told through letters and diaries.
+- a: https://www.chipublib.org/archival_subject/military/
+  dt: Military Archival Collections
+  dd: A list of all archival collections related to the Civil War, including records
+    of the Daughters of Union Veterans of the Civil War, as well as personal collections
+    of service members from other conflicts, such as World War II.
+mainimage:
+  url: '634'
+  text: "&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s
+    Campaign</em> by George N. Barnard, 1865"
+  size: auto 575px
+  align: center
+  alt: Black and white photograph of eight Civil War generals in two rows. Four seated
+    on chairs in front, and four standing in second row 
+thumbs:
+- url: '116'
+  text: Sword, model 1850 staff and field officer, circa 1860
+  size: auto 120px
+  align: center
+  alt: Close up of sword hilt, with blade extending out of the image
+- url: '721'
+  text: Uniform, artillery jacket, 1862
+  size: auto 120px
+  align: 50% 15%
+  alt: Dark blue uniform jacket with red piped detail on collar, cuffs, and seams.
+    Gold buttons down the front
+- url: '35'
+  text: Ulysses S. Grant, 1865
+  size: 120px auto
+  align: 50% 20%
+  alt: Sepia tone photograph of U.S. Grant in uniform. He is standing, right hand
+    in pocket, left hand tucked into his vest at his breast.
+- url: '38'
+  text: Union ticket, South Division, 1864
+  size: 110px auto
+  align: 55% 15%
+  alt: List of names on union ticket, decorative drawing of an eagle in a circle at
+    the top of the page
+link: wha
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection

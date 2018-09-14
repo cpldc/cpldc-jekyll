@@ -1,0 +1,93 @@
+---
+flag: '11'
+title: Esther A. Barlow Collection
+coll: bar
+sortname: Barlow, Esther A. Collection
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg
+  pich: 20rem
+  size: 110%
+  pos: auto
+  alt: Esther Barlow as a young woman.
+category: Libraries &amp; Education
+textshort: Family photographs of CPL Librarian Esther Barlow and images of her work
+  at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.
+textlong: Esther Barlow was a children&rsquo;s librarian in neighborhood branches
+  of Chicago Public Library from 1927 until 1976.
+textrich: Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow
+  family</a> and images of Esther Barlow at work at the Hild Regional Library and
+  Lake View Branch Library. Photographs showcase Barlow with her colleagues and her
+  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work
+  with children. </a>
+mainimage:
+  url: '52'
+  text: Chicago Public Library staff, Lake View Branch, circa 1950
+  size: ''
+  align: 55% 50%
+  alt: Esther Barlow and 11 other library staff, all women, pose on the front steps
+    of the Lakeview Branch.
+thumbs:
+- url: '199'
+  text: Story hour in Welles Park, Hild Regional Library, circa 1930
+  size: 400px
+  align: 15% 20%
+  alt: A large group of children, some wearing bunny masks, pose for a picture.
+- url: '70'
+  text: Esther Barlow at the circulation desk, Lake View Branch, 1951
+  size: 500px
+  align: 53% 49%
+  alt: Esther Barlow sits at a desk. Next to her desk is a tall bookshelf filled with
+    children's books.
+- url: '16'
+  text: Esther Barlow and Buddy Flaskerud, 1913
+  size: 400px
+  align: 33% 22%
+  alt: A baby Esther Barlow sits with a little boy in a small wagon hitched to a goat.
+link: bar
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+type: collection

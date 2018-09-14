@@ -1,0 +1,126 @@
+---
+flag: ''
+title: Ravenswood-Lake View Community Collection
+coll: rvw
+sortname: Ravenswood-Lake View Community Collection
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rvw/1086/default.jpg
+  pich: 250px
+  size: 250%
+  pos: 24% 45%
+  alt: A man seated at a soda counter, looking into his drink.  He is wearing a bowler
+    hat high on his head.
+category: Neighborhoods
+textshort: Street scenes and community life on the North Side, 1860s-1990s.
+textlong: Lake View Township and its evolution from an independent municipality into
+  current Northside communities, 1860s-1990s.
+textrich: <p>More than <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100
+  early photographs</a> represent Lake View Township and its residents, schools, homes,
+  businesses and everyday rituals.</p><p>Over the next 100 years North Siders and
+  their neighborhoods experienced tremendous changes as evidenced by their <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes
+  of transportation</a> and the establishment of a number of <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a>
+  and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social
+  clubs</a>. Notable local events include <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving
+  the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking
+  ground for the Conrad Sulzer Regional Library</a>.</p>
+CPLRes:
+- a: https://www.chipublib.org/chicago-newspapers-on-microfilm/
+  dt: Chicago Newspapers
+  dd: Online and microfilm.
+- a: https://www.chipublib.org/archival_subject/neighborhoods/
+  dt: Neighborhood Archival Collections
+  dd: Additional collections focusing on Chicago&rsquo;s neighborhoods.
+ExRes:
+- a: http://www.ravenswoodhistorical.com/
+  dt: Ravenswood-Lake View Historical Association
+  dd: Programs, publications and tours focusing on Chicago northside neighborhood
+    history.
+- a: http://www.edgewaterhistory.org/ehs/
+  dt: Edgewater Historical Society
+  dd: Exhibits, events and tours of the Edgewater neighborhood.
+mainimage:
+  url: '421'
+  text: Lincoln &amp; Montrose Avenues, 1910
+  size: 110%
+  align: 50% 50%
+  alt: A man and woman sit on a bench facing the intersection of Lincoln and Montrose
+    Avenues.  Retail businesses occupy the two- and three-story buildings on those
+    streets.
+thumbs:
+- url: '1800'
+  text: Arthur G. Bennett, undated
+  size: 110%
+  align: 60% 10%
+  alt: A young man dressed in form-fitting clothing and cap rides a bicycle.  The
+    bicycle has a very large front tire and a small back tire.
+- url: '3142'
+  text: Charles Perkins, undated
+  size: 200%
+  align: 50% 10%
+  alt: A man steers an old-fashioned automobile using a long handle attached to the
+    front axle.  A small engine is mounted on the rear axle.  In the background three
+    boys stand under a tree looking at the car.
+- url: '933'
+  text: Riverview Park, 1950s
+  size: 170%
+  align: 50% 50%
+  alt: An elevated view of an attraction at Riverview Park.  The facade of the building
+    is the head of a genie with a thin moustache and a long thin beard.  He is wearing
+    a turban and holding a lamp.
+- url: '1272'
+  text: Klausen family salutes the American flag, 1918
+  size: 601px
+  align: 33% 20%
+  alt: A young man holds two small American flags while five women to his left salute.  They
+    are standing in front of a house whose front porch is decorated with American
+    flags.
+link: rvw
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+type: collection

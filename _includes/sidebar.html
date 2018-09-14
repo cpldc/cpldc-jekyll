@@ -23,10 +23,10 @@
         <div class="sidebar-list">
             <p>Browse by Subject</p>
             <ul>
-                {% assign subject_links = site.data.sidebar | where: 'type', 'subj' %}
-                {% for item in subject_links %}
+                {% assign items = site.data.subjects %}
+                {% for item in items %}
                     <li>
-                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.sidebarname }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -34,10 +34,9 @@
         <div class="sidebar-list">
             <p>Browse by Location</p>
             <ul>
-                {% assign location_links = site.data.sidebar | where: 'type', 'loc' %}
-                {% for item in location_links %}
+                {% for item in site.data.locations %}
                     <li>
-                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>

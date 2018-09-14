@@ -1,0 +1,589 @@
+- Afam: 
+  flag: ''
+  title: African Americans
+  shortname: African Americans
+  sidebarname: African Americans
+  cardpic:
+    pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/10/default.jpg
+    pich: 250px
+    size: 110%
+    pos: 50% 50%
+    alt: Richard Durham sits at a desk with a typewriter. He is reading some loose pages
+      and has a pencil in his right hand.
+  textshort: Chicago Public Library collections that document African American history
+    in Chicago and throughout the United States.
+  textlong: Chicago Public Library collections that document African American history
+    in Chicago and throughout the United States.
+  catcoll: documenting Black history in the United States
+  CPLRes:
+  - a: http://gatekeeper.chipublib.org/login?url=http://search.proquest.com/hnpchicagodefender/ip?accountid=303
+    dt: Chicago Defender Historical Archive
+    dd: Offers full text, including display and classified advertisements, of this nationally
+      significant African American newspaper from 1910 to 1975.
+  - a: https://cpl.thehistorymakers.org/home
+    dt: HistoryMakers
+    dd: The largest African American video oral history archive in the world features
+      interviews with African Americans who have made significant contributions in American
+      life or culture.
+  - a: https://www.chipublib.org/tag/african-american-history/
+    dt: African American History Blog Posts
+    dd: Written by CPL librarians and staff.
+  mainimage:
+    url: '4'
+    coll: cr
+    text: Women&rsquo;s reading group at Hall Branch, 1940
+    size: 100%
+    align: 50% 0%
+    alt: A book club consisting of over two dozen women sit at a table in Hall Branch.
+  thumbs:
+  - url: '14'
+    coll: cr
+    text: All-black WAC band, 1944
+    size: 431px
+    align: 0% 20%
+    alt: An African American Women's Army Corps band at a performance.
+  - url: 8g
+    coll: cr
+    text: Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948
+    size: 140%
+    align: center
+    alt: Marian Campfield stands outside the Chicago Defender offices next to a press
+      car.
+  - url: '0'
+    coll: cr
+    text: Catalog, &rdquo;Exhibition of the Art of the American Negro,&ldquo; 1940
+    size: 112%
+    align: 75% 45%
+    alt: 'Cover of &rdquo;Exhibition of the Art of the American Negro&ldquo; catalog
+      featuring an image of a painting by Charles White.  '
+  - url: '6'
+    coll: rhwc
+    text: Mayor Washington at the 27th Annual International Folk Fair, 1986
+    size: 200%
+    align: 40% 60%
+    alt: Mayor Washington stands with two men in front of three paintings at the DuSable
+      Museum of African American History.
+  link: AfAm
+  type: category
+  sidebarflag: x
+- Civilwar: 
+  flag: ''
+  title: Civil War
+  shortname: Civil War
+  sidebarname: Civil War
+  cardpic:
+    pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/721/default.jpg
+    pich: 280px
+    size: auto 120%
+    pos: center
+    alt: An 1854 artillery jacket, Civil War uniform, showcased on a mannequin.
+  mainimage:
+    url: '231'
+    coll: p16818coll6
+    text: "&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved
+      persons, 1854"
+    size: cover
+    align: center
+    alt: 1854 poster advertising a marshal's sale, a public auction of enslaved persons.
+  thumbs:
+  - url: '173'
+    coll: wha
+    text: Pauline Cushman, actress and Union spy, undated
+    size: 150%
+    align: center 30%
+    alt: Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss
+      Major Pauline Cushman. Union spy&ldquo;
+  - url: '314'
+    coll: wha
+    text: Sword, model 1850 staff and field officer, 1861-1865
+    size: auto 150px
+    align: 40% 30%
+    alt: Blade and handle of 1850 model sword.
+  - url: '35'
+    coll: wha
+    text: Ulysses S. Grant, 1865
+    size: 120px auto
+    align: 50% 20%
+    alt: Portrait of Ulysses S. Grant, typed caption under the image is &rdquo;Lieut.
+      Gen. U. S. Grant.&ldquo;
+  - url: '422'
+    coll: p16818coll6
+    text: Letter from John Brown, Jr., 1859
+    size: 200px
+    align: 55% 5%
+    alt: Handwritten 1859 letter from John Brown, Jr. to his uncle, aunt, and cousins.
+  textshort: Personal narratives, artifacts and manuscripts tell the story of slaves
+    and soldiers during the war that tore the nation apart.
+  textlong: A view into life during the Civil War via personal letters, documents and
+    photographs detailing battles, homefront activities and the fight to end slavery
+    in the United States.
+  textrich: A significant portion of the library&rsquo;s Civil War era material comes
+    from the Illinois Department of the Grand Army of the Republic, including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a>
+    and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing
+    the GAR material are items in the Harsh Research Collection&rsquo;s Philip David
+    Sang Collection pertaining to <a href="https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/search/searchterm/186104-1865/field/date/mode/exact/conn/and/order/title/ad/asc">the
+    African American experience during the Civil War era.</a></p>
+  CPLRes:
+  - a: https://www.chipublib.org/?post_type=post&s=%22civil+war%22
+    dt: Civil War blog posts
+    dd: Written by CPL librarians and staff.
+  ExRes:
+  - a: https://www.loc.gov/collections/abraham-lincoln-papers/about-this-collection/
+    dt: Abraham Lincoln Papers at the Library of Congress
+    dd: ''
+  - a: https://www.umbrasearch.org/
+    dt: Umbra Search African American History
+    dd: ''
+  - a: https://dp.la/primary-source-sets/sets?tags%5B%5D=civil-war-and-reconstruction-1850-1877
+    dt: DPLA&rsquo;s Primary Source Sets covering the Civil War and Reconstruction eras
+    dd: ''
+  findingaid:
+  - link: https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/
+    text: American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army
+      of the Republic Collection Finding Aid
+  - link: https://www.chipublib.org/fa-daughters-of-union-veterans-of-the-civil-war-1861-1865-records-1895-1965/
+    text: Daughters of Union Veterans of the Civil War, 1861-1865, Records Finding Aid
+  - link: https://www.chipublib.org/archival_post/phillip-sang-papers/
+    text: Philip David Sang Collection Finding Aid
+  link: CivilWar
+  type: category
+  sidebarflag: x
+- LibEd: 
+  flag: ''
+  title: Libraries &amp; Education
+  shortname: Libraries &amp; Education
+  sidebarname: Libraries &amp; Education
+  cardpic:
+    pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/2/default.jpg
+    pich: 250px
+    size: 120%
+    pos: 27% 0%
+    alt: Four children stand in front of a bookmobile trailer, reading. The bookmobile
+      is hitched to a car. The back of the trailer reads &rdquo;The Chicago Public Library
+      Bookmobile.&ldquo;
+  mainimage:
+    url: '3595'
+    coll: rvw
+    text: Andersonville School, undated
+    size: 130%
+    align: center
+    alt: Andersonville School
+  thumbs:
+  - url: '426'
+    coll: hdg
+    text: Jamieson School, 1944
+    size: 130%
+    align: 50% 50%
+    alt: Members of the Jamieson School student council pose in front of a school banner
+      and an American flag.  Six are seated and behind them more students stand in a
+      row.
+  - url: '4097'
+    coll: rvw
+    text: Our Lady of Lourdes school library, circa 1942
+    size: 300%
+    align: 40% 40%
+    alt: Several students sit at tables studying in the library of Our Lady of Lourdes
+      School.  A nun holding open a book stands next to a male student.
+  - url: '721'
+    coll: ahs
+    text: Drum majorettes, Lave View High School, 1949
+    size: cover
+    align: center
+    alt: 'Five drum majorettes from Lake View High School in full uniform. Caption reads:
+      Lois Dunston, Gerry Gruen, Lorette Loewe, Diane Baxter, Sandy Colby, May 1949'
+  - url: '2'
+    coll: woop
+    text: Chicago Public Library bookmobile service, circa 1940
+    size: 150%
+    align: 27% 0%
+    alt: Four children stand in front of a bookmobile trailer, reading.  The bookmobile
+      is hitched to a car.  The back of the trailer reads &rdquo;The Chicago Public
+      Library Bookmobile.&ldquo;
+  textshort: Learn about Chicago through its libraries and schools in these photographs
+    dating from the 1860s through the 1990s.
+  textlong: Learn about Chicago through its libraries and schools in these photographs
+    dating from the 1860s through the 1990s.
+  textrich: Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular
+    water tank</a> that housed the first Chicago Public Library to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school
+    building exteriors</a> from the second half of the 19th century through the first
+    half of 20th century. Feel the energy of its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high
+    school bands</a> and see its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports
+    teams and athletes</a> in action.
+  CPLRes:
+  - a: https://www.chipublib.org/blogs/category/chicago-history/
+    dt: Chicago History Blog Posts
+    dd: Written by CPL librarians and staff.
+  - a: https://www.chipublib.org/archival_subject/chicago-public-library/
+    dt: 'Finding Aids: Chicago Public Library'
+    dd: Descriptive inventories of the archival collections documenting the development
+      of Chicago Public Library.
+  - a: https://www.chipublib.org/archival_subject/education/
+    dt: 'Finding Aids: Education'
+    dd: Descriptive inventories of the archival collections of educators, schools and
+      more.
+  link: LibEd
+  type: category
+  sidebarflag: x
+- Neigh: 
+  flag: ''
+  title: Chicago Neighborhoods
+  shortname: Neighborhoods
+  sidebarname: Neighborhoods
+  cardpic:
+    pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/138/default.jpg
+    pich: 230px
+    size: 110%
+    pos: 50% 50%
+    alt: Two young boys sit in a tree.
+  textshort: Experience daily life in Chicago neighborhoods through photographs of street
+    scenes, businesses, residences and portraits, 1860s to the present.
+  textlong: Connect with the residents of Chicago and their stories through these fascinating
+    photographs dating from the 1860s through the 1990s.
+  catcoll: that center around Chicago&rsquo;s neighborhoods
+  textrich: <p>This collection documents how Chicagoans lived their daily lives and
+    how their neighborhoods changed and evolved over time.  Go back to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort/ad/asc">school</a>,
+    revisit favorite <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>,
+    salute <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members
+    of the military</a> or just <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride
+    around the city</a>.  Every neighborhood tells a story!</p>
+  CPLRes:
+  - a: https://www.chipublib.org/blogs/category/chicago-history/
+    dt: Chicago History Blog Posts
+    dd: Written by CPL librarians and staff.
+  - a: https://www.chipublib.org/archival_subject/neighborhoods/
+    dt: Finding Aids
+    dd: Descriptive inventories of the archival collections of community associations,
+      religious organizations, high schools, notable Chicagoans and more
+  mainimage:
+    url: '107'
+    coll: cfc
+    text: Cleanup Parade, Ravenswood Manor, 1965
+    size: ''
+    align: 90% 50%
+    alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
+      and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
+      Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;
+  thumbs:
+  - url: '1248'
+    coll: rwk
+    text: Picasso statue unveiled, 1967
+    size: ''
+    align: 25% 60%
+    alt: Elevated view of the Picasso statue at the Civic Center Plaza being unveiled.
+      The plaza is completely filled with onlookers.
+  - url: '782'
+    coll: rwk
+    text: Tin Man sculpture, Oz Park, 2001
+    size: ''
+    align: 57% 17%
+    alt: Tin Man sculpture in Oz Park.  It stands on top of a pedestal with a plaque
+      that reads &ldquo;The Tin Man from The Wizard of Oz by Frank Baum Welcomes You
+      to Oz Park, A Heartfelt Salute to the Community from the Lincoln Park Chamber
+      of Commerce October 1995.&rdquo;
+  - url: '157'
+    coll: dtd
+    text: 31st Street and Albany Avenue, repairing old brick outfall, 1936
+    size: ''
+    align: 62% 37%
+    alt: Three men repair a brick sewer outfall.
+  link: Neigh
+  type: category
+  sidebarflag: x
+- News: 
+  flag: ''
+  title: Chicago Newspapers
+  shortname: Newspapers
+  sidebarname: Newspapers
+  cardpic:
+    pic: ''
+    pich: 230px
+    size: 110%
+    pos: 50% 50%
+  textshort: ''
+  textlong: ''
+  link: examiner
+  type: category
+  sidebarflag: x
+  thumbs:
+    - url: '2196'
+      coll: CPB01
+      text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+      size: 170%
+      align: 25% 22%
+      alt: Black and white drawing of a peacock on a branch in front of an orange circle
+    - url: '4833'
+      coll: ChicagoParks
+      text: Dancers at Madden Park, 1954
+      size: 140%
+      align: center
+      alt: Young women in white leotards and skirts pose with their arms extended and
+        knees bent
+    - url: '42'
+      coll: wha
+      text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+        President, Abraham Lincoln,&rdquo; 1865
+      size: 105%
+      align: 50% 20%
+      alt: Poster
+    - url: '4066'
+      coll: mpu
+      text: Crown Fountain preview, 2004
+      size: 370%
+      align: 50% 50%
+      alt: Three boys play in water in front of a lighted brick wall---
+  flag: ''
+  title: Chicago Parks
+  shortname: Parks
+  sidebarname: Parks
+  cardpic:
+    pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg
+    pich: 250px
+    size: 110%
+    pos: center
+    alt: Five boys furiously set off on a running race from the starting line on an
+      outdoor track in a park while several adult males look on.
+  textshort: Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for
+    narrow strip of land along the lakefront in 1836 to more than 500 parks today.
+  textlong: Parks have always been a part of Chicago’s city planning. Explore their
+    growth and development from six large parks begun around 1870 to over 500 today.
+  textrich: <p>While Chicago&rsquo;s <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront
+    parks</a> are popular with residents and tourists alike, public green space abounds
+    in many parts of the city. Take in <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>,
+    <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>,
+    wetlands and woodlands across the urban landscape. Peek into <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field
+    houses</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>.
+    Gaze at <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>,
+    <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a>
+    and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>,
+    from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with
+    the parks in all seasons by <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>,
+    <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice
+    skating</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>,
+    <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing
+    in archery</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking
+    selfies</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating
+    events</a> and more.</p>
+  catcoll: that focus on Chicago&rsquo;s parks
+  CPLRes:
+  - a: https://www.chipublib.org/?post_type=post&s=parks
+    dt: Park Blog Posts
+    dd: Written by CPL librarians and staff.
+  findingaid:
+  - link: https://www.chipublib.org/fa-chicago-park-district-records/
+    text: 'Chicago Park District Records: Drawings Finding Aid'
+  - link: https://www.chipublib.org/fa-clarence-hatzfeld-papers/
+    text: Clarence Hatzfeld Papers Finding Aid
+  - link: https://www.chipublib.org/fa-millennium-park-inc/
+    text: Millennium Park, Inc. Finding Aid
+  - link: https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/
+    text: Millennium Park / U.S. Equities Realty Collection Finding Aid
+  - link: https://www.chipublib.org/fa-open-space-section-records/
+    text: Open Space Section Records Finding Aid
+  mainimage:
+    url: '3708'
+    coll: ChicagoParks
+    text: Hula hooping in Horner Park, 1971
+    size: 110%
+    align: center
+    alt: A boy spins two large hoola hoops, one around each wrist, in Horner Park. Several
+      children, one a girl on a bicycle, look on.
+  thumbs:
+  - url: '2239'
+    coll: mpu
+    text: Cloud Gate, assembly complete, 2004
+    size: cover
+    align: center
+    alt: Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park.
+      SBC Plaza is still under construction and there is construction equipment scattered
+      around. Two construction workers are working to the left of the sculpture and
+      the tall buildings of Michigan Avenue are visible behind the sculpture.
+  - url: '112'
+    coll: ChicagoParks
+    text: Addams Park, undated
+    size: 200%
+    align: 52% 17%
+    alt: Three boys in suits play recorders while standing  in a semi-circle around
+      a microphone in a park building. Several adults standing together look on from
+      behind them.
+  - url: '4752'
+    coll: ChicagoParks
+    text: Red Saunders performs in Lake Meadow Park, 1970
+    size: 500px
+    align: 55% 25%
+    alt: Musician, Red Saunders, stands on a stage and plays electric guitar in front
+      of a microphone with a band sitting behind him on an outdoor stage in Lake Meadow
+      Park. An audience, both sitting and standing, take in the performance.
+  - url: '6209'
+    coll: ChicagoParks
+    text: Palmer Park, 1965
+    size: 140%
+    align: 50% 50%
+    alt: A group of approximately fifty girls in athletic uniform perform standing calisthenics
+      with their arms over their heads in a field house gymnasium in Palmer Park. Three
+      artistic murals are overhead on the wall behind them.
+  link: Parks
+  type: category
+  sidebarflag: x
+- Theater: 
+  flag: '3'
+  title: Chicago Theater
+  shortname: Theater
+  sortname: Chicago Theater
+  sidebarname: Theater
+  cardpic:
+    pic: theater-cardpic.png
+    pich: 250px
+    size: auto 225%
+    pos: 45% 60%
+    alt: A black and white drawing depicts a woman looking through a monocle. Her hair
+      is styled into a high bun.
+  category: ''
+  textshort: Playbills and programs for drama, opera, vaudeville, dance and music at
+    early Chicago theaters, 1848-1922.
+  textlong: Theater collections at Chicago Public Library document a vibrant local theater
+    community.
+  textrich: <p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than
+    2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills
+    from shows starring <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin
+    Booth</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph
+    Jefferson</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah
+    Bernhardt</a> at the well-known <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/mcvicker's/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s
+    Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside
+    traditional plays and musical works, numerous genres are represented in the collection,
+    including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>,
+    <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>
+    and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic
+    shows</a>, among others.</p>
+  rights: The Historic Programs digital collection is made possible by a generous grant
+    from the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago
+    Public Library Foundation</a>.
+  CPLRes:
+  - a: https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/
+    dt: Chicago Theater Collection-Historic Programs Finding Aid
+    dd: The complete and ever-increasing inventory of theater programs past and present,
+      some of which are presented here.
+  - a: https://www.chipublib.org/archival_subject/theater/
+    dt: Chicago Theater Collection
+    dd: A list of collections at Chicago Public Library representing theaters, designers,
+      actors and other members of the theater community.
+  mainimage:
+    url: '6053'
+    coll: CPB01
+    text: Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881
+    size: 134%
+    align: 52% 15%
+    alt: Theater playbill cover for Camille starring Sarah Bernhardt at McVicker's Theatre
+  thumbs:
+  - url: '8601'
+    coll: CPB01
+    text: "<em>Evening with Columbine</em>, Chicago Little Theatre, 1913"
+    size: 200%
+    align: 50% 85%
+    alt: Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with
+      the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;.
+      Black and white drawing depicts a woman in a short skirt, supported by two men,
+      kneeling in front of a large circle.
+  - url: '6272'
+    coll: CPB01
+    text: "<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903"
+    size: 110%
+    align: 50% 30%
+    alt: Theater program cover reads, &ldquo;Iroquois Theatre, Randolph St. between
+      State and Dearborn Streets, Chicago,&rdquo; and depicts a Greek revival door,
+      topped by an Iroquois face in headdress and flanked by Native American shields.
+  - url: '6748'
+    coll: CPB01
+    text: Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896
+    size: 140%
+    align: 50% 40%
+    alt: Theater program cover reads, &rdquo;38th year, McVicker's Theatre, Bill of
+      the Play, 1857-1896,&rdquo; and depicts a bas relief, inside the theater, a scene
+      from the World's Columbian Exposition and a white haired man framed by a floral
+      motif.
+  - url: '9755'
+    coll: CPB01
+    text: "<em>The Mikado</em>, Chicago Opera House, 1886"
+    size: 200%
+    align: 68% 47%
+    alt: Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo;
+      and depicts a drawing of a stage with an actor downstage, and a large circle upstage
+      showcasing a drawing of a person in Japanese-style dress. A woman holding a fan
+      looks on from a balcony which is supported by a feminine stature. The stage is
+      flanked by curtains and plants.
+  link: CPB01
+  coll: CPB01
+  location:
+    title: Special Collections at HWLC
+    sortname: Special Collections at HWLC
+    shortname: HWLCSC
+    longname: Special Collections and Preservation Division at Harold Washington Library
+      Center
+    sidebarname: Special Collections at HWLC
+    pic: ''
+    mainimage:
+      url: '79'
+      coll: woop
+      text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+      size: 105%
+      align: 50% 50%
+      alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+        are pictured in front along with two men wearing hats.
+    thumbs:
+    - url: '2196'
+      coll: CPB01
+      text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+      size: 170%
+      align: 25% 22%
+      alt: Black and white drawing of a peacock on a branch in front of an orange circle
+    - url: '4833'
+      coll: ChicagoParks
+      text: Dancers at Madden Park, 1954
+      size: 140%
+      align: center
+      alt: Young women in white leotards and skirts pose with their arms extended and
+        knees bent
+    - url: '42'
+      coll: wha
+      text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+        President, Abraham Lincoln,&rdquo; 1865
+      size: 105%
+      align: 50% 20%
+      alt: Poster
+    - url: '4066'
+      coll: mpu
+      text: Crown Fountain preview, 2004
+      size: 370%
+      align: 50% 50%
+      alt: Three boys play in water in front of a lighted brick wall
+    textshort: at Harold Washington Library Center
+    textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+      Washington Library Center</a> showcases rare books and archival material relating
+      to Chicago history. Major areas of interest include: Chicago authors and publishing,
+      Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+      world’s fairs and Mayor Harold Washington.'
+    locname: Harold Washington Library Center
+    loclink: '34'
+    locemail: specoll@chipublib.org
+    locphone: "(312) 747-4875"
+    link: HWLCSC
+    type: location
+  homeloc: HWLCSC
+  type: collection
+  subcollections:
+  - filename: EBG
+    title: E.B. Gould Programs Collection
+    sortname: Gould, E.B. Programs Collection
+    textlong: See <a class="all-links" href="#CPB01">Chicago Theater</a>.
+    textshort: The annotated programs of a local Chicago businessman and enthusiastic
+      playgoer.
+    browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc
+    type: subcollection
+  - filename: Playbills
+    title: Chicago Theater Collection-Historic Playbills
+    sortname: Chicago Theater Collection-Historic Playbills
+    textlong: See <a class="all-links" href="#CPB01">Chicago Theater</a>.
+    textshort: Programs, playbills and newspaper clippings from more than 2,000 productions
+      at Chicago’s historic theaters dating back to the 1840s.
+    browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/
+    type: subcollection
+  sidebarflag: x

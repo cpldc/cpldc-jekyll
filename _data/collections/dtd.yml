@@ -1,0 +1,124 @@
+---
+flag: '13'
+title: Chicago Sewers Collection
+coll: dtd
+sortname: Chicago Sewers Collection
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg
+  pich: 200px
+  size: 120%
+  pos: 50% -20px
+  alt: Three men working on an unfinished sewer.
+category: Neighborhoods
+textshort: Photographs of sewer systems and passageways from 1925 to 1949 offer a
+  rare look at the underbelly of Chicago.
+textlong: The sewer systems and passageways that lie beneath our feet are critical
+  to the health and well being of the city. Offering a rare look at the “underbelly”
+  of Chicago, this collection of historical images features construction photographs
+  of sewers and tunnels.
+textrich: <p>In 1855, Boston engineer Ellis S. Chesbrough was invited to Chicago to
+  design the first comprehensive system of underground sewers in the United States.
+  His work lifted the city to make room for the new sewers which became the most extensive
+  in the world. In the more than 150 years since Chicago&rsquo;s Department of Water
+  Management continues to service and maintain this underground system.  </p><p>Take
+  a look at these wonders in images from the 1920s-1960s as you start  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Above+ground/field/contri/mode/all/conn/and/order/nosort">above
+  ground</a> and work your way below the surface along <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Avenue+J/field/subjec/mode/all/conn/and/order/nosort">Avenue
+  J</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/California+Avenue/field/subjec/mode/all/conn/and/order/nosort">California</a>
+  and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Elston+Avenue/field/subjec/mode/all/conn/and/order/nosort">Elston</a>
+  Avenues among others. </p>
+CPLRes:
+- a: https://www.chipublib.org/fa-chicago-sewers-collection/
+  dt: Chicago Sewers Collection Finding Aid
+  dd: The complete list of photographs, glass plate slides and documents, rich with
+    geographic and technical details.
+mainimage:
+  url: '167'
+  text: 103rd and Rockwell Streets, inspecting tile, 1936
+  size: ''
+  align: center
+  alt: Two men peer into a section of large concrete pipe.  Two more men stand inside
+    the section of pipe.
+thumbs:
+- url: '150'
+  text: Magnolia Avenue sewer system, 1933
+  size: 400%
+  align: 61% 37%
+  alt: A large sewer pipe splits into two directions.  Men are standing in both sections
+    of the sewer with waste coming up above their knees.
+- url: '142'
+  text: Broadway Street, sewer in Rokeby Street, 1927
+  size: 250%
+  align: 30% 50%
+  alt: A construction worker is perched on top of a wooden fence,  operating a piece
+    of machinery.  Another man stands on the ground and holds the machinery; a third
+    man holds onto a metal pipe.
+- url: '144'
+  text: Bryn Mawr Avenue, bricklayers, 1930
+  size: 250%
+  align: 0 50%
+  alt: A group of construction workers stand on wooden planks inside a large unfinished
+    sewer pipe.  Bricks are scattered on the ground.
+- url: '155'
+  text: 103rd and Rockwell Streets, pipe yard, 1936
+  size: 250%
+  align: 40% 35%
+  alt: Men walk among several sections of very large pipes covered with tarpaulins.  One
+    man stands on top of a pipe and sprays it with water.
+link: dtd
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection

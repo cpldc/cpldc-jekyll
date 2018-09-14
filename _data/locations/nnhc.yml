@@ -1,0 +1,44 @@
+title: Northside Neighborhood History Collection
+sortname: Northside Neighborhood History Collection
+shortname: NNHC
+longname: Northside Neighborhood History Collection
+sidebarname: Northside Neighborhood History Collection
+pic: ''
+textshort: at Sulzer Regional Library
+textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+  Regional Library</a> highlights historical and contemporary materials about Northside
+  neighborhoods.
+mainimage:
+  url: '1182'
+  coll: rwk
+  text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+  size: 125%
+  align: 50% 50%
+thumbs:
+- url: '902'
+  coll: ahs
+  text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+  size: 400px
+  align: 65% 15%
+- url: '567'
+  coll: rwk
+  text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+    watch sign, 1989
+  size: 500px
+  align: 57% 37%
+- url: '653'
+  coll: rwk
+  text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+  size: auto 130%
+  align: center
+- url: '661'
+  coll: rwk
+  text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+  size: 110%
+  align: 50% 25%
+loclink: '67'
+locname: Sulzer Regional Library
+locemail: northsidehistory@chipublib.org
+locphone: "(312) 742-4455"
+link: NNHC
+type: location

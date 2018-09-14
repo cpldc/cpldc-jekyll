@@ -1,0 +1,65 @@
+---
+flag: ''
+title: Chicago Neighborhoods
+shortname: Neighborhoods
+sidebarname: Neighborhoods
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/138/default.jpg
+  pich: 230px
+  size: 110%
+  pos: 50% 50%
+  alt: Two young boys sit in a tree.
+textshort: Experience daily life in Chicago neighborhoods through photographs of street
+  scenes, businesses, residences and portraits, 1860s to the present.
+textlong: Connect with the residents of Chicago and their stories through these fascinating
+  photographs dating from the 1860s through the 1990s.
+catcoll: that center around Chicago&rsquo;s neighborhoods
+textrich: <p>This collection documents how Chicagoans lived their daily lives and
+  how their neighborhoods changed and evolved over time.  Go back to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort/ad/asc">school</a>,
+  revisit favorite <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>,
+  salute <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members
+  of the military</a> or just <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride
+  around the city</a>.  Every neighborhood tells a story!</p>
+CPLRes:
+- a: https://www.chipublib.org/blogs/category/chicago-history/
+  dt: Chicago History Blog Posts
+  dd: Written by CPL librarians and staff.
+- a: https://www.chipublib.org/archival_subject/neighborhoods/
+  dt: Finding Aids
+  dd: Descriptive inventories of the archival collections of community associations,
+    religious organizations, high schools, notable Chicagoans and more
+mainimage:
+  url: '107'
+  coll: cfc
+  text: Cleanup Parade, Ravenswood Manor, 1965
+  size: ''
+  align: 90% 50%
+  alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
+    and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
+    Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;
+thumbs:
+- url: '1248'
+  coll: rwk
+  text: Picasso statue unveiled, 1967
+  size: ''
+  align: 25% 60%
+  alt: Elevated view of the Picasso statue at the Civic Center Plaza being unveiled.
+    The plaza is completely filled with onlookers.
+- url: '782'
+  coll: rwk
+  text: Tin Man sculpture, Oz Park, 2001
+  size: ''
+  align: 57% 17%
+  alt: Tin Man sculpture in Oz Park.  It stands on top of a pedestal with a plaque
+    that reads &ldquo;The Tin Man from The Wizard of Oz by Frank Baum Welcomes You
+    to Oz Park, A Heartfelt Salute to the Community from the Lincoln Park Chamber
+    of Commerce October 1995.&rdquo;
+- url: '157'
+  coll: dtd
+  text: 31st Street and Albany Avenue, repairing old brick outfall, 1936
+  size: ''
+  align: 62% 37%
+  alt: Three men repair a brick sewer outfall.
+link: Neigh
+type: category
+sidebarflag: x
