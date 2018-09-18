@@ -1,0 +1,115 @@
+---
+flag: '10'
+title: Henry D. Green Photograph Collection
+coll: hdg
+sortname: Green, Henry D. Photograph Collection
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg
+  pich: 250px
+  size: 110%
+  pos: 50% 50%
+  alt: Five men from the fire department pose with a fire engine. Three are standing,
+    and two are riding in the vehicle. One of the men has a white shirt and tie. Part
+    of the fire house and two neighboring houses are pictured in the background
+category: Neighborhoods
+textshort: Photographs by Henry Green of businesses, community groups, neighborhood
+  celebrations and school events on Chicago&rsquo;s North Side, 1943-1951.
+textlong: Chicago Public Library&rsquo;s Northside Neighborhood History Collection
+  houses the photographs of Henry Green, a commercial photographer on Chicago&rsquo;s
+  North Side.
+textrich: Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business
+  establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious
+  institutions</a>, celebrations in neighborhood parks and events at local schools.
+  Many photographs reflect life on the North Side during World War II, including images
+  of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military
+  personnel</a>.
+findingaid:
+- text: Henry Delorval Green Photograph Collection Finding Aid
+  link: https://www.chipublib.org/archival_post/henry-d-green-photograph-collection/
+CPLRes:
+- a: https://www.chipublib.org/archival_subject/neighborhoods/
+  dt: Neighborhood Archival Collections
+  dd: Additional collections focusing on Chicago&rsquo;s neighborhoods.
+mainimage:
+  url: '6'
+  text: American Legion/Albany Park Post 24, undated
+  size: 110%
+  align: center
+  alt: Young men in baseball uniforms posed for a team picture in three rows. Three
+    men also pictured seated with the team are not in uniform. Some of the team members
+    in the front row are holding baseball bats. There are trees and a fieldhouse pictures
+    in the back.
+thumbs:
+- url: '174'
+  text: Girl Scouts Troup 119 Tin Can Salvage, 1945
+  size: 130%
+  align: 40% 25%
+  alt: Six girls in girl scout uniforms, and three women and one man surround a pile
+    of flattened tin cans
+- url: '669'
+  text: Monadnock Coffee Shop, 1949
+  size: ''
+  align: 47% 57%
+  alt: Diner scene. Customers sit at the counter drnking coffee. A waitress takes
+    orders. Cooks can be seen in the open kitchen at the back, flanked by display
+    cases with baked goods. Décor includes plants and a clock.
+- url: '345'
+  text: Portrait of Henry Delorval Green, 1949
+  size: 120%
+  align: 45% 27%
+  alt: A man in a suit and wearing glasses is pictured from his shoulders up.
+- url: '123'
+  text: Chicago Fire Department, undated
+  size: 130%
+  align: center
+  alt: Five men from the fire department pose with a fire engine. Three are standing,
+    and two are riding in the vehicle. One of the men has a white shirt and tie. Part
+    of the fire house and two neighboring houses are pictured in the background
+link: hdg
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+type: collection

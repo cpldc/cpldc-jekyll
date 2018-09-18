@@ -30,6 +30,23 @@ theme: minima
 plugins:
   - jekyll-feed
 
+defaults: 
+  sidebartype: collapse
+# collections_dir: content
+# collections:
+#   digicolls: 
+#     output: true
+#     permalink: /:name
+#   loc: 
+#     output: true
+#     permalink: /:name
+#   subc: 
+#     output: true
+#     permalink: /:name
+#   subj: 
+#     output: true
+#     permalink: /:name
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

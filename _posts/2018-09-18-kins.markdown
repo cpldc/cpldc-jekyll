@@ -1,0 +1,16 @@
+---
+date:   2018-09-08 13:08:29 -0500
+layout: content
+filename: Kins
+sidebartype: fixed
+permalink: /:title
+categories: subcollections
+title: Helen G. Kinsella Collection
+sortname: Kinsella, Helen G. Collection
+textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
+textshort: Dramatic productions and other activities led by the award-winning Lake
+  View High School drama and public speaking teacher.
+browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Helen+G.+Kinsella+Collection/field/collec/mode/all/conn/and/order/nosort
+link: "#ahs"
+type: subcollection
+---

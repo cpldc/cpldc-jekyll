@@ -1,13 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-14T16:29:59-05:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/09/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/jekyll/update/2018/09/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/09/08/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-18T14:08:59-05:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">News</title><link href="http://localhost:4000/2018/09/18/news.html" rel="alternate" type="text/html" title="News" /><published>2018-09-18T00:00:00-05:00</published><updated>2018-09-18T00:00:00-05:00</updated><id>http://localhost:4000/2018/09/18/news</id><content type="html" xml:base="http://localhost:4000/2018/09/18/news.html">&lt;hr /&gt;
+&lt;p&gt;date:   2018-09-08 13:08:29 -0500
+layout: content
+sidebartype: fixed
+permalink: /:title
+title: Chicago Newspapers
+categories: subjects
+shortname: Newspapers
+sidebarname: Newspapers
+cardpic:
+  pic: ‘’
+  pich: 230px
+  size: 110%
+  pos: 50% 50%
+textshort: ‘’
+textlong: ‘’
+link: examiner
+type: category
+sidebarflag: x
+thumbs:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;url: ‘2196’
+coll: CPB01
+text: “&lt;em&gt;The Philanderer&lt;/em&gt;, Chicago Little Theatre, 1914”
+size: 170%
+align: 25% 22%
+alt: Black and white drawing of a peacock on a branch in front of an orange circle&lt;/li&gt;
+  &lt;li&gt;url: ‘4833’
+coll: ChicagoParks
+text: Dancers at Madden Park, 1954
+size: 140%
+align: center
+alt: Young women in white leotards and skirts pose with their arms extended and
+  knees bent&lt;/li&gt;
+  &lt;li&gt;url: ‘42’
+coll: wha
+text: Wanted poster, “$100,000 Reward! The Murderer of our late beloved
+  President, Abraham Lincoln,” 1865
+size: 105%
+align: 50% 20%
+alt: Poster&lt;/li&gt;
+  &lt;li&gt;url: ‘4066’
+coll: mpu
+text: Crown Fountain preview, 2004
+size: 370%
+align: 50% 50%
+alt: Three boys play in water in front of a lighted brick wall—&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">date: 2018-09-08 13:08:29 -0500 layout: content sidebartype: fixed permalink: /:title title: Chicago Newspapers categories: subjects shortname: Newspapers sidebarname: Newspapers cardpic: pic: ‘’ pich: 230px size: 110% pos: 50% 50% textshort: ‘’ textlong: ‘’ link: examiner type: category sidebarflag: x thumbs: url: ‘2196’ coll: CPB01 text: “The Philanderer, Chicago Little Theatre, 1914” size: 170% align: 25% 22% alt: Black and white drawing of a peacock on a branch in front of an orange circle url: ‘4833’ coll: ChicagoParks text: Dancers at Madden Park, 1954 size: 140% align: center alt: Young women in white leotards and skirts pose with their arms extended and knees bent url: ‘42’ coll: wha text: Wanted poster, “$100,000 Reward! The Murderer of our late beloved President, Abraham Lincoln,” 1865 size: 105% align: 50% 20% alt: Poster url: ‘4066’ coll: mpu text: Crown Fountain preview, 2004 size: 370% align: 50% 50% alt: Three boys play in water in front of a lighted brick wall—</summary></entry><entry><title type="html">Chicago Public Library Archives</title><link href="http://localhost:4000/woop" rel="alternate" type="text/html" title="Chicago Public Library Archives" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/woop</id><content type="html" xml:base="http://localhost:4000/woop"></content><author><name></name></author><category term="Libraries &amp;amp; Education" /><summary type="html"></summary></entry><entry><title type="html">Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections</title><link href="http://localhost:4000/wha" rel="alternate" type="text/html" title="Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/wha</id><content type="html" xml:base="http://localhost:4000/wha"></content><author><name></name></author><category term="Civil War" /><summary type="html"></summary></entry><entry><title type="html">Louis D. Walz Collection</title><link href="http://localhost:4000/walz" rel="alternate" type="text/html" title="Louis D. Walz Collection" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/walz</id><content type="html" xml:base="http://localhost:4000/walz"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Chicago Theater</title><link href="http://localhost:4000/theater" rel="alternate" type="text/html" title="Chicago Theater" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/theater</id><content type="html" xml:base="http://localhost:4000/theater"></content><author><name></name></author><category term="" /><summary type="html"></summary></entry><entry><title type="html">Robert W. Krueger Photograph Collection</title><link href="http://localhost:4000/rwk" rel="alternate" type="text/html" title="Robert W. Krueger Photograph Collection" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/rwk</id><content type="html" xml:base="http://localhost:4000/rwk"></content><author><name></name></author><category term="Neighborhoods" /><summary type="html"></summary></entry><entry><title type="html">Ravenswood-Lake View Community Collection</title><link href="http://localhost:4000/rvw" rel="alternate" type="text/html" title="Ravenswood-Lake View Community Collection" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/rvw</id><content type="html" xml:base="http://localhost:4000/rvw"></content><author><name></name></author><category term="Neighborhoods" /><summary type="html"></summary></entry><entry><title type="html">Ravenswood Manor Improvement Association Collection</title><link href="http://localhost:4000/rmia" rel="alternate" type="text/html" title="Ravenswood Manor Improvement Association Collection" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/rmia</id><content type="html" xml:base="http://localhost:4000/rmia"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Remembering Harold Washington</title><link href="http://localhost:4000/rhwc" rel="alternate" type="text/html" title="Remembering Harold Washington" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/rhwc</id><content type="html" xml:base="http://localhost:4000/rhwc"></content><author><name></name></author><category term="African Americans" /><summary type="html"></summary></entry><entry><title type="html">Portage Park Community Collection</title><link href="http://localhost:4000/portpark" rel="alternate" type="text/html" title="Portage Park Community Collection" /><published>2018-09-08T13:08:29-05:00</published><updated>2018-09-08T13:08:29-05:00</updated><id>http://localhost:4000/portpark</id><content type="html" xml:base="http://localhost:4000/portpark"></content><author><name></name></author><summary type="html"></summary></entry></feed>

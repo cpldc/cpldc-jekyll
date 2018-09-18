@@ -1,17 +1,20 @@
-{% for item in site.data.cards %}
+{% assign cards = site.posts | sort: 'flag' %}
+{% for item in cards %}
+{% if item.flag %}
 <div class="card" style="width: 20rem">
-    <a href="">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpicurl }}); background-size: {{ item.cardpicsize }}; background-position: {{ item.cardpicposition }}; height: {{ item.cardpicpicheight }}" class="card-img-top" alt="">
+    <a href="{{ item.url }}">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpic.pic }}); background-size: {{ item.cardpic.size }}; background-position: {{ item.cardpic.pos }}; height: {{ item.cardpic.pich }}" class="card-img-top" alt="">
     </a>
     <div class="card-bottom">
         {% if item.category  %}
             <span class="card-subj">{{ item.category }}</span>
             <br />
         {% endif %}
-        <a href="">
-            <h2 class="card-title">{{ item.name }}</h2>
+        <a href="{{ item.url }}">
+            <h2 class="card-title">{{ item.title }}</h2>
         </a>
-        <span class="card-text">{{ item.cardtext }}</span>  
+        <span class="card-text">{{ item.textshort }}</span>  
     </div>
 </div>
+{% endif %}
 {% endfor %}

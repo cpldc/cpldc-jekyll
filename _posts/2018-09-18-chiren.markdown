@@ -1,0 +1,140 @@
+---
+date: 2018-09-08 13:08:29 -0500
+layout: content
+title: Chicago Renaissance
+sidebartype: fixed
+permalink: /:title
+categories: collections
+flag: '8'
+coll: cr
+sortname: Chicago Renaissance
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg
+  pich: 20rem
+  size: 100%
+  pos: auto
+  alt: Margaret Walker's face, smiling
+category: African Americans
+textshort: African American community leaders, performers, artists, writers and activists
+  on Chicago&rsquo;s South Side, 1930-1950.
+textlong: The Black Chicago Renaissance was a creative movement when activism and
+  scholarship flourished with the prodigious work of African American community leaders,
+  performers, artists, writers and activists.
+textrich: <p>During and after the Great Depression (1930s-1950s), African Americans
+  in Chicago created a new community on the South Side that was distinctly their own.</p><p>In
+  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Literature/field/subjed/mode/all/conn/and/order/nosort">literature</a>
+  the Black Chicago Renaissance was represented by such giants as Richard Wright,
+  Gwendolyn Brooks, Margaret Walker, Arna Bontemps and Fenton Johnson. The explosion
+  of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Music/field/subjed/mode/all/conn/and/order/nosort">musical</a>
+  creativity in <a href="https://cdm16818.contentdm.oclc.org/digital/collection/cr/search/searchterm/Bronzeville%20(Chicago%2C%20Ill.)!art/field/neighb!subjec/mode/all!all/conn/and!and/order/title/ad/asc">Bronzeville&rsquo;s</a>
+  clubs and concert halls ranged from classical to jazz and from gospel to blues and
+  pop. A new <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Social%20Science/field/subjed/mode/all/conn/and/order/nosort">social
+  science</a> of Black urban life was born with the writing of St. Clair Drake and
+  Horace Cayton&rsquo;s <em>Black Metropolis</em>. The <a href="https://cdm16818.contentdm.oclc.org/digital/search/searchterm/art/field/subjec/mode/exact/conn/and/order/nosort/ad/asc">art</a>
+  of William McBride, William Edouard Scott, Gordon Parks, Archibald Motley, Jr. and
+  other local Chicago Black artists defined the era.</p>
+findingaid:
+- link: https://www.chipublib.org/fa-charles-walton-papers/
+  text: Charles Walton Papers Finding Aid
+- link: https://www.chipublib.org/fa-george-cleveland-hall-branch-archives/
+  text: Chicago Public Library, George Cleveland Hall Branch Archives Finding Aid
+- link: https://www.chipublib.org/fa-horace-r-cayton-papers/
+  text: Horace Cayton Papers Finding Aid
+- link: https://www.chipublib.org/fa-william-mcbride-papers/
+  text: William McBride, Jr. Papers Finding Aid
+CPLRes:
+- a: content.php?id=AfAm
+  dt: African American Digital Collections
+  dd: Digital collections that include materials documenting Black history in the
+    United States.
+mainimage:
+  url: '1'
+  text: Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944
+  size: 110%
+  align: 50% 0
+  alt: Horace Cayton shows three paintings to two women. One of the paintings is Charles
+    Sebree's &ldquo;Blue Boy.&rdquo;
+thumbs:
+- url: '11'
+  text: Langston Hughes and Gwendolyn Brooks, 1949
+  size: 100%
+  align: 50% 10%
+  alt: Langston Hughes and Gwendolyn Brooks. Hughes is holding a copy of the book
+    &ldquo;The Poetry of the Negro.&rdquo;"
+- url: '10'
+  text: Richard Durham, 1948
+  size: 150%
+  align: center
+  alt: Richard Durham sits at a desk with a typewriter.  He is reading some loose
+    pages and has a pencil in his right hand.
+- url: '15'
+  text: C.L. Cook and his Dreamland Orchestra, 1923
+  size: 150%
+  align: center
+  alt: An advertisement for &ldquo;Cook&rdquo; and his Dreamland Orchestra, now playing
+    at Harmon's Dreamland. Photos depict individual members of the band and the group.
+- url: '12'
+  text: Margaret Walker, 1942
+  size: cover
+  align: 50% 25%
+  alt: Margaret Walker's face, smiling
+link: cr
+location:
+  title: Vivian G. Harsh Research Collection
+  sortname: Harsh Collection
+  longname: Harsh Collection
+  shortname: Harsh
+  sidebarname: Vivian G. Harsh Collection
+  pic: ''
+  textshort: at Woodson Regional Library
+  textlong: The largest African American history and literature collection in the
+    Midwest, the Vivian G. Harsh Research Collection of Afro-American History and
+    Literature at <a href="https://www.chipublib.org/locations/81">Woodson Regional
+    Library</a> documents the black experience with a strong focus on Chicago.
+  mainimage:
+    url: ASNLH.jpg
+    coll: rwk
+    text: ASNLH 20th anniversary planning committee, 1936
+    size: auto 125%
+    align: center
+    alt: A group of 13 men and women sit and stand around a table; including Carter
+      G. Woodson and Vivian G. Harsh.
+  thumbs:
+  - url: '18'
+    coll: cr
+    text: U.S. Congressman William L. Dawson, 1940s
+    size: 200%
+    align: 50% 10%
+    alt: William Dawson stands in front of two microphones with an American flag and
+      a reelect Dawson for Congressman sign behind him.
+  - url: '405'
+    coll: p16818coll6
+    text: Note from Frederick Douglass regarding A. Lincoln&rsquo;s death, 1865
+    size: 400%
+    align: 29% 10%
+    alt: Portrait sketch of Frederick Douglass next to a 1865 letter by Douglass regarding
+      President Lincoln&lsquo;s death. Below the portrait is a typed transcription
+      of the handwritten letter. 
+  - url: '21'
+    coll: cr
+    text: Pamphlet, &ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943
+    size: 250%
+    align: 55% 75%
+    alt: Cover page of a pamphlet titled &rdquo;The War&lsquo;s Greatest Scandal.&ldquo;
+      A black and white sketch of a giant white person&lsquo;s fist on top of an African
+      American soldier. 
+  - url: '2'
+    coll: cr
+    text: "&ldquo;Self-portrait&rdquo; by Gordon Parks, 1941"
+    size: cover
+    align: 50% 40%
+    alt: Portrait photograph of Gordon Parks holding a cigarette. 
+  loclink: '81'
+  locname: Woodson Regional Library
+  locemail: harshcollection@chipublib.org
+  locphone: "(312) 745-2080"
+  link: Harsh
+  type: location
+homeloc: Harsh
+type: collection
+---

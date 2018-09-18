@@ -1,0 +1,15 @@
+---
+date:   2018-09-08 13:08:29 -0500
+layout: content
+filename: RMIA
+sidebartype: fixed
+permalink: /:title
+categories: subcollections
+title: Ravenswood Manor Improvement Association Collection
+sortname: Ravenswood Manor Improvement Association Collection
+textlong: See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.
+textshort: Community activism in the North Side riverfront neighborhood.
+browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort
+link: "#cfc"
+type: subcollection
+---

@@ -1,0 +1,96 @@
+---
+layout: content
+flag: ''
+title: Chicago Parks
+shortname: Parks
+sidebarname: Parks
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg
+  pich: 250px
+  size: 110%
+  pos: center
+  alt: Five boys furiously set off on a running race from the starting line on an
+    outdoor track in a park while several adult males look on.
+textshort: Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for
+  narrow strip of land along the lakefront in 1836 to more than 500 parks today.
+textlong: Parks have always been a part of Chicago’s city planning. Explore their
+  growth and development from six large parks begun around 1870 to over 500 today.
+textrich: <p>While Chicago&rsquo;s <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront
+  parks</a> are popular with residents and tourists alike, public green space abounds
+  in many parts of the city. Take in <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>,
+  wetlands and woodlands across the urban landscape. Peek into <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field
+  houses</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>.
+  Gaze at <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a>
+  and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>,
+  from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with
+  the parks in all seasons by <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice
+  skating</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing
+  in archery</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking
+  selfies</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating
+  events</a> and more.</p>
+catcoll: that focus on Chicago&rsquo;s parks
+CPLRes:
+- a: https://www.chipublib.org/?post_type=post&s=parks
+  dt: Park Blog Posts
+  dd: Written by CPL librarians and staff.
+findingaid:
+- link: https://www.chipublib.org/fa-chicago-park-district-records/
+  text: 'Chicago Park District Records: Drawings Finding Aid'
+- link: https://www.chipublib.org/fa-clarence-hatzfeld-papers/
+  text: Clarence Hatzfeld Papers Finding Aid
+- link: https://www.chipublib.org/fa-millennium-park-inc/
+  text: Millennium Park, Inc. Finding Aid
+- link: https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/
+  text: Millennium Park / U.S. Equities Realty Collection Finding Aid
+- link: https://www.chipublib.org/fa-open-space-section-records/
+  text: Open Space Section Records Finding Aid
+mainimage:
+  url: '3708'
+  coll: ChicagoParks
+  text: Hula hooping in Horner Park, 1971
+  size: 110%
+  align: center
+  alt: A boy spins two large hoola hoops, one around each wrist, in Horner Park. Several
+    children, one a girl on a bicycle, look on.
+thumbs:
+- url: '2239'
+  coll: mpu
+  text: Cloud Gate, assembly complete, 2004
+  size: cover
+  align: center
+  alt: Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park.
+    SBC Plaza is still under construction and there is construction equipment scattered
+    around. Two construction workers are working to the left of the sculpture and
+    the tall buildings of Michigan Avenue are visible behind the sculpture.
+- url: '112'
+  coll: ChicagoParks
+  text: Addams Park, undated
+  size: 200%
+  align: 52% 17%
+  alt: Three boys in suits play recorders while standing  in a semi-circle around
+    a microphone in a park building. Several adults standing together look on from
+    behind them.
+- url: '4752'
+  coll: ChicagoParks
+  text: Red Saunders performs in Lake Meadow Park, 1970
+  size: 500px
+  align: 55% 25%
+  alt: Musician, Red Saunders, stands on a stage and plays electric guitar in front
+    of a microphone with a band sitting behind him on an outdoor stage in Lake Meadow
+    Park. An audience, both sitting and standing, take in the performance.
+- url: '6209'
+  coll: ChicagoParks
+  text: Palmer Park, 1965
+  size: 140%
+  align: 50% 50%
+  alt: A group of approximately fifty girls in athletic uniform perform standing calisthenics
+    with their arms over their heads in a field house gymnasium in Palmer Park. Three
+    artistic murals are overhead on the wall behind them.
+link: Parks
+type: category
+sidebarflag: x
+---

@@ -1,0 +1,157 @@
+---
+date: 2018-09-08 13:08:29 -0500
+layout: content
+categories: collections
+sidebartype: fixed
+permalink: /:title
+title: Northside Clubs and Organizations
+coll: cfc
+sortname: Northside Clubs and Organizations
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/130/default.jpg
+  pich: 240px
+  size: 175%
+  pos: 20% 55%
+  alt: A juggler performs for onlooking children; a balloon floats in the foreground.
+mainimage:
+  url: '24'
+  text: Christian Fellowship Church, picnic at Schiller Park woods, 1930
+  size: 125%
+  align: 80% 40%
+  alt: Members of the Christian Fellowship Church stand in a circle holding hands
+    in Schiller Park.
+thumbs:
+- url: '396'
+  text: Members of the Girls&rsquo; Patriotic Service League at Portage Park, 1919
+  size: 450px
+  align: 17% 27%
+  alt: Five members of the Girls' Patriotic Service League in old-fashioned bathing
+    costumes stand in a shallow pool of water.
+- url: '61'
+  text: Mayor Harold Washington at the Ravenswood Manor Improvement Association, 70th
+    anniversary celebration, 1984
+  size: 175%
+  align: 50% 50%
+  alt: Mayor Washington smiles and shakes hands with an older woman.
+- url: '144'
+  text: Annual picnic, Ravenswood Manor Improvement Association, circa 1984
+  size: 375px
+  align: 60% 50%
+  alt: A clown and a group of children attend a picnic.  Balloons float above their
+    heads.
+- url: '107'
+  text: Cleanup Parade, Ravenswood Manor, 1965
+  size: 730px
+  align: 80% 40%
+  alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
+    and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
+    Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;
+category: Neighborhoods
+textshort: Glimpse into the activities of the thriving civic service scene on the
+  North Side as well as the rich ethnic and religious heritage of the community.
+textlong: Glimpse into the activities of the thriving civic service scene on the North
+  Side as well as the rich ethnic and religious heritage of the community.
+subdigicoll:
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort
+  dt: Christian Fellowship Church Collection
+  dd: Activities of the church founded by Conrad and Martha Wendtland in their home
+    in 1926.
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort
+  dt: Lake View Council on Religious Action
+  dd: Representatives from local churches and synagogues and members of the Kiwanis
+    Club of Lake View at work
+- a: https://cdm16818.contentdm.oclc.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and
+  dt: Portage Park Community Collection
+  dd: Patriotism on display during World War I.
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort
+  dt: Ravenswood Manor Improvement Association
+  dd: Community activism in the North Side riverfront neighborhood.
+findingaid:
+- link: https://www.chipublib.org/fa-northwest-federation-of-improvement-clubs-records/
+  text: Northwest Federation of Improvement Clubs Records Finding Aid
+- link: https://www.chipublib.org/archival_post/ravenswood-gardens-homeowners-association-records/
+  text: Ravenswood Gardens Homeowners Association Records Finding Aid
+link: cfc
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+subcollections:
+- filename: CFCC
+  title: Christian Fellowship Church Collection
+  sortname: Christian Fellowship Church Collection
+  textlong: See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.
+  textshort: Activities of the church founded by Conrad and Martha Wendtland in their
+    home in 1926.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort
+  link: "#cfc"
+  type: subcollection
+- filename: LVCRA
+  title: Lake View Council on Religious Action
+  sortname: Lake View Council on Religious Action
+  textlong: See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.
+  textshort: Representatives from local churches and synagogues and members of the
+    Kiwanis Club of Lake View at work.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort
+  link: "#cfc"
+  type: subcollection
+- filename: PortPark
+  title: Portage Park Community Collection
+  sortname: Portage Park Community Collection
+  textlong: See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.
+  textshort: Patriotism on display during World War I.
+  browse: https://cdm16818.contentdm.oclc.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and
+  link: "#cfc"
+  type: subcollection
+- filename: RMIA
+  title: Ravenswood Manor Improvement Association Collection
+  sortname: Ravenswood Manor Improvement Association Collection
+  textlong: See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.
+  textshort: Community activism in the North Side riverfront neighborhood.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort
+  link: "#cfc"
+  type: subcollection
+type: collection
+---

@@ -1,0 +1,78 @@
+---
+layout: content
+flag: ''
+title: Libraries &amp; Education
+shortname: Libraries &amp; Education
+sidebarname: Libraries &amp; Education
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/2/default.jpg
+  pich: 250px
+  size: 120%
+  pos: 27% 0%
+  alt: Four children stand in front of a bookmobile trailer, reading. The bookmobile
+    is hitched to a car. The back of the trailer reads &rdquo;The Chicago Public Library
+    Bookmobile.&ldquo;
+mainimage:
+  url: '3595'
+  coll: rvw
+  text: Andersonville School, undated
+  size: 130%
+  align: center
+  alt: Andersonville School
+thumbs:
+- url: '426'
+  coll: hdg
+  text: Jamieson School, 1944
+  size: 130%
+  align: 50% 50%
+  alt: Members of the Jamieson School student council pose in front of a school banner
+    and an American flag.  Six are seated and behind them more students stand in a
+    row.
+- url: '4097'
+  coll: rvw
+  text: Our Lady of Lourdes school library, circa 1942
+  size: 300%
+  align: 40% 40%
+  alt: Several students sit at tables studying in the library of Our Lady of Lourdes
+    School.  A nun holding open a book stands next to a male student.
+- url: '721'
+  coll: ahs
+  text: Drum majorettes, Lave View High School, 1949
+  size: cover
+  align: center
+  alt: 'Five drum majorettes from Lake View High School in full uniform. Caption reads:
+    Lois Dunston, Gerry Gruen, Lorette Loewe, Diane Baxter, Sandy Colby, May 1949'
+- url: '2'
+  coll: woop
+  text: Chicago Public Library bookmobile service, circa 1940
+  size: 150%
+  align: 27% 0%
+  alt: Four children stand in front of a bookmobile trailer, reading.  The bookmobile
+    is hitched to a car.  The back of the trailer reads &rdquo;The Chicago Public
+    Library Bookmobile.&ldquo;
+textshort: Learn about Chicago through its libraries and schools in these photographs
+  dating from the 1860s through the 1990s.
+textlong: Learn about Chicago through its libraries and schools in these photographs
+  dating from the 1860s through the 1990s.
+textrich: Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular
+  water tank</a> that housed the first Chicago Public Library to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school
+  building exteriors</a> from the second half of the 19th century through the first
+  half of 20th century. Feel the energy of its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high
+  school bands</a> and see its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports
+  teams and athletes</a> in action.
+CPLRes:
+- a: https://www.chipublib.org/blogs/category/chicago-history/
+  dt: Chicago History Blog Posts
+  dd: Written by CPL librarians and staff.
+- a: https://www.chipublib.org/archival_subject/chicago-public-library/
+  dt: 'Finding Aids: Chicago Public Library'
+  dd: Descriptive inventories of the archival collections documenting the development
+    of Chicago Public Library.
+- a: https://www.chipublib.org/archival_subject/education/
+  dt: 'Finding Aids: Education'
+  dd: Descriptive inventories of the archival collections of educators, schools and
+    more.
+link: LibEd
+type: category
+sidebarflag: x
+---

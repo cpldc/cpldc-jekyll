@@ -9,6 +9,10 @@ $( document ).ready(function() {
     $( "#showSidebar" ).click(function() {
         showSidebar();
     });
+    if (viewportWidth < 976 ){
+        hideSidebar();
+        switchLayoutC();
+    }
 });
 // sidebar show/hide: 
     function hideSidebar(){
@@ -22,6 +26,9 @@ $( document ).ready(function() {
         $('.main-container').animate(
             {'padding-left': '5px'},
             {duration: 100});
+        // $('.main-content').removeClass('col-xl-6 col-8').addClass('col-xl-9 col-lg-8 col');
+        // $('.sidebar').removeClass('col-4 col-lg-4 col-xl-3');
+        // col-xl-6 col-8
     }
     function showSidebar(){
         $('#showSidebar').toggle();
@@ -31,8 +38,12 @@ $( document ).ready(function() {
         $('.main-container').animate(
             {'padding-left': '235px'},
             {duration: 100});
+        // $('.main-content').removeClass('col-xl-9 col-lg-8 col').addClass('col-xl-6 col-8');
+        // $('.sidebar').addClass('col-4 col-lg-4 col-xl-3');
     }
-
+    function switchLayoutC(){
+        // $('main > .container').removeClass('container').addClass('container-fluid');
+    }
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not
     function expandSearch(){

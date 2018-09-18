@@ -1,4 +1,4 @@
-<div class="sidebar{% if page.sidebartype == "collapse" %} float-left collapsable{% endif %}{% if page.sidebartype == "fixed" %} col-4 col-lg-4 col-xl-3{% endif %}">
+<div class="sidebar{% if page.sidebartype == "collapse" %} float-left collapsable{% elsif page.sidebartype == "fixed" %} col-4 col-lg-4 col-xl-3{% endif %}">
     
     <div class="sidebar-header-button sidebar-header-button-show"  id="showSidebar">
         <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
@@ -23,21 +23,26 @@
         <div class="sidebar-list">
             <p>Browse by Subject</p>
             <ul>
-                {% assign items = site.data.subjects %}
-                {% for item in items %}
+                {% assign sortedSubjects = site.posts | sort: 'sidebarname' %}
+                {% for item in sortedSubjects %}
+                    {% if item.categories contains "subjects"  %}
                     <li>
-                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.sidebarname }}</a>
+                        <a href="{{ item.url }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
         <div class="sidebar-list">
             <p>Browse by Location</p>
             <ul>
-                {% for item in site.data.locations %}
-                    <li>
-                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.title }}</a>
-                    </li>
+                {% assign sortedLocs = site.posts | sort: 'sortname' %}
+                {% for item in sortedLocs %}
+                    {% if item.categories contains "locations"  %}
+                        <li>
+                            <a href="{{ item.url }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
