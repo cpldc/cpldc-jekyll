@@ -186,11 +186,11 @@
             padding-right: 5px;
         }
         .sidebar-list li {
-            margin: 12px 0;
+            margin: 12px 5px 12px 0;
         }
         .sidebar-list p {
             text-transform: uppercase;
-        font-size: 0.88rem;
+            font-size: 0.88rem;
         }
         .sidebar-header-button {
             background-color: #000;
@@ -389,6 +389,12 @@
         .textblock dl {
             padding: 10px 15px 5px 40px;
         }
+
+        // image still loading, show gif: 
+        .loading {
+            padding: 25px 0;
+            background: transparent url('https://cdn-events.bibliocommons.com/1532962502026/img/loader.gif') center no-repeat;
+          }
     // right side
     .events, .blogs {
         background-color: #fff;

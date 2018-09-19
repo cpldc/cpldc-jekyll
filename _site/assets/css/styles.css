@@ -182,7 +182,7 @@ header, .browse-dropdown-toplevel {
   padding-right: 5px; }
 
 .sidebar-list li {
-  margin: 12px 0; }
+  margin: 12px 5px 12px 0; }
 
 .sidebar-list p {
   text-transform: uppercase;
@@ -380,6 +380,10 @@ footer {
 
 .textblock dl {
   padding: 10px 15px 5px 40px; }
+
+.loading {
+  padding: 25px 0;
+  background: transparent url("https://cdn-events.bibliocommons.com/1532962502026/img/loader.gif") center no-repeat; }
 
 .events, .blogs {
   background-color: #fff;

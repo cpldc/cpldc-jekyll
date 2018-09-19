@@ -1,6 +1,7 @@
 
 // when the page is finished loading:
     // show/hide sidebar buttons are active
+var viewportWidth = $(window).width();
 $( document ).ready(function() {
     console.log( "ready!" );
     $( "#hideSidebar" ).click(function() {
@@ -66,6 +67,25 @@ $( document ).ready(function() {
             window.location.href = searchUrl;
         }
     }
+    // loading gif while images are loading
+  /*! waitForImages jQuery Plugin 2018-02-13 */
+         $(function(){
+    $('img.loading').each(function(){
+       var this_image = this;
+       var targetImage = $(this_image).css('background-image');
+       var loadingImage = $(this_image).attr('src');
+       var blankImage = $(this_image).attr('data-src');
+       if(targetImage.length > 0){
+            var img = new Image();
+            $(img).on("load", function() {
+                this_image.targetImage = this.blankImage;
+            });
+            img.src = loadingImage;
+        }else{
+            this_image.src = blankImage;
+        }
+    });
+});
     // media queries: 
 // if page opens at :
     // sm, md: run hideSidebar()

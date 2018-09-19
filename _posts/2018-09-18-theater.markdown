@@ -10,7 +10,7 @@ shortname: Theater
 sortname: Chicago Theater
 sidebarname: Theater
 cardpic:
-  pic: theater-cardpic.png
+  pic: assets/images/theater-cardpic.png
   pich: 250px
   size: auto 225%
   pos: 45% 60%
