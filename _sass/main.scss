@@ -17,6 +17,13 @@
             background-color: rgba(0,0,0,0);
             border-color: rgba(0,0,0,0);
         }
+        .hidden {
+            display: none;
+        }
+        .always-on-top {
+            position: relative;
+            z-index: 100;
+        }
     // header
         header {
             margin-bottom: 15px;
@@ -152,7 +159,6 @@
         }
         .sidebar {
             color: #fff;
-            // overflow: hidden;
             height: 100%;
         }
         .collapsable {
@@ -162,6 +168,7 @@
         #sidebar-toplevel {
             height: 100%;
             background-color: #000;
+            overflow: hidden;
         }
         .sidebar a, header a {
             color: inherit;
@@ -192,6 +199,9 @@
             text-transform: uppercase;
             font-size: 0.88rem;
         }
+        .sidebar-list ul {
+            padding-left: 0;
+        }
         .sidebar-header-button {
             background-color: #000;
         }
@@ -211,8 +221,30 @@
             text-decoration: underline;
         }
     // main - center content
-        .main-container {
-            padding-left: 235px;
+        // .main-container {
+        //     width: calc(100% - 235px);
+        //     margin-left: 235px;
+        // }
+        .main-container-wide {
+            width: calc(100% - 75px);
+            margin-left: 55px;
+            margin-right: 10px;
+        }
+        .main-container-narrow {
+            width: calc(100% - 255px);
+            margin-left: 235px;
+            margin-right: 10px;
+        }
+        .sidebar-narrow {
+            //used when sidebar is attached to the left
+            width: 230px;
+        }
+        .sidebar-wide {
+            width: inherit;
+            margin-left: inherit;
+        }
+        .sidebar-gone {
+            width: 0;
         }
         .grid {
             margin: 0 auto;
@@ -220,6 +252,10 @@
         .grid-item {
             margin-bottom: 20px;
             box-shadow: 4px 3px 5px -4.5px #3f4344;
+        }
+        .content {
+            box-shadow: 4px 3px 5px -4.5px #3f4344;
+            background-color: #fff;
         }
     // cards
         .card {

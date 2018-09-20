@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
     <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Vivian G. Harsh Research Collection | Digital Collections | Chicago Public Library</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -29,12 +30,24 @@
         <div class="row">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col header-left">
+                    <div class="col header-left hidden-md-down" id="logo-fullSize">
                         <a href="https://www.chipublib.org/">
                             <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                         </a>
                         <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
                     </div>
+                    <div class="col header-left hidden-lg-up" id="logo-small">
+                        <div class="header-small-img">
+                            <a href="https://www.chipublib.org/">
+                                <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 
+                        <div class="hidden-lg-up col">
+                            <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
+                            <div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
+                        </div> -->
                     <div class="col header-right">
                         <div class="search float-right" onclick="expandSearch()" tabindex="0">
                             <span class="search-text">Search</span>
@@ -136,18 +149,22 @@
             </div>
         </section>
     </header>
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="sidebar col-4 col-lg-4 col-xl-3">
+    <main id="sidebar-c-target">
+        <div class="container fixed main-container">
+            <div class="row" id="sidebar-f-target">
+                <div id="sidebar" class="sidebar col-4 col-lg-4 col-xl-3">
     
-    <div class="sidebar-header-button sidebar-header-button-show"  id="showSidebar">
+    <div class="sidebar-header-button sidebar-header-button-show always-on-top"  id="showSidebar">
         <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
     </div>
     <div id="sidebar-toplevel">
         <div class="sidebar-header">
             <div class="sidebar-header-text clearfix">
                 <a href="https://digital.chipublib.org/">Digital Collections</a>
+                
+                <div class="sidebar-header-button sidebar-header-button-hide always-on-top float-right hidden" style="z-index: 2" id="hideSidebar">
+                    <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
+                </div>
                 
             </div>
             <script>
@@ -402,7 +419,7 @@
     </div>
 
 </div>
-                <div class="card main-content col-xl-6 col-8">
+                <div class="content main-content col-xl-6 col-8">
                     <h1 class="page-title">Vivian G. Harsh Research Collection</h1>
                     <section class="intro">
                         <div class="prosecontent">The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature at <a href="https://www.chipublib.org/locations/81">Woodson Regional Library</a> documents the black experience with a strong focus on Chicago.</div>
@@ -493,7 +510,7 @@
                     </section>
                 </div>
                 <div class="hidden-lg-down col-lg-3 right-sidebar">
-                    <div class="card blogs">
+                    <div class="content blogs">
                         <div class="blogs-title">
                             <h2>Chicago History Blog</h2>
                         </div>
@@ -507,7 +524,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card events">
+                    <div class="content events">
                             <div class="events-title">
                                 <h2>History &amp; Genealogy Events</h2>
                             </div>

@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-08T13:08:29-05:00" />
 <script type="application/ld+json">
-{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/welcome-to-jekyll"},"@type":"BlogPosting","url":"http://localhost:4000/welcome-to-jekyll","headline":"Welcome to Jekyll!","dateModified":"2018-09-08T13:08:29-05:00","datePublished":"2018-09-08T13:08:29-05:00","@context":"http://schema.org"}</script>
+{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","@type":"BlogPosting","url":"http://localhost:4000/welcome-to-jekyll","headline":"Welcome to Jekyll!","dateModified":"2018-09-08T13:08:29-05:00","datePublished":"2018-09-08T13:08:29-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/welcome-to-jekyll"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
 <body><header>
@@ -23,12 +23,24 @@
         <div class="row">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col header-left">
+                    <div class="col header-left hidden-md-down" id="logo-fullSize">
                         <a href="https://www.chipublib.org/">
                             <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                         </a>
                         <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
                     </div>
+                    <div class="col header-left hidden-lg-up" id="logo-small">
+                        <div class="header-small-img">
+                            <a href="https://www.chipublib.org/">
+                                <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 
+                        <div class="hidden-lg-up col">
+                            <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
+                            <div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
+                        </div> -->
                     <div class="col header-right">
                         <div class="search float-right" onclick="expandSearch()" tabindex="0">
                             <span class="search-text">Search</span>

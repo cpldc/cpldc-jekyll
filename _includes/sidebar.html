@@ -1,17 +1,17 @@
-<div class="sidebar{% if page.sidebartype == "collapse" %} float-left collapsable{% elsif page.sidebartype == "fixed" %} col-4 col-lg-4 col-xl-3{% endif %}">
+<div id="sidebar" class="sidebar{% if page.sidebartype == "collapse" %} float-left collapsable{% elsif page.sidebartype == "fixed" %} col-4 col-lg-4 col-xl-3{% endif %}">
     
-    <div class="sidebar-header-button sidebar-header-button-show"  id="showSidebar">
+    <div class="sidebar-header-button sidebar-header-button-show always-on-top"  id="showSidebar">
         <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
     </div>
     <div id="sidebar-toplevel">
         <div class="sidebar-header">
             <div class="sidebar-header-text clearfix">
                 <a href="https://digital.chipublib.org/">Digital Collections</a>
-                {% if page.sidebartype == "collapse" %}
-                <div class="sidebar-header-button sidebar-header-button-hide float-right" style="z-index: 2" id="hideSidebar">
+                
+                <div class="sidebar-header-button sidebar-header-button-hide always-on-top float-right{% if page.sidebartype == "fixed" %} hidden{% endif %}" style="z-index: 2" id="hideSidebar">
                     <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
                 </div>
-                {% endif %}
+                
             </div>
             <script>
 
