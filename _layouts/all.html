@@ -27,8 +27,24 @@
                     <dl class="all-collections">
                         {% for post in sortedPosts %}
                             {% if post.type == 'collection' or post.type == 'subcollection' %}
-                                <dt>{{ post.sortname }}</dt>
-                                <dd>{{ post.textshort }}</dd>
+                                <dt id="{{ post.slug }}">
+                                    {% if post.type == 'collection' %}
+                                        <a href="{{ post.url }}">{{ post.sortname }}</a>
+                                    {% else %}
+                                        {{ post.sortname }}
+                                    {% endif %}
+                                </dt>
+                                <dd>{{ post.textlong }}</dd>
+                                {% if post.type == 'collection' %}
+                                    <dd class="all-collections-category">Found in
+                                        {% if post.category.first %}
+                                            <a class="catlink-one" href="{{ post.category[0] }}">{{ post.categoryFull[0] }}</a>
+                                            <a class="catlink-two" href="{{ post.category[1] }}">{{ post.categoryFull[1] }}</a>
+                                        {% else %}
+                                            <a href="{{ post.category }}">{{ post.categoryFull }}</a>
+                                        {% endif %}
+                                    </dd>
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                     </dl>

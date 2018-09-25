@@ -5,7 +5,7 @@ title: Chicago Renaissance
 sidebartype: fixed
 permalink: /:title
 contenttype: collections
-flag: '8'
+flag: 8
 coll: cr
 sortname: Chicago Renaissance
 cardpic:

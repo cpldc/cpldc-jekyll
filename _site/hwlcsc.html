@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+
+    <title>Special Collections at HWLC | Digital Collections | Chicago Public Library</title>
+</head>
+<body class="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/js/cpldc.js"></script>
+<script src="/assets/js/simpleLightbox.js"></script>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/simpleLightbox.css">
+<!-- <link rel="stylesheet" href="cpldc.css" > -->
+    
+    
+    <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col header-left hidden-md-down" id="logo-fullSize">
+                        <a href="https://www.chipublib.org/">
+                            <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
+                        </a>
+                        <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
+                    </div>
+                    <div class="col header-left hidden-lg-up" id="logo-small">
+                        <div class="header-small-img">
+                            <a href="https://www.chipublib.org/">
+                                <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 
+                        <div class="hidden-lg-up col">
+                            <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
+                            <div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
+                        </div> -->
+                    <div class="col header-right">
+                        <div class="search float-right" onclick="expandSearch()" tabindex="0">
+                            <span class="search-text">Search</span>
+                            <input type="text" id="search-input">
+                            <i onclick="searchContent()" class="search-icon-white fa fa-search" id="search-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="header-button" id="browse-button" onclick="expandBrowseDropdown()" tabindex="0">Browse<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div class="header-button" id="events-button" onclick="" tabindex="0">
+                        <a href="https://chipublib.bibliocommons.com/events/search/index">
+                            <i class="fa fa-calendar"></i>
+                            Events
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="browse-dropdown-toplevel"  id="browseDropdown" onclick="expandBrowseDropdown()">
+        <div class="container browse-dropdown">
+            <div class="row">
+                <div class="browse-dropdown-header">Browse</div>
+                <div class="browse-dropdown-middlelist">
+                    <span class="browse-dropdown-list browse-dropdown-list-header">By Format</span>
+                    <ul>
+                        
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/books/">Books</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/ebooks/">eBooks</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/music/">Music</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="browse-dropdown-middlelist">
+                    <span class="browse-dropdown-list browse-dropdown-list-header">By Audience</span>
+                    <ul>
+                        
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/kids/">Kids</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/teens/">Teens</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="browse-dropdown-list">
+                    <span class="browse-dropdown-list-header">More</span>
+                    <ul>
+                        
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/online-resources/">Online Resources</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.chipublib.org/archives-collections/">Archival Collections</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.chipublib.org/browse_program/one-book-one-chicago/">One Book, One Chicago</a>
+                        </li>
+                        
+                    </ul></div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main id="sidebar-c-target">
+        <div class="container fixed main-container">
+            <div class="row" id="sidebar-f-target">
+                <div id="sidebar" class="sidebar col-4 col-lg-4 col-xl-3">
+    
+    <div class="sidebar-header-button sidebar-header-button-show always-on-top"  id="showSidebar">
+        <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
+    </div>
+    <div id="sidebar-toplevel">
+        <div class="sidebar-header">
+            <div class="sidebar-header-text clearfix">
+                <a href="https://digital.chipublib.org/">Digital Collections</a>
+                
+                <div class="sidebar-header-button sidebar-header-button-hide always-on-top float-right hidden" style="z-index: 2" id="hideSidebar">
+                    <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
+                </div>
+                
+            </div>
+            <script>
+
+            </script>
+        </div>
+        <div class="sidebar-all">
+            View All Collections 
+        </div>
+        <div class="sidebar-list sidebar-separator">
+            <p>Browse by Subject</p>
+            <ul>
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/afam" >African Americans</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/civilwar" >Civil War</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/rhwc" >Harold Washington</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/libed" >Libraries &amp; Education</a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/neigh" >Neighborhoods</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/examiner" >Newspapers</a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/parks" >Parks</a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/theater" >Theater</a>
+                    </li>
+                    
+                
+                    
+                
+            </ul>
+        </div>
+        <div class="sidebar-list sidebar-separator">
+            <p>Browse by Location</p>
+            <ul>
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="/harsh" >Vivian G. Harsh Collection</a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="/mrc" >Municipal Reference Collection</a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="/nnhc" >Northside Neighborhood History Collection</a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="/hwlcsc" class="current">Special Collections at HWLC</a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </div>
+        <div class="sidebar-list sidebar-separator">
+            <p>Related Links</p>
+            <ul>
+                <li>
+                    <a href="http://www.chipublib.org/archives-collections/" class="sidebar-links">Archival Collections</a>
+                </li>
+                <li>
+                    <a href="http://www.chipublib.org/browse/chicago-history/" class="sidebar-links">Chicago History</a>
+                </li>
+                <li>
+                    <a href="https://www.chipublib.org/resources/history/" class="sidebar-links">Online Resources: History &amp; Social Science</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-list">
+            <p>External Resources</p>
+            <ul>
+                <li>
+                    <a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a>
+                </li>
+                <li>
+                    <a href="https://dp.la/" class="sidebar-links">Digital Public Library of America</a>
+                </li>
+                <li>
+                    <a href="http://explore.chicagocollections.org/" class="sidebar-links">Explore Chicago Collections</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+                <div class="content main-content col-xl-6 col-8">
+                    <h1 class="page-title">Special Collections at HWLC</h1>
+                    <section class="intro">
+                        <div class="prosecontent">The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold Washington Library Center</a> showcases rare books and archival material relating to Chicago history. Major areas of interest include: Chicago authors and publishing, Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s world’s fairs and Mayor Harold Washington.</div>
+                    </section>
+                    <section class="images">
+                        <div class="container-fluid lightbox imageGallery">
+                            <div class="row">
+                                <div class="col justify-content-center lightbox-mainimage">
+                                    <a href="http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg" data-caption="<a href=>Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870</a>" data-alt="Engraving of a water tank on a support. Trees, grazing cattle, and a fence are pictured in front along with two men wearing hats." title="Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870" class="loading">
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" alt="Engraving of a water tank on a support. Trees, grazing cattle, and a fence are pictured in front along with two men wearing hats." style="background-image: url(http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: 105%; background-position: 50% 50%" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row lightbox-thumbs justify-content-center">
+                                
+                                
+                                
+                                    <div class="col">
+                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/CPB01/2196/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection//id/2196><em>The Philanderer</em>, Chicago Little Theatre, 1914</a>" data-alt="Black and white drawing of a peacock on a branch in front of an orange circle" class="loading">
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Black and white drawing of a peacock on a branch in front of an orange circle" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/CPB01/2196/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: 170%; background-position: 25% 22%" />
+                                        </a>
+                                    </div>
+                                    
+                                
+                                
+                                    <div class="col">
+                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection//id/4833>Dancers at Madden Park, 1954</a>" data-alt="Young women in white leotards and skirts pose with their arms extended and knees bent" class="loading">
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Young women in white leotards and skirts pose with their arms extended and knees bent" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: 140%; background-position: center" />
+                                        </a>
+                                    </div>
+                                    
+                                
+                                
+                                    <div class="col hidden-sm-down">
+                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/42/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection//id/42>Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved President, Abraham Lincoln,&rdquo; 1865</a>" data-alt="Poster" class="loading">
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Poster" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/42/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: 105%; background-position: 50% 20%" />
+                                        </a>
+                                    </div>
+                                    
+                                
+                                
+                                    <div class="col hidden-xs-down">
+                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/4066/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection//id/4066>Crown Fountain preview, 2004</a>" data-alt="Three boys play in water in front of a lighted brick wall" class="loading">
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Three boys play in water in front of a lighted brick wall" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/4066/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: 370%; background-position: 50% 50%" />
+                                        </a>
+                                    </div>
+                                    
+                                
+                            </div>
+                        </div>
+                        <script>
+                            $('.imageGallery a').simpleLightbox();
+                        </script>
+                    </section>
+                    <section class="prosecontent" id="mainTextContent">
+                        <div class="center-button browseall" id="browseButton">
+                            <a href="http://digital.chipublib.org/digital/search/collection//order/title/ad/asc" id="allButton" class="btn btn-primary">
+                                Browse All
+                            </a>
+                        </div>
+                        <div class="prosecontent" id="textAndLists">
+                            
+                            
+                            
+                                <div class="textblock">
+                                    <h3>Digital Collections</h3>
+                                    <span>Collections  from the Special Collections and Preservation Division at Harold Washington Library Center include:</span>
+                                    <dl>
+                                        
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="woop">Chicago Public Library Archives</a></dt>
+                                                <dd>
+                                                    Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.
+                                                </dd>
+                                            
+                                        
+                                            
+                                                <dt><a href="wha">Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections</a></dt>
+                                                <dd>
+                                                    Camp equipment, weaponry and uniforms used on the homefront and the battlefield.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="CPB01">Chicago Theater</a></dt>
+                                                <dd>
+                                                    Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="rhwc">Remembering Harold Washington</a></dt>
+                                                <dd>
+                                                    Chicago&rsquo;s first African American mayor served from 1983 to 1987, and his legacy endures.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="mpu">Millennium Park U.S. Equities Realty Collection</a></dt>
+                                                <dd>
+                                                    See a rail yard transform into a dynamic urban park.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="examiner">Chicago Examiner</a></dt>
+                                                <dd>
+                                                    Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="dtd">Chicago Sewers Collection</a></dt>
+                                                <dd>
+                                                    Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                                <dt><a href="ChicagoParks">Chicago Park District Records: Photographs</a></dt>
+                                                <dd>
+                                                    Photographs from the Chicago Park District document how the city’s parks have grown, changed and been enjoyed for more than a century.
+                                                </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                    </dl>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                                <div class="textblock" aria-label="Location"><dl>
+                                    <dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
+                                    <dd class="contact-list-item">Phone: (312) 747-4875</dd>
+                                    <dd class="contact-list-item">
+                                        <a href="mailto:specoll@chipublib.org">specoll@chipublib.org</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            
+                        </div>
+                    </section>
+                </div>
+                <div class="hidden-lg-down col-lg-3 right-sidebar">
+                    <div class="content blogs">
+                        <div class="blogs-title">
+                            <h2>Chicago History Blog</h2>
+                        </div>
+                        
+<!-- saved from url=(0074)https://cdm16818.contentdm.oclc.org/customizations/global/pages/blogs.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="blogpost"><dl><dt class="blogpost-title"><a href="https://www.chipublib.org/blogs/post/chicago-fought-to-limit-flus-spread-during-1918-epidemic/" class="blogpost-link">Chicago Fought to Limit Flu’s Spread During 1918 Epidemic<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: SarahD, September 10, 2018</dd><dd class="blogpost-description">A hundred years ago, the Spanish flu spread throughout the world,…</dd></dl><dl><dt class="blogpost-title"><a href="https://www.chipublib.org/blogs/post/changes-in-writing-from-slates-to-typewriters-in-chicagos-schools/" class="blogpost-link">From Slates to Typewriters in Chicago’s Schools<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: Sarah, August 24, 2018</dd><dd class="blogpost-description">Freshly sharped pencils are often associated with the beginning o…</dd></dl><dl><dt class="blogpost-title"><a href="https://www.chipublib.org/blogs/post/lincoln-park-zoo-turns-150/" class="blogpost-link">Lincoln Park Zoo Turns 150<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: Johanna, August 24, 2018</dd><dd class="blogpost-description">The Lincoln Park Zoo&nbsp;has been a staple of Chicago for longer tha…</dd></dl></div><span id="sbmarwbthv5"></span></body></html>
+                        <div class="blogs-viewmore">
+                            <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content events">
+                            <div class="events-title">
+                                <h2>History &amp; Genealogy Events</h2>
+                            </div>
+                        
+<!-- saved from url=(0075)https://cdm16818.contentdm.oclc.org/customizations/global/pages/events.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="event"> <h3 class="event-title"><a href="https://chipublib.bibliocommons.com/events/5ac4fe0e97e56525007982a8" class="event-link">Military Genealogy 1776-1955<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="https://www.chipublib.org/locations/67" class="event-location-link">Sulzer Regional</a></div><div class="event-datetime"><div class="event-date">Sep 15</div><div class="event-time">10:00AM</div></div></div><div class="event"> <h3 class="event-title"><a href="https://chipublib.bibliocommons.com/events/5b573f1d4739662400a4077f" class="event-link">Remembering the Chicago Municipal Tuberculosis Sanitarium: A City within a City<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="https://www.chipublib.org/locations/67" class="event-location-link">Sulzer Regional</a></div><div class="event-datetime"><div class="event-date">Sep 19</div><div class="event-time">1:00PM</div></div></div><div class="event"> <h3 class="event-title"><a href="https://chipublib.bibliocommons.com/events/5a982560a226322500195bba" class="event-link">Patricia Liddell Researchers: Show and Tell<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="https://www.chipublib.org/locations/81" class="event-location-link">Woodson Regional</a></div><div class="event-datetime"><div class="event-date">Sep 22</div><div class="event-time">1:15PM</div></div></div><div class="event"> <h3 class="event-title"><a href="https://chipublib.bibliocommons.com/events/5aa6b1e4b2e43d2e00fe5976" class="event-link">Discover the Histories and Mysteries of Your Ancestors<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="https://www.chipublib.org/locations/82" class="event-location-link">Wrightwood-Ashburn</a></div><div class="event-datetime"><div class="event-date">Sep 24</div><div class="event-time">6:00PM</div></div></div><div class="event"> <h3 class="event-title"><a href="https://chipublib.bibliocommons.com/events/5b69d4f5b23bca2e004e82af" class="event-link">Finding Your Family Tree<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="https://www.chipublib.org/locations/53" class="event-location-link">Near North</a></div><div class="event-datetime"><div class="event-date">Sep 24</div><div class="event-time">6:30PM</div></div></div><span id="sbmarwbthv5"></span></body></html>
+                        <div class="events-viewmore">
+                            <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="">
+	<section class="footer-top" role="navigation">
+		<div class="container">
+			<div class="row align-items-top">
+				<div class="col-md-1">
+					<div class="footer-list footer-social">
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/pages/Chicago-Public-Library/35447572453">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-fb"></i>
+										<i class="fa fa-stack-1x fa-facebook footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/chipublib">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-tw"></i>
+										<i class="fa fa-stack-1x fa-twitter footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/chicagopubliclibrary/">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-ig"></i>
+										<i class="fa fa-stack-1x fa-instagram footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">
+									<span class="fa-stack fa-lg hover-dim">
+										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-cc" ></i>
+										<i class="fa fa-stack-1x fa-newspaper-o footer-social-icons-fg"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-list">
+						<h2>Digital Collections</h2>
+						<ul>
+							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
+							<li><a href="http://digital.chipublib.org/digital/search">Browse All</a></li>
+							<li><a href="content.php?id=Takedown">Copyright &amp; Takedown</a></li>
+							<li><a href="content.php?id=About">About</a></li>
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-list footer-floatright">
+						<h2>Services</h2>
+						<ul>
+							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
+							<li><a href="https://www.chipublib.org/ask-a-librarian/">Ask a Librarian</a></li>
+							<li><a href="https://www.chipublib.org/order-a-photo-reproduction/">Order a Photo Reproduction</a></li>
+							
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-list footer-floatright">
+						<h2>Chicago Public Library</h2>
+						<ul>
+							<li><a href="https://www.chipublib.org/">CPL Home</a></li>
+							<li><a href="https://www.chipublib.org/archives-collections/">Archival Collections</a></li>
+							<li><a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">Sign Up for Email Updates</a></li>
+							<li><a href="https://www.chipublib.org/library-policies/website-accessibility-policy/">Website Accessibility Policy</a></li> 
+							<!-- <li><a href=""></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-contactinfo footer-floatright">
+						<address>
+							<strong>Contact Us</strong><br>
+							Chicago Public Library<br>
+							400 S. State Street<br>
+							Chicago, IL 60605<br>
+							(312) 747-4300
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="footer-bottom" role="copyright">
+		<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-md-4">
+						<div class="footer-logo-img"><a href="https://secure3.convio.net/cplf/site/Donation2?idb=330762243&DONATION_LEVEL_ID_SELECTED=1&df_id=2140&mfc_pref=T&2140.donation=form1&idb=0"><img src="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/02/CPLSupportCPLF_web_130x60.png?v=1505779744150575491515057548853" alt="" /></a></div>
+					</div>
+					<div class="col-md-4 offset-md-4">
+						<div class="footer-bottom-right footer-floatright">
+							<a href="http://www.cityofchicago.org/">City of Chicago</a>&nbsp;&copy; 2017 Chicago Public Library
+						</div>
+					</div>
+				</div>
+		</div>	
+	</section>
+</footer>
+</body>
+</html>

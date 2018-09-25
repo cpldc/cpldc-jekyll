@@ -13,9 +13,46 @@
             height: 100%;
             position: relative;
         }
+        .content a {
+            color: #234c86;
+            text-decoration: none;
+            border-bottom: 1px solid #909696;
+        }
+        .content a:hover {
+            text-decoration: none;
+            color: #234c86;
+            border-bottom: 2px solid #909696;
+        }
+        .content dt a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #262626;
+            border-bottom: none;
+        }
+        .content dt a:hover {
+            color: #262626;
+            text-decoration: underline;
+            border-bottom: none;
+        }
+        #browseButton a {
+            background-color: #2d63af !important;
+            border-bottom: inherit;
+            border-color: #2d63af !important;
+            color: #fff;
+        }
+        #browseButton a:hover {
+            border-bottom: inherit;
+        }
         header button {
             background-color: rgba(0,0,0,0);
             border-color: rgba(0,0,0,0);
+        }
+        .hidden {
+            display: none;
+        }
+        .always-on-top {
+            position: relative;
+            z-index: 100;
         }
     // header
         header {
@@ -152,8 +189,6 @@
         }
         .sidebar {
             color: #fff;
-            // overflow: hidden;
-            // height: 100%;
         }
         .collapsable {
             max-width: 230px;
@@ -162,6 +197,7 @@
         #sidebar-toplevel {
             height: 100%;
             background-color: #000;
+            overflow: hidden;
         }
         .sidebar a, header a {
             color: inherit;
@@ -175,11 +211,8 @@
             min-height: 50px;
             padding-top: 15px;
         }
-        .sidebar-header, .sidebar-all, .sidebar-list {
+        .sidebar-header, .sidebar-all, .sidebar-separator {
             border-bottom: 1px solid #fff;
-        }
-        .sidebar-list-last {
-            border: none;
         }
         .sidebar-all {
             border-bottom: 1px dashed #fff;
@@ -194,6 +227,9 @@
         .sidebar-list p {
             text-transform: uppercase;
             font-size: 0.88rem;
+        }
+        .sidebar-list ul {
+            padding-left: 0;
         }
         .sidebar-header-button {
             background-color: #000;
@@ -210,12 +246,37 @@
             top: 13px;
             left: 0.75rem;
         }
+        .sidebar-height {
+            height: 100%;
+        }
         .current {
             text-decoration: underline;
         }
     // main - center content
-        .main-container {
-            padding-left: 235px;
+        // .main-container {
+        //     width: calc(100% - 235px);
+        //     margin-left: 235px;
+        // }
+        .main-container-wide {
+            width: calc(100% - 75px);
+            margin-left: 55px;
+            margin-right: 10px;
+        }
+        .main-container-narrow {
+            width: calc(100% - 255px);
+            margin-left: 235px;
+            margin-right: 10px;
+        }
+        .sidebar-narrow {
+            //used when sidebar is attached to the left
+            width: 230px;
+        }
+        .sidebar-wide {
+            width: inherit;
+            margin-left: inherit;
+        }
+        .sidebar-gone {
+            width: 0;
         }
         .grid {
             margin: 0 auto;
@@ -224,15 +285,13 @@
             margin-bottom: 20px;
             box-shadow: 4px 3px 5px -4.5px #3f4344;
         }
+        .content {
+            box-shadow: 4px 3px 5px -4.5px #3f4344;
+            background-color: #fff;
+        }
     // cards
         .card {
-            box-shadow: 4px 3px 5px -4.5px #3f4344;
-        }
-        .grid > .card {
             margin-bottom: 10px;
-        }
-        .card {
-            // margin-bottom: 10px;
             box-shadow: 4px 3px 5px -4.5px #3f4344;
         }
         .card-bottom {
@@ -249,41 +308,6 @@
             font-size: 1.21rem;
             line-height: 24px;
             color: #3f4344;
-        }
-        .catlink-one {
-            padding-right: 0.5rem;
-        }
-        .catlink-two {
-            padding-left: 0.5rem;
-            border-left: 1px solid #2d63af;
-        }
-    // all collections 
-        .all-collections dt {
-            padding-bottom: 10px;
-            padding-top: 24px;
-            margin-top: 16px;
-            border-top: 1px solid #ccc;
-            a {
-                text-decoration: none;
-                font-size: 1rem;
-                color: #262626;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-        .all-collections-category {
-            font-size: 13px;
-            color: #3f4344;
-            a {
-                border-bottom: 1px dotted #909696;
-                font-size: 14px;
-                color: #234c86;
-            }
-            a:hover {
-                text-decoration: none;
-                border-bottom: 1px solid #909696;
-            }
         }
     // footer
         footer {
@@ -439,11 +463,6 @@
             padding: 25px 0;
             background: transparent url('https://cdn-events.bibliocommons.com/1532962502026/img/loader.gif') center no-repeat;
           }
-        .rsaquo {
-            // padding-left: 5px;
-            font-size: 15px;
-            font-weight: 700;
-        }
     // right side
     .events, .blogs {
         background-color: #fff;
@@ -544,4 +563,18 @@
     }
     .events-viewmore a:hover, .blogs-viewmore a:hover {
         color: #2d63af;
+    }
+    // all
+    .all-collections dt a, .all-collections dt {
+        font-size: 18px;
+    }
+    .all-collections-category {
+        font-size: 13px;
+        color: #3f4344;
+    }
+    .all-collections dt {
+        padding-bottom: 10px;
+        padding-top: 24px;
+        margin-top: 16px;
+        border-top: 1px solid #ccc;
     }
