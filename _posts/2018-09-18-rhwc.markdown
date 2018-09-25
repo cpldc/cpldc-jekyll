@@ -5,7 +5,7 @@ title: Remembering Harold Washington
 sidebartype: fixed
 permalink: /:title
 categories: [collections, subjects]
-flag: '5'
+flag: 5
 link: rhwc
 coll: rhwc
 sortname: Remembering Harold Washington
@@ -18,7 +18,8 @@ cardpic:
   pos: 75% 40%
   alt: Mayor Washington smiles and points to the crowd while riding on the back of
     a convertible.
-category: African Americans
+category: afam
+categoryFull: African Americans
 textshort: Chicago&rsquo;s first African American mayor served from 1983 to 1987,
   and his legacy endures.
 textlong: Mayor Harold Washington, the first African American mayor of Chicago, transformed

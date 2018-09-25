@@ -7,7 +7,14 @@
     </a>
     <div class="card-bottom">
         {% if item.category  %}
-            <span class="card-subj">{{ item.category }}</span>
+            <span class="card-subj">
+                {% if item.category.first %}
+                        <a class="catlink-one" href="{{ item.category[0] }}">{{ item.categoryFull[0] }}</a>
+                        <a class="catlink-two" href="{{ item.category[1] }}">{{ item.categoryFull[1] }}</a>
+                {% else %}
+                        <a href="{{ item.category }}">{{ item.categoryFull }}</a>
+                {% endif %}
+            </span>
             <br />
         {% endif %}
         <a href="{{ item.url }}">

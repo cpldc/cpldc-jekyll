@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '7'
+flag: 7
 sidebartype: fixed
 permalink: /:title
 title: Chicago Examiner
@@ -14,7 +14,8 @@ cardpic:
   pich: 19rem
   size: 110% auto
   pos: 50% -15px
-category: Newspapers
+category: news
+categoryFull: Newspapers
 textshort: Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i>
   extends from 1908 to 1918 and represents the longest run of the Hearst newspaper
   still available.

@@ -15,8 +15,7 @@ cardpic:
   alt: Lake View High School baseball team, seated for posed photograph, 1893
 mainimage:
   url: '634'
-  text: Captain Louis D. Walz and Lake View High School drum major and majorettes,
-    1942
+  text: Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942
   size: 110%
   align: center
   alt: Louis D. Walz poses with eight drum majorettes and one drum major.  They are
@@ -47,8 +46,8 @@ thumbs:
   alt: The Lake View High School football team stands on the tarmac in front of an
     airplane.  They are on their way to watch the Orange Bowl.
 category:
-- Neighborhoods
-- Libraries &amp; Education
+- neigh
+- libed
 textshort: Photographs of high school football games, theatrical productions, dances
   and extracurricular activities from the 1870s to the 1950s.
 textlong: Photographs of high school football games, theatrical productions, dances

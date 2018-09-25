@@ -20,6 +20,7 @@
         {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
     {% endif %}
     {% include header.html %}
+    {% assign sortedPosts = site.posts | sort:"sortname" %}
     <main>
         <div class="container">
             <div class="row">
@@ -33,7 +34,7 @@
                         <div class="container-fluid lightbox imageGallery">
                             <div class="row">
                                 <div class="col justify-content-center lightbox-mainimage">
-                                    <a href="{{ mainimage }}" data-caption="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" title="{{ page.mainimage.text }}" class="loading">
+                                    <a href="{{ mainimage }}" class="loading" data-caption="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" title="{{ page.mainimage.text }}">
                                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
                                     </a>
                                 </div>
@@ -47,7 +48,7 @@
                                     {% assign coll = page.coll %}
                                 {% endif %}
                                     <div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}">
-                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ thumb.col }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
+                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" class="loading" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ thumb.col }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ thumb.size }}; background-position: {{ thumb.align }}" />
                                         </a>
                                     </div>
@@ -99,23 +100,20 @@
                                                 <dd>{{ subcoll.dd }}</dd>
                                             {% endfor %}
                                         {% endif %}
-                                        {% for subcoll in data.site.collections %}
-                                            {% if page.type == 'category' and subcoll.category == page.title %}
-                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
-                                                <dl>
-                                                    {{ subcoll.textshort }}
-                                                    {% if subcoll.link == 'RVLV' and page.link == 'LibEd' %}
-                                                        This collection contains images of high schools in the neighborhoods.
-                                                    {% endif %}
-                                                    {% if subcoll.link == 'Sang' and page.link == 'Civilwar'%}
+                                        {% for post in sortedPosts %}
+                                            {% if page.type == 'category' and post.category contains page.slug %}
+                                                <dt><a href="{{ post.link }}">{{ post.title }}</a></dt>
+                                                <dd>
+                                                    {{ post.textshort }}
+                                                    {% if post.slug == 'p16818coll6' and page.slug == 'civilwar'%}
                                                         A number of documents in the collection were created during the Civil War.
                                                     {% endif %}
-                                                </dl>
-                                            {% elsif page.type == 'location' and subcoll.location == page.link %}
-                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
-                                                <dl>
-                                                    {{ subcoll.textshort }}
-                                                </dl>
+                                                </dd>
+                                            {% elsif page.type == 'location' and post.location contains page.slug %}
+                                                <dt><a href="{{ post.link }}">{{ post.title }}</a></dt>
+                                                <dd>
+                                                    {{ post.textshort }}
+                                                </dd>
                                             {% endif %}
                                         {% endfor %}
                                     </dl>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% include libraries.html %}
+    {% include header.html %}
+    {% assign sortedPosts = site.posts | sort:"sortname" %}
+    <main>
+        <div class="container">
+            <div class="row">
+                {% include sidebar.html %}
+                <div class="card main-content col-xl-6 col-8">
+                    <h1 class="page-title">Digital Collections A-Z</h1>
+                    <dl class="all-collections">
+                        {% for coll in sortedPosts %}
+                        {% if coll.categories contains 'collections' or coll.categories contains 'subcollections' %}
+                            <dt>
+                                {% if coll.categories contains 'collections' %}
+                                    <a href="{{ coll.url }}" id="{{ coll.slug }}">{{ coll.sortname }} </a><i class="rsaquo fa fa-angle-right" aria-hidden="true"></i>
+                                {% else %}
+                                    {{ coll.sortname }}
+                                {% endif %}
+                            </dt>
+                            <dd>{{ coll.textlong }}</dd>
+                            {% if coll.category.first %}
+                                <dd class="all-collections-category">
+                                    Found in 
+                                    <a href="{{ coll.category[0] }}">{{ coll.categoryFull[0] }}</a>
+                                    <a href="{{ coll.category[1] }}">{{ coll.categoryFull[1] }}</a>
+                                </dd>
+                            {% elsif coll.category %}
+                                <dd class="all-collections-category">
+                                    Found in 
+                                    <a href="{{ coll.category }}">{{ coll.categoryFull }}</a>
+                                </dd>
+                            {% endif %}
+                            </dd>
+                        {% endif %}
+                        {% endfor %}
+                    </dl>
+                </div>
+                <div class="hidden-lg-down col-lg-3 right-sidebar">
+                    <div class="card blogs">
+                        <div class="blogs-title">
+                            <h2>Chicago History Blog</h2>
+                        </div>
+                        {% include blogs.html %}
+                        <div class="blogs-viewmore">
+                            <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card events">
+                            <div class="events-title">
+                                <h2>History &amp; Genealogy Events</h2>
+                            </div>
+                        {% include events.html %}
+                        <div class="events-viewmore">
+                            <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% include footer.html %}
+</body>
+</html>

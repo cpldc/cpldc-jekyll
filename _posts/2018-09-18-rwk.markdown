@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '9'
+flag: 9
 sidebartype: fixed
 permalink: /:title
 title: Robert W. Krueger Photograph Collection
@@ -15,7 +15,8 @@ cardpic:
   pos: 50% 50%
   alt: The front of a two-story duplex viewed from the street.  Two people sit at
     the entrance to one of the homes.
-category: Neighborhoods
+category: neigh
+categoryFull: Neighborhoods
 textshort: Local photographer Robert Krueger documented Chicago&rsquo;s North Side
   with photographs of community events, buildings and people.
 textlong: In 1984, the Library began working with local photographer Robert Krueger

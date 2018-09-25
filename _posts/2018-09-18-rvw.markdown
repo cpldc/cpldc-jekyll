@@ -14,7 +14,8 @@ cardpic:
   pos: 24% 45%
   alt: A man seated at a soda counter, looking into his drink.  He is wearing a bowler
     hat high on his head.
-category: Neighborhoods
+category: neigh
+categoryFull: Neighborhoods
 textshort: Street scenes and community life on the North Side, 1860s-1990s.
 textlong: Lake View Township and its evolution from an independent municipality into
   current Northside communities, 1860s-1990s.

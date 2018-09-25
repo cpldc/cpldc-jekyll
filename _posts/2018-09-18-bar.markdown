@@ -4,7 +4,7 @@ layout: content
 categories: collections
 sidebartype: fixed
 permalink: /:title
-flag: '11'
+flag: 11
 title: Esther A. Barlow Collection
 coll: bar
 sortname: Barlow, Esther A. Collection
@@ -14,7 +14,8 @@ cardpic:
   size: 110%
   pos: auto
   alt: Esther Barlow as a young woman.
-category: Libraries &amp; Education
+category: libed
+categoryFull: Libraries &amp; Education
 textshort: Family photographs of CPL Librarian Esther Barlow and images of her work
   at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.
 textlong: Esther Barlow was a children&rsquo;s librarian in neighborhood branches

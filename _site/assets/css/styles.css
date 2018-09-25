@@ -148,8 +148,7 @@ header, .browse-dropdown-toplevel {
   display: none; }
 
 .sidebar {
-  color: #fff;
-  height: 100%; }
+  color: #fff; }
 
 .collapsable {
   max-width: 230px;
@@ -173,6 +172,9 @@ header, .browse-dropdown-toplevel {
 
 .sidebar-header, .sidebar-all, .sidebar-list {
   border-bottom: 1px solid #fff; }
+
+.sidebar-list-last {
+  border: none; }
 
 .sidebar-all {
   border-bottom: 1px dashed #fff; }
@@ -217,7 +219,12 @@ header, .browse-dropdown-toplevel {
   box-shadow: 4px 3px 5px -4.5px #3f4344; }
 
 .card {
-  margin-bottom: 10px;
+  box-shadow: 4px 3px 5px -4.5px #3f4344; }
+
+.grid > .card {
+  margin-bottom: 10px; }
+
+.card {
   box-shadow: 4px 3px 5px -4.5px #3f4344; }
 
 .card-bottom {
@@ -234,6 +241,36 @@ header, .browse-dropdown-toplevel {
   font-size: 1.21rem;
   line-height: 24px;
   color: #3f4344; }
+
+.catlink-one {
+  padding-right: 0.5rem; }
+
+.catlink-two {
+  padding-left: 0.5rem;
+  border-left: 1px solid #2d63af; }
+
+.all-collections dt {
+  padding-bottom: 10px;
+  padding-top: 24px;
+  margin-top: 16px;
+  border-top: 1px solid #ccc; }
+  .all-collections dt a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #262626; }
+  .all-collections dt a:hover {
+    text-decoration: underline; }
+
+.all-collections-category {
+  font-size: 13px;
+  color: #3f4344; }
+  .all-collections-category a {
+    border-bottom: 1px dotted #909696;
+    font-size: 14px;
+    color: #234c86; }
+  .all-collections-category a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #909696; }
 
 footer {
   background-color: #fff; }
@@ -384,6 +421,10 @@ footer {
 .loading {
   padding: 25px 0;
   background: transparent url("https://cdn-events.bibliocommons.com/1532962502026/img/loader.gif") center no-repeat; }
+
+.rsaquo {
+  font-size: 15px;
+  font-weight: 700; }
 
 .events, .blogs {
   background-color: #fff;

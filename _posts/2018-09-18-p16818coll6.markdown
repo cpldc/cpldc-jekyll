@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '2'
+flag: 2
 sidebartype: fixed
 permalink: /:title
 title: Philip David Sang Collection
@@ -50,6 +50,9 @@ thumbs:
   align: center
   alt: 1854 poster advertising a marshal's sale, a public auction of enslaved persons.
 category:
+- afam
+- civilwar
+categoryFull: 
 - African Americans
 - Civil War
 textshort: The Philip David Sang Collection contains unpublished and published works

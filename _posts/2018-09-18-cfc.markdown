@@ -46,7 +46,8 @@ thumbs:
   alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
     and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
     Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;
-category: Neighborhoods
+category: neigh
+categoryFull: Neighborhoods
 textshort: Glimpse into the activities of the thriving civic service scene on the
   North Side as well as the rich ethnic and religious heritage of the community.
 textlong: Glimpse into the activities of the thriving civic service scene on the North

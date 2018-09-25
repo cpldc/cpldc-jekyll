@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '12'
+flag: 12
 sidebartype: fixed
 permalink: /:title
 title: Chicago Public Library Archives
@@ -15,7 +15,8 @@ cardpic:
   pos: 50% -20px
   alt: View of Michigan Avenue and Washington Street sides of the original Chicago
     Public Library Central Library.
-category: Libraries &amp; Education
+category: libed
+categoryFull: Libraries &amp; Education
 textshort: Photographs trace CPL&rsquo;s history from a small water tank that survived
   the Great Chicago Fire to the extensive network of neighborhood libraries that span
   the city today.

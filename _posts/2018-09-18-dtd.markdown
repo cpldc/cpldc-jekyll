@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '13'
+flag: 13
 sidebartype: fixed
 permalink: /:title
 categories: collections
@@ -14,7 +14,8 @@ cardpic:
   size: 120%
   pos: 50% -20px
   alt: Three men working on an unfinished sewer.
-category: Neighborhoods
+category: neigh
+categoryFull: Neighborhoods
 textshort: Photographs of sewer systems and passageways from 1925 to 1949 offer a
   rare look at the underbelly of Chicago.
 textlong: The sewer systems and passageways that lie beneath our feet are critical

@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '10'
+flag: 10
 sidebartype: fixed
 permalink: /:title
 categories: collections
@@ -16,7 +16,8 @@ cardpic:
   alt: Five men from the fire department pose with a fire engine. Three are standing,
     and two are riding in the vehicle. One of the men has a white shirt and tie. Part
     of the fire house and two neighboring houses are pictured in the background
-category: Neighborhoods
+category: neigh
+categoryFull: Neighborhoods
 textshort: Photographs by Henry Green of businesses, community groups, neighborhood
   celebrations and school events on Chicago&rsquo;s North Side, 1943-1951.
 textlong: Chicago Public Library&rsquo;s Northside Neighborhood History Collection

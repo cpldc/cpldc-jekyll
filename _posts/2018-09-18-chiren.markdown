@@ -5,7 +5,7 @@ title: Chicago Renaissance
 sidebartype: fixed
 permalink: /:title
 categories: collections
-flag: '8'
+flag: 8
 coll: cr
 sortname: Chicago Renaissance
 cardpic:
@@ -14,7 +14,8 @@ cardpic:
   size: 100%
   pos: auto
   alt: Margaret Walker's face, smiling
-category: African Americans
+category: afam
+categoryFull: African Americans
 textshort: African American community leaders, performers, artists, writers and activists
   on Chicago&rsquo;s South Side, 1930-1950.
 textlong: The Black Chicago Renaissance was a creative movement when activism and

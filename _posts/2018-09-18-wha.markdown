@@ -5,7 +5,7 @@ categories: collections
 sidebartype: fixed
 permalink: /:title
 title: "Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections"
-flag: '6'
+flag: 6
 coll: wha
 sortname: 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic
   and Civil War Collections'
@@ -16,7 +16,8 @@ cardpic:
   pich: 280px
   size: 110%
   pos: 50% 40%
-category: Civil War
+category: civilwar
+categoryFull: Civil War
 textshort: Camp equipment, weaponry and uniforms used on the homefront and the battlefield.
 textlong: Camp equipment, weaponry and uniforms used on the homefront and the battlefield,
   with a focus on the Illinois experience.

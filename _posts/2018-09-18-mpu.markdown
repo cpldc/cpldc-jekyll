@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '4'
+flag: 4
 sidebartype: fixed
 permalink: /:title
 categories: collections
@@ -17,7 +17,8 @@ cardpic:
     Park. SBC Plaza is still under construction and there is construction equipment
     scattered around. The tall buildings of Michigan Avenue are visible behind the
     sculpture.
-category: Parks
+category: parks
+categoryFull: Parks
 textshort: See a rail yard transform into a dynamic urban park.
 textlong: Watch the Millennium Park site transform from an industrial wasteland to
   a new urban park of world renown from 1999-2005, under the project management of

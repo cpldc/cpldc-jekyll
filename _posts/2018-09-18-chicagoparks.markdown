@@ -4,7 +4,7 @@ layout: content
 categories: collections
 sidebartype: fixed
 permalink: /:title
-flag: '1'
+flag: 1 
 title: 'Chicago Park District Records: Photographs'
 coll: ChicagoParks
 sortname: 'Chicago Park District Records: Photographs'
@@ -44,7 +44,8 @@ thumbs:
   size: 250%
   align: 68% 18%
   alt: Young children tend plants in a narrow vegetable garden at the side of a building.
-category: Parks
+category: parks
+categoryFull: Parks
 textshort: Photographs from the Chicago Park District document how the city’s parks
   have grown, changed and been enjoyed for more than a century.
 textlong: Parks have always been a part of Chicago’s city planning. Explore their

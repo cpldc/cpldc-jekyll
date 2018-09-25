@@ -1,7 +1,7 @@
 ---
 date:   2018-09-08 13:08:29 -0500
 layout: content
-flag: '3'
+flag: 3
 sidebartype: fixed
 permalink: /:title
 title: Chicago Theater
@@ -16,7 +16,7 @@ cardpic:
   pos: 45% 60%
   alt: A black and white drawing depicts a woman looking through a monocle. Her hair
     is styled into a high bun.
-category: ''
+category: 
 textshort: Playbills and programs for drama, opera, vaudeville, dance and music at
   early Chicago theaters, 1848-1922.
 textlong: Theater collections at Chicago Public Library document a vibrant local theater
