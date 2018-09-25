@@ -4,7 +4,7 @@ layout: content
 flag: 4
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 title: Millennium Park U.S. Equities Realty Collection
 coll: mpu
 sortname: Millennium Park U.S. Equities Realty Collection

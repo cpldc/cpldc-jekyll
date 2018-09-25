@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+
+    <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
 </head>
-<body>
+<body class="{{ page.contenttype }}">
     {% include libraries.html %}
     {% if page.mainimage.coll %}
         {% assign coll = page.mainimage.coll %}
@@ -20,12 +23,18 @@
         {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
     {% endif %}
     {% include header.html %}
+<<<<<<< HEAD
     {% assign sortedPosts = site.posts | sort:"sortname" %}
     <main>
         <div class="container">
             <div class="row">
+=======
+    <main id="sidebar-c-target">
+        <div class="container fixed main-container">
+            <div class="row" id="sidebar-f-target">
+>>>>>>> ad8f6b6cd41371dbc07c2f907e5d75e8b2e423cb
                 {% include sidebar.html %}
-                <div class="card main-content col-xl-6 col-8">
+                <div class="content main-content col-xl-6 col-8">
                     <h1 class="page-title">{{ page.title }}</h1>
                     <section class="intro">
                         <div class="prosecontent">{{ page.textlong }}</div>
@@ -100,6 +109,7 @@
                                                 <dd>{{ subcoll.dd }}</dd>
                                             {% endfor %}
                                         {% endif %}
+<<<<<<< HEAD
                                         {% for post in sortedPosts %}
                                             {% if page.type == 'category' and post.category contains page.slug %}
                                                 <dt><a href="{{ post.link }}">{{ post.title }}</a></dt>
@@ -113,6 +123,24 @@
                                                 <dt><a href="{{ post.link }}">{{ post.title }}</a></dt>
                                                 <dd>
                                                     {{ post.textshort }}
+=======
+                                        {% for subcoll in site.posts %}
+                                            {% if page.type == 'category' and subcoll.category contains page.shortname %}
+                                            <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
+                                            <dd>
+                                                {{ subcoll.textshort }}
+                                                {% if subcoll.link == 'RVLV' and page.link == 'LibEd' %}
+                                                    This collection contains images of high schools in the neighborhoods.
+                                                {% endif %}
+                                                {% if subcoll.link == 'Sang' and page.link == 'Civilwar'%}
+                                                    A number of documents in the collection were created during the Civil War.
+                                                {% endif %}
+                                            </dd>
+                                            {% elsif page.type == 'location' and subcoll.homeloc == page.link %}
+                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
+                                                <dd>
+                                                    {{ subcoll.textshort }}
+>>>>>>> ad8f6b6cd41371dbc07c2f907e5d75e8b2e423cb
                                                 </dd>
                                             {% endif %}
                                         {% endfor %}
@@ -195,7 +223,7 @@
                     </section>
                 </div>
                 <div class="hidden-lg-down col-lg-3 right-sidebar">
-                    <div class="card blogs">
+                    <div class="content blogs">
                         <div class="blogs-title">
                             <h2>Chicago History Blog</h2>
                         </div>
@@ -207,7 +235,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card events">
+                    <div class="content events">
                             <div class="events-title">
                                 <h2>History &amp; Genealogy Events</h2>
                             </div>

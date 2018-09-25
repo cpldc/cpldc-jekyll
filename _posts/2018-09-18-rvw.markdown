@@ -4,7 +4,7 @@ layout: content
 sidebartype: fixed
 permalink: /:title
 title: Ravenswood-Lake View Community Collection
-categories: collections
+contenttype: collections
 coll: rvw
 sortname: Ravenswood-Lake View Community Collection
 cardpic:

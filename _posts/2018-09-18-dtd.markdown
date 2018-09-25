@@ -4,7 +4,7 @@ layout: content
 flag: 13
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 title: Chicago Sewers Collection
 coll: dtd
 sortname: Chicago Sewers Collection

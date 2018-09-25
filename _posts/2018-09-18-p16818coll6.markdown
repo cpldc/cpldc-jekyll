@@ -6,7 +6,7 @@ sidebartype: fixed
 permalink: /:title
 title: Philip David Sang Collection
 coll: p16818coll6
-categories: collections
+contenttype: collections
 sortname: Sang, Philip David Collection
 cardpic:
   pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg

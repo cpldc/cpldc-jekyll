@@ -4,7 +4,7 @@ layout: content
 title: Northside High Schools
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 coll: ahs
 sortname: Northside High Schools
 cardpic:

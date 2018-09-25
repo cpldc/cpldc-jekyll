@@ -1,49 +1,55 @@
 
 // when the page is finished loading:
     // show/hide sidebar buttons are active
-var viewportWidth = $(window).width();
-$( document ).ready(function() {
-    console.log( "ready!" );
-    $( "#hideSidebar" ).click(function() {
-        hideSidebar();
+    var viewportWidth = $(window).width();
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        $( "#hideSidebar" ).click(function() {
+            hideSidebar();
+        });
+        $( "#showSidebar" ).click(function() {
+            showSidebar();
+        });
+        if (viewportWidth < 976 ){
+            userShrinksWindow();
+        }
+        if (viewportWidth > 976 ){
+            userExpandsWindow();
+        }
     });
-    $( "#showSidebar" ).click(function() {
-        showSidebar();
-    });
-    if (viewportWidth < 976 ){
-        hideSidebar();
-        switchLayoutC();
+    function mainContainerSidePadding(modifier) {
+        if (modifier === 'shrinkContent' && !($('.main-container').hasClass('fixed'))){
+            $('.main-container').addClass('main-container-narrow', 100).removeClass('main-container-wide');
+        } else if (modifier === 'enlargeContent' && !($('.main-container').hasClass('fixed'))){
+            $('.main-container').addClass('main-container-wide', 100).removeClass('main-container-narrow');
+        }
     }
-});
 // sidebar show/hide: 
     function hideSidebar(){
-        $('#sidebar-toplevel').animate(
-            {width: 'toggle'},
-            {duration: 100,
-                // showing the button before the animation is complete looks jarring
-            complete: function () {
-                    $('#showSidebar').show();
-                }});
-        $('.main-container').animate(
-            {'padding-left': '5px'},
-            {duration: 100});
-        // $('.main-content').removeClass('col-xl-6 col-8').addClass('col-xl-9 col-lg-8 col');
-        // $('.sidebar').removeClass('col-4 col-lg-4 col-xl-3');
-        // col-xl-6 col-8
+        $('#sidebar-toplevel').removeClass('sidebar-wide').addClass('sidebar-gone', 100);
+        $('#showSidebar').show();
+        mainContainerSidePadding('enlargeContent');
     }
     function showSidebar(){
-        $('#showSidebar').toggle();
-        $('#sidebar-toplevel').animate(
-            {width: 'toggle'},
-            {duration: 100});
-        $('.main-container').animate(
-            {'padding-left': '235px'},
-            {duration: 100});
-        // $('.main-content').removeClass('col-xl-9 col-lg-8 col').addClass('col-xl-6 col-8');
-        // $('.sidebar').addClass('col-4 col-lg-4 col-xl-3');
+        $('#showSidebar').hide();
+        $('#sidebar-toplevel').addClass('sidebar-wide', 100).removeClass('sidebar-gone');
+        mainContainerSidePadding('shrinkContent');
     }
     function switchLayoutC(){
-        // $('main > .container').removeClass('container').addClass('container-fluid');
+        var sidebar = $('#sidebar').detach();
+        $('#sidebar-c-target').prepend(sidebar);
+        $('#sidebar').removeClass('col-4 col-lg-4 col-xl-3').addClass('float-left collapsable sidebar-height');
+        $('#hideSidebar').removeClass('hidden');
+        $('.main-container').removeClass('container fixed');
+        $('.main-content').removeClass('col-xl-6 col-8');
+    }
+    function switchLayoutF(){
+        var sidebar = $('#sidebar').detach();
+        $('#sidebar-f-target').prepend(sidebar);
+        $('.sidebar').addClass('col-4 col-lg-4 col-xl-3').removeClass('float-left collapsable sidebar-height');
+        $('.main-container').addClass('container fixed').removeClass('main-container-wide main-container-narrow');
+        $('#hideSidebar').addClass('hidden');
+        $('.main-content').addClass('col-xl-6 col-8');
     }
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not
@@ -67,28 +73,21 @@ $( document ).ready(function() {
             window.location.href = searchUrl;
         }
     }
-    // loading gif while images are loading
-  /*! waitForImages jQuery Plugin 2018-02-13 */
-         $(function(){
-    $('img.loading').each(function(){
-       var this_image = this;
-       var targetImage = $(this_image).css('background-image');
-       var loadingImage = $(this_image).attr('src');
-       var blankImage = $(this_image).attr('data-src');
-       if(targetImage.length > 0){
-            var img = new Image();
-            $(img).on("load", function() {
-                this_image.targetImage = this.blankImage;
-            });
-            img.src = loadingImage;
-        }else{
-            this_image.src = blankImage;
-        }
-    });
-});
-    // media queries: 
-// if page opens at :
-    // sm, md: run hideSidebar()
-// if page shrinks/grows to:
-    // xs, sm, md: run hideSidebar()
-    // lg, xl: 
+    function userExpandsWindow(){
+        // the card page index should never change to the fixed layout so, in /layouts/cardpage.html, the <main> tag has a clas called "no-fixed"
+        (!$('main').hasClass('no-fixed') ? switchLayoutF() : '');
+        showSidebar();
+    }
+    function userShrinksWindow(){
+        switchLayoutC();
+        hideSidebar();
+    }
+    $(window).resize(function () {
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 976) {
+            userShrinksWindow();
+		}
+		if (viewportWidth > 976) {
+            userExpandsWindow();
+		}
+	});

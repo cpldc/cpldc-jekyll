@@ -4,48 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+    <title>Digital Collections | Chicago Public Library</title>
     {% include libraries.html %}
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <style>
+        /* div {
+            border: 1px solid black;
+        } */
+        
+    </style>
+</head>
+{% assign sortedPosts = site.posts | sort: 'sortname' %}
+<body>
     {% include header.html %}
-    {% assign sortedPosts = site.posts | sort:"sortname" %}
-    <main>
-        <div class="container">
-            <div class="row">
+    <main id="sidebar-c-target">
+        <div class="container fixed main-container">
+            <div class="row" id="sidebar-f-target">
                 {% include sidebar.html %}
-                <div class="card main-content col-xl-6 col-8">
+                <div class="content main-content col-xl-6 col-8">
                     <h1 class="page-title">Digital Collections A-Z</h1>
                     <dl class="all-collections">
-                        {% for coll in sortedPosts %}
-                        {% if coll.categories contains 'collections' or coll.categories contains 'subcollections' %}
-                            <dt>
-                                {% if coll.categories contains 'collections' %}
-                                    <a href="{{ coll.url }}" id="{{ coll.slug }}">{{ coll.sortname }} </a><i class="rsaquo fa fa-angle-right" aria-hidden="true"></i>
-                                {% else %}
-                                    {{ coll.sortname }}
-                                {% endif %}
-                            </dt>
-                            <dd>{{ coll.textlong }}</dd>
-                            {% if coll.category.first %}
-                                <dd class="all-collections-category">
-                                    Found in 
-                                    <a href="{{ coll.category[0] }}">{{ coll.categoryFull[0] }}</a>
-                                    <a href="{{ coll.category[1] }}">{{ coll.categoryFull[1] }}</a>
-                                </dd>
-                            {% elsif coll.category %}
-                                <dd class="all-collections-category">
-                                    Found in 
-                                    <a href="{{ coll.category }}">{{ coll.categoryFull }}</a>
-                                </dd>
+                        {% for post in sortedPosts %}
+                            {% if post.type == 'collection' or post.type == 'subcollection' %}
+                                <dt>{{ post.sortname }}</dt>
+                                <dd>{{ post.textshort }}</dd>
                             {% endif %}
-                            </dd>
-                        {% endif %}
                         {% endfor %}
                     </dl>
                 </div>
                 <div class="hidden-lg-down col-lg-3 right-sidebar">
-                    <div class="card blogs">
+                    <div class="content blogs">
                         <div class="blogs-title">
                             <h2>Chicago History Blog</h2>
                         </div>
@@ -57,7 +46,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card events">
+                    <div class="content events">
                             <div class="events-title">
                                 <h2>History &amp; Genealogy Events</h2>
                             </div>
@@ -73,6 +62,6 @@
             </div>
         </div>
     </main>
-{% include footer.html %}
+    {% include footer.html %}
 </body>
 </html>

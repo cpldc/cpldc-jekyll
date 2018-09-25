@@ -5,7 +5,7 @@ flag: 9
 sidebartype: fixed
 permalink: /:title
 title: Robert W. Krueger Photograph Collection
-categories: collections
+contenttype: collections
 coll: rwk
 sortname: Krueger, Robert W. Photograph Collection
 cardpic:
