@@ -4,7 +4,7 @@ layout: content
 flag: '10'
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 title: Henry D. Green Photograph Collection
 coll: hdg
 sortname: Green, Henry D. Photograph Collection

@@ -74,7 +74,8 @@
         }
     }
     function userExpandsWindow(){
-        switchLayoutF();
+        // the card page index should never change to the fixed layout so, in /layouts/cardpage.html, the <main> tag has a clas called "no-fixed"
+        (!$('main').hasClass('no-fixed') ? switchLayoutF() : '');
         showSidebar();
     }
     function userShrinksWindow(){

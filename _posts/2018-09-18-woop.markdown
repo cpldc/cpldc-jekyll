@@ -5,7 +5,7 @@ flag: '12'
 sidebartype: fixed
 permalink: /:title
 title: Chicago Public Library Archives
-categories: collections
+contenttype: collections
 coll: woop
 sortname: Chicago Public Library Archives
 cardpic:

@@ -9,7 +9,7 @@
 
     <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
 </head>
-<body>
+<body class="{{ page.contenttype }}">
     {% include libraries.html %}
     {% if page.mainimage.coll %}
         {% assign coll = page.mainimage.coll %}

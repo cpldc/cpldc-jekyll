@@ -4,7 +4,7 @@ layout: content
 title: Chicago Renaissance
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 flag: '8'
 coll: cr
 sortname: Chicago Renaissance

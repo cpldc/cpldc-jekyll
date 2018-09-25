@@ -4,7 +4,7 @@ title: Amundsen High School Collection
 layout: content
 sidebartype: fixed
 permalink: /:title
-categories: collections
+contenttype: collections
 filename: Amund
 sortname: Amundsen High School Collection
 textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
