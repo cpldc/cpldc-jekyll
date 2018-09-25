@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar{% if page.sidebartype == "collapse" %} float-left collapsable{% elsif page.sidebartype == "fixed" %} col-4 col-lg-4 col-xl-3{% endif %}">
+<div id="sidebar" class="sidebar{% if page.sidebartype == 'collapse' %} float-left collapsable sidebar-height{% elsif page.sidebartype == 'fixed' %} col-4 col-lg-4 col-xl-3{% endif %}">
     
     <div class="sidebar-header-button sidebar-header-button-show always-on-top"  id="showSidebar">
         <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
@@ -20,7 +20,7 @@
         <div class="sidebar-all">
             View All Collections 
         </div>
-        <div class="sidebar-list">
+        <div class="sidebar-list sidebar-list-bottomborder">
             <p>Browse by Subject</p>
             <ul>
                 {% assign sortedSubjects = site.posts | sort: 'sidebarname' %}
@@ -33,7 +33,7 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="sidebar-list">
+        <div class="sidebar-list sidebar-list-bottomborder">
             <p>Browse by Location</p>
             <ul>
                 {% assign sortedLocs = site.posts | sort: 'sortname' %}
@@ -46,7 +46,7 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="sidebar-list">
+        <div class="sidebar-list sidebar-list-bottomborder">
             <p>Related Links</p>
             <ul>
                 <li>

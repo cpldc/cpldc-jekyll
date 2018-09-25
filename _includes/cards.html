@@ -6,9 +6,11 @@
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpic.pic }}); background-size: {{ item.cardpic.size }}; background-position: {{ item.cardpic.pos }}; height: {{ item.cardpic.pich }}" class="card-img-top" alt="">
     </a>
     <div class="card-bottom">
-        {% if item.category  %}
-            <span class="card-subj">{{ item.category }}</span>
-            <br />
+        {% if item.category.first %}
+            <a class="catlink-one" href="{{ item.category[0] }}">{{ item.categoryFull[0] }}</a>
+            <a class="catlink-two" href="{{ item.category[1] }}">{{ item.categoryFull[1] }}</a>
+        {% else %}
+            <a href="{{ item.category[1] }}">{{ item.categoryFull[1] }}</a>
         {% endif %}
         <a href="{{ item.url }}">
             <h2 class="card-title">{{ item.title }}</h2>

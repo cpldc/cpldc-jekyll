@@ -38,7 +38,7 @@
     function switchLayoutC(){
         var sidebar = $('#sidebar').detach();
         $('#sidebar-c-target').prepend(sidebar);
-        $('#sidebar').removeClass('col-4 col-lg-4 col-xl-3').addClass('float-left collapsable')
+        $('#sidebar').removeClass('col-4 col-lg-4 col-xl-3').addClass('float-left collapsable sidebar-height');
         $('#hideSidebar').removeClass('hidden');
         $('.main-container').removeClass('container fixed');
         $('.main-content').removeClass('col-xl-6 col-8');
@@ -46,7 +46,7 @@
     function switchLayoutF(){
         var sidebar = $('#sidebar').detach();
         $('#sidebar-f-target').prepend(sidebar);
-        $('.sidebar').addClass('col-4 col-lg-4 col-xl-3').removeClass('float-left collapsable')
+        $('.sidebar').addClass('col-4 col-lg-4 col-xl-3').removeClass('float-left collapsable sidebar-height');
         $('.main-container').addClass('container fixed').removeClass('main-container-wide main-container-narrow');
         $('#hideSidebar').addClass('hidden');
         $('.main-content').addClass('col-xl-6 col-8');

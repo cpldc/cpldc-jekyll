@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Collections | Chicago Public Library</title>
+    {% include libraries.html %}
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <style>
+        /* div {
+            border: 1px solid black;
+        } */
+        
+    </style>
+</head>
+{% assign sortedPosts = site.posts | sort: 'sortname' %}
+<body>
+    {% include header.html %}
+    <main id="sidebar-c-target">
+        <div class="container fixed main-container">
+            <div class="row" id="sidebar-f-target">
+                {% include sidebar.html %}
+                <div class="content main-content col-xl-6 col-8">
+                    <h1 class="page-title">Digital Collections A-Z</h1>
+                    <dl class="all-collections">
+                        {% for post in sortedPosts %}
+                            {% if post.type == 'collection' or post.type == 'subcollection' %}
+                                <dt>{{ post.sortname }}</dt>
+                                <dd>{{ post.textshort }}</dd>
+                            {% endif %}
+                        {% endfor %}
+                    </dl>
+                </div>
+                <div class="hidden-lg-down col-lg-3 right-sidebar">
+                    <div class="content blogs">
+                        <div class="blogs-title">
+                            <h2>Chicago History Blog</h2>
+                        </div>
+                        {% include blogs.html %}
+                        <div class="blogs-viewmore">
+                            <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content events">
+                            <div class="events-title">
+                                <h2>History &amp; Genealogy Events</h2>
+                            </div>
+                        {% include events.html %}
+                        <div class="events-viewmore">
+                            <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
+                                View More 
+                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
+</html>

@@ -159,6 +159,8 @@
         }
         .sidebar {
             color: #fff;
+        }
+        .sidebar-height{
             height: 100%;
         }
         .collapsable {
@@ -182,7 +184,7 @@
             min-height: 50px;
             padding-top: 15px;
         }
-        .sidebar-header, .sidebar-all, .sidebar-list {
+        .sidebar-header, .sidebar-all, .sidebar-list-bottomborder {
             border-bottom: 1px solid #fff;
         }
         .sidebar-all {

@@ -102,23 +102,23 @@
                                                 <dd>{{ subcoll.dd }}</dd>
                                             {% endfor %}
                                         {% endif %}
-                                        {% for subcoll in data.site.collections %}
-                                            {% if page.type == 'category' and subcoll.category == page.title %}
+                                        {% for subcoll in site.posts %}
+                                            {% if page.type == 'category' and subcoll.category contains page.shortname %}
+                                            <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
+                                            <dd>
+                                                {{ subcoll.textshort }}
+                                                {% if subcoll.link == 'RVLV' and page.link == 'LibEd' %}
+                                                    This collection contains images of high schools in the neighborhoods.
+                                                {% endif %}
+                                                {% if subcoll.link == 'Sang' and page.link == 'Civilwar'%}
+                                                    A number of documents in the collection were created during the Civil War.
+                                                {% endif %}
+                                            </dd>
+                                            {% elsif page.type == 'location' and subcoll.homeloc == page.link %}
                                                 <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
-                                                <dl>
+                                                <dd>
                                                     {{ subcoll.textshort }}
-                                                    {% if subcoll.link == 'RVLV' and page.link == 'LibEd' %}
-                                                        This collection contains images of high schools in the neighborhoods.
-                                                    {% endif %}
-                                                    {% if subcoll.link == 'Sang' and page.link == 'Civilwar'%}
-                                                        A number of documents in the collection were created during the Civil War.
-                                                    {% endif %}
-                                                </dl>
-                                            {% elsif page.type == 'location' and subcoll.location == page.link %}
-                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
-                                                <dl>
-                                                    {{ subcoll.textshort }}
-                                                </dl>
+                                                </dd>
                                             {% endif %}
                                         {% endfor %}
                                     </dl>

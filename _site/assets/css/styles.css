@@ -155,7 +155,9 @@ header, .browse-dropdown-toplevel {
   display: none; }
 
 .sidebar {
-  color: #fff;
+  color: #fff; }
+
+.sidebar-height {
   height: 100%; }
 
 .collapsable {
@@ -179,7 +181,7 @@ header, .browse-dropdown-toplevel {
   min-height: 50px;
   padding-top: 15px; }
 
-.sidebar-header, .sidebar-all, .sidebar-list {
+.sidebar-header, .sidebar-all, .sidebar-list-bottomborder {
   border-bottom: 1px solid #fff; }
 
 .sidebar-all {
