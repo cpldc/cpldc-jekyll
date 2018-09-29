@@ -35,7 +35,7 @@
                                     {% endif %}
                                 </dt>
                                 <dd>{{ post.textlong }}</dd>
-                                {% if post.type == 'collection' %}
+                                {% if post.type == 'collection'  and post.slug != 'theater' %}
                                     <dd class="all-collections-category">Found in
                                         {% if post.category.first %}
                                             <a class="catlink-one" href="{{ post.category[0] }}">{{ post.categoryFull[0] }}</a>

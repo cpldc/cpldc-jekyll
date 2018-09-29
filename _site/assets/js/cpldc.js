@@ -54,7 +54,8 @@
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not
     function expandSearch(){
-        $('#search-input').show().focus();
+        $('#searchExpander').removeClass('hidden').addClass('inline-div');
+        $('#search-input').focus();
         $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
     }
     function expandBrowseDropdown(){

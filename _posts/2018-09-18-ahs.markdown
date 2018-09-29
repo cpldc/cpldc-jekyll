@@ -39,8 +39,7 @@ thumbs:
   alt: Football game between Amundsen High School and Taft High School at Winnemac
     Park.  The bleachers are half full.
 - url: '245'
-  text: Lake View High School football team en route to the Orange Bowl, Midway Airport,
-    1953
+  text: Lake View High School football team en route to the Orange Bowl, Midway Airport, 1953
   size: 150%
   align: center
   alt: The Lake View High School football team stands on the tarmac in front of an
@@ -48,6 +47,9 @@ thumbs:
 category:
 - neigh
 - libed
+categoryFull:
+- Libraries &amp; Education
+- Neighborhoods
 textshort: Photographs of high school football games, theatrical productions, dances
   and extracurricular activities from the 1870s to the 1950s.
 textlong: Photographs of high school football games, theatrical productions, dances

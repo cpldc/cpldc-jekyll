@@ -36,29 +36,34 @@
                         </a>
                         <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
                     </div>
-                    <div class="col header-left hidden-lg-up" id="logo-small">
-                        <div class="header-small-img">
+                    <div class="inline-div  header-left hidden-lg-up" id="logo-small">
+                        <div class="header-small-img inline-div ">
                             <a href="https://www.chipublib.org/">
                                 <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
                             </a>
                         </div>
-                    </div>
-                    <!-- 
-                        <div class="hidden-lg-up col">
-                            <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
+                        <div class="hidden-lg-up  inline-div">
+                            <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#browseModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
                             <div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
-                        </div> -->
-                    <div class="col header-right">
+                        </div>
+                    </div>
+                    
+                    <div class="inline-div header-right">
                         <div class="search float-right" onclick="expandSearch()" tabindex="0">
-                            <span class="search-text">Search</span>
-                            <input type="text" id="search-input">
-                            <i onclick="searchContent()" class="search-icon-white fa fa-search" id="search-icon"></i>
+                            <div class="search-text inline-div">Search</div>
+                            <div class="hidden" id="searchExpander">
+                                
+                                <input type="text" id="search-input">
+                            </div>
+                            <div class="search-icon-wrapper inline-div">
+                                <i onclick="searchContent()" class="search-icon-white fa fa-search" id="search-icon"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row header-bottom">
+        <div class="row header-bottom hidden-md-down">
             <div class="container">
                 <div class="row">
                     <div class="header-button" id="browse-button" onclick="expandBrowseDropdown()" tabindex="0">Browse<i class="fa fa-angle-down" aria-hidden="true"></i></div>
@@ -148,6 +153,80 @@
                 </div>
             </div>
         </section>
+        <section role="navigation" class="modal fade" id="browseModal" tabindex="-1" aria-label="Browse CPL Website" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Browse <i class="fa fa-angle-down" aria-hidden="true"></i></h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="header-modal-listheader">By Format</h3><ul id="modal-format" class="list-group">
+                            
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/books/">Books</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/ebooks/">eBooks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/music/">Music</a>
+                                </li>
+                            
+                        </ul>
+                        <h3 class="header-modal-listheader">By Audience</h3><ul id="modal-aud" class="list-group">
+                            
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/kids/">Kids</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/teens/">Teens</a>
+                                </li>
+                            
+                        </ul>
+                        <h3 class="header-modal-listheader">More</h3><ul id="modal-more" class="list-group">
+                            
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/online-resources/">Online Resources</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.chipublib.org/archives-collections/">Archival Collections</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.chipublib.org/browse_program/one-book-one-chicago/">One Book, One Chicago</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <main id="sidebar-c-target">
         <div class="container fixed main-container">
@@ -172,7 +251,7 @@
             </script>
         </div>
         <div class="sidebar-all">
-            View All Collections 
+            <a href="/all.html">View All Collections </a>
         </div>
         <div class="sidebar-list sidebar-separator">
             <p>Browse by Subject</p>
