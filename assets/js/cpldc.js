@@ -63,10 +63,10 @@
             console.log('droppding should be happening');
             $('.search').addClass('hidden');
             $('#searchDropper').removeClass('hidden');
-            $('#search-input').focus();
+            $('#search-input-dropped').focus();
         } else {
             $('#searchExpander').removeClass('hidden').addClass('inline-div');
-            $('#search-input').focus();
+            $('#search-input-exp').focus();
             $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
         }
     }
@@ -79,13 +79,14 @@
     }
     function searchContent(a){
         var input;
-        // athis = $(athis);
-        console.log($(a).siblings('.search-input'));
-        if($(a).hasClass('search-input')){
-            input = $(a).val();
+        if ( a === 'exp'){
+            input = $('#search-input-exp').val();
+        } else if ( a === 'drop') {
+            input = $('#search-input-dropped').val();
         } else {
-            input = $(a).siblings('input.search-input').val();
+            input = $(a).val();
         }
+        console.log(input);
         // if ( pagetype === "collection" && selectSearchType < 0) {
         //     var searchUrl = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + input + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
         // } else if ( pagecolls != '' && selectSearchType < 0) {

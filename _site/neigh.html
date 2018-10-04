@@ -54,20 +54,15 @@
                                 <div class="search-text inline-div">Search</div>
                                 <div class="hidden" id="searchExpander">
                                     
-                                    <div id="searchType" class="dropdown show">
-                                        <button class="dropdown-toggle searchtype-dropdown" id="selectSearchTarget" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            This Subject
-                                        </button>
-                                        <div class="dropdown-menu searchtype-optionbox" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item searchtype-option" href="#">This Subject</a>
-                                            <a class="dropdown-item searchtype-option" href="#">All Subjects</a>
-                                        </div>
-                                    </div>
+                                    <select class="inline-div form-control searchtype-dropdown">
+                                        <option>This Subject</option>
+                                        <option>All Subjects</option>
+                                    </select>
                                     
-                                    <input type="text" class="search-input search-input-expanded" id="search-input">
+                                    <input type="text" class="search-input search-input-expanded inline-div" id="search-input-exp">
                                 </div>
                                 <div class="search-icon-wrapper inline-div">
-                                    <i onclick="searchContent(this)" class="search-icon-white fa fa-search" id="search-icon"></i>
+                                    <i onclick="searchContent('exp')" class="search-icon-white fa fa-search" id="search-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +99,7 @@
                             <button class="dropdown-toggle searchtype-dropdown" id="selectSearchTarget" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 This Subject
                             </button>
-                            <div class="dropdown-menu searchtype-optionbox" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu searchtype-optionbox" aria-labelledby="dropdownMenuButton2">
                                 <a class="dropdown-item searchtype-option" href="#">This Subject</a>
                                 <a class="dropdown-item searchtype-option" href="#">All Subjects</a>
                             </div>
@@ -113,9 +108,9 @@
                 
                 <div class="search-dropped-row">
                     <div class="search-dropped-input inline-div">
-                        <input type="text" name="search-query" class="search-input" id="search-input" \>
+                        <input type="text" name="search-query" class="search-input" id="search-input-dropped" \>
                     </div>
-                    <div class="search-dropped-icon inline-div"  onclick="searchContent(this)" >
+                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop')" >
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </div>
                 </div>

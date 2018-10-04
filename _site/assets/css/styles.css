@@ -226,7 +226,6 @@ header, .browse-dropdown-toplevel {
 .dropdown-toggle::after {
   border: solid #666;
   border-width: 0 1px 1px 0;
-  /* display: inline-block; */
   float: right;
   position: relative;
   top: 6px;
@@ -234,45 +233,17 @@ header, .browse-dropdown-toplevel {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
 
-.searchtype-dropdown, .searchtype-optionbox, .bib-button-searchthe-optionbox-dropdown, .bib-button-searchthe-dropdown {
-  border: 1px solid #ccc; }
-
-.searchtype-dropdown, .searchtype-optionbox {
-  min-width: 135px;
-  margin-left: 7px; }
-
-.searchtype-dropdown, .searchtype-option, .bib-button-searchthe-optionbox-dropdown, .bib-button-searchthe-dropdown {
-  text-align: left;
-  color: #666;
-  background-color: #fff;
-  line-height: 1.485;
-  padding: 6px 12px 6px 6px;
-  font-size: 14px; }
-
-.searchtype-optionbox, .bib-button-searchthe-optionbox-dropdown {
-  border-radius: 0;
-  margin-top: 2px;
-  padding: 0; }
-
-.bib-button-searchthe-optionbox-dropdown {
-  width: 100%; }
-
-.searchtype-button {
-  text-align: left;
-  color: #666;
-  background-color: #fff;
-  line-height: 1.485;
-  padding: 6px 12px 6px 6px;
-  font-size: 14px; }
-
-.searchtype-button, .searchtype-dropdown {
-  min-width: 135px;
-  margin-left: 7px; }
-
 .searchtype-dropdown {
-  border-radius: 0;
-  margin-top: 2px;
-  padding: 0; }
+  border: 1px solid #ccc;
+  margin-left: 7px;
+  color: #666;
+  position: relative;
+  top: -3px;
+  padding: 5px;
+  max-width: 125px;
+  max-height: 34px;
+  min-width: 125px;
+  border-radius: 0; }
 
 .search-input-expanded {
   border: 1px solid #ccc;
