@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
-<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 
     <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
 </head>
@@ -17,11 +17,12 @@
         {% assign coll = page.coll %}
     {% endif %}
     {% if page.mainimage.url contains '.jpg' %}
-        {% assign mainimage = '/assets/images/' | append: page.mainimage.url %}
+        {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
         {% assign mainimageUrl = page.mainimage.coll %}
     {% else %}
         {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
     {% endif %}
+    {% assign sortedPosts = site.posts | sort: 'sortname' %}
     {% include header.html %}
     <main id="sidebar-c-target">
         <div class="container fixed main-container">
@@ -39,8 +40,23 @@
                                     <a href="{{ mainimage }}" data-caption="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" title="{{ page.mainimage.text }}" class="loading">
                                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
                                     </a>
+                                    {% if mainimage contains 'mpu' %}
+                                        <i class="rights-i rights-i-main fa fa-info-circle"></i>
+                                        <div class="rights-overlay rights-overlay-main">
+                                            <div class="rights-guts">
+                                                <span class="rights-statement">
+                                                    {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
+                                                    {{ mpu.rights2 }}
+                                                </span>
+                                            </div>
+                                            <div class="rights-close">
+                                                <i class="rights-close-icon fa fa-times"></i>
+                                            </div>
+                                        </div>
+                                        {% endif %}
                                 </div>
                             </div>
+                            {% if page.slug == 'mrc' %}{% else %}
                             <div class="row lightbox-thumbs justify-content-center">
                                 {% assign counter = 1 %}
                                 {% for thumb in page.thumbs %}
@@ -57,17 +73,20 @@
                                     {% assign counter = counter | plus:1 %}
                                 {% endfor %}
                             </div>
+                            {% endif %}
                         </div>
                         <script>
                             $('.imageGallery a').simpleLightbox();
                         </script>
                     </section>
                     <section class="prosecontent" id="mainTextContent">
+                        {% if page.slug == 'mrc' %}{% else %}
                         <div class="center-button browseall" id="browseButton">
                             <a href="http://digital.chipublib.org/digital/search/collection/{% if page.type == 'category' or page.type == 'location' %}{{ page.allcolls }}{% elsif page.type == 'collection' %}{{ page.coll }}{% endif %}/order/title/ad/asc" id="allButton" class="btn btn-primary">
                                 Browse All
                             </a>
                         </div>
+                        {% endif %}
                         <div class="prosecontent" id="textAndLists">
                             {% if page.textrich %}
                                 <div class="textblock">
@@ -94,6 +113,9 @@
                             {% if page.subdigicoll or page.type == 'category' or page.type == 'location' %}
                                 <div class="textblock">
                                     <h3>Digital Collections</h3>
+                                    {% if page.slug == 'mrc' %}
+                                        <span>Digital collections from the Municipal Reference Collection are forthcoming.</span><p></p>
+                                    {% else %}
                                     <span>Collections {{ page.catcoll }}{% if page.type == 'location' %} from the {{ page.longname }}{% endif %} include:</span>
                                     <dl>
                                         {% if page.subdigicoll %}
@@ -102,7 +124,7 @@
                                                 <dd>{{ subcoll.dd }}</dd>
                                             {% endfor %}
                                         {% endif %}
-                                        {% for subcoll in site.posts %}
+                                        {% for subcoll in sortedPosts %}
                                             {% if page.type == 'category' and subcoll.category contains page.slug %}
                                                 <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
                                                 <dd>
@@ -122,6 +144,7 @@
                                             {% endif %}
                                         {% endfor %}
                                     </dl>
+                                    {% endif %}
                                 </div>
                             {% endif %}
                             {% if page.CPLRes %}

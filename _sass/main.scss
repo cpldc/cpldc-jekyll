@@ -243,9 +243,9 @@
             position: relative;
             top: -3px;
             padding: 5px;
-            max-width: 125px;
+            max-width: 145px;
             max-height: 34px;
-            min-width: 125px;
+            min-width: 155px;
             border-radius: 0;
         }
         .search-input-expanded {
@@ -745,4 +745,59 @@
         padding-top: 24px;
         margin-top: 16px;
         border-top: 1px solid #ccc;
+    }
+    //rights 
+    .card a, .lightbox-mainimage a {
+        position: relative;
+    }
+    .lightbox-mainimage {
+        max-height: 380px;
+    }
+    .rights, .rights a {
+        color: #666;
+        font-size: 0.75rem;
+    }
+    .rights-i {
+        color: #fff;
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        padding: 5px;
+    }
+    .rights-i-card, .rights-i-about, .rights-overlay-card, .rights-overlay-about {
+        position: absolute; 
+        // top: 213px;
+        bottom: 0;
+        left: 0;
+    }
+    .rights-i-lightbox, .rights-overlay-lightbox {
+        left: 16px;
+        bottom: 80px;
+        z-index: 5000;
+    }
+    .rights-overlay-main, .rights-i-main {
+        position: absolute; 
+        bottom: 16px;
+        left: 16px;
+    }
+    .rights-overlay {
+        cursor: default;
+        display: none;
+        background-color: rgba(55,55,55,0.8);
+        color: #fff;
+        position: absolute;
+        width: 75%;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+    .rights-close {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        color: #fff;
+    }
+    .rights-guts {
+        position: relative;
+        display: inline-block;
     }

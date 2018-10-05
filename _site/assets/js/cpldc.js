@@ -5,7 +5,7 @@
     $( document ).ready(function() {
 		$('.search-input').keypress(function(e){
 			if(e.keyCode==13)
-                searchContent(this);
+                searchContent(this, beelzebub);
 		});
         console.log( "ready!" );
         $( "#hideSidebar" ).click(function() {
@@ -13,6 +13,12 @@
         });
         $( "#showSidebar" ).click(function() {
             showSidebar();
+        });
+        $('.rights-i').click(function(e){
+            rightsI();
+        });
+        $('.rights-close').click(function(e){
+            rightsClose();
         });
         if (viewportWidth < 976 ){
             userShrinksWindow();
@@ -77,7 +83,7 @@
     function expandBrowseDropdown(){
         $('#browseDropdown').toggle();
     }
-    function searchContent(a){
+    function searchContent(a, pagecolls){
         var input;
         if ( a === 'exp'){
             input = $('#search-input-exp').val();
@@ -86,16 +92,16 @@
         } else {
             input = $(a).val();
         }
-        console.log(input);
-        // if ( pagetype === "collection" && selectSearchType < 0) {
-        //     var searchUrl = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + input + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
-        // } else if ( pagecolls != '' && selectSearchType < 0) {
-        //     var searchUrl = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/' + input + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
-        // } else {
+        var searchType = $('#searchType').val();
+        console.log(searchType);
+        if ( pagecolls && searchType.indexOf('This') > -1 ){
+            var searchUrl = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/' + input + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
+        } else {
             var searchUrl = 'http://digital.chipublib.org/digital/search/searchterm/' + input;
-        // }
+        }
         if (input.length > 0 ){
-            window.location.href = searchUrl;
+            // window.location.href = searchUrl;
+            console.log('searching ' + searchType + ' which is ' + pagecolls + ' for ' + input + ' and well go ' + searchUrl );
         }
     }
     function userExpandsWindow(){
@@ -104,6 +110,7 @@
         $('.header-left').addClass('header-left-bumper');
         $('.search').removeClass('search-bumper-small').addClass('search-bumper-big');
         showSidebar();
+        hideSearch();
     }
     function userShrinksWindow(){
         switchLayoutC();
@@ -119,4 +126,68 @@
 		if (viewportWidth > 976) {
             userExpandsWindow();
 		}
-	});
+    });
+    
+    // MPU rights 'i'
+    function rightsInsertion(loc) {
+		var rightsDiv = '<div class="rights-block">' +
+				'<i class="rights-i rights-i-lightbox fa fa-info-circle"></i>' + 
+					'<div class="rights-overlay rights-overlay-lightbox">' + 
+						'<div class="rights-guts">' + 
+							'<span class="rights-statement">' + 
+								'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
+							'</span>' + 
+						'</div>' + 
+						'<div class="rights-close">' + 
+							'<i class="rights-close-icon fa fa-times"></i>' + 
+						'</div>' + 
+					'</div>' + 
+				'</div>';
+		if (loc.src.indexOf("mpu") >= 0) {
+			if ($('.rights-overlay').is(":visible")){
+				$('.rights-overlay').hide();
+				$('.rights-i').show();
+			}
+			if ($(loc).children('.rights-i').length < 1) {
+
+				if ($(loc).attr('class') == 'slbImage') {
+					$('.slbContentOuter').prepend(rightsDiv);
+				} else {
+					$(loc).prepend(rightsDiv);
+				}
+			}
+			if ($('.rights-i').is(":hidden") && $('.rights-overlay').is(":hidden")) {
+				$(loc).children('.rights-i').show();	
+			}
+		} else if (loc.src.indexOf("mpu") < 0 ){
+			$(".slbContentOuter").children('.rights-block').hide();
+		}
+		RefreshEventListener();
+	}
+
+    function rightsI() {
+        e.preventDefault();
+        $(this).toggle();
+        $(this).siblings('.rights-overlay').toggle();
+        // RefreshEventListener();
+    }
+    function rightsClose(){
+        e.preventDefault();
+        $(this).parents('.rights-overlay').toggle();
+        $(this).parents('.rights-overlay').siblings('.rights-i').toggle();
+        // RefreshEventListener();
+    }
+	function RefreshEventListener() {
+		// https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+		// turns off the event listeners for the MPU rights "i" and turn them back on again; happens when lightbox loads an image, otherwise the event listener won't notice the new image
+		$(".rights-i").off(); 
+		$(".rights-close").off(); 
+        $('.rights-i').click(function(e){
+            rightsI();
+			return false;
+        });
+        $('.rights-close').click(function(e){
+            rightsClose();
+			return false;
+        });
+	}

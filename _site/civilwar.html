@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
-<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 
     <title>Civil War | Digital Collections | Chicago Public Library</title>
 </head>
@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="stylesheet" href="/assets/css/simpleLightbox.css">
 <!-- <link rel="stylesheet" href="cpldc.css" > -->
+    
     
     
     <header>
@@ -49,20 +50,27 @@
                             </div>
                         </div>
                         
+                        
+                        <script>
+                            var beelzebub = 'wha!p16818coll6';
+                            console.log(beelzebub);
+                        </script>
                         <div class="inline-div header-right">
                             <div class="search float-right" onclick="expandSearch()" tabindex="0">
                                 <div class="search-text inline-div">Search</div>
                                 <div class="hidden" id="searchExpander">
                                     
-                                    <select class="inline-div form-control searchtype-dropdown">
-                                        <option>This Subject</option>
-                                        <option>All Subjects</option>
-                                    </select>
+                                        
+                                        <select class="inline-div form-control searchtype-dropdown" id="searchType">
+                                            <option>This Subject</option>
+                                            <option>All Subjects</option>
+                                        </select>
+                                        
                                     
                                     <input type="text" class="search-input search-input-expanded inline-div" id="search-input-exp">
                                 </div>
                                 <div class="search-icon-wrapper inline-div">
-                                    <i onclick="searchContent('exp')" class="search-icon-white fa fa-search" id="search-icon"></i>
+                                    <i onclick="searchContent('exp', 'wha!p16818coll6')" class="search-icon-white fa fa-search" id="search-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -96,13 +104,12 @@
                 
                     <div class="search-dropped-row">
                         <div class="header-search-row">
-                            <button class="dropdown-toggle searchtype-dropdown" id="selectSearchTarget" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                This Subject
-                            </button>
-                            <div class="dropdown-menu searchtype-optionbox" aria-labelledby="dropdownMenuButton2">
-                                <a class="dropdown-item searchtype-option" href="#">This Subject</a>
-                                <a class="dropdown-item searchtype-option" href="#">All Subjects</a>
-                            </div>
+                            
+                            <select class="inline-div form-control searchtype-dropdown" id="searchType">
+                                <option>This Subject</option>
+                                <option>All Subjects</option>
+                            </select>
+                            
                         </div>
                     </div>
                 
@@ -110,7 +117,7 @@
                     <div class="search-dropped-input inline-div">
                         <input type="text" name="search-query" class="search-input" id="search-input-dropped" \>
                     </div>
-                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop')" >
+                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop', 'wha!p16818coll6')" >
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -554,8 +561,10 @@
                                     <a href="http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/231/default.jpg" data-caption="<a href=>&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854</a>" data-alt="1854 poster advertising a marshal's sale, a public auction of enslaved persons." title="&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854" class="loading">
                                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" alt="1854 poster advertising a marshal's sale, a public auction of enslaved persons." style="background-image: url(http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/231/default.jpg); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: cover; background-position: center" />
                                     </a>
+                                    
                                 </div>
                             </div>
+                            
                             <div class="row lightbox-thumbs justify-content-center">
                                 
                                 
@@ -592,17 +601,20 @@
                                     
                                 
                             </div>
+                            
                         </div>
                         <script>
                             $('.imageGallery a').simpleLightbox();
                         </script>
                     </section>
                     <section class="prosecontent" id="mainTextContent">
+                        
                         <div class="center-button browseall" id="browseButton">
                             <a href="http://digital.chipublib.org/digital/search/collection//order/title/ad/asc" id="allButton" class="btn btn-primary">
                                 Browse All
                             </a>
                         </div>
+                        
                         <div class="prosecontent" id="textAndLists">
                             
                                 <div class="textblock">
@@ -613,9 +625,40 @@
                             
                                 <div class="textblock">
                                     <h3>Digital Collections</h3>
+                                    
                                     <span>Collections  include:</span>
                                     <dl>
                                         
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
                                         
                                             
                                         
@@ -628,6 +671,20 @@
                                                     
                                                     
                                                 </dd>
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
+                                            
+                                        
                                             
                                         
                                             
@@ -665,51 +722,8 @@
                                         
                                             
                                         
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
                                     </dl>
+                                    
                                 </div>
                             
                             

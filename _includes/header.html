@@ -27,24 +27,49 @@
                         {% elsif page.type == 'category' %}
                             {% assign typesingular = 'This Subject' %}
                             {% assign typeplural = 'All Subjects' %}
+                            {% for post in site.posts %}
+                                {% if post.category contains page.slug %}
+                                    {% if pagecoll %}
+                                        {% capture pagecoll %}{{ pagecoll }}!{{ post.coll }}{% endcapture %}
+                                    {% else %}
+                                        {% assign pagecoll = post.coll %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% elsif page.type == 'location' %}
                             {% assign typesingular = 'This Location' %}
-                            {% assign typeplural = 'All Location' %}
+                            {% assign typeplural = 'All Locations' %}
+                            {% for post in site.posts %}
+                                {% if post.homeloc contains page.shortname %}
+                                    {% if pagecoll %}
+                                        {% capture pagecoll %}{{ pagecoll }}!{{ post.coll }}{% endcapture %}
+                                    {% else %}
+                                        {% assign pagecoll = post.coll %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
+                        {% if pagecoll %}{% else %}{% assign pagecoll = page.coll %}{% endif %}
+                        <script>
+                            var beelzebub = '{{pagecoll}}';
+                            console.log(beelzebub);
+                        </script>
                         <div class="inline-div header-right">
                             <div class="search float-right" onclick="expandSearch()" tabindex="0">
                                 <div class="search-text inline-div">Search</div>
                                 <div class="hidden" id="searchExpander">
-                                    {% if typesingular %}
-                                    <select class="inline-div form-control searchtype-dropdown">
-                                        <option>{{ typesingular }}</option>
-                                        <option>{{ typeplural}}</option>
-                                    </select>
+                                    {% if page.shortname == 'MRC' %}{% else %}
+                                        {% if typesingular %}
+                                        <select class="inline-div form-control searchtype-dropdown" id="searchType">
+                                            <option>{{ typesingular }}</option>
+                                            <option>{{ typeplural}}</option>
+                                        </select>
+                                        {% endif %}
                                     {% endif %}
                                     <input type="text" class="search-input search-input-expanded inline-div" id="search-input-exp">
                                 </div>
                                 <div class="search-icon-wrapper inline-div">
-                                    <i onclick="searchContent('exp')" class="search-icon-white fa fa-search" id="search-icon"></i>
+                                    <i onclick="searchContent('exp', '{{ pagecoll }}')" class="search-icon-white fa fa-search" id="search-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -78,13 +103,12 @@
                 {% if typesingular %}
                     <div class="search-dropped-row">
                         <div class="header-search-row">
-                            <button class="dropdown-toggle searchtype-dropdown" id="selectSearchTarget" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ typesingular }}
-                            </button>
-                            <div class="dropdown-menu searchtype-optionbox" aria-labelledby="dropdownMenuButton2">
-                                <a class="dropdown-item searchtype-option" href="#">{{ typesingular }}</a>
-                                <a class="dropdown-item searchtype-option" href="#">{{ typeplural }}</a>
-                            </div>
+                            {% if typesingular %}
+                            <select class="inline-div form-control searchtype-dropdown" id="searchType">
+                                <option>{{ typesingular }}</option>
+                                <option>{{ typeplural}}</option>
+                            </select>
+                            {% endif %}
                         </div>
                     </div>
                 {% endif %}
@@ -92,7 +116,7 @@
                     <div class="search-dropped-input inline-div">
                         <input type="text" name="search-query" class="search-input" id="search-input-dropped" \>
                     </div>
-                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop')" >
+                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop', '{{ pagecoll }}')" >
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </div>
                 </div>

@@ -4,7 +4,22 @@
 <div class="card" style="width: 20rem">
     <a href="{{ item.url }}">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpic.pic }}); background-size: {{ item.cardpic.size }}; background-position: {{ item.cardpic.pos }}; height: {{ item.cardpic.pich }}" class="card-img-top" alt="">
+        {% if item.cardpic.pic contains 'mpu' %}
+        <i class="rights-i rights-i-card fa fa-info-circle"></i>
+        <div class="rights-overlay rights-overlay-card">
+            <div class="rights-guts">
+                <span class="rights-statement">
+                    {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
+                    {{ mpu.rights2 }}
+                </span>
+            </div>
+            <div class="rights-close">
+                <i class="rights-close-icon fa fa-times"></i>
+            </div>
+        </div>
+        {% endif %}
     </a>
+
     <div class="card-bottom">
         {% if item.category  %}
             <span class="card-subj">{{ item.category }}</span>
