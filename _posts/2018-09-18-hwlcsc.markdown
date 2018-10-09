@@ -3,7 +3,6 @@ date:   2018-09-08 13:08:29 -0500
 layout: content
 title: Special Collections at HWLC
 sidebartype: fixed
-permalink: /:title
 sortname: Special Collections at HWLC
 categories: locations
 shortname: HWLCSC

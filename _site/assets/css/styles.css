@@ -159,13 +159,13 @@ header, .browse-dropdown-toplevel {
   margin: auto;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
-  width: 96%; }
+  width: 90%; }
 
 .search-dropped-close {
   position: relative;
   float: right;
   top: -40px;
-  right: 17px;
+  right: 25px;
   padding: 4px 7px 3px 7px;
   background-color: #f2f2f2;
   border-left: 1px solid #ccc;
@@ -233,17 +233,25 @@ header, .browse-dropdown-toplevel {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
 
-.searchtype-dropdown {
-  border: 1px solid #ccc;
-  margin-left: 7px;
-  color: #666;
+#searchExpander .searchtype-dropdown {
+  max-width: 145px;
   position: relative;
   top: -3px;
-  padding: 5px;
-  max-width: 145px;
-  max-height: 34px;
+  margin-left: 7px; }
+
+.searchtype-dropdown {
+  border: 1px solid #ccc;
+  color: #666;
   min-width: 155px;
+  padding: 5px;
+  max-height: 34px;
   border-radius: 0; }
+
+#searchType {
+  margin-left: 0; }
+
+.header-search-row {
+  width: 100%; }
 
 .search-input-expanded {
   border: 1px solid #ccc;
@@ -738,11 +746,14 @@ footer {
   color: #666;
   font-size: 0.75rem; }
 
-.rights-i {
+.rights-i, .rights-i-cardonly {
   color: #fff;
   cursor: pointer;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   padding: 5px; }
+
+#rightsWrapper {
+  position: relative; }
 
 .rights-i-card, .rights-i-about, .rights-overlay-card, .rights-overlay-about {
   position: absolute;
@@ -750,8 +761,9 @@ footer {
   left: 0; }
 
 .rights-i-lightbox, .rights-overlay-lightbox {
-  left: 16px;
+  position: absolute;
   bottom: 80px;
+  left: 0;
   z-index: 5000; }
 
 .rights-overlay-main, .rights-i-main {

@@ -3,7 +3,7 @@ date: 2018-09-08 13:08:29 -0500
 title: Amundsen High School Collection
 layout: content
 sidebartype: fixed
-permalink: /:title
+
 contenttype: collections
 filename: Amund
 sortname: Amundsen High School Collection

@@ -18,10 +18,10 @@
 <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="/assets/js/cpldc.js"></script>
-<script src="/assets/js/simpleLightbox.js"></script>
-<link rel="stylesheet" href="/assets/css/styles.css">
-<link rel="stylesheet" href="/assets/css/simpleLightbox.css">
+<script src="assets/js/cpldc.js"></script>
+<script src="assets/js/simpleLightbox.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/simpleLightbox.css">
 <!-- <link rel="stylesheet" href="cpldc.css" > -->
     
     
@@ -32,13 +32,13 @@
             <div class="row">
                 <div class="container">
                     <div class="row clearfix">
-                        <div class="col header-left hidden-md-down header-left-bumper" id="logo-fullSize">
+                        <div class="header-left hidden-md-down header-left-bumper" id="logo-fullSize">
                             <a href="https://www.chipublib.org/">
                                 <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                             </a>
                             <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
                         </div>
-                        <div class="inline-div  header-left hidden-lg-up" id="logo-small">
+                        <div class="inline-div col header-left hidden-lg-up" id="logo-small">
                             <div class="header-small-img inline-div ">
                                 <a href="https://www.chipublib.org/">
                                     <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
@@ -55,9 +55,9 @@
                             var beelzebub = 'dtd';
                             console.log(beelzebub);
                         </script>
-                        <div class="inline-div header-right">
-                            <div class="search float-right" onclick="expandSearch()" tabindex="0">
-                                <div class="search-text inline-div">Search</div>
+                        <div class="inline-div header-right col">
+                            <div class="search float-right inline-div" onclick="expandSearch()" tabindex="0">
+                                <div class="search-text inline-div hidden-sm-down">Search</div>
                                 <div class="hidden" id="searchExpander">
                                     
                                         
@@ -105,7 +105,7 @@
                     <div class="search-dropped-row">
                         <div class="header-search-row">
                             
-                            <select class="inline-div form-control searchtype-dropdown" id="searchType">
+                            <select class="inline-div form-control !!own" id="searchType">
                                 <option>This Collection</option>
                                 <option>All Collections</option>
                             </select>
@@ -363,39 +363,25 @@
                 
                     
                     <li>
-                        <a href="/afam" >African Americans</a>
+                        <a href="/customizations/global/pages/jekyll/afam.html" >African Americans</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/civilwar" >Civil War</a>
+                        <a href="/customizations/global/pages/jekyll/civilwar.html" >Civil War</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/rhwc" >Harold Washington</a>
+                        <a href="/customizations/global/pages/jekyll/rhwc.html" >Harold Washington</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/libed" >Libraries &amp; Education</a>
-                    </li>
-                    
-                
-                    
-                
-                    
-                    <li>
-                        <a href="/neigh" >Neighborhoods</a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        <a href="/examiner" >Newspapers</a>
+                        <a href="/customizations/global/pages/jekyll/libed.html" >Libraries &amp; Education</a>
                     </li>
                     
                 
@@ -403,7 +389,13 @@
                 
                     
                     <li>
-                        <a href="/parks" >Parks</a>
+                        <a href="/customizations/global/pages/jekyll/neigh.html" >Neighborhoods</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/customizations/global/pages/jekyll/examiner.html" >Newspapers</a>
                     </li>
                     
                 
@@ -411,7 +403,15 @@
                 
                     
                     <li>
-                        <a href="/theater" >Theater</a>
+                        <a href="/customizations/global/pages/jekyll/parks.html" >Parks</a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/customizations/global/pages/jekyll/theater.html" >Theater</a>
                     </li>
                     
                 
@@ -466,7 +466,7 @@
                 
                     
                         <li>
-                            <a href="/harsh" >Vivian G. Harsh Collection</a>
+                            <a href="/customizations/global/pages/jekyll/harsh.html" >Vivian G. Harsh Collection</a>
                         </li>
                     
                 
@@ -482,7 +482,7 @@
                 
                     
                         <li>
-                            <a href="/mrc" >Municipal Reference Collection</a>
+                            <a href="/customizations/global/pages/jekyll/mrc.html" >Municipal Reference Collection</a>
                         </li>
                     
                 
@@ -492,7 +492,7 @@
                 
                     
                         <li>
-                            <a href="/nnhc" >Northside Neighborhood History Collection</a>
+                            <a href="/customizations/global/pages/jekyll/nnhc.html" >Northside Neighborhood History Collection</a>
                         </li>
                     
                 
@@ -508,7 +508,7 @@
                 
                     
                         <li>
-                            <a href="/hwlcsc" >Special Collections at HWLC</a>
+                            <a href="/customizations/global/pages/jekyll/hwlcsc.html" >Special Collections at HWLC</a>
                         </li>
                     
                 

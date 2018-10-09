@@ -3,7 +3,6 @@ date:   2018-09-08 13:08:29 -0500
 layout: content
 filename: RMIA
 sidebartype: fixed
-permalink: /:title
 categories: subcollections
 title: Ravenswood Manor Improvement Association Collection
 sortname: Ravenswood Manor Improvement Association Collection

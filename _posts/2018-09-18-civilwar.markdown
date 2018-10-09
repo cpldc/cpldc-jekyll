@@ -3,7 +3,6 @@ date: 2018-09-08 13:08:29 -0500
 layout: content
 title: Civil War
 sidebartype: fixed
-permalink: /:title
 categories: subjects
 shortname: Civil War
 sidebarname: Civil War

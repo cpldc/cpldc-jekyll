@@ -29,7 +29,7 @@
                             {% if post.type == 'collection' or post.type == 'subcollection' %}
                                 <dt id="{{ post.slug }}">
                                     {% if post.type == 'collection' %}
-                                        <a href="{{ post.url }}">{{ post.sortname }}</a>
+                                        <a href="{{ post.url | prepend:site.baseurl }}">{{ post.sortname }}</a>
                                     {% else %}
                                         {{ post.sortname }}
                                     {% endif %}

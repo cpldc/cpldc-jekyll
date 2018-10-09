@@ -27,7 +27,7 @@
                 {% for item in sortedSubjects %}
                     {% if item.categories contains "subjects"  %}
                     <li>
-                        <a href="{{ item.url }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
+                        <a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -40,7 +40,7 @@
                 {% for item in sortedLocs %}
                     {% if item.categories contains "locations"  %}
                         <li>
-                            <a href="{{ item.url }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
+                            <a href="{{ item.url | prepend:site.baseurl }}" {% if page.url == item.url %}class="current"{% endif %}>{{ item.sidebarname }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}

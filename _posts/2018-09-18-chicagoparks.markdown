@@ -3,7 +3,6 @@ date: 2018-09-08 13:08:29 -0500
 layout: content
 contenttype: collections
 sidebartype: fixed
-permalink: /:title
 flag: 1 
 title: 'Chicago Park District Records: Photographs'
 coll: ChicagoParks

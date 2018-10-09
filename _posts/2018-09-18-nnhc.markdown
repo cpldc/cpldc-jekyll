@@ -3,7 +3,6 @@ date:   2018-09-08 13:08:29 -0500
 layout: content
 title: Northside Neighborhood History Collection
 sidebartype: fixed
-permalink: /:title
 sortname: Northside Neighborhood History Collection
 categories: locations
 shortname: NNHC

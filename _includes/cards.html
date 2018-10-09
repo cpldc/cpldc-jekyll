@@ -2,7 +2,7 @@
 {% for item in cards %}
 {% if item.flag %}
 <div class="card" style="width: 20rem">
-    <a href="{{ item.url }}">
+    <a href="{{ item.link }}">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url({{ item.cardpic.pic }}); background-size: {{ item.cardpic.size }}; background-position: {{ item.cardpic.pos }}; height: {{ item.cardpic.pich }}" class="card-img-top" alt="">
         {% if item.cardpic.pic contains 'mpu' %}
         <i class="rights-i rights-i-card fa fa-info-circle"></i>

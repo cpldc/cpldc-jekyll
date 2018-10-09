@@ -6,19 +6,20 @@
 		$('.search-input').keypress(function(e){
 			if(e.keyCode==13)
                 searchContent(this, beelzebub);
-		});
-        console.log( "ready!" );
+        });
+        $('.card .rights-i').click(function(e){
+            e.preventDefault();
+            rightsI(this);
+        });
+        $('.card .rights-close').click(function(e){
+            e.preventDefault();
+            rightsClose(this);
+        });
         $( "#hideSidebar" ).click(function() {
             hideSidebar();
         });
         $( "#showSidebar" ).click(function() {
             showSidebar();
-        });
-        $('.rights-i').click(function(e){
-            rightsI();
-        });
-        $('.rights-close').click(function(e){
-            rightsClose();
         });
         if (viewportWidth < 976 ){
             userShrinksWindow();
@@ -66,10 +67,10 @@
     function expandSearch(){
         viewportWidth = $(window).width();
         if (viewportWidth < 976 ){
-            console.log('droppding should be happening');
-            $('.search').addClass('hidden');
+            $('.search').hide();
             $('#searchDropper').removeClass('hidden');
             $('#search-input-dropped').focus();
+            $('.search-icon-white').hide();
         } else {
             $('#searchExpander').removeClass('hidden').addClass('inline-div');
             $('#search-input-exp').focus();
@@ -77,8 +78,11 @@
         }
     }
     function hideSearch() {
+        $('#searchExpander').addClass('hidden');
+        $('#search-icon').removeClass('search-icon-black').addClass('search-icon-white');
         $('#searchDropper').addClass('hidden');
-        $('.search').removeClass('hidden');
+        $('.search').show();
+        $('.search-icon-white').show();
     }
     function expandBrowseDropdown(){
         $('#browseDropdown').toggle();
@@ -93,15 +97,14 @@
             input = $(a).val();
         }
         var searchType = $('#searchType').val();
-        console.log(searchType);
         if ( pagecolls && searchType.indexOf('This') > -1 ){
             var searchUrl = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/' + input + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
         } else {
             var searchUrl = 'http://digital.chipublib.org/digital/search/searchterm/' + input;
         }
         if (input.length > 0 ){
-            // window.location.href = searchUrl;
-            console.log('searching ' + searchType + ' which is ' + pagecolls + ' for ' + input + ' and well go ' + searchUrl );
+            window.location.href = searchUrl;
+            // console.log('searching ' + searchType + ' which is ' + pagecolls + ' for ' + input + ' and well go ' + searchUrl );
         }
     }
     function userExpandsWindow(){
@@ -111,12 +114,19 @@
         $('.search').removeClass('search-bumper-small').addClass('search-bumper-big');
         showSidebar();
         hideSearch();
+        if ($('#searchDropper').is(':visible')){
+            expandSearch();
+        }
     }
     function userShrinksWindow(){
         switchLayoutC();
         $('.header-left').removeClass('header-left-bumper');
         $('.search').removeClass('search-bumper-big').addClass('search-bumper-small');
         hideSidebar();
+        hideSearch();
+        if ($('#searchExpander').is(':visible')){
+            expandSearch();
+        }
     }
     $(window).resize(function () {
 		var viewportWidth = $(window).width();
@@ -129,65 +139,47 @@
     });
     
     // MPU rights 'i'
-    function rightsInsertion(loc) {
-		var rightsDiv = '<div class="rights-block">' +
-				'<i class="rights-i rights-i-lightbox fa fa-info-circle"></i>' + 
-					'<div class="rights-overlay rights-overlay-lightbox">' + 
-						'<div class="rights-guts">' + 
-							'<span class="rights-statement">' + 
-								'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
-							'</span>' + 
-						'</div>' + 
-						'<div class="rights-close">' + 
-							'<i class="rights-close-icon fa fa-times"></i>' + 
-						'</div>' + 
-					'</div>' + 
-				'</div>';
-		if (loc.src.indexOf("mpu") >= 0) {
-			if ($('.rights-overlay').is(":visible")){
-				$('.rights-overlay').hide();
-				$('.rights-i').show();
-			}
-			if ($(loc).children('.rights-i').length < 1) {
-
-				if ($(loc).attr('class') == 'slbImage') {
-					$('.slbContentOuter').prepend(rightsDiv);
-				} else {
-					$(loc).prepend(rightsDiv);
-				}
-			}
-			if ($('.rights-i').is(":hidden") && $('.rights-overlay').is(":hidden")) {
-				$(loc).children('.rights-i').show();	
-			}
-		} else if (loc.src.indexOf("mpu") < 0 ){
-			$(".slbContentOuter").children('.rights-block').hide();
-		}
-		RefreshEventListener();
-	}
-
-    function rightsI() {
-        e.preventDefault();
-        $(this).toggle();
-        $(this).siblings('.rights-overlay').toggle();
-        // RefreshEventListener();
-    }
-    function rightsClose(){
-        e.preventDefault();
-        $(this).parents('.rights-overlay').toggle();
-        $(this).parents('.rights-overlay').siblings('.rights-i').toggle();
-        // RefreshEventListener();
-    }
-	function RefreshEventListener() {
-		// https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
-		// turns off the event listeners for the MPU rights "i" and turn them back on again; happens when lightbox loads an image, otherwise the event listener won't notice the new image
-		$(".rights-i").off(); 
-		$(".rights-close").off(); 
-        $('.rights-i').click(function(e){
-            rightsI();
-			return false;
+        // rightsInsertion is called by simple lightbox (I edited the js at line 180); 
+        //     whenever an image is loaded (onload), it looks at whether 'mpu' is in url; 
+        //     if it is, it wraps the image in a div (so it's separate from SLB's caption) 
+        //     and then attaches the "rightsdiv" after it
+        function rightsInsertion(loc) {
+            if (loc.src.indexOf("mpu") >= 0) {
+                var rightsDiv = '<div class="rights-block">' +
+                        '<i class="rights-i rights-i-lightbox fa fa-info-circle"></i>' + 
+                        '<div class="rights-overlay rights-overlay-lightbox">' + 
+                            '<div class="rights-guts">' + 
+                                '<span class="rights-statement">' + 
+                                    'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
+                                '</span>' + 
+                            '</div>' + 
+                            '<div class="rights-close">' + 
+                                '<i class="rights-close-icon fa fa-times"></i>' + 
+                            '</div>' + 
+                        '</div>' + 
+                    '</div>';
+                $(loc).wrap('<div id="rightsWrapper"></div>');
+                $(loc).after(rightsDiv);
+            }
+        }
+        // rightsI and rightsClose handle the user interacting
+        function rightsI(item) {
+            $(item).toggle();
+            $(item).siblings('.rights-overlay').toggle();
+        }
+        function rightsClose(item){
+            $(item).parents('.rights-overlay').toggle();
+            $(item).parents('.rights-overlay').siblings('.rights-i').toggle();
+        }
+        // rather than using a docready or a event refresher, 
+        // this (body) method doesn't need to be dynamically altered when the page adds a new mpu image 
+        // (as is the case with the lightbox)
+        // inexplicably, this doesnt work on the cards so .card .rights-i is in docready
+        $('body').on('click', '.rights-i', function(e) {
+            e.preventDefault();
+            rightsI(this);
         });
-        $('.rights-close').click(function(e){
-            rightsClose();
-			return false;
+        $('body').on('click', '.rights-close', function(e) {
+                e.preventDefault();
+                rightsClose(this);
         });
-	}

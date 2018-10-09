@@ -3,7 +3,6 @@ date:   2018-09-08 13:08:29 -0500
 layout: content
 filename: Playbills
 sidebartype: fixed
-permalink: /:title
 categories: subcollections
 title: Chicago Theater Collection-Historic Playbills
 sortname: Chicago Theater Collection-Historic Playbills
