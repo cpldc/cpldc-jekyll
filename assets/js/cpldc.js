@@ -7,6 +7,7 @@
 			if(e.keyCode==13)
                 searchContent(this, beelzebub);
         });
+        $('.textblock').css('bottom-border','1px solid #ccc');
         $('.card .rights-i').click(function(e){
             e.preventDefault();
             rightsI(this);
@@ -51,8 +52,8 @@
         $('#sidebar-c-target').prepend(sidebar);
         $('#sidebar').removeClass('col-4 col-lg-4 col-xl-3').addClass('float-left collapsable sidebar-height');
         $('#hideSidebar').removeClass('hidden');
-        $('.main-container').removeClass('container fixed');
-        $('.main-content').removeClass('col-xl-6 col-8');
+        $('.main-container').removeClass('fixed');
+        // $('.main-content').removeClass('col-xl-6 col-8');
     }
     function switchLayoutF(){
         var sidebar = $('#sidebar').detach();
@@ -60,7 +61,7 @@
         $('.sidebar').addClass('col-4 col-lg-4 col-xl-3').removeClass('float-left collapsable sidebar-height');
         $('.main-container').addClass('container fixed').removeClass('main-container-wide main-container-narrow');
         $('#hideSidebar').addClass('hidden');
-        $('.main-content').addClass('col-xl-6 col-8');
+        $('.main-content').addClass('col-xl-6 col-lg-8 col-12');
     }
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not

@@ -21,6 +21,7 @@
         {% assign mainimageUrl = page.mainimage.coll %}
     {% else %}
         {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
+        {% assign mainimageUrl = 'https://cdm16818.contentdm.oclc.org/digital/collection/' | append: coll | append: '/id/' | append: page.mainimage.url %}
     {% endif %}
     {% assign sortedPosts = site.posts | sort: 'sortname' %}
     {% include header.html %}
@@ -28,7 +29,7 @@
         <div class="container fixed main-container">
             <div class="row" id="sidebar-f-target">
                 {% include sidebar.html %}
-                <div class="content main-content col-xl-6 col-8">
+                <div class="content main-content col-xl-6 col-lg-8 col-12">
                     <h1 class="page-title">{{ page.title }}</h1>
                     <section class="intro">
                         <div class="prosecontent">{{ page.textlong }}</div>
@@ -38,7 +39,7 @@
                             <div class="row">
                                 <div class="col justify-content-center lightbox-mainimage">
                                     <a href="{{ mainimage }}" data-caption="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" title="{{ page.mainimage.text }}" class="loading">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
                                     </a>
                                     {% if mainimage contains 'mpu' %}
                                         <i class="rights-i rights-i-main fa fa-info-circle"></i>
@@ -56,20 +57,20 @@
                                         {% endif %}
                                 </div>
                             </div>
-                            {% if page.slug == 'mrc' %}{% else %}
+                            {% if page.slug == 'mrc' %}{% elsif page.slug == 'takedown' %}{% else %}
                             <div class="row lightbox-thumbs justify-content-center">
                                 {% assign counter = 1 %}
                                 {% for thumb in page.thumbs %}
-                                {% if thumb.coll %}
-                                    {% assign coll = thumb.coll %}
-                                {% else %}
-                                    {% assign coll = page.coll %}
-                                {% endif %}
-                                    <div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}">
-                                        <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ thumb.col }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ thumb.size }}; background-position: {{ thumb.align }}" />
-                                        </a>
-                                    </div>
+                                    {% if thumb.coll %}
+                                        {% assign coll = thumb.coll %}
+                                    {% else %}
+                                        {% assign coll = page.coll %}
+                                    {% endif %}
+                                        <div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}">
+                                            <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ coll }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ thumb.size }}; background-position: {{ thumb.align }}" />
+                                            </a>
+                                        </div>
                                     {% assign counter = counter | plus:1 %}
                                 {% endfor %}
                             </div>
@@ -80,7 +81,7 @@
                         </script>
                     </section>
                     <section class="prosecontent" id="mainTextContent">
-                        {% if page.slug == 'mrc' %}{% else %}
+                        {% if page.slug == 'mrc' %}{% elsif page.slug == 'takedown' %}{% else %}
                         <div class="center-button browseall" id="browseButton">
                             <a href="http://digital.chipublib.org/digital/search/collection/{% if page.type == 'category' or page.type == 'location' %}{{ page.allcolls }}{% elsif page.type == 'collection' %}{{ page.coll }}{% endif %}/order/title/ad/asc" id="allButton" class="btn btn-primary">
                                 Browse All
@@ -110,7 +111,7 @@
                                     </dl>
                                 </div>
                             {% endif %}
-                            {% if page.subdigicoll or page.type == 'category' or page.type == 'location' %}
+                            {% if page.subcollections or page.type == 'category' or page.type == 'location' %}
                                 <div class="textblock">
                                     <h3>Digital Collections</h3>
                                     {% if page.slug == 'mrc' %}
@@ -118,15 +119,15 @@
                                     {% else %}
                                     <span>Collections {{ page.catcoll }}{% if page.type == 'location' %} from the {{ page.longname }}{% endif %} include:</span>
                                     <dl>
-                                        {% if page.subdigicoll %}
-                                            {% for subcoll in page.subdigicoll %}
-                                                <dt><a href="{{ subcoll.a }}">{{ subcoll.dt }}</a></dt>
-                                                <dd>{{ subcoll.dd }}</dd>
+                                        {% if page.subcollections %}
+                                            {% for subcoll in page.subcollections %}
+                                                <dt><a href="{{ subcoll.browse }}">{{ subcoll.title }}</a></dt>
+                                                <dd>{{ subcoll.textshort }}</dd>
                                             {% endfor %}
                                         {% endif %}
                                         {% for subcoll in sortedPosts %}
                                             {% if page.type == 'category' and subcoll.category contains page.slug %}
-                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
+                                                <dt><a href="{{ subcoll.url | prepend:site.baseurl }}">{{ subcoll.title }}</a></dt>
                                                 <dd>
                                                     {{ subcoll.textshort }}
                                                     {% if subcoll.link == 'rvw' and page.slug == 'libed' %}
@@ -137,7 +138,7 @@
                                                     {% endif %}
                                                 </dd>
                                             {% elsif page.type == 'location' and subcoll.homeloc == page.shortname %}
-                                                <dt><a href="{{ subcoll.link }}">{{ subcoll.title }}</a></dt>
+                                                <dt><a href="{{ subcoll.url | prepend:site.baseurl }}">{{ subcoll.title }}</a></dt>
                                                 <dd>
                                                     {{ subcoll.textshort }}
                                                 </dd>
@@ -161,11 +162,13 @@
                                                 {% endif %}
                                             </dd>
                                             <ul>
-                                                {% for fa in page.findingaid %}
+                                                {% assign sortedFas = page.findingaid | sort: 'text' %}
+                                                {% for fa in sortedFas %}
                                                     <li><a href="{{ fa.link }}">{{ fa.text }}</a></li>
                                                 {% endfor %}
                                             </ul>
                                         {% endif %}
+                                        {% assign sortedCplres = page.CPLRes | sort: 'dt' %}
                                         {% for listitem in page.CPLRes %}
                                             <dt><a href="{{ listitem.a }}">{{ listitem.dt }}</a></dt>
                                             <dd>{{ listitem.dd }}</dd>
@@ -178,7 +181,8 @@
                                         <h3>Finding Aids</h3>
                                         <p>The descriptive inventories for their physical collections.</p>
                                         <ul>
-                                            {% for fa in page.findingaid %}
+                                            {% assign sortedFas = page.findingaid | sort: 'text' %}
+                                            {% for fa in sortedFas %}
                                                 <li><a href="{{ fa.link }}">{{ fa.text }}</a></li>
                                             {% endfor %}
                                         </ul>
@@ -191,11 +195,12 @@
                                     {% endif %}
                                 </div>
                             {% endif %}
-                            {% if page.exres %}
+                            {% if page.ExRes %}
                                 <div class="textblock">
                                     <h3>External Resources</h3>
                                     <dl>
-                                        {% for listitem in page.exres %}
+                                        {% assign sortedLis = page.ExRes | sort: 'dt' %}
+                                        {% for listitem in sortedLis %}
                                             <dt><a href="{{ listitem.a }}">{{ listitem.dt }}</a></dt>
                                             <dd>{{ listitem.dd }}</dd>
                                         {% endfor %}

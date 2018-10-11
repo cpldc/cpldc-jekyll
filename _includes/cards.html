@@ -25,7 +25,7 @@
             <span class="card-subj">{{ item.category }}</span>
             <br />
         {% endif %}
-        <a href="{{ item.url }}">
+        <a href="{{ item.url | prepend:site.baseurl }}">
             <h2 class="card-title">{{ item.title }}</h2>
         </a>
         <span class="card-text">{{ item.textshort }}</span>  

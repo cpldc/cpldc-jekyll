@@ -423,13 +423,7 @@ header, .browse-dropdown-toplevel {
 .current {
   text-decoration: underline; }
 
-.main-container-wide {
-  width: calc(100% - 75px);
-  margin-left: 55px;
-  margin-right: 10px; }
-
 .main-container-narrow {
-  width: calc(100% - 255px);
   margin-left: 235px;
   margin-right: 10px; }
 
@@ -584,12 +578,13 @@ footer {
 .lightbox-mainimage {
   margin: auto;
   padding: 15px;
-  width: 100%;
+  max-height: 480px;
   overflow: hidden;
   position: relative; }
 
 .lightbox-mainimage img {
-  height: 350px;
+  max-height: 350px;
+  height: auto;
   width: 100%; }
 
 .lightbox-thumbs {
@@ -599,6 +594,20 @@ footer {
   width: 100%;
   height: 100%; }
 
+.slbCaption a {
+  overflow: visible;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
+  padding: .71429em 0;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.7); }
+
 .prosecontent {
   padding-top: 15px;
   margin-bottom: 15px; }
@@ -607,9 +616,14 @@ footer {
   padding: 10px 15px 0 15px; }
 
 .textblock {
-  padding: 0 15px; }
+  padding: 0 15px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px; }
 
-.textblock h3 {
+.textblock:last-child {
+  border-bottom: none; }
+
+.textblock h3, .textblock h2 {
   font-weight: bold;
   font-size: 18px; }
 
@@ -739,9 +753,6 @@ footer {
 .card a, .lightbox-mainimage a {
   position: relative; }
 
-.lightbox-mainimage {
-  max-height: 380px; }
-
 .rights, .rights a {
   color: #666;
   font-size: 0.75rem; }
@@ -792,3 +803,33 @@ footer {
 .rights-guts {
   position: relative;
   display: inline-block; }
+
+#about-image, #announce-image {
+  padding: 15px 0; }
+
+#about-image, .hr {
+  border-top: 1px solid #ccc;
+  margin-top: 15px; }
+
+.about-contact-p-first {
+  padding-top: 10px; }
+
+.about-contact-p-last {
+  margin-bottom: 18px; }
+
+.about-contact a {
+  color: #2d63af; }
+
+.about-contact a:hover {
+  color: #2d63af; }
+
+.about-image, .announce-image {
+  width: 94% !important;
+  margin: auto;
+  position: relative; }
+
+.about-image {
+  height: 250px;
+  background: url(http://digital.chipublib.org/digital/api/singleitem/image/mpu/2232/default.jpg);
+  background-size: 120%;
+  background-position: 0px 60%; }

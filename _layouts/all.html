@@ -38,10 +38,10 @@
                                 {% if post.type == 'collection'  and post.slug != 'theater' %}
                                     <dd class="all-collections-category">Found in
                                         {% if post.category.first %}
-                                            <a class="catlink-one" href="{{ post.category[0] }}">{{ post.categoryFull[0] }}</a>
-                                            <a class="catlink-two" href="{{ post.category[1] }}">{{ post.categoryFull[1] }}</a>
+                                            <a class="catlink-one" href="{{ post.category[0] }}.html">{{ post.categoryFull[0] }}</a>
+                                            <a class="catlink-two" href="{{ post.category[1] }}.html">{{ post.categoryFull[1] }}</a>
                                         {% else %}
-                                            <a href="{{ post.category }}">{{ post.categoryFull }}</a>
+                                            <a href="{{ post.category }}.html">{{ post.categoryFull }}</a>
                                         {% endif %}
                                     </dd>
                                 {% endif %}
@@ -58,7 +58,7 @@
                         <div class="blogs-viewmore">
                             <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
                                 View More 
-                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                                <i class="rsaquo fa fa-angle-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <div class="events-viewmore">
                             <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
                                 View More 
-                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                                <i class="rsaquo fa fa-angle-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
