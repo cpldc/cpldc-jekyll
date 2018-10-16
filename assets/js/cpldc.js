@@ -28,6 +28,26 @@
         if (viewportWidth > 976 ){
             userExpandsWindow();
         }
+        // $.ajax({
+        //     type: "POST",
+        //     url: 'events.php',
+        //     dataType: 'html',
+        //     data: {functionname: 'eventer'},
+        //     success: function (obj, textstatus) {
+        //         $('#events').empty().append(obj);
+        //     },
+        //     error: function(req, err){ console.log('my message ' + err); } 
+        // });
+        // $.ajax({
+        //     type: "POST",
+        //     url: 'blogs.php',
+        //     dataType: 'html',
+        //     data: {functionname: 'eventer'},
+        //     success: function (obj, textstatus) {
+        //         $('#blogs').empty().append(obj);
+        //     },
+        //     error: function(req, err){ console.log('my message ' + err); } 
+        // });
     });
     function mainContainerSidePadding(modifier) {
         if (modifier === 'shrinkContent' && !($('.main-container').hasClass('fixed'))){
@@ -66,6 +86,9 @@
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not
     function expandSearch(){
+        if ($('#searchDropper').is(':visible') || $('#searchExpander').is(':visible')){
+            return false;
+        }
         viewportWidth = $(window).width();
         if (viewportWidth < 976 ){
             $('.search').hide();
@@ -73,6 +96,7 @@
             $('#search-input-dropped').focus();
             $('.search-icon-white').hide();
         } else {
+            $('#test').removeClass('hidden');
             $('#searchExpander').removeClass('hidden').addClass('inline-div');
             $('#search-input-exp').focus();
             $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
@@ -111,6 +135,7 @@
     function userExpandsWindow(){
         // the card page index should never change to the fixed layout so, in /layouts/cardpage.html, the <main> tag has a clas called "no-fixed"
         (!$('main').hasClass('no-fixed') ? switchLayoutF() : '');
+        footerWide();
         $('.header-left').addClass('header-left-bumper');
         $('.search').removeClass('search-bumper-small').addClass('search-bumper-big');
         showSidebar();
@@ -121,12 +146,32 @@
     }
     function userShrinksWindow(){
         switchLayoutC();
+        footerNarrow();
         $('.header-left').removeClass('header-left-bumper');
         $('.search').removeClass('search-bumper-big').addClass('search-bumper-small');
         hideSidebar();
         hideSearch();
         if ($('#searchExpander').is(':visible')){
             expandSearch();
+        }
+    }
+    // footer funkiness
+    function footerNarrow() {
+        if(!$('.footer-social').hasClass('footer-social-horiz')){
+            $('.footer-social').addClass('footer-social-horiz');
+        }
+        if ($(".footer-list").hasClass("footer-floatright")){
+            $(".footer-list").removeClass("footer-floatright");
+            $(".footer-contactinfo").removeClass("footer-floatright");
+        }
+    }
+    function footerWide() {
+        if ($(".footer-social").hasClass("footer-social-horiz")){
+            $(".footer-social").removeClass("footer-social-horiz");
+        }
+        if (!$(".footer-list").hasClass("footer-floatright")){
+            $(".footer-list").addClass("footer-floatright");
+            $(".footer-contactinfo").addClass("footer-floatright");
         }
     }
     $(window).resize(function () {

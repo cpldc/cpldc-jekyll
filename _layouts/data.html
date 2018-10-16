@@ -14,49 +14,15 @@
 
 {% include header.html %}
 <main id="sidebar-c-target">
-    <div class="container fixed main-container">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div id="content" class="container fixed main-container">
         <div class="row" id="sidebar-f-target">
-            {% include sidebar.html %}
-            <div  id="content" class="content main-content col-xl-6 col-lg-8 col-12">
-                    <h1 class="page-title">{{ page.title }}</h1>
-                    <section class="intro">
-                        <div class="prosecontent">{{ page.textlong }}</div>
-                    </section>
-<div id="about-image" class="center-lightbox">
-        <div class="col-12 lightbox-main-img-div about-image content-main-img" title="Cloud Gate, assembly complete, view from above, July 16, 2004">
-                <i class="rights-i rights-i-about fa fa-info-circle"></i>
-                <div class="rights-overlay rights-overlay-about">
-                    <div class="rights-guts">
-                        <span class="rights-statement">
-                            {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
-                            {{ mpu.rights2 }}
-                        </span>
-                    </div>
-                    <div class="rights-close">
-                        <i class="rights-close-icon fa fa-times"></i>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <div class="prosecontent textblock">
-        <p>{{ page.textrich }}</p>
-            {% if page.slug == 'about' %}
-            <p>
-                Our digital collections come from CPL’s special collections:
-            </p>
-            <dl>
-                {% assign sortedPosts = site.posts | sort: 'sortname' %} 
-                {% for post in sortedPosts %}
-                {% if post.type == 'location' %}
-                    <dt><a href="{{ post.url | prepend:site.baseurl}}">{{ post.title }}</a></dt><dd>{{ post.textshort }}</dd>
-                    {% endif %}
-                {% endfor %}
-            </dl>
-            {% endif %}
-            {{ page.extracontent }}
+            {% include sidebar-data.html %}
+            <div  id="content" class="content main-content col-12">
+                <div class="startercontent"></div>
             </div>
-</div>
-    <div class="hidden-lg-down col-lg-3 right-sidebar">
+        </div>
+        <div class="hidden-lg-down col-lg-3 right-sidebar">
             <div class="content blogs">
                 <div class="blogs-title">
                     <h2>Chicago History Blog</h2>

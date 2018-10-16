@@ -1,17 +1,17 @@
 ---
-date:   2018-10-10 10:20:09 -0500
-layout: content
+layout: about
 sidebartype: fixed
+link: takedown
 title: Copyright and Takedown Policy
 textlong: Notice to users&amp; The Chicago Public Library works to ensure that it has appropriate rights to provide access to content through the Digital Collections website. These materials are made available for educational and scholarly use.
 mainimage:
     url: '2232'
     coll: mpu
-    text: Notice and Takedown Policy
+    text: Cloud Gate, assembly complete, view from above, July 16, 2004
     size: cover
     align: center
 textrich: >-
-        If you are a rights holder and are concerned that you have found material on the Chicago Public Library&rsquo;s Digital Collections Website without your permission and believe our inclusion of this material on the Digital Collections Website violates your rights (e.g. inclusion is not covered by the Fair Use or other exemption to a copyright holder&rsquo;s rights), please contact webmaster@chipublib.org and include the following &amp;
+        If you are a rights holder and are concerned that you have found material on the Chicago Public Library&rsquo;s Digital Collections Website without your permission and believe our inclusion of this material on the Digital Collections Website violates your rights (e.g. inclusion is not covered by the Fair Use or other exemption to a copyright holder&rsquo;s rights), please contact <a href="mailto:webmaster@chipublib.org">webmaster@chipublib.org</a> and include the following:
         <ul><li>Your contact information (including email address and phone),</li>
         <li>Exact URL where you found the material,</li>
         <li>Details that describe the material (title, collection name, number of items, etc.),</li>

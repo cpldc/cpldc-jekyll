@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+        <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+    
     <title>Digital Collections | Chicago Public Library</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
@@ -23,6 +26,12 @@
 </head>
 <body>
     <header>
+    <section class="a11y-skip-links">
+        <span class="invisitext"><a href="#sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
+        <!-- <span class="invisitext hidden-lg-up"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span> -->
+        <span class="invisitext"><a href="#search" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
+        <span class="invisitext"><a href="#content" class="a11ylinks">Skip to Content</a></span>
+    </section>
     <section>
         <div class="container-fluid">
             <div class="row">
@@ -32,7 +41,7 @@
                             <a href="https://www.chipublib.org/">
                                 <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                             </a>
-                            <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
+                            <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/jekyll/">Digital Collections</a></h2>
                         </div>
                         <div class="inline-div col header-left hidden-lg-up" id="logo-small">
                             <div class="header-small-img inline-div ">
@@ -338,8 +347,6 @@
                     
                 
                     
-                
-                    
                     <li>
                         <a href="/customizations/global/pages/jekyll/afam.html" >African Americans</a>
                     </li>
@@ -401,8 +408,6 @@
             <p>Browse by Location</p>
             <ul>
                 
-                
-                    
                 
                     
                 
@@ -528,7 +533,7 @@
 
 </div>
         <div class="main-container">
-            <div class="grid">
+            <div id="content" class="grid">
                 
 
 
@@ -580,17 +585,17 @@
 
 
 
-
-
 <div class="card" style="width: 20rem">
-    <a href="ChicagoParks">
+    <a href="/customizations/global/pages/jekyll/chicagoparks.html">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg); background-size: 250%; background-position: 87% 47%; height: 250px" class="card-img-top" alt="">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">parks</span>
+            
+                <span class="card-subj">Parks</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/chicagoparks.html">
@@ -603,14 +608,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="p16818coll6">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg); background-size: 190%; background-position: 20% 25%; height: 300px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/p16818coll6.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg); background-size: 190%; background-position: 20% 25%; height: 300px" class="card-img-top" alt="Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">afamcivilwar</span>
+            
+                <span class="card-subj card-subj-first">African Americans</span><span class="card-subj card-subj-last">Civil War</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/p16818coll6.html">
@@ -623,8 +630,8 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="CPB01">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(assets/images/theater-cardpic.png); background-size: auto 225%; background-position: 45% 60%; height: 250px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/theater.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(assets/images/theater-cardpic.png); background-size: auto 225%; background-position: 45% 60%; height: 250px" class="card-img-top" alt="A black and white drawing depicts a woman looking through a monocle. Her hair is styled into a high bun.">
         
     </a>
 
@@ -640,8 +647,8 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="mpu">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg); background-size: 130%; background-position: 35% 50%; height: 240px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/mpu.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg); background-size: 130%; background-position: 35% 50%; height: 240px" class="card-img-top" alt="Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. The tall buildings of Michigan Avenue are visible behind the sculpture.">
         
         <i class="rights-i rights-i-card fa fa-info-circle"></i>
         <div class="rights-overlay rights-overlay-card">
@@ -660,7 +667,9 @@
 
     <div class="card-bottom">
         
-            <span class="card-subj">parks</span>
+            
+                <span class="card-subj">Parks</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/mpu.html">
@@ -673,14 +682,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="rhwc">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg); background-size: 200%; background-position: 75% 40%; height: 250px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/rhwc.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg); background-size: 200%; background-position: 75% 40%; height: 250px" class="card-img-top" alt="Mayor Washington smiles and points to the crowd while riding on the back of a convertible.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">afam</span>
+            
+                <span class="card-subj">African Americans</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/rhwc.html">
@@ -693,14 +704,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="wha">
+    <a href="/customizations/global/pages/jekyll/wha.html">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg); background-size: 110%; background-position: 50% 40%; height: 280px" class="card-img-top" alt="">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">civilwar</span>
+            
+                <span class="card-subj">Civil War</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/wha.html">
@@ -713,14 +726,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="examiner">
+    <a href="/customizations/global/pages/jekyll/examiner.html">
         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg); background-size: 110% auto; background-position: 50% -15px; height: 19rem" class="card-img-top" alt="">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">news</span>
+            
+                <span class="card-subj">Newspapers</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/examiner.html">
@@ -733,14 +748,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="cr">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg); background-size: 100%; background-position: auto; height: 20rem" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/chiren.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg); background-size: 100%; background-position: auto; height: 20rem" class="card-img-top" alt="Margaret Walker's face, smiling">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">afam</span>
+            
+                <span class="card-subj">African Americans</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/chiren.html">
@@ -753,14 +770,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="rwk">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg); background-size: 100%; background-position: 50% 50%; height: 210px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/rwk.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg); background-size: 100%; background-position: 50% 50%; height: 210px" class="card-img-top" alt="The front of a two-story duplex viewed from the street.  Two people sit at the entrance to one of the homes.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">neigh</span>
+            
+                <span class="card-subj">Neighborhoods</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/rwk.html">
@@ -773,14 +792,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="hdg">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg); background-size: 110%; background-position: 50% 50%; height: 250px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/hdg.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg); background-size: 110%; background-position: 50% 50%; height: 250px" class="card-img-top" alt="Five men from the fire department pose with a fire engine. Three are standing, and two are riding in the vehicle. One of the men has a white shirt and tie. Part of the fire house and two neighboring houses are pictured in the background">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">neigh</span>
+            
+                <span class="card-subj">Neighborhoods</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/hdg.html">
@@ -793,14 +814,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="bar">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg); background-size: 110%; background-position: auto; height: 20rem" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/bar.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg); background-size: 110%; background-position: auto; height: 20rem" class="card-img-top" alt="Esther Barlow as a young woman.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">libed</span>
+            
+                <span class="card-subj">Libraries &amp; Education</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/bar.html">
@@ -813,14 +836,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="woop">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg); background-size: 100%; background-position: 50% -20px; height: 200px;" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/woop.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg); background-size: 100%; background-position: 50% -20px; height: 200px;" class="card-img-top" alt="View of Michigan Avenue and Washington Street sides of the original Chicago Public Library Central Library.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">libed</span>
+            
+                <span class="card-subj">Libraries &amp; Education</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/woop.html">
@@ -833,14 +858,16 @@
 
 
 <div class="card" style="width: 20rem">
-    <a href="dtd">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg); background-size: 120%; background-position: 50% -20px; height: 200px" class="card-img-top" alt="">
+    <a href="/customizations/global/pages/jekyll/dtd.html">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 20rem; background: url(https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg); background-size: 120%; background-position: 50% -20px; height: 200px" class="card-img-top" alt="Three men working on an unfinished sewer.">
         
     </a>
 
     <div class="card-bottom">
         
-            <span class="card-subj">neigh</span>
+            
+                <span class="card-subj">Neighborhoods</span>
+            
             <br />
         
         <a href="/customizations/global/pages/jekyll/dtd.html">

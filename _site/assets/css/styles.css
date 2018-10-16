@@ -4,9 +4,7 @@ body {
   line-height: 18px;
   margin: 0;
   font-size: 1.00rem;
-  position: relative;
-  height: 100%;
-  width: 100%; }
+  position: relative; }
 
 main {
   height: 100%;
@@ -59,7 +57,7 @@ header button {
 header {
   margin-bottom: 15px;
   background-color: #fff;
-  font-family: "Open Sans", Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 header, .browse-dropdown-toplevel {
   box-shadow: 0px 3px 4px 1px rgba(50, 50, 50, 0.5); }
@@ -110,6 +108,7 @@ header, .browse-dropdown-toplevel {
 
 .header-sm-button {
   padding: 12px 15px;
+  font-family: "Open Sans", Arial, sans-serif;
   cursor: pointer;
   border: 0;
   background-color: #fff;
@@ -121,11 +120,13 @@ header, .browse-dropdown-toplevel {
 
 .search {
   padding: 8px;
-  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
   font-size: 1.08rem;
   margin: auto 0;
   cursor: pointer; }
+
+.search-text {
+  font-family: "Open Sans", Arial, sans-serif; }
 
 .search-bumper-big {
   position: absolute;
@@ -461,6 +462,14 @@ header, .browse-dropdown-toplevel {
   color: #2d63af;
   text-transform: uppercase; }
 
+.card-subj-first {
+  padding-right: 0.5rem;
+  margin-right: 0; }
+
+.card-subj-last {
+  padding-left: 0.5rem;
+  border-left: 1px solid #2d63af; }
+
 .card-title {
   font-weight: bold;
   font-size: 1.21rem;
@@ -588,11 +597,17 @@ footer {
   width: 100%; }
 
 .lightbox-thumbs {
-  height: 100px; }
+  overflow: hidden;
+  height: 100px;
+  max-height: 100px; }
 
 .lightbox-thumbs img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
+
+.slbCaption {
+  overflow: visible !important; }
 
 .slbCaption a {
   overflow: visible;
@@ -663,7 +678,6 @@ footer {
   margin-bottom: 0; }
 
 .blogs-title h2, .events-title h2 {
-  text-transform: uppercase;
   font-weight: bold;
   color: #3f4344;
   line-height: 19px;
@@ -698,6 +712,14 @@ footer {
 .event-location a, .event-date, .event-time {
   font-size: 12px;
   color: #666; }
+
+.event-location a {
+  border-bottom: 0; }
+
+.event-location a:hover {
+  border-bottom: 0;
+  color: #666;
+  text-decoration: underline; }
 
 .event-datetime {
   border-top: 1px solid #ccc;
@@ -833,3 +855,16 @@ footer {
   background: url(http://digital.chipublib.org/digital/api/singleitem/image/mpu/2232/default.jpg);
   background-size: 120%;
   background-position: 0px 60%; }
+
+.invisitext a {
+  background-color: #fff;
+  z-index: 999;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px; }
+
+.invisitext a:focus {
+  opacity: 1;
+  color: #123; }
