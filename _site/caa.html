@@ -312,15 +312,27 @@
     // nonfunctions: 
     // globals: 
             // results array is the array of objects for search results
-            // results html is ithe results array with html added
+            // resulvar 
+            var artTerms = [{"group": "painting", "name": "Painting", "ids": ["Acrylics","Airbrushing","Casien","Egg Tempora","Encaustic Painting","Faux Finishing","Fresco","Gouache","Graffiti","Icons","Landscapes","Marine Painting","Murals","Oil Crayon","Oil Painting","Painting","Pastels","Portraits","Reverse Painting","Tempra","Watercolor"]},
+                {"group": "drawing", "name": "Drawing", "ids": ["Animation","Calligraphy","Caricaturs","Cartography","Cartoons","Comics","Computer Art","Drafting","Drawing","Illumination","Illustration","Ink","Ketubot","Landscapes","Medical Illustration","Oil Crayon","Pastels","Portraits","Scratchboard","Works on Paper"]},
+                {"group": "printmaking", "name": "Printmaking", "ids": ["Block Printing","Bookplates","Collage","Collographs","Drypoint","Emgraving","Etching","Lithographs","Portraits","Silverpoint","Printmaking","Screen Printing","Woodblock Printing","Woodcuts","Works on Paper"]},
+                {"group": "design", "name": "Design", "ids": ["Advertising Design","Architecture","Church Decoration","Costume Design","Design","Fashion Design","Floral Design","Furniture","Graphics","Greeting Cards","Industrial Design","Interior Design","Landscape Architecture","Scenography","Theater Design"]},
+                {"group": "sculpture", "name": "Sculpture", "ids": ["Bronzes","Assemblage","Construction","Fiber Art","Funerary Sculpture","Icons","Installation","Plexiglass","Portraits","Sculpture","Stone Carving","Topiary Sculpture","Wood Carving"]},
+                {"group": "film-theater", "name": "Film/Theater", "ids": ["Animation","Costume Design","Filmmaker","Puppetry","Scenography","Theater Design","Video Art"]},
+                {"group": "bookarts-lettering", "name": "Book Arts / Lettering", "ids": ["Artists' Books","Bookbinding","Calligraphy","Graffiti","Illumination","Ketubot","Typography","Writing"]},
+                {"group": "professions", "name": "Professions", "ids": ["Art Critic","Art Educator","Art Historian","Art Therapist","Collector","Curator","Gallery Director","Makeup Artist","Tattoo Artist"]},
+                {"group": "movements-style", "name": "Movements/Style", "ids": ["Conceptual Art","Environmental Art","Fiber Art","Folk Art","Found Objects","Land Art","Light Art","Mixed Media","Multimedia","Naïve Art","Performance Art","Pin Up Art","Portraits","Postal Art","Social Practice","Sound Art","Street Art","Video Art"]},
+                {"group": "crafts", "name": "Crafts", "ids": ["Basketmaking","Batik","Beadwork","Ceramics","Crafts","Dollmaking","Embroidery","Enameling","Glass","Glyptics","Goldsmithing","Gourds","Inlaid Wood","Jewelry","Kitemaking","Lace Making","Macrame","Maskmaking","Metalwork","Marbling","Marquetry","Millinery","Miniatures","Mosaics","Needlework","Origami","Papermaking","Papier Mache","Pyrography","Quilting","Rosemaling","Rubbings","Scrimshaw","Stained Glass","Tapestry","Textiles","Tie Dying","Toy Making","Turnery","Wallpaper","Weaving","Wood Carving","Wood Working"]},
+                {"group": "photography", "name": "Photography", "ids": ["Holography","Landscapes","Photocopies","Photograms","Photography","Video Art"]}];
 
-            var cultures = [
-                {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
-                {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
-                {"group": "africa",  "name":"Africa & ME", "ids" : ["Nigeria","South Africa","Cameroon","Egypt","Sudan","Tunisia","Morocco","Israel","Iran","Iraq","Afghanistan"]},
-                {"group": "asia", "name":"Asia & Pacific Islands", "ids": ["China","Hawaii","Japan","South Korea","Taiwan","Korea","Philippines","Hong Kong","Nepal","India","Vietnam","Indonesia","Bangladesh","Asian / Pacific Islander" ]},
-                {"group": "europe",  "name":"Europe", "ids": ["Belgium","British","Bohemia","Turkey","Serbia","Estonia","Moravia","Georgia","Netherlands","Bulgaria","Germany","Luxembourg","Cyprus","Poland","Latvia","Wales","Basque","Belarus","Switzerland","Holland","Lithuania","Scotland","Armenia","Greece","Sweden","Russia","Italy","Yugoslavia","Romania","Spain","Denmark","Ireland","Ukraine","Austria","England","Czechoslovakia","France","Norway","Hungary"]},
-                {"group": "religions",  "name":"Religions & Ethnicities", "ids": ["Jewish","Christian","Muslim"]}];
+            var cultures = [{"group": "asia", "name": "Asia", "ids": ["Afganistan","Armenia","Asian / Pacific Islander","Bangladesh","China","Georgia","Hong Kong","India","Iran","Iraq","Israel","Japan","Korea","Nepal","South Korea","Taiwan","Turkey","Vietnam"]},
+                {"group": "africa", "name": "Africa", "ids": ["Cameroon","Egypt","Morocco","Nigeria","South Africa","Sudan","Tunisia"]},
+                {"group": "europe", "name": "Europe", "ids": ["Austria","Basque","Belarus","Belgium","Bohemia","Bulgaria","Cyprus","Czechoslovakia","Denmark","England","Estonia","France","Germany","Greece","Hungary","Ireland","Italy","Latvia","Lithuania","Luxembourg","Moravia","Netherlands","Norway","Poland","Romania","Russia","Scotland","Serbia","Spain","Sweden","Switzerland","Ukraine","Wales","Yugoslavia"]},
+                {"group": "americas", "name": "Americas", "ids": ["African American","Afro-Hispanic","Apache","Argentina","Asian / Pacific Islander","Belize","Brazil","Canada","Chile","Colombia","Cuba","Dominican Republic","Franco-American","Guatemala","Haiti","Hawaii","Hispanic","Inca","Italian-American","Jamaica","Mestizo","Mexico","Native American","Navajo","Nicaragua","Panama","Puerto Rico","Venezuela"]},
+                {"group": "pacific-islands", "name": "Pacific Islands", "ids": ["Asian / Pacific Islander","Hawaii","Indonesia","Philippines"]},
+                {"group": "religion", "name": "Religion", "ids": ["Christian","Jewish","Muslim"]}];
+
+
         // iterate over filter list arrays (terms, cultures); draw them with checkboxes
             // for (var m in artTerms) {
             //     $('#filter-terms-toplevel').append(
@@ -335,24 +347,20 @@
                 function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
             }
         // creates culture filters
-        var i = 0;
-        var group =  1;
-            for ( var t in artTerms ) {
-                if (i % 16 === 0){
-                    $('#filter-terms-toplevel').append('<li class="filter-terms-group" data-sort="group-' + group + '" id="group-' + group + '" >' + 
-                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-group-' + group + '\')">' + 
-                            'Group ' + group + 
+        for (var l in artTerms) {
+                $('#filter-terms-toplevel').append('<li class="filter-term-group" data-sort="' + artTerms[l].group + '" id="' + artTerms[l].group + '" >' + 
+                        '<h6 class="filter-term-group-text" onClick="toggleFilterList(\'filter-list-' + artTerms[l].group + '\')">' + 
+                            artTerms[l].name + 
                         '</h6>' + 
-                        '<ul class="filter-culture-group-toplevel" id="filter-list-group-' + group + '" style="display: none">' + 
+                        '<ul class="filter-term-group-toplevel" id="filter-list-' + artTerms[l].group + '" style="display: none">' + 
                         '</ul>' + 
-                    '</li>');
-                    group++;
-                        }
-                    i++;
-                    $('#filter-list-group-' + (group - 1)).append('<li class="filter-culture-group-item" data-sort="' + t + '">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-' + t + '" class="filter-cultures" value="' + t+ '"> ' +
-                            '<label for="filter-type-' + t + '">' + t + '</label>' + 
+                    '</li>').sortElements('li');
+                for (var c in artTerms[l].ids ) {
+                    $('#filter-list-' + artTerms[l].group).append('<li class="filter-term-group-item" data-sort="' + artTerms[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + artTerms[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '" class="filter-artterms" value="' + artTerms[l].ids[c] + '"> ' +
+                            '<label for="filter-type-' + artTerms[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '">' + artTerms[l].ids[c] + '</label>' + 
                         '</li>').sortElements('li');
+                }
             }
             for (var l in cultures) {
                 $('#filter-culture-toplevel').append('<li class="filter-culture-group" data-sort="' + cultures[l].group + '" id="' + cultures[l].group + '" >' + 
@@ -363,9 +371,9 @@
                         '</ul>' + 
                     '</li>').sortElements('li');
                 for (var c in cultures[l].ids ) {
-                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c] + '">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c] + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
-                            '<label for="filter-type-' + cultures[l].ids[c] + '">' + cultures[l].ids[c] + '</label>' + 
+                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
+                            '<label for="filter-type-' + cultures[l].ids[c].replace(/[&\/\\#\s,+()$~%.'":*?<>{}]/g,'') + '">' + cultures[l].ids[c] + '</label>' + 
                         '</li>').sortElements('li');
                 }
             }
@@ -543,7 +551,7 @@
                     filteredIds = [],
                     filteredUniqueIds = [];
                 for (var f in filterTerms) {
-                    idArray = idArray.concat(artTerms[filterTerms[f]]);
+                    idArray = idArray.concat(artTermsTable[filterTerms[f]]);
                 }
                 termsArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
                 idArray = [];
