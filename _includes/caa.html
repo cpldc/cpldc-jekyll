@@ -1,0 +1,295 @@
+<h1 >Chicago Artists File<span id="search-count-target">
+
+</span>
+</h1><div class="row center-content-search">
+    <div class="filter-column">
+        <div class="filters">
+            <div class="filter-text clearfix"> <p class="filter-list-title">Name</p>
+                <input type="text" id="text-input" class="filter-text-input" />
+            </div>
+            <div class="filter-vocab">
+                <div class="data-filter-header">
+                    <p class="filter-title-title">Additional Filters</p>
+                    <span class="label-desc">Click to expand.</span>
+                </div>
+                <div id="filter-terms">
+                    <p class="clickable-title filter-list-title" onClick="toggleFilterList('filter-terms-toplevel')">Medium</h5>
+                    <ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>
+                </div>
+                <div id="filter-cultures">
+                    <p class="clickable-title filter-list-title" onClick="toggleFilterList('filter-culture-toplevel')">Cultural Affiliation</h5>
+                    <ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>
+                </div>
+            </div>
+            <button class="go-button" onClick="activateTextSearch()">Apply Filters</button>
+        </div>
+    </div>
+    <div class="col artists">
+            
+        <div class="results-target" id="results">
+
+            <div class="artist" id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // nonfunctions: 
+    // globals: 
+            // results array is the array of objects for search results
+            // results html is ithe results array with html added
+
+            var cultures = [
+                {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
+                {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
+                {"group": "africa",  "name":"Africa & ME", "ids" : ["Nigeria","South Africa","Cameroon","Egypt","Sudan","Tunisia","Morocco","Israel","Iran","Iraq","Afghanistan"]},
+                {"group": "asia", "name":"Asia & Pacific Islands", "ids": ["China","Hawaii","Japan","South Korea","Taiwan","Korea","Philippines","Hong Kong","Nepal","India","Vietnam","Indonesia","Bangladesh","Asian / Pacific Islander" ]},
+                {"group": "europe",  "name":"Europe", "ids": ["Belgium","British","Bohemia","Turkey","Serbia","Estonia","Moravia","Georgia","Netherlands","Bulgaria","Germany","Luxembourg","Cyprus","Poland","Latvia","Wales","Basque","Belarus","Switzerland","Holland","Lithuania","Scotland","Armenia","Greece","Sweden","Russia","Italy","Yugoslavia","Romania","Spain","Denmark","Ireland","Ukraine","Austria","England","Czechoslovakia","France","Norway","Hungary"]},
+                {"group": "religions",  "name":"Religions & Ethnicities", "ids": ["Jewish","Christian","Muslim"]}];
+        // iterate over filter list arrays (terms, cultures); draw them with checkboxes
+            // for (var m in artTerms) {
+            //     $('#filter-terms-toplevel').append(
+            //         '<li data-sort="' + m + '" class="caa-filter">' +
+            //                 '<input name="contentFilter" type="checkbox" id="filter-type-'  + m + '" class="filter-cultures" value="'  + m + '">' + 
+            //                 '<label for="filter-type-'  + m + '"> '  + m + '</label>' + 
+            //         '</li>');
+            // }
+        // sorts results, filters, filter categories
+            jQuery.fn.sortElements = function sortElements(el) {
+                $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
+                function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
+            }
+        // creates culture filters
+        var i = 0;
+        var group =  1;
+            for ( var t in artTerms ) {
+                if (i % 16 === 0){
+                    $('#filter-terms-toplevel').append('<li class="filter-terms-group" data-sort="group-' + group + '" id="group-' + group + '" >' + 
+                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-group-' + group + '\')">' + 
+                            'Group ' + group + 
+                        '</h6>' + 
+                        '<ul class="filter-culture-group-toplevel" id="filter-list-group-' + group + '" style="display: none">' + 
+                        '</ul>' + 
+                    '</li>');
+                    group++;
+                        }
+                    i++;
+                    $('#filter-list-group-' + (group - 1)).append('<li class="filter-culture-group-item" data-sort="' + t + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + t + '" class="filter-cultures" value="' + t+ '"> ' +
+                            '<label for="filter-type-' + t + '">' + t + '</label>' + 
+                        '</li>').sortElements('li');
+            }
+            for (var l in cultures) {
+                $('#filter-culture-toplevel').append('<li class="filter-culture-group" data-sort="' + cultures[l].group + '" id="' + cultures[l].group + '" >' + 
+                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-' + cultures[l].group + '\')">' + 
+                            cultures[l].name + 
+                        '</h6>' + 
+                        '<ul class="filter-culture-group-toplevel" id="filter-list-' + cultures[l].group + '" style="display: none">' + 
+                        '</ul>' + 
+                    '</li>').sortElements('li');
+                for (var c in cultures[l].ids ) {
+                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c] + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c] + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
+                            '<label for="filter-type-' + cultures[l].ids[c] + '">' + cultures[l].ids[c] + '</label>' + 
+                        '</li>').sortElements('li');
+                }
+            }
+        var resultsArray = [],
+            resultsHtml = [],
+            sourceArray = [],
+            filterCheckboxes = $('input[type="checkbox"]'),
+            input = $('#text-input').val(),
+            filterTerms = [],
+            filterCultures = [];
+    // listen for enter key while in input field and activateTextSearch()
+        $( document ).ready(function() {
+            $('#text-input').keypress(function(e){
+                if(e.keyCode==13)
+                    activateTextSearch();
+            });
+        });
+    // functions: 
+        // show/hide the lists of filters    
+            function toggleFilterList(list){
+                $('#' + list).slideToggle();
+                // $('#' + list).slideToggle().sortElements('ul');
+                // $('.culture-toplevel').sortElements('ul > li');
+            }
+        // clears all filters
+            function clearFilters(){
+                $('input[type=checkbox]').prop('checked',false); 
+                $('#text-input').val('');
+                resultsArray = [];
+                resultsHtml = [];
+                clearCenter();
+                $('#results').empty().append('<div class="artist" id="helper-text">Please search for an artist by name, or select filters from the left.</div>');
+            }
+        // clear out middle section, used a lot
+            function clearCenter(){
+                $('#search-count-target').empty();
+                $('#results').empty();
+                $('#intro-text').empty();
+            }
+        // unique for each db, this creates a html presentation for a result 
+            function htmlifyResult(){
+                resultsHtml = [];
+                count = 0;
+                function arrayer(n){
+                    var string = ''
+                    for (var e in n){
+                        var bumper = '';
+                        if (string != ''){
+                            bumper = ', ';
+                        }
+                        string += bumper + n[e];
+                    }
+                    return string;
+                }
+                function arrayerCitations(n){
+                    var citations = '';
+                    for (var c in n){
+                        var author = n[c].firstName + ' ' + n[c].lastName;
+                        var callNo = n[c].callNumber.replace(/ /g,"+");
+                        var url = 'http://chipublib.bibliocommons.com/search?custom_query=callnumber%3A%28%22' + callNo + '*%22%29';
+                        citations += '<li><a href=' + url + '>' + n[c].title + '</a>' + (author != ' ' ? ' by ' + n[c].firstName + ' ' + n[c].lastName : '' ) + '</li>'
+                    }
+                    return '<ul>' + citations + '</ul>';
+                }
+                for (var h in resultsArray) {
+                    count++;
+                    resultsHtml.push('<div class="artist" data-termFilter="' + (resultsArray[h].artTerms != '' ? arrayer(resultsArray[h].artTerms) : '' ) + 
+                        '" data-cultureFilter="' + (resultsArray[h].cultures != '' ? arrayer(resultsArray[h].cultures) : '' ) + 
+                        '" data-sort="' + resultsArray[h].name + '" id="' + resultsArray[h].accNumber + '"><h2 class="artist-name">' + resultsArray[h].name + '</h2>' + 
+                        ((resultsArray[h].dob !=  '' || resultsArray[h].dod != '') ? '<p class="artist-details">' + resultsArray[h].dob + '-' + resultsArray[h].dod + '</p>' : '' ) + 
+                        (resultsArray[h].gender != '' ? '<p class="artist-details">Gender: ' + resultsArray[h].gender + '</p>': '') + 
+                        (resultsArray[h].artTerms != '' ? '<p class="artist-details">Medium(s): <span>' + arrayer(resultsArray[h].artTerms, '') + '</span></p>' : '' ) + 
+                        (resultsArray[h].cultures != '' ? '<p class="artist-details">Cultural Affiliation(s): ' + arrayer(resultsArray[h].cultures, '') + '</p>' : '' ) + 
+                        (resultsArray[h].monographs != '' ? '<p class="artist-citations">Citations from the CPL Collection: ' + arrayerCitations(resultsArray[h].monographs) + '</p>' : '' ) + 
+                            '<p class="caa-contents-header">Chicago Artists File Contents:' +
+                                '<ul class="caa-contents-list">' + 
+                                    '<li>File: ' + ( resultsArray[h].file == "TRUE" ? 'Yes' : 'No') + '</li>' +
+                                    '<li>Slides: ' + ( resultsArray[h].slides == "TRUE" ? 'Yes' : 'No') + '</li>' +
+                                    '<li>Video: ' + ( resultsArray[h].videos == "TRUE" ? 'Yes' : 'No') + '</li>' +
+                                    ( resultsArray[h].resume == "TRUE" ? '<li>Resume: Yes </li>' : '') +
+                                    ( resultsArray[h].article == "TRUE" ? '<li>Article: Yes </li>' : '') +
+                                    ( resultsArray[h].poster == "TRUE" ? '<li>Poster: Yes </li>' : '') +
+                                    ( resultsArray[h].folio == "TRUE" ? '<li>Folio: Yes </li>' : '') +
+                                    ( resultsArray[h].cdrom == "TRUE" ? '<li>CD-ROM: Yes </li>' : '') +
+                                    ( resultsArray[h].artistStatement == "TRUE" ? '<li>Artist Statement: Yes' : '') + 
+                                    ( resultsArray[h].galleryNotice == "TRUE" ? '<li>Gallery Notice: Yes' : '') + 
+                                '</ul>' +
+                            '</p>' +
+                            (resultsArray[h].notes != '' ? '<p class="artist-notes">Notes: ' + resultsArray[h].notes + '</p>' : '' ) + 
+                        '</div>');
+                }
+                if ( count > 500 ) {
+                    clearCenter();
+                    $('#results').empty().append('<div class="artist" id="helper-text">' + count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendResultsHtml()">Ok</button></div>');
+                } else if (count === 0 ) {
+                    clearCenter();
+                    $('#results').empty().append('<div class="artist" id="helper-text">No results.  Please search for an artist by name, or select filters from the left.</div>');
+                    // $('#helper-text').empty().append('No results.');
+                } else {
+                    appendResultsHtml();
+                }
+            }
+        // adds resultsHTML to web page
+            function appendResultsHtml(){
+                clearCenter();
+                $('#results').append(resultsHtml).sortElements('div');
+                $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
+            }
+        // activate text search - the go button
+            function activateTextSearch(){
+                input = $('#text-input').val();
+                if (input.length > 0 ){
+                    firstFilter();
+                }
+            }
+            filterCheckboxes.change(function(){
+                firstFilter();
+            });
+        // initial filter function: loops through array and sends records to filters; if filter functions return true, record is added to results.
+        // if there are already search results (resultsArray.length > 0), we will search them; otherwise, we search the main caaJson array    
+            function firstFilter(){
+                resultsArray = [];
+                var filteredIds = dataFilter(caaJson);
+                if (filteredIds.length > 0 ){
+                    for (var i in filteredIds){
+                        if ( textFilter(caaJson[filteredIds[i]])){
+                            resultsArray.push(caaJson[filteredIds[i]]);
+                        }
+                    }
+                } else if ( $('input:checked').length ) {
+                    clearCenter();
+                    $('#helper-text').empty().append('No results.  Try widening your search.');
+                    return false;
+                } else {
+                    for ( var a in caaJson ) {
+                        if ( textFilter(caaJson[a])){
+                            resultsArray.push(caaJson[a]);
+                        }
+                    }
+                }
+                htmlifyResult();
+            }
+        // textFilter checks to see if the user input string is located at array position 0 - *only looks for start of name*
+            function textFilter(haystack){
+                input = $('#text-input').val();
+                if (input.indexOf(' ') > -1){
+                    var inputArray = input.split(' '),
+                        inputArrayCheck = 0;
+                    for (var i in inputArray){
+                        if ( haystack.name && haystack.name.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) > -1  ){
+                            inputArrayCheck++;
+                        }
+                    } 
+                    if (inputArray.length === inputArrayCheck) {
+                        return true;
+                    }
+                }
+                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
+                    return true;
+                }
+            }
+            function dataFilter(haystack){
+                filterTerms = $('#filter-terms-toplevel').find(':checkbox:checked').map(function () {
+                        return $(this).val();
+                    }).get();
+                filterCultures = $('#filter-culture-toplevel').find(':checkbox:checked').map(function () {
+                        return $(this).val();
+                    }).get();
+                if (filterTerms.length === 0 && filterCultures.length === 0 && $('#text-input').val().length === 0) {
+                    clearCenter();
+                }
+                var idArray = [],
+                    termsArrayUniqueIds = [],
+                    culturesArrayUniqueIds = [],
+                    filteredIds = [],
+                    filteredUniqueIds = [];
+                for (var f in filterTerms) {
+                    idArray = idArray.concat(artTerms[filterTerms[f]]);
+                }
+                termsArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
+                idArray = [];
+                for (var f in filterCultures) {
+                    idArray = idArray.concat(culturesWithIds[filterCultures[f]]);
+                }
+                culturesArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
+                filteredIds = [];
+                if (culturesArrayUniqueIds.length > 0 && termsArrayUniqueIds.length > 0 ) {
+                    filteredIds = termsArrayUniqueIds.filter(function(element) {
+                        return culturesArrayUniqueIds.indexOf(element) !== -1;
+                    });
+                } else {
+                    filteredIds = termsArrayUniqueIds.concat(culturesArrayUniqueIds);
+                }
+                filteredUniqueIds = filteredIds.reduce(function(a,b){
+                    if (a.indexOf(b) < 0 ) a.push(b);
+                    return a;
+                },[]);
+                return filteredUniqueIds;
+            }
+   
+
+</script>   

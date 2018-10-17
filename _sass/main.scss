@@ -904,3 +904,278 @@
         opacity: 1;
         color: #123;
     }
+// city officials / aldermen / caa chicago artists
+
+        .center-content-search {
+            min-height: calc(100vh - 466px);
+            /* padding-bottom: 60px; Should be equal to the height of your footer */
+        }
+        .main-container-fixed > h1 {
+            font-size: 28px;
+        }
+        .clickable-title {
+            cursor: pointer;
+        }
+        .alderman, #aldermen-intro, .artist {
+            background-color: #fff;
+            box-shadow: 4px 4px 0 #B0B4B4;
+            padding: 15px;
+        }
+        .alderman, .artist {
+            margin: 0 0 24px 0 ;
+        }
+        .alderman a, .artist a, #aldermen-intro a, #moreInfo a {
+            color: #234c86;
+            text-decoration: none;
+            border-bottom: 1px solid #909696;
+        }
+        .alderman a:hover, .artist a:hover, #aldermen-intro a:hover, #moreInfo a:hover {
+            border-bottom: 2px solid #909696;
+        }
+        .expandingAlderman, .expandedAlderman {
+            background-color: #fff;
+            box-shadow: 4px 4px 0 #B0B4B4;
+            padding: 10px 15px;
+            margin: 0 0 7px 0;
+        }
+        #moreInfo {
+            margin-top: 10px;
+        }
+        #moreInfo em {
+            font-weight: 700;
+        }
+        .anyway-button, .go-button {
+            background-color: #000;
+            padding: 10px 15px 6px 15px;
+            color: #fff;
+            border-top: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 4px solid #4d4d4d;
+            text-align: center;
+        }
+        .nonbutton {
+            color: #000;
+            text-decoration: underline;
+            background-color: transparent;
+            cursor: pointer;
+            box-shadow: none;
+            border-radius: 0;
+            border: 0;
+        }
+        .content-header {
+            font-size: 28px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .anyway-button {
+            margin-top: 7px;
+        }
+        .go-button {
+            cursor: pointer;
+            margin: 0 0 10px 0;
+        }
+        .label-container {
+            margin: 0;
+        }
+        .filter, .lists-li {
+            list-style-type: none;
+            min-width: 40px;
+            margin: auto;
+            padding: 3px;
+        }
+        .filter {
+            display: inline-block;
+        }
+        .filter-column {
+            background-color: #fff;
+            box-shadow: 4px 4px 0 #B0B4B4;
+            width: 250px;
+            min-width: 250px;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+        .filter-vocab h6 {
+            font-size: 0.9rem;
+        }
+        .filter-vocab h5, .filter-vocab h6 {
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .filter-vocab ul {
+            padding-left: 15px;
+        }
+        .filter-vocab li {
+            list-style-type: none;
+        }
+        #date-slider {
+            border: 0;
+        }
+        #ald-header {
+            padding: 7px 0;
+        }
+        .alderman-name, .artist-name, h4 {
+            font-size: 1.25rem;
+            line-height: 1.3rem;
+            font-weight: 700;
+        }
+        h5 {
+            font-size: 1rem;
+            line-height: 1.1rem;
+            font-weight: 700;
+        }
+        label {
+            font-size: 0.8rem;
+            line-height: 1rem;
+        }
+        .artist-details, .caa-contents-header, .artist-citations {
+            margin-bottom: 3px;
+        }
+        .alderman-pic {
+            border: 1px solid #666;
+            padding: 3px;
+        }
+        .alderman-position {
+            margin: 0;
+        }
+        .alderman-list li {
+            margin: 0 0 5px 0;
+        }
+        .alderman-list {
+            list-style-type: disc;
+            margin: 7px 0;
+        }
+        .filters {
+            margin-top: 10px;
+        }
+        .filter-list {
+            padding-left: 0;
+        }
+        .silder-box {
+            padding: 5px 0;
+            margin: 10px;
+        }
+        .filter-list-title {
+            /* from bibliocommons events */
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                color: #333;
+                /* margin: 0 0 10px 0; */
+                line-height: 20px;
+                /* padding-top: 10px; */
+                border-bottom: 1px solid #e5e5e5;
+            padding: 0 0 5px 0;
+            margin: 10px 0 ;
+            font-weight: 700;
+        }
+        .filter-title-title {
+                /* from bibliocommons events */
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+                line-height: 20px;
+            padding: 0;
+            margin: 10px 0 0 0;
+            font-weight: 700;
+        }
+        .filter-text-input {
+            width: 100%;
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+        .filter-text {
+            padding: 10px 0;
+            margin: 10px 0;
+        }
+        .filters > .filter-text {
+            margin: 0;
+            padding: 0;
+        }
+        .filter-list > .caa-filter {
+            list-style-type: none;
+        }
+        .label-desc {
+            font-size: 0.75rem;
+            font-style: italic;
+            line-height: 0.8rem;
+        }
+        .data-filter-header {
+            margin-bottom: 10px;    
+        }
+        #caa-filters {
+            border-bottom: 0;
+        }
+        .caa-filter {
+            /* border-bottom: 1px solid #ccc; */
+            margin-bottom: 2px;
+        }
+        .caa-filter input {
+            margin-right: 3px;
+            margin-left: 5px;
+        }
+        .center-content {
+            flex: 1;
+        }
+        .list-header {
+            font-weight: 700;
+        }
+
+        /* bootstrap overwrites:  */
+        .nav-tabs {
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .nav-link {
+            border-top-right-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+            border-color: #e5e5e5;
+        }
+        .filter-list-tabs {
+            font-size: 14px;
+        }
+        .filter-list-tabs, .lists-list-title {
+            /* from bibliocommons events */
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #333;
+                margin: 15px 0 0 0;
+                line-height: 20px;
+                /* padding-top: 10px; */
+            font-weight: 700;
+        }
+        .lists-list-title {
+            font-size: 1rem;
+        }
+
+        .lists-list {
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        .lists-radio-ward {
+            min-width: 40px;
+            padding: 3px;
+            margin: auto;
+        }
+        .lists-radio-ward, .lists-radio-pos {
+            display: inline;
+            list-style-type: none;
+        }
+
+        label {
+            font-size: 0.8rem;
+            line-height: 1rem;
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+        .list-dates {
+            font-size: 1rem;
+            font-weight: 400;
+            display: inline-block;
+            margin: auto;
+        }
+        .list-short {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 50%;
+        }

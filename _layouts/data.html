@@ -8,46 +8,18 @@
     <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 
     <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
-</head>
-<body class="{{ page.contenttype }}">
+
     {% include libraries.html %}
 
-{% include header.html %}
+	<script src="assets/js/{{ page.db }}.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body class="{{ page.contenttype }}">
+    {% include header.html %}
 <main id="sidebar-c-target">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <div id="content" class="container fixed main-container">
-        <div class="row" id="sidebar-f-target">
-            {% include sidebar-data.html %}
-            <div  id="content" class="content main-content col-12">
-                <div class="startercontent"></div>
-            </div>
-        </div>
-        <div class="hidden-lg-down col-lg-3 right-sidebar">
-            <div class="content blogs">
-                <div class="blogs-title">
-                    <h2>Chicago History Blog</h2>
-                </div>
-                {% include blogs.html %}
-                <div class="blogs-viewmore">
-                    <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
-                        View More 
-                        <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="content events">
-                    <div class="events-title">
-                        <h2>History &amp; Genealogy Events</h2>
-                    </div>
-                {% include events.html %}
-                <div class="events-viewmore">
-                    <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
-                        View More 
-                        <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div id="content" class="container main-container main-container-fixed">
+        {% include {{ page.include }}.html %}
     </div>
 </div>
 </main>

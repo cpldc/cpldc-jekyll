@@ -8,9 +8,9 @@
     <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 
     <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
+    {% include libraries.html %}
 </head>
 <body class="{{ page.contenttype }}">
-    {% include libraries.html %}
     {% if page.mainimage.coll %}
         {% assign coll = page.mainimage.coll %}
     {% else %}

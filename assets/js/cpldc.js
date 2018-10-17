@@ -85,10 +85,15 @@
     }
     // click search icon to show input field 
     // when on a collection or subject page it also shows the dropdown to select whether to search all or not
+    var searchTracker = 0;
     function expandSearch(){
-        if ($('#searchDropper').is(':visible') || $('#searchExpander').is(':visible')){
+        // if ($('#searchDropper').is(':visible') || $('#searchExpander').is(':visible')){
+        //     return false;
+        // }
+        if (searchTracker === 1){
             return false;
         }
+        searchTracker = 1;
         viewportWidth = $(window).width();
         if (viewportWidth < 976 ){
             $('.search').hide();
@@ -96,13 +101,13 @@
             $('#search-input-dropped').focus();
             $('.search-icon-white').hide();
         } else {
-            $('#test').removeClass('hidden');
             $('#searchExpander').removeClass('hidden').addClass('inline-div');
             $('#search-input-exp').focus();
             $('#search-icon').addClass('search-icon-black').removeClass('search-icon-white');
         }
     }
     function hideSearch() {
+        searchTracker = 0;
         $('#searchExpander').addClass('hidden');
         $('#search-icon').removeClass('search-icon-black').addClass('search-icon-white');
         $('#searchDropper').addClass('hidden');
