@@ -14,7 +14,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
+<!-- <script src="https://use.fontawesome.com/a768f4e0c8.js"></script> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="assets/js/cpldc.js"></script>
@@ -363,6 +364,10 @@
             </div>
         </div>
         <div class="col aldermen" id="aldermen"></div>
+        <button onclick="topFunction()" id="topBtn" class="btn backToTop" title="Back to top">
+            <i class="fa fa-arrow-up"></i>
+            Back to Top
+        </button>
     </div>
 </div>
 <script>
@@ -573,7 +578,7 @@
                         councilJournalList = '',
                         referenceList = '';
                     function lister(listItem){
-                        return '<li>' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
+                        return '<li data-sort="' + ( listItem.preText ? listItem.preText : ( listItem.urlText ? listItem.urlText : ( listItem.interText ? listItem.interText : ''))).substring(0,5)   + '">' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
                             (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
                             (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
                             (listItem.url2 && listItem.url2 != '' ? '<a href="' + listItem.url2 + '">' + listItem.url2Text + '</a>' + (listItem.endText[0] === ')' ? '' : ' ')  : '') +
@@ -588,16 +593,18 @@
                     if (ald.cj || ald.refs){
                         lists = '<ul class="alderman-list">' + councilJournalList + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList + '</ul>' : '') + '</ul>';
                     }
+                    $('.alderman-list').sortElements('li');
                     if (ald.positionArray.length === 1){
                         var noPositions = true;
                     }
+                    $('.alderman-list').sortElements('li');
                     for (var p in ald.positionArray){
                         var ward = '';
                         if (ald.positionArray[p].ward) {
                             ward = ordinal_suffix_of(ald.positionArray[p].ward);
                         }
                         positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].pos + (ald.positionArray[p].pos === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
-                        $(positions).sortElements('div');
+                        // $(positions).sortElements('div');
                     }
                     // removing pics for now, until we find them
                     // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
@@ -637,6 +644,7 @@
                     clearCenter();
                     $('#aldermen').append(aldArray);
                     $('#aldermen').sortElements('div');
+                    $('.alderman-list').sortElements('li');
                     sortPositions();
                     $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
                     $( 'p:empty' ).remove();
@@ -859,6 +867,23 @@
                 for (var e in expandedAldermen){
                     expandAlderman(expandedAldermen[e]);
                 }
+
+    // Back to top button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
 </script>
     </div>
 </div>

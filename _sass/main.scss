@@ -1179,3 +1179,26 @@
             margin-bottom: auto;
             width: 50%;
         }
+    // back to top button 
+        #topBtn {
+            // from w3c
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            z-index: 99; /* Make sure it does not overlap */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            // from cpl/bibliocommons:
+            border-color: #909696;
+            bottom: 5px;
+            right: 5px;
+            opacity: 0.85;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff;
+            transition: 0s;
+            font-size: 14px;
+            padding: 6px 12px 6px 10px;
+        }
+        #topBtn:hover {
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
