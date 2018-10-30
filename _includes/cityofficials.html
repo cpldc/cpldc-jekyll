@@ -177,7 +177,9 @@
                     }
                     return i + "th";
                 }
+            // prototypes: 
             // sorters:  both based on: https://stackoverflow.com/a/17127455/9942821
+            // diacritic remover based on: https://stackoverflow.com/a/18238386
                 jQuery.fn.sortElements = function sortElements(el) {
                     $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
                     function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
@@ -203,6 +205,16 @@
                             function dec_sort(a, b){ return ($(b).data("date")) < ($(a).data("date")) ? 1 : -1; }
                         }
                     });
+                }
+                String.prototype.removeAccents = function(){
+                    return this
+                        .replace(/[áàãâä]/gi,"a")
+                        .replace(/[éè¨ê]/gi,"e")
+                        .replace(/[íìïî]/gi,"i")
+                        .replace(/[óòöôõ]/gi,"o")
+                        .replace(/[úùüû]/gi, "u")
+                        .replace(/[ç]/gi, "c")
+                        .replace(/[ñ]/gi, "n");
                 }
             // slider
                 $('#slider-container').slider({
@@ -232,6 +244,9 @@
                     }
                 }
             // date & text filters
+                function normalizeForSearch(text){
+                    return text.replace(/[|&;$%@"<>()-+,]/g, "").removeAccents().toUpperCase();
+                };
                 function filterDate(ald){
                     for (var k in ald.positionArray){
                         var endDate;
@@ -246,13 +261,31 @@
                     }
                 }
                 function filterText(haystack){
+                    function altNameChecker(array, query){
+                        if (haystack.altName ){
+                            for (var an in haystack.altName){
+                                if (textComparer(haystack.altName[an], query)){
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                    function textComparer(a, b){
+                        var aN = normalizeForSearch(a);
+                        var bN = normalizeForSearch(b);
+                        if (aN.indexOf(bN) === 0){
+                            return true;
+                        }
+                            
+                    }
                     input = $('#textInput').val();
                     if (input.indexOf(' ') > -1){
                         var inputArray = input.split(' '),
                             inputArrayCheck = 0;
                         for (var i in inputArray){
-                            if (( haystack.id && haystack.id.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0  )
-                                || ( haystack.firstName && haystack.firstName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
+                            if (( haystack.id && textComparer(haystack.id, inputArray[i]))
+                                || ( haystack.firstName && textComparer(haystack.firstName, inputArray[i]))
+                                || ( haystack.altName && altNameChecker(haystack.altName, inputArray[i]))){
                                     console.log(input);
                                     inputArrayCheck++;
                             }
@@ -261,8 +294,9 @@
                             return true;
                         }
                     }
-                    if (( haystack.id && haystack.id.toUpperCase().indexOf(input.toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0 ) 
-                            || ( haystack.firstName && haystack.firstName.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
+                    if (( haystack.id && textComparer(haystack.id, input)) 
+                            || ( haystack.firstName && textComparer(haystack.firstName, input)) 
+                            || ( haystack.altName && altNameChecker(haystack.altName, input))
                             || input.length < 1 ){
                         return true;
                     }
@@ -299,8 +333,8 @@
                     var positions = '',
                         lists = '',
                         pic,
-                        councilJournalList = '',
-                        referenceList = '';
+                        councilJournalList = [],
+                        referenceList = [];
                     function lister(listItem){
                         return '<li data-sort="' + ( listItem.preText ? listItem.preText : ( listItem.urlText ? listItem.urlText : ( listItem.interText ? listItem.interText : ''))).substring(0,5)   + '">' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
                             (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
@@ -309,19 +343,17 @@
                             (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + '</li>';
                     }
                     for (var r in ald.refs){
-                        referenceList += lister(ald.refs[r]); 
+                        referenceList.push(lister(ald.refs[r])); 
                     }
                     for (var c in ald.cjs) {
-                        councilJournalList += lister(ald.cjs[c]);
+                        councilJournalList.push(lister(ald.cjs[c]));
                     }
                     if (ald.cj || ald.refs){
-                        lists = '<ul class="alderman-list">' + councilJournalList + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList + '</ul>' : '') + '</ul>';
+                        lists = '<ul class="alderman-list">' + councilJournalList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }
-                    $('.alderman-list').sortElements('li');
                     if (ald.positionArray.length === 1){
                         var noPositions = true;
                     }
-                    $('.alderman-list').sortElements('li');
                     for (var p in ald.positionArray){
                         var ward = '';
                         if (ald.positionArray[p].ward) {
@@ -368,7 +400,6 @@
                     clearCenter();
                     $('#aldermen').append(aldArray);
                     $('#aldermen').sortElements('div');
-                    $('.alderman-list').sortElements('li');
                     sortPositions();
                     $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
                     $( 'p:empty' ).remove();
