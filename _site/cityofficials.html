@@ -638,10 +638,15 @@
                         positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].pos + (ald.positionArray[p].pos === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
                         // $(positions).sortElements('div');
                     }
-                    // removing pics for now, until we find them
-                    // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                    let picHtml = '';
+                    if (ald.pic){
+                        for (var i in ald.pic){
+                            picHtml += '<img class="float-right alderman-pic" src="assets/images/officials/' + ald.pic[i] + '" alt="' + ald.fullName + '">';
+                        }
+                        
+                    }
                     if (type === 'filter') {
-                        return '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.fullName + '</h2>'  + 
+                        return '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<img class="float-right alderman-pic" src="assets/images/officials/' + ald.pic + '" alt=""><h2 class="alderman-name">' + ald.fullName + '</h2>'  + 
                             '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
                     } else if (type === 'list') {
                         return '<div id="moreInfo">' + (noPositions ? '' : '<em>Full list of positions: </em><div class="positions" id="' + ald.id + '-position">' + positions + '</div>') + lists + '</div>';
