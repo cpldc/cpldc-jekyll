@@ -1,19 +1,73 @@
-(function(factory) {
+(function(root, factory) {
 
     if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
+        define([], factory);
     } else if (typeof module === 'object' && module.exports) {
-        module.exports = factory(require('jquery'));
+        module.exports = factory();
     } else {
-        factory(jQuery);
+        root.SimpleLightbox = factory();
     }
 
-}(function($) {
+}(this, function() {
 
-    var instanceNum = 0,
-        $html = $('html'),
-        $document = $(document),
-        $window = $(window);
+    function assign(target) {
+
+        for (var i = 1; i < arguments.length; i++) {
+
+            var obj = arguments[i];
+
+            if (obj) {
+                for (var key in obj) {
+                    obj.hasOwnProperty(key) && (target[key] = obj[key]);
+                }
+            }
+
+        }
+
+        return target;
+
+    }
+
+    function addClass(element, className) {
+
+        if (element && className) {
+            element.className += ' ' + className;
+        }
+
+    }
+
+    function removeClass(element, className) {
+
+        if (element && className) {
+            element.className = element.className.replace(
+                new RegExp('(\\s|^)' + className + '(\\s|$)'), ' '
+            ).trim();
+        }
+
+    }
+
+    function parseHtml(html) {
+
+        var div = document.createElement('div');
+        div.innerHTML = html.trim();
+
+        return div.childNodes[0];
+
+    }
+
+    function matches(el, selector) {
+
+        return (el.matches || el.matchesSelector || el.msMatchesSelector).call(el, selector);
+
+    }
+
+    function getWindowHeight() {
+
+        return 'innerHeight' in window
+            ? window.innerHeight
+            : document.documentElement.offsetHeight;
+
+    }
 
     function SimpleLightbox(options) {
 
@@ -44,8 +98,7 @@
         nextOnImageClick: true,
         showCaptions: true,
 
-        captionAttribute: 'data-caption', // choose data source for library to glean image caption from
-        altAttribute: 'data-alt', //added by CPLDC, add alt text for lightbox image here
+        captionAttribute: 'title', // choose data source for library to glean image caption from
         urlAttribute: 'href', // where to expect large image
 
         startAt: 0, // start gallery at custom index
@@ -55,54 +108,94 @@
 
         beforeSetContent: null, // convenient hooks for extending library behavoiur
         beforeClose: null,
+        afterClose: null,
         beforeDestroy: null,
+        afterDestroy: null,
 
         videoRegex: new RegExp(/youtube.com|vimeo.com/) // regex which tests load url for iframe content
 
     };
 
-    $.extend(SimpleLightbox.prototype, {
+    assign(SimpleLightbox.prototype, {
 
         init: function(options) {
 
-            this.options = $.extend({}, SimpleLightbox.defaults, options);
-            this.ens = '.slb' + (++instanceNum);
-            this.items = [];
-            this.captions = [];
-            this.alts = [];
+            options = this.options = assign({}, SimpleLightbox.defaults, options);
 
             var self = this;
+            var elements;
 
-            if (this.options.$items) {
+            if (options.$items) {
+                elements = options.$items.get();
+            }
 
-                this.$items = this.options.$items;
+            if (options.elements) {
+                elements = [].slice.call(
+                    typeof options.elements === 'string'
+                        ? document.querySelectorAll(options.elements)
+                        : options.elements
+                );
+            }
 
-                this.$items.each(function() {
+            this.eventRegistry = {lightbox: [], thumbnails: []};
+            this.items = [];
+            this.captions = [];
 
-                    var $item = $(this);
+            if (elements) {
 
-                    self.items.push($item.attr(self.options.urlAttribute));
-                    self.captions.push($item.attr(self.options.captionAttribute));
-                    self.alts.push($item.attr(self.options.altAttribute));
+                elements.forEach(function(element, index) {
+
+                    self.items.push(element.getAttribute(options.urlAttribute));
+                    self.captions.push(element.getAttribute(options.captionAttribute));
+
+                    if (options.bindToItems) {
+
+                        self.addEvent(element, 'click', function(e) {
+
+                            e.preventDefault();
+                            self.showPosition(index);
+
+                        }, 'thumbnails');
+
+                    }
 
                 });
 
-                this.options.bindToItems && this.$items.on('click' + this.ens, function(e) {
-
-                    e.preventDefault();
-                    self.showPosition(self.$items.index($(e.currentTarget)));
-
-                });
-
-            } else if (this.options.items) {
-
-                this.items = this.options.items;
-
             }
 
-            if (this.options.captions) {
-                this.captions = this.options.captions;
+            if (options.items) {
+                this.items = options.items;
             }
+
+            if (options.captions) {
+                this.captions = options.captions;
+            }
+
+        },
+
+        addEvent: function(element, eventName, callback, scope) {
+
+            this.eventRegistry[scope || 'lightbox'].push({
+                element: element,
+                eventName: eventName,
+                callback: callback
+            });
+
+            element.addEventListener(eventName, callback);
+
+            return this;
+
+        },
+
+        removeEvents: function(scope) {
+
+            this.eventRegistry[scope].forEach(function(item) {
+                item.element.removeEventListener(item.eventName, item.callback);
+            });
+
+            this.eventRegistry[scope] = [];
+
+            return this;
 
         },
 
@@ -132,32 +225,42 @@
 
         showPosition: function(position) {
 
-            var self = this;
+            var newPosition = this.normalizePosition(position);
 
-            this.currentPosition = this.normalizePosition(position);
+            if (typeof this.currentPosition !== 'undefined') {
+                this.direction = newPosition > this.currentPosition ? 'next' : 'prev';
+            }
 
-            return this.setupLightboxHtml().prepareItem(this.currentPosition, this.setContent).show();
+            this.currentPosition = newPosition;
+
+            return this.setupLightboxHtml()
+                .prepareItem(this.currentPosition, this.setContent)
+                .show();
 
         },
 
         loading: function(on) {
 
             var self = this;
+            var options = this.options;
 
             if (on) {
 
                 this.loadingTimeout = setTimeout(function() {
 
-                    self.$el.addClass(self.options.elementLoadingClass);
+                    addClass(self.$el, options.elementLoadingClass);
 
-                    self.$content.html('<p class="slbLoadingText ' + self.options.loadingTextClass + '">' + self.options.loadingCaption + '</p>');
+                    self.$content.innerHTML =
+                        '<p class="slbLoadingText ' + options.loadingTextClass + '">' +
+                            options.loadingCaption +
+                        '</p>';
                     self.show();
 
-                }, this.options.loadingTimeout);
+                }, options.loadingTimeout);
 
             } else {
 
-                this.$el && this.$el.removeClass(this.options.elementLoadingClass);
+                removeClass(this.$el, options.elementLoadingClass);
                 clearTimeout(this.loadingTimeout);
 
             }
@@ -166,23 +269,29 @@
 
         prepareItem: function(position, callback) {
 
-            var self = this,
-                url = this.items[position];
-                altText = this.alts[position]; 
-                
+            var self = this;
+            var url = this.items[position];
+
             this.loading(true);
 
             if (this.options.videoRegex.test(url)) {
 
-                callback.call(self, $('<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>'));
+                callback.call(self, parseHtml(
+                    '<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>')
+                );
 
             } else {
-                var $imageCont = $('<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" alt="' + altText + '"/></div>');
 
-                this.$currentImage = $imageCont.find('.slbImage');
+                var $imageCont = parseHtml(
+                    '<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" /></div>'
+                );
+
+                this.$currentImage = $imageCont.querySelector('.slbImage');
 
                 if (this.options.showCaptions && this.captions[position]) {
-                    $imageCont.append('<div class="slbCaption">' + this.captions[position] + '</div>');
+                    $imageCont.appendChild(parseHtml(
+                        '<div class="slbCaption">' + this.captions[position] + '</div>')
+                    );
                 }
 
                 this.loadImage(url, function() {
@@ -219,7 +328,7 @@
 
             if (!this.$el) {
 
-                this.$el = $(
+                this.$el = parseHtml(
                     '<div class="slbElement ' + o.elementClass + '">' +
                         '<div class="slbOverlay"></div>' +
                         '<div class="slbWrapOuter">' +
@@ -227,28 +336,24 @@
                                 '<div class="slbContentOuter">' +
                                     '<div class="slbContent"></div>' +
                                     '<button type="button" title="' + o.closeBtnCaption + '" class="slbCloseBtn ' + o.closeBtnClass + '">×</button>' +
+                                    (this.items.length > 1
+                                        ? '<div class="slbArrows">' +
+                                             '<button type="button" title="' + o.prevBtnCaption + '" class="prev slbArrow' + o.prevBtnClass + '">' + o.prevBtnCaption + '</button>' +
+                                             '<button type="button" title="' + o.nextBtnCaption + '" class="next slbArrow' + o.nextBtnClass + '">' + o.nextBtnCaption + '</button>' +
+                                          '</div>'
+                                        : ''
+                                    ) +
                                 '</div>' +
                             '</div>' +
                         '</div>' +
                     '</div>'
                 );
 
-                if (this.items.length > 1) {
-
-                    $(
-                        '<div class="slbArrows">' +
-                            '<button type="button" title="' + o.prevBtnCaption + '" class="prev slbArrow' + o.prevBtnClass + '">' + o.prevBtnCaption + '</button>' +
-                            '<button type="button" title="' + o.nextBtnCaption + '" class="next slbArrow' + o.nextBtnClass + '">' + o.nextBtnCaption + '</button>' +
-                        '</div>'
-                    ).appendTo(this.$el.find('.slbContentOuter'));
-
-                }
-
-                this.$content = this.$el.find('.slbContent');
+                this.$content = this.$el.querySelector('.slbContent');
 
             }
 
-            this.$content.empty();
+            this.$content.innerHTML = '';
 
             return this;
 
@@ -258,10 +363,9 @@
 
             if (!this.modalInDom) {
 
-                this.$el.appendTo($(this.options.appendTarget));
-                $html.addClass(this.options.htmlClass);
+                document.querySelector(this.options.appendTarget).appendChild(this.$el);
+                addClass(document.documentElement, this.options.htmlClass);
                 this.setupLightboxEvents();
-
                 this.modalInDom = true;
 
             }
@@ -272,13 +376,30 @@
 
         setContent: function(content) {
 
-            var $content = $(content);
+            var $content = typeof content === 'string'
+                ? parseHtml(content)
+                : content
+            ;
 
             this.loading(false);
 
             this.setupLightboxHtml();
-            this.options.beforeSetContent && this.options.beforeSetContent($content, this);
-            this.$content.html($content);
+
+            removeClass(this.$content, 'slbDirectionNext');
+            removeClass(this.$content, 'slbDirectionPrev');
+
+            if (this.direction) {
+                addClass(this.$content, this.direction === 'next'
+                    ? 'slbDirectionNext'
+                    : 'slbDirectionPrev'
+                );
+            }
+
+            if (this.options.beforeSetContent) {
+                this.options.beforeSetContent($content, this);
+            }
+
+            this.$content.appendChild($content);
 
             return this;
 
@@ -286,7 +407,9 @@
 
         setImageDimensions: function() {
 
-            this.$currentImage && this.$currentImage.css('max-height', $window.height() + 'px');
+            if (this.$currentImage) {
+                this.$currentImage.style.maxHeight = getWindowHeight() + 'px';
+            }
 
         },
 
@@ -294,48 +417,44 @@
 
             var self = this;
 
-            if (!this.lightboxEventsSetuped) {
-
-                this.$el.on('click' + this.ens, function(e) {
-
-                    var $target = $(e.target);
-
-                    if ($target.is('.slbCloseBtn') || (self.options.closeOnOverlayClick && $target.is('.slbWrap'))) {
-
-                        self.close();
-
-                    } else if ($target.is('.slbArrow')) {
-
-                        $target.hasClass('next') ? self.next() : self.prev();
-
-                    } else if (self.options.nextOnImageClick && self.items.length > 1 && $target.is('.slbImage')) {
-
-                        self.next();
-
-                    }
-
-                });
-
-                $document.on('keyup' + this.ens, function(e) {
-
-                    self.options.closeOnEscapeKey && e.keyCode === 27 && self.close();
-
-                    if (self.items.length > 1) {
-                        (e.keyCode === 39 || e.keyCode === 68) && self.next();
-                        (e.keyCode === 37 || e.keyCode === 65) && self.prev();
-                    }
-
-                });
-
-                $window.on('resize' + this.ens, function() {
-
-                    self.setImageDimensions();
-
-                });
-
-                this.lightboxEventsSetuped = true;
-
+            if (this.eventRegistry.lightbox.length) {
+                return this;
             }
+
+            this.addEvent(this.$el, 'click', function(e) {
+
+                var $target = e.target;
+
+                if (matches($target, '.slbCloseBtn') || (self.options.closeOnOverlayClick && matches($target, '.slbWrap'))) {
+
+                    self.close();
+
+                } else if (matches($target, '.slbArrow')) {
+
+                    matches($target, '.next') ? self.next() : self.prev();
+
+                } else if (self.options.nextOnImageClick && self.items.length > 1 && matches($target, '.slbImage')) {
+
+                    self.next();
+
+                }
+
+            }).addEvent(document, 'keyup', function(e) {
+
+                self.options.closeOnEscapeKey && e.keyCode === 27 && self.close();
+
+                if (self.items.length > 1) {
+                    (e.keyCode === 39 || e.keyCode === 68) && self.next();
+                    (e.keyCode === 37 || e.keyCode === 65) && self.prev();
+                }
+
+            }).addEvent(window, 'resize', function() {
+
+                self.setImageDimensions();
+
+            });
+
+            return this;
 
         },
 
@@ -343,26 +462,32 @@
 
             if (this.modalInDom) {
 
-                this.options.beforeClose && this.options.beforeClose(this);
-
-                this.$el && this.$el.off(this.ens);
-                $document.off(this.ens);
-                $window.off(this.ens);
-                this.lightboxEventsSetuped = false;
-
-                this.$el.detach();
-                $html.removeClass(this.options.htmlClass);
+                this.runHook('beforeClose');
+                this.removeEvents('lightbox');
+                this.$el && this.$el.parentNode.removeChild(this.$el);
+                removeClass(document.documentElement, this.options.htmlClass);
                 this.modalInDom = false;
+                this.runHook('afterClose');
+
             }
+
+            this.direction = undefined;
+            this.currentPosition = this.options.startAt;
 
         },
 
         destroy: function() {
 
             this.close();
-            this.options.beforeDestroy && this.options.beforeDestroy(this);
-            this.$items && this.$items.off(this.ens);
-            this.$el && this.$el.remove();
+            this.runHook('beforeDestroy');
+            this.removeEvents('thumbnails');
+            this.runHook('afterDestroy');
+
+        },
+
+        runHook: function(name) {
+
+            this.options[name] && this.options[name](this);
 
         }
 
@@ -372,26 +497,36 @@
 
         var instance = new SimpleLightbox(options);
 
-        return options.content ? instance.setContent(options.content).show() : instance.showPosition(instance.options.startAt);
+        return options.content
+            ? instance.setContent(options.content).show()
+            : instance.showPosition(instance.options.startAt);
 
     };
 
-    $.fn.simpleLightbox = function(options) {
+    SimpleLightbox.registerAsJqueryPlugin = function($) {
 
-        var lightboxInstance,
-            $items = this;
+        $.fn.simpleLightbox = function(options) {
 
-        return this.each(function() {
-            if (!$.data(this, 'simpleLightbox')) {
-                lightboxInstance = lightboxInstance || new SimpleLightbox($.extend({}, options, {$items: $items}));
-                $.data(this, 'simpleLightbox', lightboxInstance);
-            }
-        });
+            var lightboxInstance;
+            var $items = this;
+
+            return this.each(function() {
+                if (!$.data(this, 'simpleLightbox')) {
+                    lightboxInstance = lightboxInstance || new SimpleLightbox($.extend({}, options, {$items: $items}));
+                    $.data(this, 'simpleLightbox', lightboxInstance);
+                }
+            });
+
+        };
+
+        $.SimpleLightbox = SimpleLightbox;
 
     };
 
-    $.simpleLightbox = $.SimpleLightbox = SimpleLightbox;
+    if (typeof window !== 'undefined' && window.jQuery) {
+        SimpleLightbox.registerAsJqueryPlugin(window.jQuery);
+    }
 
-    return $;
+    return SimpleLightbox;
 
 }));
