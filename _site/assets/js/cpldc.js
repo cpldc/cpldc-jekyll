@@ -8,11 +8,11 @@
                 searchContent(this, beelzebub);
         });
         $('.textblock').css('bottom-border','1px solid #ccc');
-        $('.card .rights-i').click(function(e){
+        $('.rights-i').click(function(e){
             e.preventDefault();
             rightsI(this);
         });
-        $('.card .rights-close').click(function(e){
+        $('.rights-close').click(function(e){
             e.preventDefault();
             rightsClose(this);
         });
@@ -190,10 +190,26 @@
     });
     
     // MPU rights 'i'
-        // rightsInsertion is called by simple lightbox (I edited the js at line 180); 
+        // rightsInsertion is called by simple lightbox (I edited the js at line 286); 
         //     whenever an image is loaded (onload), it looks at whether 'mpu' is in url; 
         //     if it is, it wraps the image in a div (so it's separate from SLB's caption) 
         //     and then attaches the "rightsdiv" after it
+       	function RefreshEventListener() {
+            // https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+            // turns off the event listeners for the MPU rights "i" and turn them back on again; happens when lightbox loads an image, otherwise the event listener won't notice the new image
+            $(".rights-i").off(); 
+            $(".rights-close").off(); 
+
+            $('.rights-i').on('click', function(e){
+                console.log("refresher?");
+                e.preventDefault();
+                rightsI(this);
+            });
+            $('.rights-close').click(function(e){
+                e.preventDefault();
+                rightsClose(this);
+            });
+        }
         function rightsInsertion(loc) {
             if (loc.src.indexOf("mpu") >= 0) {
                 var rightsDiv = '<div class="rights-block">' +
@@ -211,6 +227,7 @@
                     '</div>';
                 $(loc).wrap('<div id="rightsWrapper"></div>');
                 $(loc).after(rightsDiv);
+                RefreshEventListener();
             }
         }
         // rightsI and rightsClose handle the user interacting
@@ -226,11 +243,10 @@
         // this (body) method doesn't need to be dynamically altered when the page adds a new mpu image 
         // (as is the case with the lightbox)
         // inexplicably, this doesnt work on the cards so .card .rights-i is in docready
-        $('body').on('click', '.rights-i', function(e) {
-            e.preventDefault();
-            rightsI(this);
-        });
-        $('body').on('click', '.rights-close', function(e) {
-                e.preventDefault();
-                rightsClose(this);
-        });
+        // $('body').on('click', '.rights-i', function(e) {
+        //     console.log("rights click");
+        //     RefreshEventListener();
+        // });
+        // $('body').on('click', '.rights-close', function(e) {
+        //     RefreshEventListener();
+        // });
