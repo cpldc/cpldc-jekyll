@@ -24,6 +24,36 @@
         {% assign mainimageUrl = 'https://cdm16818.contentdm.oclc.org/digital/collection/' | append: coll | append: '/id/' | append: page.mainimage.url %}
     {% endif %}
     {% assign sortedPosts = site.posts | sort: 'sortname' %}
+    {% if page.type == 'collection' %}
+        {% assign allColls = page.coll %}
+    {% elsif page.type == 'category' or page.type == 'location' %}
+        {% for item in site.posts %}
+            {% if item.category contains page.slug %}
+                {% if allColls %}
+                    {% capture allColls %}{{allColls}}!{{item.coll}}{%endcapture%}
+                {% else %}
+                    {% assign allColls = item.coll %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% if page.type == 'collection' %}
+        {% if page.slug == 'rhwc' or page.slug == 'chiren' %}
+            {% capture locationLine %}Photographs in the {{page.title}} exhibit are housed in the {{page.location.longname}}{% endcapture %}
+        {% elsif page.slug == 'examiner' %}
+            {% capture locationLine %}The {{ page.title }} is housed in the {{ page.location.longname }}; microfilm is available in the Newspapers Department at Harold Washington Library Center.{% endcapture %}
+        {% elsif page.slug == 'woop' %}
+            {% capture locationLine %}The {{page.title}} are housed in the {{page.location.longname}}{% endcapture %}
+        {% elsif page.slug == 'wha' or page.slug == 'theater' %}
+            {% capture locationLine %}Artifacts from the {{page.creditname}} are housed in the {{page.location.longname}}{% endcapture %}
+        {% elsif page.slug == 'hdg' %}
+            {% capture locationLine %}This collection is housed in the {{ page.location.longname }}.  Additional materials by Henry Delorval Green are held at the Chicago History Museum.{% endcapture %}
+        {% elsif page.slug == 'chicagoparks' %}
+            {% capture locationLine %}The {{page.title}} collection is housed in the {{ page.location.longname }}.{% endcapture %}
+        {% else %}
+            {% capture locationLine %}The {{page.title}} is housed in the {{page.location.longname}}{% endcapture %}
+        {% endif %}
+    {% endif %}
     {% include header.html %}
     <main id="sidebar-c-target">
         <div class="container fixed main-container">
@@ -83,7 +113,7 @@
                     <section class="prosecontent" id="mainTextContent">
                         {% if page.slug == 'mrc' %}{% elsif page.link == 'takedown' %}{% else %}
                         <div class="center-button browseall" id="browseButton">
-                            <a href="http://digital.chipublib.org/digital/search/collection/{% if page.type == 'category' or page.type == 'location' %}{{ page.allcolls }}{% elsif page.type == 'collection' %}{{ page.coll }}{% endif %}/order/title/ad/asc" id="allButton" class="btn btn-primary">
+                            <a href="http://digital.chipublib.org/digital/search/collection/{{ allColls }}/order/title/ad/asc" id="allButton" class="btn btn-primary">
                                 Browse All
                             </a>
                         </div>
@@ -92,6 +122,7 @@
                             {% if page.textrich %}
                                 <div class="textblock">
                                     <p>{{ page.textrich }}</p>
+                                    <p>{{ locationLine }}</p>
                                 </div>
                             {% endif %}
                             {% if page.highlights %}
@@ -241,10 +272,12 @@
                         </div>
                     </div>
                     <div class="content events">
-                            <div class="events-title">
-                                <h2>History &amp; Genealogy Events</h2>
-                            </div>
-                        {% include events.html %}
+                        <div class="events-title">
+                            <h2>History &amp; Genealogy Events</h2>
+                        </div>
+                        <aside id="bcEvents">
+
+                        </aside>
                         <div class="events-viewmore">
                             <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
                                 View More 

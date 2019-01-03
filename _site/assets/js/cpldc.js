@@ -250,3 +250,15 @@
         // $('body').on('click', '.rights-close', function(e) {
         //     RefreshEventListener();
         // });
+
+        console.log('start');
+        $.get('https://chipublib.bibliocommons.com/events/events/rss/all', function (data) {
+            $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+                var el = $(this);
+
+                console.log("------------------------");
+                console.log("title      : " + el.find("title").text());
+                console.log("author     : " + el.find("author").text());
+                console.log("description: " + el.find("description").text());
+            });
+        });
