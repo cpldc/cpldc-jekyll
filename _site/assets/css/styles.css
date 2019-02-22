@@ -662,20 +662,19 @@ footer {
 .blogs-title, .events-title {
   padding: 15px 15px 10px 15px;
   line-height: 16px;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase; }
 
 .blogpost, .blogs-viewmore {
-  padding: 0 25px; }
+  padding: 10px 25px;
+  margin-bottom: 0; }
 
 .event, .events-viewmore {
-  padding: 10px 25px; }
+  padding: 10px 25px;
+  margin-bottom: 0; }
 
 .fa-angle-double-right {
   padding-left: 5px; }
-
-.blogpost dl {
-  padding: 10px 0;
-  margin-bottom: 0; }
 
 .blogs-title h2, .events-title h2 {
   font-weight: bold;
@@ -685,7 +684,7 @@ footer {
 
 .blogpost-title, .event-title, .event-title a, .blogpost-title a {
   font-weight: bold;
-  line-height: 19px;
+  line-height: 22px;
   margin-bottom: .25rem;
   color: #000; }
 
@@ -806,7 +805,6 @@ footer {
 
 .rights-overlay {
   cursor: default;
-  display: none;
   background-color: rgba(55, 55, 55, 0.8);
   color: #fff;
   position: absolute;

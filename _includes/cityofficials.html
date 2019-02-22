@@ -112,6 +112,9 @@
                 var wardTable =  JSON.parse(localStorage.getItem('wardTable')) || [];
                     posTable = JSON.parse(localStorage.getItem('posTable')) || {'mayors': [],'treas': [],'clerks': []};
                 var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
+                        'This section should contain a short introduction to the content.' + 
+                        '<p><a href="#" id="aboutLink">We should have a link to the more detailed \'about\' page here too.</a></p>';
+                var aboutText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
                         '<ul>' + 
                         '<li><a href="#About">About This Guide</a></li>' + 
                         '<li><a href="#History">History and Scope</a></li>' + 
@@ -242,6 +245,8 @@
                     input = $('#textInput').val();
                     if (input.length > 0 ){
                         drawAldermen();
+                    } else {
+                        clearFilters();
                     }
                 }
             // date & text filters
@@ -431,6 +436,11 @@
                             activateTextSearch();
                         }
                     });
+                    $('#aboutLink').on('click', function(){
+
+                    clearCenter();
+                    $('#aldermen').append(aboutText);
+                    })
                 });
             // creating checkboxes
                 for (var w = 1; w <= 50 ; w++) {

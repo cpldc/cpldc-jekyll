@@ -21,6 +21,9 @@
 <script src="assets/js/simpleLightbox.js"></script>
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="stylesheet" href="assets/css/simpleLightbox.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
 </head>
 <body class="collections">
     
@@ -37,7 +40,6 @@
     </section>
     <section>
         <div class="container-fluid">
-            <div class="row">
                 <div class="container">
                     <div class="row clearfix">
                         <div class="header-left hidden-md-down header-left-bumper" id="logo-fullSize">
@@ -84,7 +86,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="row header-bottom hidden-md-down">
                 <div class="container">
                     <div class="row">
@@ -696,7 +697,8 @@
                         <div class="blogs-title">
                             <h2>Chicago History Blog</h2>
                         </div>
-                        <?php include '../blogs.php'; ?>
+                        <aside id="bcBlogs">
+                        </aside>
                         <div class="blogs-viewmore">
                             <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
                                 View More 
@@ -709,7 +711,6 @@
                             <h2>History &amp; Genealogy Events</h2>
                         </div>
                         <aside id="bcEvents">
-
                         </aside>
                         <div class="events-viewmore">
                             <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
