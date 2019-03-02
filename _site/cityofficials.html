@@ -344,6 +344,10 @@
                         <p class="lists-list-title">
                             Chronological Lists
                         </p>
+                        <p class="lists-checkbox">
+                            <input name="sort-direction" type="checkbox" id="sortDir">
+                            <label for="sort-direction">Sort Descending</label>
+                        </p>
                         <p class="filter-list-title">By Position</p>
                         <form id="lists-form">
                         <ul class="filter-list" id="lists-pos-list">
@@ -388,7 +392,8 @@
                     maxDate = ($.isEmptyObject(filterValues) ? currYear : filterValues['maximumDate']),
                     aldArray = '',
                     filterWard = [],
-                    filterAlpha = [];
+                    filterAlpha = [],
+                    revSort = false;
                 let picLBArray = [];
                 var alderTable = '';
                 var wardTable =  JSON.parse(localStorage.getItem('wardTable')) || [];
@@ -470,17 +475,19 @@
                     $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
                     function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
                 }
-                jQuery.fn.sortElementsByTwoDatas = function sortElements(el) {
+                jQuery.fn.sortElementsByTwoDatas = function sortElements(el, direction) {
+                    var one; 
+                    (direction ? one = -1 : one = 1)
                     $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
                     function dec_sort(a, b){ 
                         if ($(b).data('sort') === $(a).data('sort') ){
                             if ($(b).data('enddate') === $(a).data('enddate')){
-                                return ($(b).data('name')) < ($(a).data('name')) ? 1 : -1; 
+                                return ($(b).data('name')) < ($(a).data('name')) ? one : -one; 
                             } else {
-                                return ($(b).data('enddate')) < ($(a).data('enddate')) ? 1 : -1; 
+                                return ($(b).data('enddate')) < ($(a).data('enddate')) ? one : -one; 
                             }
                         } else {
-                            return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; 
+                            return ($(b).data('sort')) < ($(a).data('sort')) ? one : -one; 
                         }
                     }
                 }
@@ -703,9 +710,13 @@
             // docready for checkbox changing & pressing enter in the text input
                 $( document ).ready(function() {
                     $('input[type="checkbox"]').on('change', function() {
-                        clearCenter();
-                        clearOtherTab();
-                        drawAldermen();
+                        if ($(this).attr('id') == 'sortDir'){
+                            reverseSort($(this).is(":checked"));
+                        } else {
+                            clearCenter();
+                            clearOtherTab();
+                            drawAldermen();
+                        }
                     });
                     $('input[type="radio"]').on('change', function() {
                         clearCenter();
@@ -724,6 +735,13 @@
                     $('#aldermen').append(aboutText);
                     })
                 });
+                function reverseSort(val){
+                    revSort = val;
+                    console.log(val);
+                    if ($('.chron').length > 1){
+                        chronList();
+                    }
+                }
             // creating checkboxes
                 for (var w = 1; w <= 50 ; w++) {
                     var newLine = '';
@@ -759,7 +777,7 @@
                         $('#textInput').val('');
                         minDate = 1837;
                         maxDate = currYear;
-                        $('input[type=checkbox]').prop('checked',false); 
+                        $('#all-filters > input[type=checkbox]').prop('checked',false); 
                         $('#slider-container').slider('values', 0, minDate);
                         $('#slider-container').slider('values', 1, maxDate);
                         $("#date-slider").empty().append( minDate + "-" + maxDate);
@@ -829,7 +847,7 @@
                     var userRequest = $('#lists-form').find(':radio:checked').val(),
                         properName = $('#lists-label-' + userRequest).text();
                     function listListing(list){
-                        return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman" id="' + list.id + '" onClick="expandAlderman(\'' + list.id + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
+                        return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman chron" id="' + list.id + '" onClick="expandAlderman(\'' + list.id + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
                                 list.startDate + '-' + list.endDate + '</span></h2></div>'
                     }
                     if (isNaN(Number(userRequest))){
@@ -844,7 +862,7 @@
                             alderTable += listListing(list[l]);
                         }
                     }
-                    $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div');
+                    $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div', revSort);
                     $('#search-count-target').empty().append('&nbsp;›&nbsp;<small>Viewing All ' + $('#aldermen').children().length + ' ' + (properName.length > 0 ? properName : 'Aldermen') + '<button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear</button></small>')
                 }
                 function expandAlderman(userClickId){
