@@ -805,6 +805,7 @@ footer {
 
 .rights-overlay {
   cursor: default;
+  display: none;
   background-color: rgba(55, 55, 55, 0.8);
   color: #fff;
   position: absolute;

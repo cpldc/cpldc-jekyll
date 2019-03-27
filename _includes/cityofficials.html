@@ -117,9 +117,10 @@
                 var wardTable =  JSON.parse(localStorage.getItem('wardTable')) || [];
                     posTable = JSON.parse(localStorage.getItem('posTable')) || {'mayors': [],'treas': [],'clerks': []};
                 var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
+                        '<h3>Short Intro</h3>' + 
                         'This section should contain a short introduction to the content.' + 
-                        '<p><a href="#" id="aboutLink">We should have a link to the more detailed \'about\' page here too.</a></p>';
-                var aboutText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
+                        '<p>We should have a link to the more detailed \'about\' content (seen below) here too.</p>' + 
+                        '<h3>More in-depth intro content:</h3>' + 
                         '<ul>' + 
                         '<li><a href="#About">About This Guide</a></li>' + 
                         '<li><a href="#History">History and Scope</a></li>' + 
@@ -163,8 +164,7 @@
                         '<h3 class="content-header"><a name="Dates"></a>Dates of Service and Qualifications for Office</h3>' + 
                         'The dates of service listed here are not precise. Generally, an official&rsquo;s term starts when his or her oath of office is filed with the city clerk following an election or confirmation of an appointment by the City Council. The <em>Journal of the City Council</em> commonly notes the filing of the oath.The term of office ends either when an official&rsquo;s successor is elected and files an oath of office, or when the office becomes vacant due to death, resignation or legal inability to hold office.Currently the most common reason for someone to become legally unable to be an alderman is the acceptance of another elective or appointed public office. Conviction of certain crimes also vacates the office. Being legally guilty is not always required. See <em><a href="http://hdl.handle.net/2027/hvd.32044078688405?urlappend=%3Bseq=84">Hildreth v. Heath</a></em> and <em><a href="http://www.illinoiscourts.gov/opinions/appellatecourt/2003/1stdistrict/june/html/1020236.htm">Bloom v. Municipal Employees Annuity and Benefit Fund of Chicago</a></em> for two examples where aldermen, although not legally guilty of a crime involving public office, were still determined to have committed the offense.Usually, but not always, public officials resign if they become ineligible. But if the official does not resign, subtle legal questions remain as to if the public office or crime qualifies as disabling and the exact effective date. Sometimes there&rsquo;s not an official answer.There are other reasons a City Council seat becomes vacant. For example, the City Council declared Fred Hubbard&rsquo;s seat vacant after he was indicted and disappeared. In 1900, the council decided it had too many members and refused to seat two election winners. Alderman Dennis Block moved to the suburbs in 1977.For the first century, the City Council closely guarded its prerogative to decide on the qualifications of its members and would occasionally seat one member, then decide that somebody else had won a contested election. In 1927, for example, <a href="https://archive.org/stream/proceedingsofcit104chic#page/1119/mode/1up">Haffa replaced Alderman Albert three months after the election</a>. Now the courts usually decide such questions.For these reasons, we try to give dates of appointments, resignations, acceptance of other offices, contested elections, deaths, indictments, convictions, etc., but these do not indicate dates of service. The dates given here are just useful information for further research.' + 
                         '<h3 class="content-header"><a name="Alderman"></a>Aldermen vs. Alderwomen</h3>' + 
-                        'State law provides that City Council members are "aldermen." It took until 1971 for Chicago&rsquo;s first two women to be elected to the council. This was nearly 60 years after women gained the vote and well-qualified women began to run for the council. The <em>City Council Journal</em> and other sources commonly referred to women as alderwomen from 1971 onward.In 1984, Harold Washington nominated Dorothy Tillman as "alderwoman." A hostile City Council refused to consider the nomination, claiming the office did not exist. Washington then nominated her as "alderman." The council ultimately confirmed her, and since 1984 "alderman" has been used for both female and male members of the council.' +
-                        '</div>';
+                        'State law provides that City Council members are "aldermen." It took until 1971 for Chicago&rsquo;s first two women to be elected to the council. This was nearly 60 years after women gained the vote and well-qualified women began to run for the council. The <em>City Council Journal</em> and other sources commonly referred to women as alderwomen from 1971 onward.In 1984, Harold Washington nominated Dorothy Tillman as "alderwoman." A hostile City Council refused to consider the nomination, claiming the office did not exist. Washington then nominated her as "alderman." The council ultimately confirmed her, and since 1984 "alderman" has been used for both female and male members of the council.';
                 if (wardTable.length < 1){
                     var i;
                     for (i = 0; i < 50; i++) { 
@@ -561,30 +561,31 @@
             // create chron lists
                 function chronList() { 
                     saveFilters();
-                    alderTable = '';
+                    alderTable = [];
                     var userRequest = $('#lists-form').find(':radio:checked').val(),
                         properName = $('#lists-label-' + userRequest).text();
-                    function listListing(list){
-                        return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman chron" id="' + list.id + '" onClick="expandAlderman(\'' + list.id + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
+                    function listListing(list, index){
+                        return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman chron" id="' + list.id + '-' + index + '" onClick="expandAlderman(\'' + list.id + '-' + index + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
                                 list.startDate + '-' + list.endDate + '</span></h2></div>'
                     }
                     if (isNaN(Number(userRequest))){
                         var list = $.uniqueSort( posTable[userRequest] );
                         for (var l in posTable[userRequest]){
-                            alderTable += listListing(list[l]);
+                            alderTable.push(listListing(list[l], alderTable.length));
                         }
                     } else {
                         userRequest = userRequest - 1;
                         var list = $.uniqueSort( wardTable[userRequest] );
                         for (var l in wardTable[userRequest]){
-                            alderTable += listListing(list[l]);
+                            alderTable.push(listListing(list[l]));
                         }
                     }
                     $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div', revSort);
                     $('#search-count-target').empty().append('&nbsp;›&nbsp;<small>Viewing All ' + $('#aldermen').children().length + ' ' + (properName.length > 0 ? properName : 'Aldermen') + '<button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear</button></small>')
                 }
                 function expandAlderman(userClickId){
-                    var ald = $.grep(aldermen, function(obj){return obj.id === userClickId;})[0],
+                    var aldId = userClickId.substr(0, userClickId.indexOf('-'));
+                    var ald = $.grep(aldermen, function(obj){return obj.id === aldId;})[0],
                         $alderman = $('#' + userClickId);
                     if ($($alderman).hasClass('expandingAlderman')){
                         var moreInfo = drawAlderman(ald, 'list');
@@ -597,7 +598,7 @@
                     } else if ($($alderman).hasClass('expandedAlderman') && !$( event.target ).is( "a" )){
                         $($alderman).removeClass('expandedAlderman').addClass('expandingAlderman').children('#moreInfo').remove();
                     } else {
-                        console.log('something broke: ' + userClickId);
+                        console.log('something broke: ' + aldId);
                     }
                 }
             // filters will persist after page reload
