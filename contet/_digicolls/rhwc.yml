@@ -1,0 +1,143 @@
+---
+layout: content
+flag: '5'
+title: Remembering Harold Washington
+link: rhwc
+coll: rhwc
+sortname: Remembering Harold Washington
+shortname: Harold Washington
+sidebarname: Harold Washington
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg
+  pich: 250px
+  size: 200%
+  pos: 75% 40%
+  alt: Mayor Washington smiles and points to the crowd while riding on the back of
+    a convertible.
+category: African Americans
+textshort: Chicago&rsquo;s first African American mayor served from 1983 to 1987,
+  and his legacy endures.
+textlong: Mayor Harold Washington, the first African American mayor of Chicago, transformed
+  the city during his years in office (1983-1987).
+textrich: <p>This collection showcases Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic
+  and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous
+  people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking
+  and development projects</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a>.</p><p>Chicago
+  Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold
+  Washington Reseach Collection</a>.  Selections from those collections can be found
+  in the Finding Aids section below.
+CPLRes:
+- a: https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/
+  dt: Municipal Reference Collection
+  dd: Collections include local government publications, city election results, maps,
+    municipal ordinances and more.
+- a: https://www.chipublib.org/fa-brenetta-howell-barrett-papers/
+  dt: Brenetta Howell Barrett Papers Finding Aid
+  dd: Barrett served in the mayoral administrations of Harold Washington and Eugene
+    Sawyer. She was a political activist for housing, environmental and civil liberties
+    issues.
+- a: https://www.chipublib.org/tag/harold-washington/
+  dt: Harold Washington Blog Posts
+  dd: Written by CPL librarians and staff.
+- a: https://www.chipublib.org/mayor-harold-washington-biography/
+  dt: Mayor Harold Washington Biography
+  dd: Information about Mayor Harold Washington&rsquo;s education, military service,
+    career and selected accomplishments.
+findingaid:
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-campaign-records/
+  text: Mayoral Campaign Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-records-press-office-records/
+  text: Mayoral Records, Press Office Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-illinois-state-representative-records/
+  text: Illinois State Representative Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/
+  text: Pre-Mayoral Photograph Collection Finding Aid
+mainimage:
+  url: '73'
+  text: Mayor Washington addresses the International Circulation Managers Association,
+    1987
+  size: 130%
+  align: 80% 0
+  alt: Mayor Washington smiles and waves from podium.
+thumbs:
+- url: '72'
+  text: Mayor Washington reads to Dominik Przekota and class, 1986
+  size: 300%
+  align: 0 20%
+  alt: Mayor Washington sits with book in front of a group of children in a library.
+    One boy stands at front, video cameraman stands at back.
+- url: '64'
+  text: Mayor Washington at the KOCO groundbreaking ceremony, 1987
+  size: ''
+  align: 52% 15%
+  alt: Mayor Washington and six others pose holding shovels full of dirt.
+- url: '13'
+  text: Mayor Washington with members of the Philippine Chamber of Commerce, 1987
+  size: 150%
+  align: 40% 40%
+  alt: Mayor Washington poses with three women, one of whom holds a plaque.
+- url: '30'
+  text: Mayor Washington at the Bud Billiken Parade, 1987
+  size: 400%
+  align: 71% 30%
+  alt: Mayor Washington smiles and points to the crowd while riding on the back of
+    a convertible.
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection
+sidebarflag: x
+---

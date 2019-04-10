@@ -1,0 +1,123 @@
+---
+layout: content
+flag: '9'
+title: Robert W. Krueger Photograph Collection
+coll: rwk
+sortname: Krueger, Robert W. Photograph Collection
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg
+  pich: 210px
+  size: 100%
+  pos: 50% 50%
+  alt: The front of a two-story duplex viewed from the street.  Two people sit at
+    the entrance to one of the homes.
+category: Neighborhoods
+textshort: Local photographer Robert Krueger documented Chicago&rsquo;s North Side
+  with photographs of community events, buildings and people.
+textlong: In 1984, the Library began working with local photographer Robert Krueger
+  to document the North Side.
+textrich: <p>Krueger photographed hundreds of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rwk/searchterm/Restaurants/field/subjed/mode/all/conn/and/order/nosort">restaurants</a>,
+  street scenes, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rwk/searchterm/Parks/field/genre/mode/all/conn/and/order/nosort">parks</a>,
+  businesses, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rwk/searchterm/Schools/field/genre/mode/all/conn/and/order/nosort">schools</a>,
+  houses,  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rwk/searchterm/Cemeteries/field/genre/mode/all/conn/and/order/nosort">cemeteries</a>,
+  religious institutions, community events and residents of North Side neighborhoods.
+  These photographs are a sample of his work.</p>
+CPLRes:
+- a: https://www.chipublib.org/archival_post/robert-w-krueger-photograph-collection/
+  dt: Robert W. Krueger Photograph Collection Finding Aid
+  dd: Descriptive inventory for the complete physical collection.
+- a: https://www.chipublib.org/chicago-newspapers-on-microfilm/
+  dt: Chicago Newspapers
+  dd: Online and microfilm.
+ExRes:
+- a: http://www.ravenswoodhistorical.com/
+  dt: Ravenswood-Lake View Historical Association
+  dd: Programs, publications and tours focusing on Chicago northside neighborhood
+    history.
+- a: http://www.edgewaterhistory.org/ehs/
+  dt: Edgewater Historical Society
+  dd: Exhibits, events and tours of the Edgewater neighborhood.
+mainimage:
+  url: '414'
+  text: 47th and 48th Ward cleanup on Clark Street, 1988
+  size: 150%
+  align: 50% 30%
+  alt: The front of a two-story duplex viewed from the street.  Two people sit at
+    the entrance to one of the homes.
+thumbs:
+- url: '412'
+  text: German-American Festival, 1988
+  size: 300%
+  align: 50% 35%
+  alt: Alderman Gene Schulter poses in the middle of a row of young women and and
+    men.  The women are dressed in dirndls.  They are standing in front of a covered
+    stage decorated with flags and pennants. A large sign at the back of the stage
+    reads &rdquo;Welcome Ald. Gene Schluter.&ldquo;
+- url: '349'
+  text: Picasso statue unveiled, 1967
+  size: 120%
+  align: center
+  alt: A bird&lsquo;s-eye view of thousands of people watching the unveiling of a
+    large Picasso sculpture in the middle of Civic Center Plaza.  The tarp has been
+    almost entirely removed but remains draped around the bottom of the sculpture.
+- url: '828'
+  text: Henry Krueger, Marie and Lydia Wahl and a friend, 1923
+  size: 200%
+  align: 50% 25%
+  alt: A young man and young woman pose on the hood of an old-fashioned car.  Two
+    other young women pose on the front fender of the car.
+- url: '1365'
+  text: 1720-22 W. Leland Avenue, 1988
+  size: 140%
+  align: center
+  alt: The front of a two-story duplex viewed from the street.  Two people sit at
+    the entrance to one of the homes.
+link: rwk
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+type: collection
+---

@@ -1,8 +1,8 @@
-#Simple editing: 
+# Simple editing: 
 
 Each landing page (or all, about, etc) exist as individual webpages on the server, so any of them can be downloaded, edited, and reuploaded.  This won't make any persistent changes to the github repository, but it's an easy way to make specific changes if necessary.  
 
-#Introduction and core  
+# Introduction and core  
 
 Jekyll is a static site generator, which takes templates that a user provides, combines it with data the user provides, and creates standard HTML, JavaScript, and CSS files that can be uploaded to a server.  Jekyll is written in Ruby, uses Liquid as a templating language, and markdown for formatting.  
 
@@ -70,13 +70,13 @@ When you need to nest data, it’s done with dashes and spaces:
 
 This seems extremely similar to a formatting style called YAML (Jekyll is probably using YAML in this context, despite the files being .markdown files – or maybe YAML is always a part of markdown?), so that might be a good way to look if you have questions about it.  In CPLDC content, see the _posts/ folder for examples. 
 
-##Structure 
+## Structure 
 
-###Jekyll File Structure 
+### Jekyll File Structure 
 
 Jekyll is frequently used for blogs, and, rather than reinventing the wheel, the CPLDC site uses Jekyll’s blog feature for its skeleton.  Here is the overview of where each component is. 
 
-####/
+#### /
 
 Jekyll starts with markdown files (*.md or *.markdown) located in the root directory.  There, CPLDC has:  
 
@@ -105,11 +105,11 @@ The City Officials and CAA pages use a 'data' layout, and merely direct jekyll t
 
 The index page, like the 'all' page, is all iterative code, and so its *.md page is very simple as well.
 
-####_layouts
+#### _layouts
 
 This folder holds the layout files that are referenced in the root *.md files.  Layout files are HTML files with Liquid elements.  
 
-#####_layouts/about.html
+##### _layouts/about.html
 
 The About page is a good example, since it takes content from the *.md file and places it in the HTML, but doesn't dig too deep into any other aspects of Jekyll.
 
@@ -123,7 +123,7 @@ After that, the blogs and events are added.  These two still present a substanti
 
 Finally the footer is included.
 
-#####_layouts/all.html
+##### _layouts/all.html
 
 The all.html layout demostrates a page which has no original content, and digs into the collection data.
 
@@ -139,11 +139,11 @@ We "assign" the variable sortedPosts the value of all the posts, after we run th
 
 Then, at line 28, we iterate through each post in the sortedPosts array.  If the post's "type" value is "collection" or "subcollection" (like the pieces of the Northside Clubs/Orgs or the two collections within Theater), then they will be included.  (Naturally we want to exclude type values of "category" or "location".)  We present the (sub)collection's title, and in the case of collections, we link the title to the page.  In the case of the subcollection, we link to the anchor of the parent collection *on this page*.  Then we add the brief description, and then the categories, which have a small logical section because sometimes a collection will have 2 categories.
 
-#####_layouts/cardpage.html
+##### _layouts/cardpage.html
 
 The cardpage is the index page.  It has no sidebar or blogs/events, so it's just libraries, header, and footer.  This page, however, *include*s the cards themselves, so we will address them specifically in that section.  However, note that we're using the Masonry js library (instead of default css masonry) because the library allows for the cards to reposition when the window is resized.  It also enables access to the  "imagesLoaded" javascript sub-library.  When images load after the card is drawn, it can result in the cards lying on top of each other; imagesLoaded prevents that.  I use the jQuery implementation because we're already using jquery all over the place (and it's shorter), but these can be invoked without it.
 
-#####_layouts/content.html
+##### _layouts/content.html
 
 The content page is probably the largest and most complex page, but it's not that challenging to understand from a conceptual perspective.  The complexity comes from handling the corner cases for when some content is there and other content is not.  
 
@@ -211,47 +211,47 @@ After the images, the content section is a set of if statements determining what
 
 Additionally there are minor language tweaks depending on what the collection is; for example, in the Civil War category page, there is language appended to the Sang Collection Finding Aid description to clarify that some of the Sang content is from the CW era.  (if page.title contains "Civil War" and findingaid.title contains "Sang", then add "blah blah blah".)
 
-_layouts/data.html
+##### _layouts/data.html
 
 Because the two data pages handle their databases so differently, this page is just a header/footer frame (no sidebar or blogs/events).
 
-_includes
+##### _includes
 
 The _includes folder contains html files that are expected to be included into full html pages, so these are all partial (no html header, no outer tags, etc).
 
-_includes/blogs.html
+##### _includes/blogs.html
 
-The blogs and events are still handled with php.  There are two reasons for this: 
+The blogs and events are finally handled in JavaScript.  
 
-    1. The Bibliocommons RSS feeds upon which these depend do not have the correct CORS headers, so when they are pulled, they trip the cross-site scripting attack alarms within JavaScript.  This is a Bibliocommons problem; it is a simple fix, but I wouldn't count on them fixing it - and I wouldn't bother, because regardless, problem #2 would exist unless they overhaul their entire way of handling events.
+The jqxhrBlogs() function uses an AJAX call to get the blog RSS.  In development, it's important to have the CORS-anywhere url added to the beginning of the URL ("https://cors-anywhere.herokuapp.com/"), but it should be taken out before uploading to the ContentDM custom pages.  It then calls the blogerizer() function, which inserts the blog content into the HTML template, on each entry in the RSS until the returned html array has 3 entries (length of 2, because arrays start counting at 0).  
 
-    2. Because the events RSS feed is so large, any JavaScript that has to wait on it will cause a ~5 second page load.  Usiung Javascript, there's no way to avoid the 5 second wait. Using PHP, we are able to get around this by having the PHP code grab the RSS and create the tiny HTML file that we use, and save that file for 24 hours.  This means that only one page load, every 24 hours, has to wait the 5 second load time. There is no JavaScript equivalent of PHP's file_put_contents().  (Node.js has writeFile(), but that requires a nodeJS server, which we don't have.)
+Events are handled the same way, but with 5 of them (length = 4) instead of 3.
 
-If the PHP implementation stops working, it is my feeling that, rather than force users to experience a 5 second page load, we should remove the events from the page.  (The blogs are not a problem and can be implemented with vanilla JavaScript without any trouble.)
+If the AJAX call receives an error message or otherwise fails to get the RSS, the error message will be printed to the console.
 
-_includes/caa.html
+##### _includes/caa.html
 
-See separate guide.
+See separate guide for CAA and City Officials.
 
-_includes/cards.html
+##### _includes/cards.html
 
 Collections that should have a card drawn have a number value in their 'flag' key, which is the order in which they will be sorted.  One could easily implement a _data solution to put the card orders in one file (see _data/cardflags.yml), but the collections already had their  flags in their data, so this implementation was simpler.
 
 The cards use the core Bootstrap 'card' class css.  Images are handled the same way as "main images" except with slightly different key/value pairs, and no lightbox.  Again, we look at the image path for the string 'mpu' to determine whther to add the rights 'i'.  Slightly interestingly, if the category value is an array, we iterate over the array; otherwise, we just spit out the one. It might seem logical to make all categories arrays and just iterate once, but it's slightly less complex this way, because the category presentation requires a pipe between items on the list (which is actually a css border, to match Bibliocommons).  Then it's just collection title and "textshort".
 
-_includes/cityofficials.html
+##### _includes/cityofficials.html
 
-See separate guide.
+See separate guide for CAA and City Officials.
 
-_includes/events.html
+##### _includes/events.html
 
-see _includes/blogs.html
+See _includes/blogs.html
 
-_includes/footer.html
+##### _includes/footer.html
 
 The footer html is pretty straightforward.  It uses Font Awesome for the social media icons (matching Bibliocommons, who appears to use the same icons, but doesn't credit FA, maybe a unique license?)  The sections of the footer should stack as the browser window shrinks, using Bootstrap responsive classes.
 
-_includes/header.html
+##### _includes/header.html
 
 The header is a bit more complex.  It includes a few javascript/jquery elements: 
 
@@ -261,11 +261,11 @@ Browse Dropdown
 Hotkeys
 Responsive...responses.
 
-Show/Hide the search input:
+###### Show/Hide the search input:
 
-Pretty simply, if you click on the search area, the input form appears.  When the window is "lg" or larger (width > 970), it remains in the header.  Like in Bibliocommons, there's no way to close/hide it.  in "md" or smaller (width < 970), clicking the search div drops an input form.  On content pages, both include a selection to limit your search to that page's content, or all content.  This should not appear on the index, about, all, takedown, etc, pages.
+Pretty simply, if you click on the search area, the input form appears.  When the window is "lg" or larger (width >= 970), it remains in the header.  Like in Bibliocommons, there's no way to close/hide it.  in "md" or smaller (width < 970), clicking the search div drops an input form.  On content pages, both include a selection to limit your search to that page's content, or all content.  This should not appear on the index, about, all, takedown, etc, pages.
 
-Activate the search:
+###### Activate the search:
 
 Takes the search input (if length > 0) and appends it to the search results string in contentdm.  When you search in contentDM, the url pattern is either: 
 
@@ -277,11 +277,13 @@ http://digital.chipublib.org/digital/search/searchterm/[SEARCHINPUT]
 
 so the function simply inserts the user's input into those structures.  The former searches one or many collections (collection strings delimited with !, eg mpu!ChicagoParks, similar to the Browse button of the content pages), the latter searches all content.  
 
-Browse Dropdown: 
+###### Browse Dropdown: 
 
 Drops the Browse menu on click.  The Bibliocommons version disappears when you click off of the menu; I prefered to make it disappear when you click on the menu, but not on a link.
 
-Hotkeys:
+This becomes a modal menu under 970px, like in bibliocommons.
+
+###### Hotkeys:
 
 There are event listeners for:
     Pressing enter when the search div is focused
@@ -292,8 +294,111 @@ There are event listeners for:
     Pressing escape when the Browse menu is visible 
         Hides the browse menu
 
-Responsive elements: 
+###### Responsive elements: 
 
 Normal responsive elements are used: under a certain size, the CPL logo changes and the browse/events buttons change, matching Bibliocommons.  These use Bootstrap's responsive classes (eg hidden-md-down). In addition to these Bootstrap responses, there are javascript listeners for window resizing.
 
 When a user resizes the window and crosses the 970px threshold, the browse dropdown will hide, and the search inputs, when visible, will hide again.  (The modal version of the browse menu is not responsive; it seemed too disorienting when it disappeared on resize.  This is in line with Bibliocommons.)
+
+
+##### _includes/libraries.html
+
+The libraries file just adds the external libraries and frameworks that we use, including our own CSS and js files.
+
+##### _includes/sidebar.html
+
+The sidebar has a couple of important functions.  The show/hide buttons are pretty straightforward, but there are also two types of sidebars, the collapsable one that can be seen on the home page, and the fixed one that can be seen on the landing pages.  However, when the page width gets to a certain breakpoint (970px), the fixed sidebar becomes collapsable.  This is handled in the switchLayoutF() and switchLayoutC() functions.  It is important to recognize that in the fixed layout, the sidebar is a part of the main frame (the bootstrap container); the collapsable sidebar is outside of the main frame.  The result is the entire sidebar has to be removed (.detach()) and placed somewhere else in the DOM, rather than just changing some of its CSS.
+
+The lists of subjects and locations are automagically created by iterating over the posts (see _posts/ section).  This was initially done because of how it was handled in the PHP version, but given how infrequently subjects and locations will be added, it's probably just as good to remove that complexity and make a standard HTML list.
+
+#### _posts/
+
+This folder contains the landing pages.
+
+Jekyll is primarily used for blogs, so the easiest way to give it content is to pretend they're blog posts.  (It can also be done with arrays in the _data folder, but it's much more time consuming and provides no benefit other than conceptual cleanliness.)
+
+Each subject, location, colletion, and subcollection gets a file here. 
+
+The formatting of these files is very specific; new lines and tabs are vital to how Jekyll processes the data, so if things don't appear as expected, check that first.
+
+Also note that the date field and the date in the filename are required by Jekyll; they aren't used in any way, but they need to be real dates.  They don't have to be accurate, just real.
+
+Each piece of these files is used in the content page, so see the _layouts/content.html section for details.
+
+#### _sass/, _sass/main.scss
+
+Jekyll uses a Sass processor to handle CSS by default.  Sass simply extends the capabilities of CSS, enabling, for example, nesting, so, instead of: 
+
+    .big-box {
+        background-color: blue;
+    }
+    .big-box > .little-box {
+        background-color: orange;
+    }
+
+You can write:
+
+    .big-box {
+        background-color: blue;
+        .little-box {
+            background-color: orange;
+        }
+    }
+
+Given that all of the CSS was already written for the PHP version, which didn't use Sass, Sass features aren't actually used at all.  
+
+#### _site/
+
+When you "build" a jekyll site, all of the layouts and included content are processed and straightforward .html, .css, and .js files are created.  _site/ is where that content will go.  When you make changes, and run 'jekyll build', and upload the output to the ContentDM custom pages, these files are the ones to upload.
+
+All of these files will be overwritten, so don't bother to make changes to them.
+
+One note: when you upload the content, ContentDM does not understand tree structures in an upload, so you have to upload all of the HTML files first (the files in /site_), and then, in ContentDM, you have to navigate to assets/js/ and upload the contents of _site/assets/js/ there, then assets/css/ & _site/assets/css, etc.  All files have to be uploaded to the correct folder.
+
+#### .sass-cache/
+
+This is for the sass processing.  Ignore/don't touch.
+
+#### assets/
+
+All collateral content is stored here.
+
+##### _assets/css/
+
+The simpleLightbox that handles the images on the landing pages came with css; that file is here.  No need to mess with it unless you're updating simpleLightbox.
+
+It's also the location of the core .scss file, which simply tells Jekyll & Sass what to process.  
+
+##### _assets/images/
+
+Several images that we use aren't actually in ContentDM; they're here.  You shouldn't have any trouble undertanding what they are by looking at them.
+
+The aldermen images are also here, in the Officials folder.
+
+##### _assets/js/
+
+This is where our javascript files are located.
+
+_aldermen-db.js_ & _caa-db.js_ are simply the data, not the actual functions that are used in the pages.  When updating the data via excel export, this is where those files should be placed.
+
+_content.js_ was recently split from cpldc.js to prevent large, heavyweight functions being called unnecessarily.  (The blogs and events were the main problem; you don't need to go and get a 10,000 line events rss file when you aren't using it, like on the home page or the city officials page.)
+
+_cpldc.js_ is the primary js file; almost all functions are here.  The code is explained in comments in the file, so there's no need to go through it here.
+
+_simpleLightbox.js_ is worth mentioning because it's been modified.  In line 286, we've added 
+
+    onload="rightsInsertion(this)" 
+
+which adds the little (i) on the MPU images in the lightbox.  These will probably be removed, however, because the event listeners for the image load have to be refreshed every time the user clicks, and this is expensive and complex behavior that's offers information that's redundant.  The rights (i) appears on the image before it's opened in the lightbox, which is adequate.
+
+#### /_config.yml
+
+This is the core config file for Jekyll.  While there are a number of minor options, the most important aspect is the 'baseurl' which is the string that needs to be in every link.  While the field is called baseurl, it's really the appended part of the url, so the url is actually:
+
+    url/baseurl
+
+#### /_about.md, all.md, caa.md, etc
+
+All the *.md files at the top level are the files which indicate what should be built.  Each unique page should have one. As you will see from looking at them, some are very simple pages; their core content is elsewhere.  Others have their content written in markdown in the file.  
+
+Jekyll will, by default, process all *.md files in the root directory, so any new, unique pages you would like to add should be handled that way.  New collections, subjects, locations, etc, should be treated like the others, in the _posts/ folder.

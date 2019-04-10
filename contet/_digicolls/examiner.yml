@@ -1,0 +1,143 @@
+---
+layout: content
+flag: '7'
+title: Chicago Examiner
+coll: examiner
+sortname: Chicago Examiner
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg
+  pich: 19rem
+  size: 110% auto
+  pos: 50% -15px
+category: Newspapers
+textshort: Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i>
+  extends from 1908 to 1918 and represents the longest run of the Hearst newspaper
+  still available.
+textlong: The Chicago Examiner was one of a dozen major newspapers published in Chicago
+  at the turn of the last century. It was known for its sensational news stories.
+textrich: <p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner,</i>
+  while incomplete, extends from 1908 to 1918 and represents the longest run of the
+  paper still available.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck
+  of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and
+  crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous
+  1910 Union Stock Yards fire,</a> that killed more firefighters than any building
+  collapse until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the
+  mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage,
+  photos and illustrations; and big early <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins
+  for the Cubs and the White Sox.</a></p>
+mainimage:
+  url: '6812'
+  text: "&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo;
+    <em>Chicago Examiner</em>, vol. 10 no. 1, 1909"
+  size: 150%
+  align: 78% 5%
+thumbs:
+- url: '51184'
+  text: "&ldquo;Camera&rsquo;s Story of Day&rsquo;s Happenings in River Horror,&rdquo;
+    <em>Chicago Examiner</em>, vol. 13 no. 187, 1915"
+  size: 110px auto
+  align: center
+- url: '12357'
+  text: "&ldquo;Cubs Gain Big Lead for World&rsquo;s Championship,&rdquo; <em>Chicago
+    Examiner</em>, vol. 6 no. 253, 1908"
+  size: 500px auto
+  align: 10% 10%
+- url: '51163'
+  text: "&ldquo;Unceasing Rescue Work on Eastland; Relief Efforts,&rdquo; <em>Chicago
+    Examiner</em>, vol. 13 no. 186, 1915"
+  size: 350px auto
+  align: 90% 60%
+- url: '477'
+  text: "&ldquo;Men Clinging to Girders Drop Into Flames as the Steel Grows Red Hot,&rdquo;
+    <em>Chicago Examiner</em>, vol. 7 no. 27, 1909"
+  size: 200px
+  align: 25% 10%
+CPLRes:
+- dt: Chicago Newspapers
+  a: https://www.chipublib.org/chicago-newspapers-on-microfilm/
+  dd: Online and microfilm.
+- dt: Newspaper Blog Posts
+  a: https://www.chipublib.org/?post_type=post&s=newspapers
+  dd: Written by CPL librarians and staff.
+ExRes:
+- a: http://chroniclingamerica.loc.gov/
+  dt: 'Library of Congress Chronicling America: Historic American Newspapers'
+  dd: Digitized newspapers from all 50 states, 1789-1943.
+- a: http://idnc.library.illinois.edu/
+  dt: Illinois Digital Newspaper Collections
+  dd: More than 100 Illinois newspapers dating back to 1831.
+findingaid:
+- link: https://www.chipublib.org/fa-austin-newspapers-collection/
+  text: Austin Newspapers Collection
+- link: https://www.chipublib.org/fa-chicago-african-american-and-latino-newspapers-microfilm-collection/
+  text: Chicago African American and Latino Newspapers Microfilm Collection
+- link: https://www.chipublib.org/fa-englewood-newspaper-collection/
+  text: Englewood Newspaper Collection
+- link: https://www.chipublib.org/fa-south-chicago-newspapers-collection/
+  text: South Chicago Newspapers Collection
+- link: https://www.chipublib.org/fa-south-shore-newspapers-collection/
+  text: South Shore Newspapers Collection
+- link: https://www.chipublib.org/fa-the-greek-star-newspaper-collection
+  text: Greek Star Newspaper Collection
+- link: https://www.chipublib.org/fa-west-side-newspaper-collection/
+  text: West Side Newspaper Collection
+link: examiner
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection
+sidebarname: Newspapers
+---

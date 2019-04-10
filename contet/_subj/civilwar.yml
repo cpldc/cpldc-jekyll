@@ -1,0 +1,84 @@
+---
+layout: content
+flag: ''
+title: Civil War
+shortname: Civil War
+sidebarname: Civil War
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/721/default.jpg
+  pich: 280px
+  size: auto 120%
+  pos: center
+  alt: An 1854 artillery jacket, Civil War uniform, showcased on a mannequin.
+mainimage:
+  url: '231'
+  coll: p16818coll6
+  text: "&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved
+    persons, 1854"
+  size: cover
+  align: center
+  alt: 1854 poster advertising a marshal's sale, a public auction of enslaved persons.
+thumbs:
+- url: '173'
+  coll: wha
+  text: Pauline Cushman, actress and Union spy, undated
+  size: 150%
+  align: center 30%
+  alt: Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss
+    Major Pauline Cushman. Union spy&ldquo;
+- url: '314'
+  coll: wha
+  text: Sword, model 1850 staff and field officer, 1861-1865
+  size: auto 150px
+  align: 40% 30%
+  alt: Blade and handle of 1850 model sword.
+- url: '35'
+  coll: wha
+  text: Ulysses S. Grant, 1865
+  size: 120px auto
+  align: 50% 20%
+  alt: Portrait of Ulysses S. Grant, typed caption under the image is &rdquo;Lieut.
+    Gen. U. S. Grant.&ldquo;
+- url: '422'
+  coll: p16818coll6
+  text: Letter from John Brown, Jr., 1859
+  size: 200px
+  align: 55% 5%
+  alt: Handwritten 1859 letter from John Brown, Jr. to his uncle, aunt, and cousins.
+textshort: Personal narratives, artifacts and manuscripts tell the story of slaves
+  and soldiers during the war that tore the nation apart.
+textlong: A view into life during the Civil War via personal letters, documents and
+  photographs detailing battles, homefront activities and the fight to end slavery
+  in the United States.
+textrich: A significant portion of the library&rsquo;s Civil War era material comes
+  from the Illinois Department of the Grand Army of the Republic, including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a>
+  and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing
+  the GAR material are items in the Harsh Research Collection&rsquo;s Philip David
+  Sang Collection pertaining to <a href="https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/search/searchterm/186104-1865/field/date/mode/exact/conn/and/order/title/ad/asc">the
+  African American experience during the Civil War era.</a></p>
+CPLRes:
+- a: https://www.chipublib.org/?post_type=post&s=%22civil+war%22
+  dt: Civil War blog posts
+  dd: Written by CPL librarians and staff.
+ExRes:
+- a: https://www.loc.gov/collections/abraham-lincoln-papers/about-this-collection/
+  dt: Abraham Lincoln Papers at the Library of Congress
+  dd: ''
+- a: https://www.umbrasearch.org/
+  dt: Umbra Search African American History
+  dd: ''
+- a: https://dp.la/primary-source-sets/sets?tags%5B%5D=civil-war-and-reconstruction-1850-1877
+  dt: DPLA&rsquo;s Primary Source Sets covering the Civil War and Reconstruction eras
+  dd: ''
+findingaid:
+- link: https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/
+  text: American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army
+    of the Republic Collection Finding Aid
+- link: https://www.chipublib.org/fa-daughters-of-union-veterans-of-the-civil-war-1861-1865-records-1895-1965/
+  text: Daughters of Union Veterans of the Civil War, 1861-1865, Records Finding Aid
+- link: https://www.chipublib.org/archival_post/phillip-sang-papers/
+  text: Philip David Sang Collection Finding Aid
+link: CivilWar
+type: category
+sidebarflag: x
+---

@@ -1,0 +1,165 @@
+---
+layout: content
+flag: '3'
+title: Chicago Theater
+shortname: Theater
+sortname: Chicago Theater
+sidebarname: Theater
+cardpic:
+  pic: theater-cardpic.png
+  pich: 250px
+  size: auto 225%
+  pos: 45% 60%
+  alt: A black and white drawing depicts a woman looking through a monocle. Her hair
+    is styled into a high bun.
+category: ''
+textshort: Playbills and programs for drama, opera, vaudeville, dance and music at
+  early Chicago theaters, 1848-1922.
+textlong: Theater collections at Chicago Public Library document a vibrant local theater
+  community.
+textrich: <p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than
+  2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills
+  from shows starring <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin
+  Booth</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph
+  Jefferson</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah
+  Bernhardt</a> at the well-known <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/mcvicker's/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s
+  Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside
+  traditional plays and musical works, numerous genres are represented in the collection,
+  including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>,
+  <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>
+  and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic
+  shows</a>, among others.</p>
+rights: The Historic Programs digital collection is made possible by a generous grant
+  from the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago
+  Public Library Foundation</a>.
+CPLRes:
+- a: https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/
+  dt: Chicago Theater Collection-Historic Programs Finding Aid
+  dd: The complete and ever-increasing inventory of theater programs past and present,
+    some of which are presented here.
+- a: https://www.chipublib.org/archival_subject/theater/
+  dt: Chicago Theater Collection
+  dd: A list of collections at Chicago Public Library representing theaters, designers,
+    actors and other members of the theater community.
+mainimage:
+  url: '6053'
+  coll: CPB01
+  text: Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881
+  size: 134%
+  align: 52% 15%
+  alt: Theater playbill cover for Camille starring Sarah Bernhardt at McVicker's Theatre
+thumbs:
+- url: '8601'
+  coll: CPB01
+  text: "<em>Evening with Columbine</em>, Chicago Little Theatre, 1913"
+  size: 200%
+  align: 50% 85%
+  alt: Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with
+    the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;.
+    Black and white drawing depicts a woman in a short skirt, supported by two men,
+    kneeling in front of a large circle.
+- url: '6272'
+  coll: CPB01
+  text: "<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903"
+  size: 110%
+  align: 50% 30%
+  alt: Theater program cover reads, &ldquo;Iroquois Theatre, Randolph St. between
+    State and Dearborn Streets, Chicago,&rdquo; and depicts a Greek revival door,
+    topped by an Iroquois face in headdress and flanked by Native American shields.
+- url: '6748'
+  coll: CPB01
+  text: Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896
+  size: 140%
+  align: 50% 40%
+  alt: Theater program cover reads, &rdquo;38th year, McVicker's Theatre, Bill of
+    the Play, 1857-1896,&rdquo; and depicts a bas relief, inside the theater, a scene
+    from the World's Columbian Exposition and a white haired man framed by a floral
+    motif.
+- url: '9755'
+  coll: CPB01
+  text: "<em>The Mikado</em>, Chicago Opera House, 1886"
+  size: 200%
+  align: 68% 47%
+  alt: Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo;
+    and depicts a drawing of a stage with an actor downstage, and a large circle upstage
+    showcasing a drawing of a person in Japanese-style dress. A woman holding a fan
+    looks on from a balcony which is supported by a feminine stature. The stage is
+    flanked by curtains and plants.
+link: CPB01
+coll: CPB01
+location:
+  title: Special Collections at HWLC
+  sortname: Special Collections at HWLC
+  shortname: HWLCSC
+  longname: Special Collections and Preservation Division at Harold Washington Library
+    Center
+  sidebarname: Special Collections at HWLC
+  pic: ''
+  mainimage:
+    url: '79'
+    coll: woop
+    text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
+    size: 105%
+    align: 50% 50%
+    alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
+      are pictured in front along with two men wearing hats.
+  thumbs:
+  - url: '2196'
+    coll: CPB01
+    text: "<em>The Philanderer</em>, Chicago Little Theatre, 1914"
+    size: 170%
+    align: 25% 22%
+    alt: Black and white drawing of a peacock on a branch in front of an orange circle
+  - url: '4833'
+    coll: ChicagoParks
+    text: Dancers at Madden Park, 1954
+    size: 140%
+    align: center
+    alt: Young women in white leotards and skirts pose with their arms extended and
+      knees bent
+  - url: '42'
+    coll: wha
+    text: Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved
+      President, Abraham Lincoln,&rdquo; 1865
+    size: 105%
+    align: 50% 20%
+    alt: Poster
+  - url: '4066'
+    coll: mpu
+    text: Crown Fountain preview, 2004
+    size: 370%
+    align: 50% 50%
+    alt: Three boys play in water in front of a lighted brick wall
+  textshort: at Harold Washington Library Center
+  textlong: 'The Special Collections and Preservation Division at <a href="https://www.chipublib.org/locations/34">Harold
+    Washington Library Center</a> showcases rare books and archival material relating
+    to Chicago history. Major areas of interest include: Chicago authors and publishing,
+    Chicago Park District, Chicago Public Library, Chicago theater, Civil War, Chicago’s
+    world’s fairs and Mayor Harold Washington.'
+  locname: Harold Washington Library Center
+  loclink: '34'
+  locemail: specoll@chipublib.org
+  locphone: "(312) 747-4875"
+  link: HWLCSC
+  type: location
+homeloc: HWLCSC
+type: collection
+subcollections:
+- filename: EBG
+  title: E.B. Gould Programs Collection
+  sortname: Gould, E.B. Programs Collection
+  textlong: See <a class="all-links" href="#CPB01">Chicago Theater</a>.
+  textshort: The annotated programs of a local Chicago businessman and enthusiastic
+    playgoer.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc
+  type: subcollection
+- filename: Playbills
+  title: Chicago Theater Collection-Historic Playbills
+  sortname: Chicago Theater Collection-Historic Playbills
+  textlong: See <a class="all-links" href="#CPB01">Chicago Theater</a>.
+  textshort: Programs, playbills and newspaper clippings from more than 2,000 productions
+    at Chicago’s historic theaters dating back to the 1840s.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/
+  type: subcollection
+sidebarflag: x
+---

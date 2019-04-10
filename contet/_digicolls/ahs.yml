@@ -1,0 +1,154 @@
+---
+layout: content
+flag: ''
+title: Northside High Schools
+coll: ahs
+sortname: Northside High Schools
+cardpic:
+  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ahs/197/default.jpg
+  pich: 250px
+  size: 110%
+  pos: 0% 45%
+  alt: Lake View High School baseball team, seated for posed photograph, 1893
+mainimage:
+  url: '634'
+  text: Captain Louis D. Walz and Lake View High School drum major and majorettes,
+    1942
+  size: 110%
+  align: center
+  alt: Louis D. Walz poses with eight drum majorettes and one drum major.  They are
+    all wearing marching band uniforms.
+thumbs:
+- url: '350'
+  text: Lake View High School, 1985
+  size: 150%
+  align: center
+  alt: Cars drive past Lake View High School.
+- url: '149'
+  text: "<em>Gold in Them Thar Hills</em>, Lake View High School, 1940"
+  size: 150%
+  align: 50% 25%
+  alt: Lake View High School students, three girls and two boys, pose in costume for
+    a production of &ldquo;Gold in Them Thar Hills.&rdquo;
+- url: '7'
+  text: Amundsen vs. Taft, Winnemac Park, 1949
+  size: 150%
+  align: center
+  alt: Football game between Amundsen High School and Taft High School at Winnemac
+    Park.  The bleachers are half full.
+- url: '245'
+  text: Lake View High School football team en route to the Orange Bowl, Midway Airport,
+    1953
+  size: 150%
+  align: center
+  alt: The Lake View High School football team stands on the tarmac in front of an
+    airplane.  They are on their way to watch the Orange Bowl.
+category:
+- Neighborhoods
+- Libraries &amp; Education
+textshort: Photographs of high school football games, theatrical productions, dances
+  and extracurricular activities from the 1870s to the 1950s.
+textlong: Photographs of high school football games, theatrical productions, dances
+  and extracurricular activities from the 1870s to the 1950s.
+subdigicoll:
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Amundsen+High+School+Collection/field/collec/mode/all/conn/and/order/nosort
+  dt: Amundsen High School Collection
+  dd: The Winnemac Park school opened in its doors in 1930.  Cheer on their football
+    team as they do battle with Taft High School.
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Helen+G.+Kinsella+Collection/field/collec/mode/all/conn/and/order/nosort
+  dt: Helen G. Kinsella Collection
+  dd: Dramatic productions and other activities led by the award-winning Lake View
+    High School drama and public speaking teacher.
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Lake+View+High+School+Collection/field/collec/mode/all/conn/and/order/nosort
+  dt: Lake View High School Collection
+  dd: Academics and extracurriculars at the first high school in Lake View Township.
+- a: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort
+  dt: Louis D. Walz Collection
+  dd: The life of the long-time director of the Lake View High School band and World
+    War I veteran.
+link: ahs
+location:
+  title: Northside Neighborhood History Collection
+  sortname: Northside Neighborhood History Collection
+  shortname: NNHC
+  longname: Northside Neighborhood History Collection
+  sidebarname: Northside Neighborhood History Collection
+  pic: ''
+  textshort: at Sulzer Regional Library
+  textlong: The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer
+    Regional Library</a> highlights historical and contemporary materials about Northside
+    neighborhoods.
+  mainimage:
+    url: '1182'
+    coll: rwk
+    text: Lincoln Square, 4700 N. Lincoln Ave., 2002
+    size: 125%
+    align: 50% 50%
+  thumbs:
+  - url: '902'
+    coll: ahs
+    text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
+    size: 400px
+    align: 65% 15%
+  - url: '567'
+    coll: rwk
+    text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
+      watch sign, 1989
+    size: 500px
+    align: 57% 37%
+  - url: '653'
+    coll: rwk
+    text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
+    size: auto 130%
+    align: center
+  - url: '661'
+    coll: rwk
+    text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
+    size: 110%
+    align: 50% 25%
+  loclink: '67'
+  locname: Sulzer Regional Library
+  locemail: northsidehistory@chipublib.org
+  locphone: "(312) 742-4455"
+  link: NNHC
+  type: location
+homeloc: NNHC
+type: collection
+subcollections:
+- filename: Amund
+  title: Amundsen High School Collection
+  sortname: Amundsen High School Collection
+  textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
+  textshort: The Winnemac Park school opened in its doors in 1930. Cheer on their
+    football team as they do battle with Taft High School.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Amundsen+High+School+Collection/field/collec/mode/all/conn/and/order/nosort
+  link: "#ahs"
+  type: subcollection
+- filename: Kins
+  title: Helen G. Kinsella Collection
+  sortname: Kinsella, Helen G. Collection
+  textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
+  textshort: Dramatic productions and other activities led by the award-winning Lake
+    View High School drama and public speaking teacher.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Helen+G.+Kinsella+Collection/field/collec/mode/all/conn/and/order/nosort
+  link: "#ahs"
+  type: subcollection
+- filename: LVHS
+  title: Lake View High School Collection
+  sortname: Lake View High School Collection
+  textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
+  textshort: Academics and extracurriculars at the first high school in Lake View
+    Township.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Lake+View+High+School+Collection/field/collec/mode/all/conn/and/order/nosort
+  link: "#ahs"
+  type: subcollection
+- filename: Walz
+  title: Louis D. Walz Collection
+  sortname: Walz, Louis D. Collection
+  textlong: See <a class="all-links" href="#ahs">Northside High Schools</a>.
+  textshort: The life of the long-time director of the Lake View High School band
+    and World War I veteran.
+  browse: https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort
+  link: "#ahs"
+  type: subcollection
+---
