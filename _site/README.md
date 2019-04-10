@@ -1,4 +1,8 @@
-Introduction and core  
+#Simple editing: 
+
+Each landing page (or all, about, etc) exist as individual webpages on the server, so any of them can be downloaded, edited, and reuploaded.  This won't make any persistent changes to the github repository, but it's an easy way to make specific changes if necessary.  
+
+#Introduction and core  
 
 Jekyll is a static site generator, which takes templates that a user provides, combines it with data the user provides, and creates standard HTML, JavaScript, and CSS files that can be uploaded to a server.  Jekyll is written in Ruby, uses Liquid as a templating language, and markdown for formatting.  
 
@@ -66,13 +70,13 @@ When you need to nest data, it’s done with dashes and spaces:
 
 This seems extremely similar to a formatting style called YAML (Jekyll is probably using YAML in this context, despite the files being .markdown files – or maybe YAML is always a part of markdown?), so that might be a good way to look if you have questions about it.  In CPLDC content, see the _posts/ folder for examples. 
 
-Structure 
+##Structure 
 
-Jekyll File Structure 
+###Jekyll File Structure 
 
 Jekyll is frequently used for blogs, and, rather than reinventing the wheel, the CPLDC site uses Jekyll’s blog feature for its skeleton.  Here is the overview of where each component is. 
 
-/
+####/
 
 Jekyll starts with markdown files (*.md or *.markdown) located in the root directory.  There, CPLDC has:  
 
@@ -101,11 +105,11 @@ The City Officials and CAA pages use a 'data' layout, and merely direct jekyll t
 
 The index page, like the 'all' page, is all iterative code, and so its *.md page is very simple as well.
 
-_layouts
+####_layouts
 
 This folder holds the layout files that are referenced in the root *.md files.  Layout files are HTML files with Liquid elements.  
 
-_layouts/about.html
+#####_layouts/about.html
 
 The About page is a good example, since it takes content from the *.md file and places it in the HTML, but doesn't dig too deep into any other aspects of Jekyll.
 
@@ -119,7 +123,7 @@ After that, the blogs and events are added.  These two still present a substanti
 
 Finally the footer is included.
 
-_layouts/all.html
+#####_layouts/all.html
 
 The all.html layout demostrates a page which has no original content, and digs into the collection data.
 
@@ -135,11 +139,11 @@ We "assign" the variable sortedPosts the value of all the posts, after we run th
 
 Then, at line 28, we iterate through each post in the sortedPosts array.  If the post's "type" value is "collection" or "subcollection" (like the pieces of the Northside Clubs/Orgs or the two collections within Theater), then they will be included.  (Naturally we want to exclude type values of "category" or "location".)  We present the (sub)collection's title, and in the case of collections, we link the title to the page.  In the case of the subcollection, we link to the anchor of the parent collection *on this page*.  Then we add the brief description, and then the categories, which have a small logical section because sometimes a collection will have 2 categories.
 
-_layouts/cardpage.html
+#####_layouts/cardpage.html
 
 The cardpage is the index page.  It has no sidebar or blogs/events, so it's just libraries, header, and footer.  This page, however, *include*s the cards themselves, so we will address them specifically in that section.  However, note that we're using the Masonry js library (instead of default css masonry) because the library allows for the cards to reposition when the window is resized.  It also enables access to the  "imagesLoaded" javascript sub-library.  When images load after the card is drawn, it can result in the cards lying on top of each other; imagesLoaded prevents that.  I use the jQuery implementation because we're already using jquery all over the place (and it's shorter), but these can be invoked without it.
 
-_layouts/content.html
+#####_layouts/content.html
 
 The content page is probably the largest and most complex page, but it's not that challenging to understand from a conceptual perspective.  The complexity comes from handling the corner cases for when some content is there and other content is not.  
 
@@ -271,11 +275,11 @@ or
 
 http://digital.chipublib.org/digital/search/searchterm/[SEARCHINPUT]
 
-so our function simply inserts the user's input into those structures.  The former is searching one or many collections (collection strings delimited with !, eg mpu!ChicagoParks, similar to the Browse button of the content pages), the latter is searching all content.  
+so the function simply inserts the user's input into those structures.  The former searches one or many collections (collection strings delimited with !, eg mpu!ChicagoParks, similar to the Browse button of the content pages), the latter searches all content.  
 
 Browse Dropdown: 
 
-drops the Browse menu on click.  The Bibliocommons version disappears when you click off of the menu; I prefered to make it disappear when you click on the menu, but not on a link.
+Drops the Browse menu on click.  The Bibliocommons version disappears when you click off of the menu; I prefered to make it disappear when you click on the menu, but not on a link.
 
 Hotkeys:
 
@@ -288,8 +292,8 @@ There are event listeners for:
     Pressing escape when the Browse menu is visible 
         Hides the browse menu
 
-Responsive responses: 
+Responsive elements: 
 
-Normal responsive elements are at work: under a certain size, the CPL logo changes and the browse/events buttons change, matching Bibliocommons.  These use Bootstrap's responsive classes. In addition to these Bootstrap responses, there are javascript listeners for window resizing.
+Normal responsive elements are used: under a certain size, the CPL logo changes and the browse/events buttons change, matching Bibliocommons.  These use Bootstrap's responsive classes (eg hidden-md-down). In addition to these Bootstrap responses, there are javascript listeners for window resizing.
 
-When a user resizes the window and crosses the 970px threshold, the browse dropdown will hide, and the search inputs, when visible, will change to their larger or smaller selves.  (The modal version of the browse menu is not responsive; it seemed too disorienting when it disappeared on resize.)
+When a user resizes the window and crosses the 970px threshold, the browse dropdown will hide, and the search inputs, when visible, will hide again.  (The modal version of the browse menu is not responsive; it seemed too disorienting when it disappeared on resize.  This is in line with Bibliocommons.)

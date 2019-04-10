@@ -586,6 +586,7 @@
                 function expandAlderman(userClickId){
                     var aldId = userClickId.substr(0, userClickId.indexOf('-'));
                     var ald = $.grep(aldermen, function(obj){return obj.id === aldId;})[0],
+                        // expandedAldermen = [],
                         $alderman = $('#' + userClickId);
                     if ($($alderman).hasClass('expandingAlderman')){
                         var moreInfo = drawAlderman(ald, 'list');
@@ -596,7 +597,11 @@
                         saveFilters();
                         sortPositions();
                     } else if ($($alderman).hasClass('expandedAlderman') && !$( event.target ).is( "a" )){
+                        if (expandedAldermen.indexOf(userClickId) > -1 ){
+                            expandedAldermen.splice(expandedAldermen.indexOf(userClickId), 1);
+                        }
                         $($alderman).removeClass('expandedAlderman').addClass('expandingAlderman').children('#moreInfo').remove();
+                        saveFilters();
                     } else {
                         console.log('something broke: ' + aldId);
                     }
