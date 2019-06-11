@@ -402,3 +402,11 @@ This is the core config file for Jekyll.  While there are a number of minor opti
 All the *.md files at the top level are the files which indicate what should be built.  Each unique page should have one. As you will see from looking at them, some are very simple pages; their core content is elsewhere.  Others have their content written in markdown in the file.  
 
 Jekyll will, by default, process all *.md files in the root directory, so any new, unique pages you would like to add should be handled that way.  New collections, subjects, locations, etc, should be treated like the others, in the _posts/ folder.
+
+#### /Gemfile, /Gemfile.lock
+
+These are ruby system files, no need to mess with them.
+
+#### /bl-ev-script.php
+
+This was a php file used to convert the php arrays into markdown and json.  Kept for historical purposes, and potential reuse.

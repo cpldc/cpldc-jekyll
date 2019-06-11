@@ -283,7 +283,9 @@
             } else {
 
                 var $imageCont = parseHtml(
-                    '<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" /></div>'
+                    '<div class="slbImageWrap"><img ' + 
+                        // 'onload="rightsInsertion(this)" ' + 
+                        'class="slbImage" src="' + url + '" /></div>'
                 );
 
                 this.$currentImage = $imageCont.querySelector('.slbImage');

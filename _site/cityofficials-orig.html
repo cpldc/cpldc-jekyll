@@ -26,7 +26,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
 
-	<script src="assets/js/rawOfficials.js"></script>
+	<script src="assets/js/aldermen-db.js"></script>
 </head>
 <body class="">
     <header>
@@ -447,94 +447,6 @@
                         'The dates of service listed here are not precise. Generally, an official&rsquo;s term starts when his or her oath of office is filed with the city clerk following an election or confirmation of an appointment by the City Council. The <em>Journal of the City Council</em> commonly notes the filing of the oath.The term of office ends either when an official&rsquo;s successor is elected and files an oath of office, or when the office becomes vacant due to death, resignation or legal inability to hold office.Currently the most common reason for someone to become legally unable to be an alderman is the acceptance of another elective or appointed public office. Conviction of certain crimes also vacates the office. Being legally guilty is not always required. See <em><a href="http://hdl.handle.net/2027/hvd.32044078688405?urlappend=%3Bseq=84">Hildreth v. Heath</a></em> and <em><a href="http://www.illinoiscourts.gov/opinions/appellatecourt/2003/1stdistrict/june/html/1020236.htm">Bloom v. Municipal Employees Annuity and Benefit Fund of Chicago</a></em> for two examples where aldermen, although not legally guilty of a crime involving public office, were still determined to have committed the offense.Usually, but not always, public officials resign if they become ineligible. But if the official does not resign, subtle legal questions remain as to if the public office or crime qualifies as disabling and the exact effective date. Sometimes there&rsquo;s not an official answer.There are other reasons a City Council seat becomes vacant. For example, the City Council declared Fred Hubbard&rsquo;s seat vacant after he was indicted and disappeared. In 1900, the council decided it had too many members and refused to seat two election winners. Alderman Dennis Block moved to the suburbs in 1977.For the first century, the City Council closely guarded its prerogative to decide on the qualifications of its members and would occasionally seat one member, then decide that somebody else had won a contested election. In 1927, for example, <a href="https://archive.org/stream/proceedingsofcit104chic#page/1119/mode/1up">Haffa replaced Alderman Albert three months after the election</a>. Now the courts usually decide such questions.For these reasons, we try to give dates of appointments, resignations, acceptance of other offices, contested elections, deaths, indictments, convictions, etc., but these do not indicate dates of service. The dates given here are just useful information for further research.' + 
                         '<h3 class="content-header"><a name="Alderman"></a>Aldermen vs. Alderwomen</h3>' + 
                         'State law provides that City Council members are "aldermen." It took until 1971 for Chicago&rsquo;s first two women to be elected to the council. This was nearly 60 years after women gained the vote and well-qualified women began to run for the council. The <em>City Council Journal</em> and other sources commonly referred to women as alderwomen from 1971 onward.In 1984, Harold Washington nominated Dorothy Tillman as "alderwoman." A hostile City Council refused to consider the nomination, claiming the office did not exist. Washington then nominated her as "alderman." The council ultimately confirmed her, and since 1984 "alderman" has been used for both female and male members of the council.';
-                
-            // takes excel input and refactors the data by id
-                var aldermen = refactorer(rawOfficials);
-                function refactorer(json){
-                    var dataType,
-                        masterJson = [];
-                    for (var i = 0; i < json.length; i++){
-                        add(masterJson, json[i].id);
-                        var mJI = masterJson.findIndex(item => item.id === json[i].id);
-                        if (json[i].hasOwnProperty("fullName")){
-                            // adding properties in this way will overwrite any existing values, so there can't be duplicates
-                            Object.assign(masterJson[mJI], {
-                                fullName: json[i].fullName,
-                                lastName: json[i].lastName,
-                                firstName: json[i].firstName
-                            });
-                        } else if (json[i].hasOwnProperty("positionArray")) {
-                            // if the id already have a position array, we'll just push in the new one; otherwise,create it as a new empty array, and then push the new one into it
-                            // keys: pos, ward, startDate, endDate
-                            if(masterJson[mJI].hasOwnProperty("positionArray")){
-                                masterJson[mJI].positionArray.push(json[i].positionArray.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    positionArray: []
-                                });
-                                masterJson[mJI].positionArray.push(json[i].positionArray.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("altName")) {
-                            // same logic as positionArray, except this is a simple array, not an array of objects
-                            if(masterJson[mJI].hasOwnProperty("altName")){
-                                masterJson[mJI].altName.push(json[i].altName.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    altName: []
-                                });
-                                masterJson[mJI].altName.push(json[i].altName.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("death")) {
-                            Object.assign(masterJson[mJI], {
-                                // death is a single object; should only ever be one value; 
-                                // keys: text, url
-                                death: json[i].death,
-                            });
-                        } else if (json[i].hasOwnProperty("pic")) {
-                            // same logic as positionArray, except this is a simple array, not an array of objects
-                            if(masterJson[mJI].hasOwnProperty("pic")){
-                                masterJson[mJI].pic.push(json[i].pic.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    pic: []
-                                });
-                                masterJson[mJI].pic.push(json[i].pic.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("notes")) {
-                            // same as positionArray
-                            // keys: text, url
-                            if(masterJson[mJI].hasOwnProperty("notes")){
-                                masterJson[mJI].notes.push(json[i].notes.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    notes: []
-                                });
-                                masterJson[mJI].notes.push(json[i].notes.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("refs")) {
-                            // same as positionArray
-                            // keys: text, url, url2
-                            // url2 is an ebook, any time there's two identical references, the second can be here; more than 2, well, let me know, or just limit yourself to 2
-                            if(masterJson[mJI].hasOwnProperty("refs")){
-                                masterJson[mJI].refs.push(json[i].refs.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    refs: []
-                                });
-                                masterJson[mJI].refs.push(json[i].refs.pop());
-                            }
-                        } else {
-                            // console.log("row has no datatype value");
-                        }
-                    }
-                    return masterJson;
-                }
-                function add(arr, id) {
-                    const { length } = arr;
-                    const found = arr.some(el => el.id === id);
-                    if (!found) arr.push({ id: id });
-                    return arr;
-                }
                 if (wardTable.length < 1){
                     var i;
                     for (i = 0; i < 50; i++) { 
@@ -645,7 +557,7 @@
                 }
                 function filterText(haystack){
                     function altNameChecker(array, query){
-                        if (haystack.hasOwnProperty("altName") ){
+                        if (haystack.altName ){
                             for (var an in haystack.altName){
                                 if (textComparer(haystack.altName[an], query)){
                                     return true;
@@ -669,6 +581,7 @@
                             if (( haystack.id && textComparer(haystack.id, inputArray[i]))
                                 || ( haystack.firstName && textComparer(haystack.firstName, inputArray[i]))
                                 || ( haystack.altName && altNameChecker(haystack.altName, inputArray[i]))){
+                                    console.log(input);
                                     inputArrayCheck++;
                             }
                         } 
@@ -715,22 +628,23 @@
                     var positions = '',
                         lists = '',
                         pic,
-                        notesList = [],
+                        councilJournalList = [],
                         referenceList = [];
                     function lister(listItem){
-                        return '<li data-sort="' + (listItem.text).substring(0,5)   + '">' + 
-                            '<a href="' + listItem.url + '">' + listItem.text + '</a> ' +
-                            ( listItem.url2 != "" ? '<a href="' + listItem.url2 + '">(ebook)</a>' : "")
-                             + '</li>';
+                        return '<li data-sort="' + ( listItem.preText ? listItem.preText : ( listItem.urlText ? listItem.urlText : ( listItem.interText ? listItem.interText : ''))).substring(0,5)   + '">' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
+                            (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
+                            (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
+                            (listItem.url2 && listItem.url2 != '' ? '<a href="' + listItem.url2 + '">' + listItem.url2Text + '</a>' + (listItem.endText[0] === ')' ? '' : ' ')  : '') +
+                            (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + '</li>';
                     }
                     for (var r in ald.refs){
                         referenceList.push(lister(ald.refs[r])); 
                     }
-                    for (var n in ald.notes) {
-                        notesList.push(lister(ald.notes[n]));
+                    for (var c in ald.cjs) {
+                        councilJournalList.push(lister(ald.cjs[c]));
                     }
                     if (ald.cj || ald.refs){
-                        lists = '<ul class="alderman-list">' + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
+                        lists = '<ul class="alderman-list">' + councilJournalList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }
                     if (ald.positionArray.length === 1){
                         var noPositions = true;
@@ -771,7 +685,6 @@
                         }).get();
                     count = 0;
                     for (var k in aldermen){
-                        // console.log(aldermen[k].id);
                         if ((( filterWard.length === 0 && filterPos.length === 0) || filterCheckboxes(aldermen[k])) && filterText(aldermen[k]) && filterDate(aldermen[k])){
                             count++
                             aldArray += drawAlderman(aldermen[k], 'filter');
@@ -824,6 +737,7 @@
                 });
                 function reverseSort(val){
                     revSort = val;
+                    console.log(val);
                     if ($('.chron').length > 1){
                         chronList();
                     }
@@ -945,7 +859,7 @@
                         userRequest = userRequest - 1;
                         var list = $.uniqueSort( wardTable[userRequest] );
                         for (var l in wardTable[userRequest]){
-                            alderTable.push(listListing(list[l], alderTable.length));
+                            alderTable.push(listListing(list[l]));
                         }
                     }
                     $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div', revSort);

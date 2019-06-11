@@ -1,286 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
-
-    <title>Chicago Aldermen and Other Elected Officials, 1837-2018 | Digital Collections | Chicago Public Library</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/cpldc.js"></script>
-<!-- http://dbrekalo.github.io/simpleLightbox/ -->
-<script src="assets/js/simpleLightbox.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="assets/css/simpleLightbox.css">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
-
-	<script src="assets/js/rawOfficials.js"></script>
-</head>
-<body class="">
-    <header>
-    <section class="a11y-skip-links">
-        <span class="invisitext"><a href="#sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
-        <!-- <span class="invisitext hidden-lg-up"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span> -->
-        <span class="invisitext"><a href="#search" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
-        <span class="invisitext"><a href="#content" class="a11ylinks">Skip to Content</a></span>
-    </section>
-    <section>
-        <div class="container-fluid">
-                <div class="container">
-                    <div class="row clearfix">
-                        <div class="header-left hidden-md-down header-left-bumper" id="logo-fullSize">
-                            <a href="https://www.chipublib.org/">
-                                <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
-                            </a>
-                            <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/jekyll/">Digital Collections</a></h2>
-                        </div>
-                        <div class="inline-div col header-left hidden-lg-up" id="logo-small">
-                            <div class="header-small-img inline-div ">
-                                <a href="https://www.chipublib.org/">
-                                    <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library">
-                                </a>
-                            </div>
-                            <div class="hidden-lg-up  inline-div">
-                                <div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#browseModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
-                                <div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
-                            </div>
-                        </div>
-                        
-                        
-                        <script>
-                            var beelzebub = '';
-                            // console.log(beelzebub);
-                        </script>
-                        <div class="inline-div header-right col">
-                            <div class="search float-right inline-div" onclick="expandSearch()" tabindex="0">
-                                <div class="search-text inline-div hidden-sm-down">Search</div>
-                                <div class="hidden" id="searchExpander">
-                                    
-                                        
-                                    
-                                    <input type="text" class="search-input search-input-expanded inline-div" id="search-input-exp">
-                                </div>
-                                <div class="search-icon-wrapper inline-div">
-                                    <i onclick="searchContent('exp', '')" class="search-icon-white fa fa-search" id="search-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="row header-bottom hidden-md-down">
-                <div class="container">
-                    <div class="row">
-                        <div class="header-button" id="browse-button" onclick="expandBrowseDropdown()" tabindex="0">Browse<i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                        <div class="header-button" id="events-button" onclick="" tabindex="0">
-                            <a href="https://chipublib.bibliocommons.com/events/search/index">
-                                <i class="fa fa-calendar"></i>
-                                Events
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="search-dropped always-on-top hidden container" id="searchDropper">
-            <div class="search-dropped-close">
-                <i class="fa fa-times fa-2x" onclick="hideSearch()" aria-hidden="true"></i>
-            </div>
-            <div class="search-dropped-main">
-                <div class="search-dropped-row">
-                    <h2>Search</h2>
-                </div>
-                
-                <div class="search-dropped-row">
-                    <div class="search-dropped-input inline-div">
-                        <input type="text" name="search-query" class="search-input" id="search-input-dropped" \>
-                    </div>
-                    <div class="search-dropped-icon inline-div"  onclick="searchContent('drop', '')" >
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="search-dropped-row">
-                    <a href="http://digital.chipublib.org/digital/search/advanced">Advanced Search</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="browse-dropdown-toplevel always-on-top"  id="browseDropdown" onclick="expandBrowseDropdown()">
-        <div class="container browse-dropdown">
-            <div class="row">
-                <div class="browse-dropdown-header">Browse</div>
-                <div class="browse-dropdown-middlelist">
-                    <span class="browse-dropdown-list browse-dropdown-list-header">By Format</span>
-                    <ul>
-                        
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/books/">Books</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/ebooks/">eBooks</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/music/">Music</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="browse-dropdown-middlelist">
-                    <span class="browse-dropdown-list browse-dropdown-list-header">By Audience</span>
-                    <ul>
-                        
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/kids/">Kids</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/teens/">Teens</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="browse-dropdown-list">
-                    <span class="browse-dropdown-list-header">More</span>
-                    <ul>
-                        
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/online-resources/">Online Resources</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a>
-                        </li>
-                        
-                        <li>
-                            <a href="http://www.chipublib.org/archives-collections/">Archival Collections</a>
-                        </li>
-                        
-                        <li>
-                            <a href="https://www.chipublib.org/browse_program/one-book-one-chicago/">One Book, One Chicago</a>
-                        </li>
-                        
-                        <li>
-                            <a href="https://chicagopubliclibrary.threadless.com/">CPL Online Store</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="col-3"></div>
-            </div>
-        </div>
-    </section>
-    <section role="navigation" class="modal fade" id="browseModal" tabindex="-1" aria-label="Browse CPL Website" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h2 class="modal-title" id="browseModal">Browse <i class="fa fa-angle-down" aria-hidden="true"></i></h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <h3 class="header-modal-listheader">By Format</h3><ul id="modal-format" class="list-group">
-                        
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/books/">Books</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/ebooks/">eBooks</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/music/">Music</a>
-                            </li>
-                        
-                    </ul>
-                    <h3 class="header-modal-listheader">By Audience</h3><ul id="modal-aud" class="list-group">
-                        
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/kids/">Kids</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/teens/">Teens</a>
-                            </li>
-                        
-                    </ul>
-                    <h3 class="header-modal-listheader">More</h3><ul id="modal-more" class="list-group">
-                        
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/online-resources/">Online Resources</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a>
-                            </li>
-                        
-                            <li>
-                                <a href="http://www.chipublib.org/archives-collections/">Archival Collections</a>
-                            </li>
-                        
-                            <li>
-                                <a href="https://www.chipublib.org/browse_program/one-book-one-chicago/">One Book, One Chicago</a>
-                            </li>
-                        
-                            <li>
-                                <a href="https://chicagopubliclibrary.threadless.com/">CPL Online Store</a>
-                            </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-</header>
-<main id="sidebar-c-target">
-    <div id="content" class="container main-container main-container-fixed">
-        <h1 >Chicago's Elected Officials<span id="search-count-target">
+<h1 >Chicago's Elected Officials<span id="search-count-target">
 
     </span>
     </h1>
@@ -447,94 +165,6 @@
                         'The dates of service listed here are not precise. Generally, an official&rsquo;s term starts when his or her oath of office is filed with the city clerk following an election or confirmation of an appointment by the City Council. The <em>Journal of the City Council</em> commonly notes the filing of the oath.The term of office ends either when an official&rsquo;s successor is elected and files an oath of office, or when the office becomes vacant due to death, resignation or legal inability to hold office.Currently the most common reason for someone to become legally unable to be an alderman is the acceptance of another elective or appointed public office. Conviction of certain crimes also vacates the office. Being legally guilty is not always required. See <em><a href="http://hdl.handle.net/2027/hvd.32044078688405?urlappend=%3Bseq=84">Hildreth v. Heath</a></em> and <em><a href="http://www.illinoiscourts.gov/opinions/appellatecourt/2003/1stdistrict/june/html/1020236.htm">Bloom v. Municipal Employees Annuity and Benefit Fund of Chicago</a></em> for two examples where aldermen, although not legally guilty of a crime involving public office, were still determined to have committed the offense.Usually, but not always, public officials resign if they become ineligible. But if the official does not resign, subtle legal questions remain as to if the public office or crime qualifies as disabling and the exact effective date. Sometimes there&rsquo;s not an official answer.There are other reasons a City Council seat becomes vacant. For example, the City Council declared Fred Hubbard&rsquo;s seat vacant after he was indicted and disappeared. In 1900, the council decided it had too many members and refused to seat two election winners. Alderman Dennis Block moved to the suburbs in 1977.For the first century, the City Council closely guarded its prerogative to decide on the qualifications of its members and would occasionally seat one member, then decide that somebody else had won a contested election. In 1927, for example, <a href="https://archive.org/stream/proceedingsofcit104chic#page/1119/mode/1up">Haffa replaced Alderman Albert three months after the election</a>. Now the courts usually decide such questions.For these reasons, we try to give dates of appointments, resignations, acceptance of other offices, contested elections, deaths, indictments, convictions, etc., but these do not indicate dates of service. The dates given here are just useful information for further research.' + 
                         '<h3 class="content-header"><a name="Alderman"></a>Aldermen vs. Alderwomen</h3>' + 
                         'State law provides that City Council members are "aldermen." It took until 1971 for Chicago&rsquo;s first two women to be elected to the council. This was nearly 60 years after women gained the vote and well-qualified women began to run for the council. The <em>City Council Journal</em> and other sources commonly referred to women as alderwomen from 1971 onward.In 1984, Harold Washington nominated Dorothy Tillman as "alderwoman." A hostile City Council refused to consider the nomination, claiming the office did not exist. Washington then nominated her as "alderman." The council ultimately confirmed her, and since 1984 "alderman" has been used for both female and male members of the council.';
-                
-            // takes excel input and refactors the data by id
-                var aldermen = refactorer(rawOfficials);
-                function refactorer(json){
-                    var dataType,
-                        masterJson = [];
-                    for (var i = 0; i < json.length; i++){
-                        add(masterJson, json[i].id);
-                        var mJI = masterJson.findIndex(item => item.id === json[i].id);
-                        if (json[i].hasOwnProperty("fullName")){
-                            // adding properties in this way will overwrite any existing values, so there can't be duplicates
-                            Object.assign(masterJson[mJI], {
-                                fullName: json[i].fullName,
-                                lastName: json[i].lastName,
-                                firstName: json[i].firstName
-                            });
-                        } else if (json[i].hasOwnProperty("positionArray")) {
-                            // if the id already have a position array, we'll just push in the new one; otherwise,create it as a new empty array, and then push the new one into it
-                            // keys: pos, ward, startDate, endDate
-                            if(masterJson[mJI].hasOwnProperty("positionArray")){
-                                masterJson[mJI].positionArray.push(json[i].positionArray.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    positionArray: []
-                                });
-                                masterJson[mJI].positionArray.push(json[i].positionArray.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("altName")) {
-                            // same logic as positionArray, except this is a simple array, not an array of objects
-                            if(masterJson[mJI].hasOwnProperty("altName")){
-                                masterJson[mJI].altName.push(json[i].altName.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    altName: []
-                                });
-                                masterJson[mJI].altName.push(json[i].altName.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("death")) {
-                            Object.assign(masterJson[mJI], {
-                                // death is a single object; should only ever be one value; 
-                                // keys: text, url
-                                death: json[i].death,
-                            });
-                        } else if (json[i].hasOwnProperty("pic")) {
-                            // same logic as positionArray, except this is a simple array, not an array of objects
-                            if(masterJson[mJI].hasOwnProperty("pic")){
-                                masterJson[mJI].pic.push(json[i].pic.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    pic: []
-                                });
-                                masterJson[mJI].pic.push(json[i].pic.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("notes")) {
-                            // same as positionArray
-                            // keys: text, url
-                            if(masterJson[mJI].hasOwnProperty("notes")){
-                                masterJson[mJI].notes.push(json[i].notes.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    notes: []
-                                });
-                                masterJson[mJI].notes.push(json[i].notes.pop());
-                            }
-                        } else if (json[i].hasOwnProperty("refs")) {
-                            // same as positionArray
-                            // keys: text, url, url2
-                            // url2 is an ebook, any time there's two identical references, the second can be here; more than 2, well, let me know, or just limit yourself to 2
-                            if(masterJson[mJI].hasOwnProperty("refs")){
-                                masterJson[mJI].refs.push(json[i].refs.pop());
-                            } else {
-                                Object.assign(masterJson[mJI], {
-                                    refs: []
-                                });
-                                masterJson[mJI].refs.push(json[i].refs.pop());
-                            }
-                        } else {
-                            // console.log("row has no datatype value");
-                        }
-                    }
-                    return masterJson;
-                }
-                function add(arr, id) {
-                    const { length } = arr;
-                    const found = arr.some(el => el.id === id);
-                    if (!found) arr.push({ id: id });
-                    return arr;
-                }
                 if (wardTable.length < 1){
                     var i;
                     for (i = 0; i < 50; i++) { 
@@ -645,7 +275,7 @@
                 }
                 function filterText(haystack){
                     function altNameChecker(array, query){
-                        if (haystack.hasOwnProperty("altName") ){
+                        if (haystack.altName ){
                             for (var an in haystack.altName){
                                 if (textComparer(haystack.altName[an], query)){
                                     return true;
@@ -669,6 +299,7 @@
                             if (( haystack.id && textComparer(haystack.id, inputArray[i]))
                                 || ( haystack.firstName && textComparer(haystack.firstName, inputArray[i]))
                                 || ( haystack.altName && altNameChecker(haystack.altName, inputArray[i]))){
+                                    console.log(input);
                                     inputArrayCheck++;
                             }
                         } 
@@ -715,22 +346,23 @@
                     var positions = '',
                         lists = '',
                         pic,
-                        notesList = [],
+                        councilJournalList = [],
                         referenceList = [];
                     function lister(listItem){
-                        return '<li data-sort="' + (listItem.text).substring(0,5)   + '">' + 
-                            '<a href="' + listItem.url + '">' + listItem.text + '</a> ' +
-                            ( listItem.url2 != "" ? '<a href="' + listItem.url2 + '">(ebook)</a>' : "")
-                             + '</li>';
+                        return '<li data-sort="' + ( listItem.preText ? listItem.preText : ( listItem.urlText ? listItem.urlText : ( listItem.interText ? listItem.interText : ''))).substring(0,5)   + '">' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
+                            (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
+                            (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
+                            (listItem.url2 && listItem.url2 != '' ? '<a href="' + listItem.url2 + '">' + listItem.url2Text + '</a>' + (listItem.endText[0] === ')' ? '' : ' ')  : '') +
+                            (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + '</li>';
                     }
                     for (var r in ald.refs){
                         referenceList.push(lister(ald.refs[r])); 
                     }
-                    for (var n in ald.notes) {
-                        notesList.push(lister(ald.notes[n]));
+                    for (var c in ald.cjs) {
+                        councilJournalList.push(lister(ald.cjs[c]));
                     }
                     if (ald.cj || ald.refs){
-                        lists = '<ul class="alderman-list">' + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
+                        lists = '<ul class="alderman-list">' + councilJournalList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }
                     if (ald.positionArray.length === 1){
                         var noPositions = true;
@@ -771,7 +403,6 @@
                         }).get();
                     count = 0;
                     for (var k in aldermen){
-                        // console.log(aldermen[k].id);
                         if ((( filterWard.length === 0 && filterPos.length === 0) || filterCheckboxes(aldermen[k])) && filterText(aldermen[k]) && filterDate(aldermen[k])){
                             count++
                             aldArray += drawAlderman(aldermen[k], 'filter');
@@ -824,6 +455,7 @@
                 });
                 function reverseSort(val){
                     revSort = val;
+                    console.log(val);
                     if ($('.chron').length > 1){
                         chronList();
                     }
@@ -945,7 +577,7 @@
                         userRequest = userRequest - 1;
                         var list = $.uniqueSort( wardTable[userRequest] );
                         for (var l in wardTable[userRequest]){
-                            alderTable.push(listListing(list[l], alderTable.length));
+                            alderTable.push(listListing(list[l]));
                         }
                     }
                     $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div', revSort);
@@ -1058,115 +690,3 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 </script>
-    </div>
-</div>
-</main>
-<footer class="">
-	<section class="footer-top" role="navigation">
-		<div class="container">
-			<div class="row align-items-top">
-				<div class="col-md-1">
-					<div class="footer-list footer-social">
-						<ul>
-							<li>
-								<a href="https://www.facebook.com/pages/Chicago-Public-Library/35447572453">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-fb"></i>
-										<i class="fa fa-stack-1x fa-facebook footer-social-icons-fg"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/chipublib">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-tw"></i>
-										<i class="fa fa-stack-1x fa-twitter footer-social-icons-fg"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.instagram.com/chicagopubliclibrary/">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-ig"></i>
-										<i class="fa fa-stack-1x fa-instagram footer-social-icons-fg"></i>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-cc" ></i>
-										<i class="fa fa-stack-1x fa-newspaper-o footer-social-icons-fg"></i>
-									</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="footer-list">
-						<h2>Digital Collections</h2>
-						<ul>
-							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
-							<li><a href="http://digital.chipublib.org/digital/search">Browse All</a></li>
-							<li><a href="/customizations/global/pages/jekyll/takedown.html">Copyright &amp; Takedown</a></li>
-							<li><a href="/customizations/global/pages/jekyll/about.html">About</a></li>
-							<!-- <li><a href=""></a></li> -->
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="footer-list footer-floatright">
-						<h2>Services</h2>
-						<ul>
-							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
-							<li><a href="https://www.chipublib.org/ask-a-librarian/">Ask a Librarian</a></li>
-							<li><a href="https://www.chipublib.org/order-a-photo-reproduction/">Order a Photo Reproduction</a></li>
-							
-							<!-- <li><a href=""></a></li> -->
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="footer-list footer-floatright">
-						<h2>Chicago Public Library</h2>
-						<ul>
-							<li><a href="https://www.chipublib.org/">CPL Home</a></li>
-							<li><a href="https://www.chipublib.org/archives-collections/">Archival Collections</a></li>
-							<li><a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">Sign Up for Email Updates</a></li>
-							<li><a href="https://www.chipublib.org/library-policies/website-accessibility-policy/">Website Accessibility Policy</a></li> 
-							<!-- <li><a href=""></a></li> -->
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="footer-contactinfo footer-floatright">
-						<address>
-							<strong>Contact Us</strong><br>
-							Chicago Public Library<br>
-							400 S. State Street<br>
-							Chicago, IL 60605<br>
-							(312) 747-4300
-						</address>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="footer-bottom" role="copyright">
-		<div class="container">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-md-4">
-						<div class="footer-logo-img"><a href="https://secure3.convio.net/cplf/site/Donation2?idb=330762243&DONATION_LEVEL_ID_SELECTED=1&df_id=2140&mfc_pref=T&2140.donation=form1&idb=0"><img src="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/02/CPLSupportCPLF_web_130x60.png?v=1505779744150575491515057548853" alt="" /></a></div>
-					</div>
-					<div class="col-md-4 offset-md-4">
-						<div class="footer-bottom-right footer-floatright">
-							<a href="http://www.cityofchicago.org/">City of Chicago</a>&nbsp;&copy; 2017 Chicago Public Library
-						</div>
-					</div>
-				</div>
-		</div>	
-	</section>
-</footer>
-</body>
-</html>
