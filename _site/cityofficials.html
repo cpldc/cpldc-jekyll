@@ -718,8 +718,10 @@
                         notesList = [],
                         referenceList = [];
                     function lister(listItem){
+                        var urlWrapper = "";
+                        (listItem.url ? urlWrapper = '<a href="' + listItem.url + '">' : '' )
                         return '<li data-sort="' + (listItem.text).substring(0,5)   + '">' + 
-                            '<a href="' + listItem.url + '">' + listItem.text + '</a> ' +
+                            urlWrapper + listItem.text + (urlWrapper != "" ? '</a> ' : '') +
                             ( listItem.url2 != "" ? '<a href="' + listItem.url2 + '">(ebook)</a>' : "")
                              + '</li>';
                     }
@@ -729,8 +731,9 @@
                     for (var n in ald.notes) {
                         notesList.push(lister(ald.notes[n]));
                     }
-                    if (ald.cj || ald.refs){
-                        lists = '<ul class="alderman-list">' + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
+                    let death = ( ald.death ? '<li>Death: ' + (ald.death.url ? '<a href="' + ald.death.url + '">' + ald.death.text + '</a>' : ald.death.text ) : '')
+                    if (ald.notes || ald.refs){
+                        lists = '<ul class="alderman-list">' + death + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }
                     if (ald.positionArray.length === 1){
                         var noPositions = true;
