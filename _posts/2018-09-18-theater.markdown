@@ -7,6 +7,7 @@ title: Chicago Theater
 categories: [collections, subjects]
 shortname: Theater
 sortname: Chicago Theater
+creditname: Chicago Theater collections
 sidebarname: Theater
 cardpic:
   pic: assets/images/theater-cardpic.png

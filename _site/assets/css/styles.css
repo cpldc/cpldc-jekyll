@@ -1162,3 +1162,6 @@ label {
 #topBtn:hover {
   background-color: #e6e6e6;
   border-color: #adadad; }
+
+.viewer-title {
+  font-size: 1.1rem; }

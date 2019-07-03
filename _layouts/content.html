@@ -41,19 +41,19 @@
     {% endif %}
     {% if page.type == 'collection' %}
         {% if page.slug == 'rhwc' or page.slug == 'chiren' %}
-            {% capture locationLine %}Photographs in the {{page.title}} exhibit are housed in the {{page.location.longname}}{% endcapture %}
+            {% capture locationLine %}Photographs in the {{page.title}} exhibit are housed in the {{page.location.longname}}.{% endcapture %}
         {% elsif page.slug == 'examiner' %}
             {% capture locationLine %}The {{ page.title }} is housed in the {{ page.location.longname }}; microfilm is available in the Newspapers Department at Harold Washington Library Center.{% endcapture %}
         {% elsif page.slug == 'woop' %}
-            {% capture locationLine %}The {{page.title}} are housed in the {{page.location.longname}}{% endcapture %}
+            {% capture locationLine %}The {{page.title}} are housed in the {{page.location.longname}}.{% endcapture %}
         {% elsif page.slug == 'wha' or page.slug == 'theater' %}
-            {% capture locationLine %}Artifacts from the {{page.creditname}} are housed in the {{page.location.longname}}{% endcapture %}
+            {% capture locationLine %}Artifacts from the {{page.creditname}} are housed in the {{page.location.longname}}.{% endcapture %}
         {% elsif page.slug == 'hdg' %}
             {% capture locationLine %}This collection is housed in the {{ page.location.longname }}.  Additional materials by Henry Delorval Green are held at the Chicago History Museum.{% endcapture %}
         {% elsif page.slug == 'chicagoparks' %}
             {% capture locationLine %}The {{page.title}} collection is housed in the {{ page.location.longname }}.{% endcapture %}
         {% else %}
-            {% capture locationLine %}The {{page.title}} is housed in the {{page.location.longname}}{% endcapture %}
+            {% capture locationLine %}The {{page.title}} is housed in the {{page.location.longname}}.{% endcapture %}
         {% endif %}
     {% endif %}
     {% include header.html %}
@@ -125,6 +125,11 @@
                                 <div class="textblock">
                                     <p>{{ page.textrich }}</p>
                                     <p>{{ locationLine }}</p>
+                                    {% if page.title == 'Chicago Theater' %}
+                                        <h4 class='viewer-title'>New Image Viewer</h4>
+                                        <p>We're using the Chicago theater collections to showcase the Mirador image viewer, which has a number of new features we think you'll enjoy.</p>
+                                        <p>Please <a href="mailto:webmaster@chipublib.org">let us know</a> if you have any feedback on this new interface.</p>
+                                    {% endif %}
                                 </div>
                             {% endif %}
                             {% if page.highlights %}
