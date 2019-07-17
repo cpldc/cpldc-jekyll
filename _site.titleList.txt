@@ -1,0 +1,44 @@
+_site/404.html:    <title>Digital Collections | Chicago Public Library</title>
+_site/about.html:    <title>About CPL Digital Collections | Digital Collections | Chicago Public Library</title>
+_site/afam.html:    <title>African Americans | Digital Collections | Chicago Public Library</title>
+_site/ahs.html:    <title>Northside High Schools | Digital Collections | Chicago Public Library</title>
+_site/all.html:    <title>Digital Collections | Chicago Public Library</title>
+_site/amund.html:    <title>Amundsen High School Collection | Digital Collections | Chicago Public Library</title>
+_site/bar.html:    <title>Esther A. Barlow Collection | Digital Collections | Chicago Public Library</title>
+_site/caa.html:    <title>CPL's Chicago Artists File | Digital Collections | Chicago Public Library</title>
+_site/cfcc.html:    <title>Christian Fellowship Church Collection | Digital Collections | Chicago Public Library</title>
+_site/cfc.html:    <title>Northside Clubs and Organizations | Digital Collections | Chicago Public Library</title>
+_site/chicagoparks.html:    <title>Chicago Park District Records: Photographs | Digital Collections | Chicago Public Library</title>
+_site/chiren.html:    <title>Chicago Renaissance | Digital Collections | Chicago Public Library</title>
+_site/cityofficials.html:    <title>Chicago Aldermen and Other Elected Officials, 1837-2018 | Digital Collections | Chicago Public Library</title>
+_site/cityofficials-orig.html:    <title>Chicago Aldermen and Other Elected Officials, 1837-2018 | Digital Collections | Chicago Public Library</title>
+_site/civilwar.html:    <title>Civil War | Digital Collections | Chicago Public Library</title>
+_site/dtd.html:    <title>Chicago Sewers Collection | Digital Collections | Chicago Public Library</title>
+_site/ebg.html:    <title>E.B. Gould Programs Collection | Digital Collections | Chicago Public Library</title>
+_site/examiner.html:    <title>Chicago Examiner | Digital Collections | Chicago Public Library</title>
+_site/harsh.html:    <title>Vivian G. Harsh Research Collection | Digital Collections | Chicago Public Library</title>
+_site/hdg.html:    <title>Henry D. Green Photograph Collection | Digital Collections | Chicago Public Library</title>
+_site/hwlcsc.html:    <title>Special Collections at HWLC | Digital Collections | Chicago Public Library</title>
+_site/hwr.html:    <title>Washington, Harold | Digital Collections | Chicago Public Library</title>
+_site/index.html:    <title>Digital Collections | Chicago Public Library</title>
+_site/kins.html:    <title>Helen G. Kinsella Collection | Digital Collections | Chicago Public Library</title>
+_site/libed.html:    <title>Libraries &amp; Education | Digital Collections | Chicago Public Library</title>
+_site/lvcra.html:    <title>Lake View Council on Religious Action | Digital Collections | Chicago Public Library</title>
+_site/lvhs.html:    <title>Lake View High School Collection | Digital Collections | Chicago Public Library</title>
+_site/mpu.html:    <title>Millennium Park U.S. Equities Realty Collection | Digital Collections | Chicago Public Library</title>
+_site/mrc.html:    <title>Municipal Reference Collection | Digital Collections | Chicago Public Library</title>
+_site/neigh.html:    <title>Chicago Neighborhoods | Digital Collections | Chicago Public Library</title>
+_site/nnhc.html:    <title>Northside Neighborhood History Collection | Digital Collections | Chicago Public Library</title>
+_site/p16818coll6.html:    <title>Philip David Sang Collection | Digital Collections | Chicago Public Library</title>
+_site/parks.html:    <title>Chicago Parks | Digital Collections | Chicago Public Library</title>
+_site/playbills.html:    <title>Chicago Theater Collection-Historic Playbills | Digital Collections | Chicago Public Library</title>
+_site/portpark.html:    <title>Portage Park Community Collection | Digital Collections | Chicago Public Library</title>
+_site/rhwc.html:    <title>Remembering Harold Washington | Digital Collections | Chicago Public Library</title>
+_site/rmia.html:    <title>Ravenswood Manor Improvement Association Collection | Digital Collections | Chicago Public Library</title>
+_site/rvw.html:    <title>Ravenswood-Lake View Community Collection | Digital Collections | Chicago Public Library</title>
+_site/rwk.html:    <title>Robert W. Krueger Photograph Collection | Digital Collections | Chicago Public Library</title>
+_site/takedown.html:    <title>Copyright and Takedown Policy | Digital Collections | Chicago Public Library</title>
+_site/theater.html:    <title>Chicago Theater | Digital Collections | Chicago Public Library</title>
+_site/walz.html:    <title>Louis D. Walz Collection | Digital Collections | Chicago Public Library</title>
+_site/wha.html:    <title>Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections | Digital Collections | Chicago Public Library</title>
+_site/woop.html:    <title>Chicago Public Library Archives | Digital Collections | Chicago Public Library</title>

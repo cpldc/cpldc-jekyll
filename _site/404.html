@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
-        <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
-    
-    <title>Digital Collections | Chicago Public Library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+
+    <title>404: Page Not Found | Digital Collections | Chicago Public Library</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -24,12 +24,10 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
-
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="assets/js/content.js"></script>
 </head>
-<body>
-    <body>
-        <header>
+<body class="">
+<header>
     <section class="a11y-skip-links">
         <span class="invisitext"><a href="#sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
         <!-- <span class="invisitext hidden-lg-up"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span> -->
@@ -278,8 +276,10 @@
         </div>
     </section>
 </header>
-        <main class="no-fixed" id="sidebar-c-target">
-            <div id="sidebar" class="sidebar float-left collapsable sidebar-height">
+<main id="sidebar-c-target">
+    <div class="container fixed main-container">
+        <div class="row" id="sidebar-f-target">
+            <div id="sidebar" class="sidebar col-4 col-lg-4 col-xl-3">
     
     <div class="sidebar-header-button sidebar-header-button-show always-on-top"  id="showSidebar">
         <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-right.png" alt="">
@@ -287,19 +287,16 @@
     <div id="sidebar-toplevel">
         <div class="sidebar-header">
             <div class="sidebar-header-text clearfix">
-                <a href="https://digital.chipublib.org//customizations/global/pages/jekyll">Digital Collections</a>
+                <a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages">Digital Collections</a>
                 
-                <div class="sidebar-header-button sidebar-header-button-hide always-on-top float-right" style="z-index: 2" id="hideSidebar">
+                <div class="sidebar-header-button sidebar-header-button-hide always-on-top float-right hidden" style="z-index: 2" id="hideSidebar">
                     <img src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/browse-toggle-left.png" alt="">
                 </div>
                 
             </div>
-            <script>
-
-            </script>
         </div>
         <div class="sidebar-all">
-            <a href="/customizations/global/pages/jekyll/all.html">View All Collections </a>
+            <a href="/customizations/global/pages/all.html">View All Collections </a>
         </div>
         <div class="sidebar-list sidebar-separator">
             <p>Browse by Subject</p>
@@ -358,39 +355,25 @@
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/afam.html" >African Americans</a>
+                        <a href="/customizations/global/pages/afam.html" >African Americans</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/civilwar.html" >Civil War</a>
+                        <a href="/customizations/global/pages/civilwar.html" >Civil War</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/rhwc.html" >Harold Washington</a>
+                        <a href="/customizations/global/pages/rhwc.html" >Harold Washington</a>
                     </li>
                     
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/libed.html" >Libraries &amp; Education</a>
-                    </li>
-                    
-                
-                    
-                
-                    
-                    <li>
-                        <a href="/customizations/global/pages/jekyll/neigh.html" >Neighborhoods</a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        <a href="/customizations/global/pages/jekyll/examiner.html" >Newspapers</a>
+                        <a href="/customizations/global/pages/libed.html" >Libraries &amp; Education</a>
                     </li>
                     
                 
@@ -398,7 +381,13 @@
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/parks.html" >Parks</a>
+                        <a href="/customizations/global/pages/neigh.html" >Neighborhoods</a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        <a href="/customizations/global/pages/examiner.html" >Newspapers</a>
                     </li>
                     
                 
@@ -406,7 +395,15 @@
                 
                     
                     <li>
-                        <a href="/customizations/global/pages/jekyll/theater.html" >Theater</a>
+                        <a href="/customizations/global/pages/parks.html" >Parks</a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        <a href="/customizations/global/pages/theater.html" >Theater</a>
                     </li>
                     
                 
@@ -459,7 +456,7 @@
                 
                     
                         <li>
-                            <a href="/customizations/global/pages/jekyll/harsh.html" >Vivian G. Harsh Collection</a>
+                            <a href="/customizations/global/pages/harsh.html" >Vivian G. Harsh Collection</a>
                         </li>
                     
                 
@@ -475,7 +472,7 @@
                 
                     
                         <li>
-                            <a href="/customizations/global/pages/jekyll/mrc.html" >Municipal Reference Collection</a>
+                            <a href="/customizations/global/pages/mrc.html" >Municipal Reference Collection</a>
                         </li>
                     
                 
@@ -485,7 +482,7 @@
                 
                     
                         <li>
-                            <a href="/customizations/global/pages/jekyll/nnhc.html" >Northside Neighborhood History Collection</a>
+                            <a href="/customizations/global/pages/nnhc.html" >Northside Neighborhood History Collection</a>
                         </li>
                     
                 
@@ -501,7 +498,7 @@
                 
                     
                         <li>
-                            <a href="/customizations/global/pages/jekyll/hwlcsc.html" >Special Collections at HWLC</a>
+                            <a href="/customizations/global/pages/hwlcsc.html" >Special Collections at HWLC</a>
                         </li>
                     
                 
@@ -542,18 +539,62 @@
     </div>
 
 </div>
-            <div class="main-container">
-                <div id="content" class="grid">
-                    <div class="col">
-  <h1>404</h1>
-  <p><strong>Page not found.</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-
+            <div  id="content" class="content main-content col-xl-6 col-lg-8 col-12">
+                <h1 class="page-title">404: Page Not Found</h1>
+                <section class="intro">
+                    <div class="prosecontent">The requested page could not be found.</div>
+                </section>
+                <div id="about-image" class="center-lightbox">
+                    <div class="col-12 lightbox-main-img-div about-image content-main-img" title="Cloud Gate, assembly complete, view from above, July 16, 2004">
+                        <i class="rights-i rights-i-about fa fa-info-circle"></i>
+                        <div class="rights-overlay rights-overlay-about">
+                            <div class="rights-guts">
+                                <span class="rights-statement">
+                                    
+                                    Courtesy of U.S. Equities Realty and the men and women who built Millennium Park
+                                </span>
+                            </div>
+                            <div class="rights-close">
+                                <i class="rights-close-icon fa fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prosecontent textblock">
+                    <p></p>
+                    
+                    
                 </div>
             </div>
-        </main>
-        <footer class="">
+            <div class="hidden-lg-down col-lg-3 right-sidebar">
+                <div class="content blogs">
+                    <div class="blogs-title">
+                        <h2>Chicago History Blog</h2>
+                    </div>
+                    <aside id="bcBlogs"></aside>
+                    <div class="blogs-viewmore">
+                        <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
+                            View More 
+                            <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content events">
+                    <div class="events-title">
+                        <h2>History &amp; Genealogy Events</h2>
+                    </div>
+                    <aside id="bcEvents"></aside>
+                    <div class="events-viewmore">
+                        <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
+                            View More 
+                            <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="">
 	<section class="footer-top" role="navigation">
 		<div class="container">
 			<div class="row align-items-top">
@@ -561,35 +602,23 @@
 					<div class="footer-list footer-social">
 						<ul>
 							<li>
-								<a href="https://www.facebook.com/pages/Chicago-Public-Library/35447572453">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-fb"></i>
-										<i class="fa fa-stack-1x fa-facebook footer-social-icons-fg"></i>
-									</span>
+								<a class="footer-social-icons-container" href="https://www.facebook.com/pages/Chicago-Public-Library/35447572453">
+									<img class="footer-social-icons"  src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/facebook-icon.png" alt="Facebook" />
 								</a>
 							</li>
 							<li>
-								<a href="https://twitter.com/chipublib">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-tw"></i>
-										<i class="fa fa-stack-1x fa-twitter footer-social-icons-fg"></i>
-									</span>
+								<a class="footer-social-icons-container" href="https://twitter.com/chipublib">
+									<img class="footer-social-icons"  src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/twitter-icon.png" alt="Twitter" />
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/chicagopubliclibrary/">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-ig"></i>
-										<i class="fa fa-stack-1x fa-instagram footer-social-icons-fg"></i>
-									</span>
+								<a class="footer-social-icons-container" href="https://www.instagram.com/chicagopubliclibrary/">
+									<img  class="footer-social-icons"  src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/instagram-icon.png" alt="Instagram" />
 								</a>
 							</li>
 							<li>
-								<a href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">
-									<span class="fa-stack fa-lg hover-dim">
-										<i class="fa fa-circle fa-stack-2x footer-social-icons-bg-cc" ></i>
-										<i class="fa fa-stack-1x fa-newspaper-o footer-social-icons-fg"></i>
-									</span>
+								<a class="footer-social-icons-container" href="https://visitor.r20.constantcontact.com/d.jsp?llr=vs7doizab&p=oi&m=1126638416469&sit=fcnca6dlb&f=a1f24030-412d-44ba-8dc8-d4bbd69edbd4">
+									<img class="footer-social-icons" src="https://d4804za1f1gw.cloudfront.net/wp-content/themes/bibliocommons/images/newsletter-icon.png" alt="">
 								</a>
 							</li>
 						</ul>
@@ -601,8 +630,8 @@
 						<ul>
 							<!-- <li><a href="http://cdm16818.contentdm.oclc.org/ui/custom/default/</li>collection/default/resources/custompages/homepage.masonry.html">Digital Collections Home</a></li> -->
 							<li><a href="http://digital.chipublib.org/digital/search">Browse All</a></li>
-							<li><a href="/customizations/global/pages/jekyll/takedown.html">Copyright &amp; Takedown</a></li>
-							<li><a href="/customizations/global/pages/jekyll/about.html">About</a></li>
+							<li><a href="/customizations/global/pages/takedown.html">Copyright &amp; Takedown</a></li>
+							<li><a href="/customizations/global/pages/about.html">About</a></li>
 							<!-- <li><a href=""></a></li> -->
 						</ul>
 					</div>
@@ -660,7 +689,5 @@
 		</div>	
 	</section>
 </footer>
-    </body>
-    </html>
 </body>
 </html>

@@ -17,7 +17,7 @@ title: CPL Digital Collections
 email: nwhite@chipublib.org
 description: >- # this means to ignore newlines until "baseurl:"
   Explore Chicago Public Library's Digital Collections
-baseurl: "/customizations/global/pages/jekyll" # the subpath of your site, e.g. /blog
+baseurl: "/customizations/global/pages" # the subpath of your site, e.g. /blog
 permalink: /:title:output_ext
 url: "https://cdm16818.contentdm.oclc.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  cpldc

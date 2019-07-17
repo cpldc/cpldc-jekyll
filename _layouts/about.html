@@ -8,85 +8,82 @@
     <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 
     <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
+    {% include libraries.html %}
+    <script src="assets/js/content.js"></script>
 </head>
 <body class="{{ page.contenttype }}">
-    {% include libraries.html %}
-
-    <script src="assets/js/content.js"></script>
 {% include header.html %}
 <main id="sidebar-c-target">
     <div class="container fixed main-container">
         <div class="row" id="sidebar-f-target">
             {% include sidebar.html %}
             <div  id="content" class="content main-content col-xl-6 col-lg-8 col-12">
-                    <h1 class="page-title">{{ page.title }}</h1>
-                    <section class="intro">
-                        <div class="prosecontent">{{ page.textlong }}</div>
-                    </section>
-<div id="about-image" class="center-lightbox">
-        <div class="col-12 lightbox-main-img-div about-image content-main-img" title="Cloud Gate, assembly complete, view from above, July 16, 2004">
-                <i class="rights-i rights-i-about fa fa-info-circle"></i>
-                <div class="rights-overlay rights-overlay-about">
-                    <div class="rights-guts">
-                        <span class="rights-statement">
-                            {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
-                            {{ mpu.rights2 }}
-                        </span>
-                    </div>
-                    <div class="rights-close">
-                        <i class="rights-close-icon fa fa-times"></i>
+                <h1 class="page-title">{{ page.title }}</h1>
+                <section class="intro">
+                    <div class="prosecontent">{{ page.textlong }}</div>
+                </section>
+                <div id="about-image" class="center-lightbox">
+                    <div class="col-12 lightbox-main-img-div about-image content-main-img" title="Cloud Gate, assembly complete, view from above, July 16, 2004">
+                        <i class="rights-i rights-i-about fa fa-info-circle"></i>
+                        <div class="rights-overlay rights-overlay-about">
+                            <div class="rights-guts">
+                                <span class="rights-statement">
+                                    {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
+                                    {{ mpu.rights2 }}
+                                </span>
+                            </div>
+                            <div class="rights-close">
+                                <i class="rights-close-icon fa fa-times"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </div>
-    </div>
-    <div class="prosecontent textblock">
-        <p>{{ page.textrich }}</p>
-            {% if page.slug == 'about' %}
-            <p>
-                Our digital collections come from CPL’s special collections:
-            </p>
-            <dl>
-                {% assign sortedPosts = site.posts | sort: 'sortname' %} 
-                {% for post in sortedPosts %}
-                {% if post.type == 'location' %}
-                    <dt><a href="{{ post.url | prepend:site.baseurl}}">{{ post.title }}</a></dt><dd>{{ post.textshort }}</dd>
+                <div class="prosecontent textblock">
+                    <p>{{ page.textrich }}</p>
+                    {% if page.slug == 'about' %}
+                    <p>
+                        Our digital collections come from CPL’s special collections:
+                    </p>
+                    <dl>
+                        {% assign sortedPosts = site.posts | sort: 'sortname' %} 
+                        {% for post in sortedPosts %}
+                        {% if post.type == 'location' %}
+                            <dt><a href="{{ post.url | prepend:site.baseurl}}">{{ post.title }}</a></dt><dd>{{ post.textshort }}</dd>
+                            {% endif %}
+                        {% endfor %}
+                    </dl>
                     {% endif %}
-                {% endfor %}
-            </dl>
-            {% endif %}
-            {{ page.extracontent }}
+                    {{ page.extracontent }}
+                </div>
             </div>
-</div>
-<div class="hidden-lg-down col-lg-3 right-sidebar">
-    <div class="content blogs">
-        <div class="blogs-title">
-            <h2>Chicago History Blog</h2>
+            <div class="hidden-lg-down col-lg-3 right-sidebar">
+                <div class="content blogs">
+                    <div class="blogs-title">
+                        <h2>Chicago History Blog</h2>
+                    </div>
+                    <aside id="bcBlogs"></aside>
+                    <div class="blogs-viewmore">
+                        <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
+                            View More 
+                            <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content events">
+                    <div class="events-title">
+                        <h2>History &amp; Genealogy Events</h2>
+                    </div>
+                    <aside id="bcEvents"></aside>
+                    <div class="events-viewmore">
+                        <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
+                            View More 
+                            <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <aside id="bcBlogs">
-        </aside>
-        <div class="blogs-viewmore">
-            <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
-                View More 
-                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-    <div class="content events">
-        <div class="events-title">
-            <h2>History &amp; Genealogy Events</h2>
-        </div>
-        <aside id="bcEvents">
-        </aside>
-        <div class="events-viewmore">
-            <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
-                View More 
-                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-</div>
-</div>
-</main>
+    </main>
 {% include footer.html %}
 </body>
 </html>

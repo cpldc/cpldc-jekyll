@@ -155,11 +155,12 @@
                                     {% if page.slug == 'mrc' %}
                                         <span>Digital collections from the Municipal Reference Collection are forthcoming.</span><p></p>
                                     {% else %}
-                                    {% if page.type == 'location' or page.type == 'category' %}
-                                        <span>Collections {{ page.catcoll }}{% if page.type == 'location' %} from the {{ page.longname }}{% endif %} include:</span>
-                                    {% else %}
-                                        <span>This collection is made up of the following archival collections:</span>
-                                    {% endif %}
+                                    {% if page.type == 'location'  %}
+                                        {% assign sourceColl = 'from the ' | append: page.longname %}
+                                    {% elsif  page.subcollections  %}
+                                        {% assign sourceColl = 'from the ' | append: page.title | append: ' Collection' %}
+                                        {% endif %}
+                                    <span>Collections {{ page.catcoll }}  {{ sourceColl }} include:</span>
                                     <dl>
                                         {% if page.subcollections %}
                                             {% for subcoll in page.subcollections %}

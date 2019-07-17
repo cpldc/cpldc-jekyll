@@ -1206,3 +1206,22 @@
         .viewer-title {
             font-size: 1.1rem;
         }
+
+        // sprite social 
+
+        .footer-social-icons:hover {
+            top: -37.5px;
+        }
+        .footer-social-icons {
+            width: 32px;
+            position: relative;
+        }
+        .footer-social-icons-container{
+
+            display: block;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
