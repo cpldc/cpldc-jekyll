@@ -449,7 +449,7 @@
                     for (var n in ald.notes) {
                         notesList.push(lister(ald.notes[n]));
                     }
-                    let death = ( ald.death ? '<li>Death: ' + (ald.death.url ? '<a href="' + ald.death.url + '">' + ald.death.text + '</a>' : ald.death.text ) : '')
+                    let death = ( ald.death ? '<li>Death: ' + (ald.death.url ? '<a href="' + ald.death.url + '">' + ald.death.text + '</a>' : ald.death.text ) : '') + '</li>'
                     if (ald.notes || ald.refs){
                         lists = '<ul class="alderman-list">' + death + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }

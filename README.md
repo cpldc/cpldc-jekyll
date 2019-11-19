@@ -2,6 +2,16 @@
 
 Each landing page (or all, about, etc) exist as individual webpages on the server, so any of them can be downloaded, edited, and reuploaded.  This won't make any persistent changes to the github repository, but it's an easy way to make specific changes if necessary.  
 
+## To get started: 
+
+You will need to install the Ruby programming language before installing Jekyll.  Detailed instructions can be found [here](https://jekyllrb.com/docs/installation/).  You will probably also need code editing software.  I recommend [VS Code](https://code.visualstudio.com/), which is open source, free of charge, and can be installed without administrative privileges.
+
+### To create a new page: 
+
+Create a new "post" in the _[posts](#posts) folder.  The filename should start with a date, and then a short code for the page you will be creating (afam for african americans; mfoc for more from our collections).
+
+Copy and paste the contents of a similar page and enter all the data for the new collection.  See [Page Data](#page-data) section for a complete explanation.
+
 # Introduction and core  
 
 Jekyll is a static site generator, which takes templates that a user provides, combines it with data the user provides, and creates standard HTML, JavaScript, and CSS files that can be uploaded to a server.  Jekyll is written in Ruby, uses Liquid as a templating language, and markdown for formatting.  
@@ -68,7 +78,7 @@ When you need to nest data, it’s done with dashes and spaces:
 
       dd: Includes manuscripts and clippings relating to slavery. 
 
-This seems extremely similar to a formatting style called YAML (Jekyll is probably using YAML in this context, despite the files being .markdown files – or maybe YAML is always a part of markdown?), so that might be a good way to look if you have questions about it.  In CPLDC content, see the _posts/ folder for examples. 
+This is basically YAML formatting. In CPLDC content, see the _[posts](#posts)/ folder for examples. 
 
 ## Structure 
 
@@ -309,7 +319,7 @@ The libraries file just adds the external libraries and frameworks that we use, 
 
 The sidebar has a couple of important functions.  The show/hide buttons are pretty straightforward, but there are also two types of sidebars, the collapsable one that can be seen on the home page, and the fixed one that can be seen on the landing pages.  However, when the page width gets to a certain breakpoint (970px), the fixed sidebar becomes collapsable.  This is handled in the switchLayoutF() and switchLayoutC() functions.  It is important to recognize that in the fixed layout, the sidebar is a part of the main frame (the bootstrap container); the collapsable sidebar is outside of the main frame.  The result is the entire sidebar has to be removed (.detach()) and placed somewhere else in the DOM, rather than just changing some of its CSS.
 
-The lists of subjects and locations are automagically created by iterating over the posts (see _posts/ section).  This was initially done because of how it was handled in the PHP version, but given how infrequently subjects and locations will be added, it's probably just as good to remove that complexity and make a standard HTML list.
+The lists of subjects and locations are automagically created by iterating over the posts (see _[posts](#posts)/ section).  This was initially done because of how it was handled in the PHP version, but given how infrequently subjects and locations will be added, it's probably just as good to remove that complexity and make a standard HTML list.
 
 #### _posts/
 
@@ -401,7 +411,7 @@ This is the core config file for Jekyll.  While there are a number of minor opti
 
 All the *.md files at the top level are the files which indicate what should be built.  Each unique page should have one. As you will see from looking at them, some are very simple pages; their core content is elsewhere.  Others have their content written in markdown in the file.  
 
-Jekyll will, by default, process all *.md files in the root directory, so any new, unique pages you would like to add should be handled that way.  New collections, subjects, locations, etc, should be treated like the others, in the _posts/ folder.
+Jekyll will, by default, process all *.md files in the root directory, so any new, unique pages you would like to add should be handled that way.  New collections, subjects, locations, etc, should be treated like the others, in the _[posts](#posts)/ folder.
 
 #### /Gemfile, /Gemfile.lock
 
@@ -410,3 +420,7 @@ These are ruby system files, no need to mess with them.
 #### /bl-ev-script.php
 
 This was a php file used to convert the php arrays into markdown and json.  Kept for historical purposes, and potential reuse.
+
+# Page Data
+
+Here is the structure and meaning of the data fields in the landing page "post" files (found in )

@@ -306,6 +306,21 @@ header, .browse-dropdown-toplevel {
   padding-right: 30px;
   border-right: 1px solid #ccc; }
 
+@media only screen and (max-width: 775px) {
+  /* md */
+  .browse-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    color: #262626; }
+
+  .browse-dropdown-row {
+    margin: auto auto;
+    width: 80%;
+    max-width: 2000px; } }
 .modal {
   background-color: #000;
   color: #262626; }

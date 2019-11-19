@@ -1,0 +1,54 @@
+---
+date: 2019-11-19 13:08:29 -0500
+title: More from Our Collections
+layout: content
+sidebartype: fixed
+contenttype: collections
+shortname: More from Our Collections
+cardpic:
+  pic: 
+  pich: 
+  size: 
+  pos: 
+  alt: 
+textshort: 
+textlong: 
+CPLRes:
+- a: 
+  dt: 
+  dd: 
+mainimage:
+  url:
+  coll:
+  text:
+  size:
+  align:
+  alt:
+thumbs:
+- url:
+  coll:
+  text:
+  size:
+  align:
+  alt:
+- url:
+  coll:
+  text:
+  size:
+  align:
+  alt:
+- url:
+  coll:
+  text:
+  size:
+  align:
+  alt:
+- url:
+  coll:
+  text:
+  size:
+  align:
+  alt:
+link: mfoc
+type: collection
+---

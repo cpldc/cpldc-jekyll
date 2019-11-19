@@ -44,7 +44,7 @@
                             <a href="https://www.chipublib.org/">
                                 <img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library">
                             </a>
-                            <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/jekyll/">Digital Collections</a></h2>
+                            <h2><a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">Digital Collections</a></h2>
                         </div>
                         <div class="inline-div col header-left hidden-lg-up" id="logo-small">
                             <div class="header-small-img inline-div ">
@@ -731,7 +731,7 @@
                     for (var n in ald.notes) {
                         notesList.push(lister(ald.notes[n]));
                     }
-                    let death = ( ald.death ? '<li>Death: ' + (ald.death.url ? '<a href="' + ald.death.url + '">' + ald.death.text + '</a>' : ald.death.text ) : '')
+                    let death = ( ald.death ? '<li>Death: ' + (ald.death.url ? '<a href="' + ald.death.url + '">' + ald.death.text + '</a>' : ald.death.text ) : '') + '</li>'
                     if (ald.notes || ald.refs){
                         lists = '<ul class="alderman-list">' + death + notesList.sort().join("") + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList.sort().join("") + '</ul>' : '') + '</ul>';
                     }
