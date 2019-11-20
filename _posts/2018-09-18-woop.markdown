@@ -31,8 +31,8 @@ textrich: <p>Explore CPL through those years, from that <a href="http://cdm16818
 mainimage:
   url: '80'
   text: Book room in the old water tank, circa 1873
-  size: cover
-  align: 50% 75%
+  size: '470,'
+  align: '158,2964,4391,2572'
   alt: A woodcut print depicts people reading at tables and getting books from bookshelves
     in the circular Book Room.
 thumbs:

@@ -10,7 +10,7 @@ sortname: Barlow, Esther A. Collection
 cardpic:
   pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg
   pich: 20rem
-  size: 110%
+  size: '470,'
   pos: auto
   alt: Esther Barlow as a young woman.
 category: libed
@@ -27,26 +27,26 @@ textrich: Included in this collection are photographs of the <a href="http://cdm
 mainimage:
   url: '52'
   text: Chicago Public Library staff, Lake View Branch, circa 1950
-  size: ''
-  align: 55% 50%
+  size: '470,'
+  align: '350,120,828,865'
   alt: Esther Barlow and 11 other library staff, all women, pose on the front steps
     of the Lakeview Branch.
 thumbs:
 - url: '199'
   text: Story hour in Welles Park, Hild Regional Library, circa 1930
-  size: 400px
-  align: 15% 20%
+  size: '200,'
+  align: '525,225,250,250'
   alt: A large group of children, some wearing bunny masks, pose for a picture.
 - url: '70'
   text: Esther Barlow at the circulation desk, Lake View Branch, 1951
-  size: 500px
-  align: 53% 49%
+  size: '200,'
+  align: '600,400,400,300'
   alt: Esther Barlow sits at a desk. Next to her desk is a tall bookshelf filled with
     children's books.
 - url: '16'
   text: Esther Barlow and Buddy Flaskerud, 1913
-  size: 400px
-  align: 33% 22%
+  size: '200,'
+  align: '400,200,400,400'
   alt: A baby Esther Barlow sits with a little boy in a small wagon hitched to a goat.
 link: bar
 location:

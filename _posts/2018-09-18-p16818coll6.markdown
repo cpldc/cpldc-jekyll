@@ -18,8 +18,8 @@ cardpic:
 mainimage:
   url: '4'
   text: Runaway slave poster, 1854
-  size: cover
-  align: auto 0px
+  size: '470,'
+  align: full
   alt: 1854 poster advertising as much as a $100 reward for information on a runaway
     enslaved man named Osborne.
 thumbs:

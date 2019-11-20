@@ -18,16 +18,11 @@
     {% else %}
         {% assign coll = page.coll %}
     {% endif %}
-    {% if page.slug == 'harsh' %}
-        {% assign mainimageFull = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg?highlightTerms=' %}
+    {% if page.mainimage.url contains '.jpg' %}
+        {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
         {% assign mainimageUrl = page.mainimage.coll %}
-        {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
-    {% elsif page.slug == 'mrc' %}
-        {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
     {% else %}
-        {% assign mainimage = 'https://cdm16818.contentdm.oclc.org/digital/iiif/' | append: coll | append: '/' | append: page.mainimage.url | append: '/' | append: page.mainimage.align | append: '/' | append: page.mainimage.size | append: '/0/default.jpg' %}
-        {% assign mainimageFull = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg?highlightTerms=' %}
-
+        {% assign mainimage = 'https://cdm16818.contentdm.oclc.org/digital/iiif/' | append: coll | append: '/' | append: page.mainimage.url | append: page.mainimage.align | append: '/' | append: page.mainimage.size | append: '/' |append: '/0/default.jpg' %}
         {% assign mainimageUrl = 'https://cdm16818.contentdm.oclc.org/digital/collection/' | append: coll | append: '/id/' | append: page.mainimage.url %}
     {% endif %}
     {% assign sortedPosts = site.posts | sort: 'sortname' %}
@@ -75,13 +70,9 @@
                         <div class="container-fluid lightbox imageGallery">
                             <div class="row">
                                 <div class="col justify-content-center lightbox-mainimage">
-                                    {% if page.slug == 'mrc' %}
-                                            <img src="{{ 'assets/images/' | append: page.mainimage.url }}" alt="{{ page.mainimage.text }}" style="" />
-                                    {% else %}
-                                        <a href="{{ mainimageFull }}" title="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" class="loading">
-                                            <img src="{{mainimage}}" alt="{{ page.mainimage.alt }}" style="" />
-                                        </a>
-                                    {% endif %}
+                                    <a href="{{ mainimage }}" title="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" class="loading">
+                                        <img src="https://cdm16818.contentdm.oclc.org/digital/iiif/" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
+                                    </a>
                                     {% if mainimage contains 'mpu' %}
                                         <i class="rights-i rights-i-main fa fa-info-circle"></i>
                                         <div class="rights-overlay rights-overlay-main">
@@ -99,7 +90,7 @@
                                 </div>
                             </div>
                             {% if page.slug == 'mrc' %}{% elsif page.link == 'takedown' %}{% else %}
-                            <div class="row lightbox-thumbs">
+                            <div class="row lightbox-thumbs justify-content-center">
                                 {% assign counter = 1 %}
                                 {% for thumb in page.thumbs %}
                                     {% if thumb.coll %}
@@ -109,7 +100,7 @@
                                     {% endif %}
                                         <div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}">
                                             <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" title="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ coll }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
-                                                <img src="https://cdm16818.contentdm.oclc.org/digital/iiif/{{ coll }}/{{ thumb.url }}/{{ thumb.align }}/{{ thumb.size }}/0/default.jpg" alt="{{ thumb.alt }}"  />
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ thumb.size }}; background-position: {{ thumb.align }}" />
                                             </a>
                                         </div>
                                     {% assign counter = counter | plus:1 %}

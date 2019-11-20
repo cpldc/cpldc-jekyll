@@ -15,32 +15,31 @@ cardpic:
 mainimage:
   url: '634'
   text: Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942
-  size: 110%
-  align: center
-  alt: Louis D. Walz poses with eight drum majorettes and one drum major.  They are
-    all wearing marching band uniforms.
+  size: '470,'
+  align: '200,300,2000,2000'
+  alt: Louis D. Walz poses with eight drum majorettes and one drum major.  They are all wearing marching band uniforms.
 thumbs:
 - url: '350'
   text: Lake View High School, 1985
-  size: 150%
-  align: center
+  size: '150,'
+  align: '75,437,600,600'
   alt: Cars drive past Lake View High School.
 - url: '149'
   text: "<em>Gold in Them Thar Hills</em>, Lake View High School, 1940"
-  size: 150%
-  align: 50% 25%
+  size: '150,'
+  align: '425,200,2200,2200'
   alt: Lake View High School students, three girls and two boys, pose in costume for
     a production of &ldquo;Gold in Them Thar Hills.&rdquo;
 - url: '7'
   text: Amundsen vs. Taft, Winnemac Park, 1949
-  size: 150%
-  align: center
+  size: '150,'
+  align: '300,1061,700,700'
   alt: Football game between Amundsen High School and Taft High School at Winnemac
     Park.  The bleachers are half full.
 - url: '245'
   text: Lake View High School football team en route to the Orange Bowl, Midway Airport, 1953
-  size: 150%
-  align: center
+  size: '150,'
+  align: '700,1100,600,600'
   alt: The Lake View High School football team stands on the tarmac in front of an
     airplane.  They are on their way to watch the Orange Bowl.
 category:

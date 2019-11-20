@@ -35,8 +35,8 @@ mainimage:
   url: '107'
   coll: cfc
   text: Cleanup Parade, Ravenswood Manor, 1965
-  size: ''
-  align: 90% 50%
+  size: '470,'
+  align: '666,333,2296,1300'
   alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
     and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
     Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;

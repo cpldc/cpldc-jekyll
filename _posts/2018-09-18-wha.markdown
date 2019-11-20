@@ -46,8 +46,8 @@ mainimage:
   url: '634'
   text: "&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s
     Campaign</em> by George N. Barnard, 1865"
-  size: auto 575px
-  align: center
+  size: '470,'
+  align: '285,572,3040,1860'
   alt: Black and white photograph of eight Civil War generals in two rows. Four seated
     on chairs in front, and four standing in second row 
 thumbs:

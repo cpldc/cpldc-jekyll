@@ -18,8 +18,8 @@ mainimage:
   url: '3595'
   coll: rvw
   text: Andersonville School, undated
-  size: 130%
-  align: center
+  size: '470,'
+  align: '54,69,1983,1369'
   alt: Andersonville School
 thumbs:
 - url: '426'

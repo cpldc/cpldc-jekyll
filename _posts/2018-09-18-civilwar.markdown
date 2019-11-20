@@ -17,8 +17,8 @@ mainimage:
   coll: p16818coll6
   text: "&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved
     persons, 1854"
-  size: cover
-  align: center
+  size: '470,'
+  align: full
   alt: 1854 poster advertising a marshal's sale, a public auction of enslaved persons.
 thumbs:
 - url: '173'

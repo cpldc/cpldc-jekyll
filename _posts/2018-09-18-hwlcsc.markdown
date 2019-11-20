@@ -14,8 +14,8 @@ mainimage:
   url: '79'
   coll: woop
   text: Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870
-  size: 105%
-  align: 50% 50%
+  size: '470,'
+  align: '166,173,3727,3277'
   alt: Engraving of a water tank on a support. Trees, grazing cattle, and a fence
     are pictured in front along with two men wearing hats.
 thumbs:

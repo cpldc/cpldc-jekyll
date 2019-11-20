@@ -34,8 +34,8 @@ mainimage:
   url: '6812'
   text: "&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo;
     <em>Chicago Examiner</em>, vol. 10 no. 1, 1909"
-  size: 150%
-  align: 78% 5%
+  size: '470,'
+  align: '1422,225,3618,2217'
 thumbs:
 - url: '51184'
   text: "&ldquo;Camera&rsquo;s Story of Day&rsquo;s Happenings in River Horror,&rdquo;

@@ -49,8 +49,8 @@ mainimage:
   url: '6053'
   coll: CPB01
   text: Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881
-  size: 134%
-  align: 52% 15%
+  size: '470,'
+  align: '650,580,3921,2895'
   alt: Theater playbill cover for Camille starring Sarah Bernhardt at McVicker's Theatre
 thumbs:
 - url: '8601'

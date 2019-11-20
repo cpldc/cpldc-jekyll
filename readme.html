@@ -1,0 +1,537 @@
+
+<h1 id="simple-editing">Simple editing:</h1>
+
+<p>Each landing page (or all, about, etc) exist as individual webpages on the server, so any of them can be downloaded, edited, and reuploaded.  This won’t make any persistent changes to the github repository, but it’s an easy way to make specific changes if necessary.</p>
+
+<h2 id="to-get-started">To get started:</h2>
+
+<p>You will need to install the Ruby programming language before installing Jekyll.  Detailed instructions can be found <a href="https://jekyllrb.com/docs/installation/">here</a>.  You will probably also need code editing software.  I recommend <a href="https://code.visualstudio.com/">VS Code</a>, which is open source, free of charge, and can be installed without administrative privileges.</p>
+
+<h3 id="to-create-a-new-page">To create a new page:</h3>
+
+<p>Create a new “post” in the <a href="#posts">_posts</a> folder.  The filename should start with a date, and then a short code for the page you will be creating (afam for african americans; mfoc for more from our collections).</p>
+
+<p>Copy and paste the contents of a similar page and enter all the data for the new collection.  See <a href="#page-data">Page Data</a> section for a complete explanation.</p>
+
+<h1 id="introduction-and-core">Introduction and core</h1>
+
+<p>Jekyll is a static site generator, which takes templates that a user provides, combines it with data the user provides, and creates standard HTML, JavaScript, and CSS files that can be uploaded to a server.  Jekyll is written in Ruby, uses Liquid as a templating language, and markdown for formatting.</p>
+
+<p>Ruby is hardly used at all as a Jekyll user, but it maybe be worth adding in as a keyword in google searches when you encounter a problem.</p>
+
+<p>Liquid is used widely in Jekyll template pages.  Jekyll templates look like normal HTML pages, but will have Liquid statements in them.  Straightforward Liquid statements will be contained in {{ double curly braces }}, while logical or more programmatic statements will be wrapped in {% curly brace/percent sign %}.  For example:</p>
+
+<pre><code>{% for page in site.pages %} 
+
+    &lt;h1&gt;{{ page.title }}&lt;/h1&gt; 
+
+    &lt;p&gt;{{ page.description }}&lt;/p&gt; 
+
+{% endfor %} 
+</code></pre>
+
+<p>This statement would go through all the “pages” in the “site” and will call each one “page”.  It will look at each “page” and put the “title” into &lt;h1&gt; ert tags, and the “desc” into a &lt;p&gt; tag.  (Page, site,</p>
+
+<p>We make extensive use of if statements in Liquid.  Here’s an example of how we would include the Millennium Park rights statement, which is only included if the “slug” is ‘mpu’.</p>
+
+<pre><code>{% if page.slug == ‘mpu’ %}  
+
+    {{ page.rights }} 
+
+{% endif %} 
+</code></pre>
+
+<p>Awkwardly, “if not” statements are done by ending the if statement immediately and performing the “not” action in an “else”.  Here’s how we exclude thumbnails from the MRC and Takedown pages:</p>
+
+<pre><code>{% if page.slug == 'mrc' %}{% elsif page.link == 'takedown' %}{% else %} 
+
+    --Thumbnail code goes here-- 
+
+{% endif %} 
+</code></pre>
+
+<p>Liquid is pretty verbose and inelegant, but it’s the industry standard.  You will see in the content layout how many nested loops and ifs are used to create the pages.</p>
+
+<p>Markdown is a very common method of formatting online.  It uses common symbols to denote certain formats, such as <strong>bold</strong> and <em>italics</em>.  We don’t actually use much of it, because our content was already in rich html from the original version, but we might’ve handled some of our formatting this way.</p>
+
+<p>More importantly, our content pages are stored in markdown files, in the header of each file (denoted by —).  The data is stored in key/value pairs in a pretty simple format:</p>
+
+<pre><code>title: Philip David Sang Collection 
+
+sortname: Sang, Philip David Collection 
+</code></pre>
+
+<p>When you need to nest data, it’s done with dashes and spaces:</p>
+
+<pre><code>categoryFull:  
+
+- African Americans 
+
+- Civil War 
+
+CPLRes: 
+
+- a: http://www.chipublib.org/fa-richard-durham-papers/ 
+
+  dt: Richard Durham Papers 
+
+  dd: Collection includes scripts for radio plays devoted to the Black experience    in America. 
+
+- a: http://www.chipublib.org/fa-madeline-stratton-morris-papers/ 
+
+  dt: Madeline Stratton Morris Papers 
+
+  dd: Includes manuscripts and clippings relating to slavery. 
+</code></pre>
+
+<p>This is basically YAML formatting. In CPLDC content, see the <a href="#posts">_posts</a>/ folder for examples.</p>
+
+<h2 id="structure">Structure</h2>
+
+<h3 id="jekyll-file-structure">Jekyll File Structure</h3>
+
+<p>Jekyll is frequently used for blogs, and, rather than reinventing the wheel, the CPLDC site uses Jekyll’s blog feature for its skeleton.  Here is the overview of where each component is.</p>
+
+<h4 id="section">/</h4>
+
+<p>Jekyll starts with markdown files (*.md or *.markdown) located in the root directory.  There, CPLDC has:</p>
+
+<pre><code>all.md 
+about.md 
+index.md 
+takedown.md 
+</code></pre>
+
+<p>Additionally, the caa and city officials files are here:</p>
+
+<pre><code>caa.html 
+cityofficials.md 
+</code></pre>
+
+<p>These files are extremely simple and merely direct jekyll to the layout we’d like to use for the page.  The ‘all.md’ page (the All Collections page) is the smallest, consisting entirely of:</p>
+
+<pre><code>---
+layout: all
+sidebartype: fixed
+---
+</code></pre>
+
+<p>This indicates to Jekyll to look for a layout called ‘all’, and creates a sidebar variable that will be used to disable sidebar hiding/showing when the final page is at full size.  Because this page simply iterates over all collections and lists them in alphabetical order, there is no unique content to be stored here.</p>
+
+<p>The ‘about’ and ‘takedown’ pages use the same layout (called ‘about’), and, since they are simple, one-off pages, their content is stored in these *.md files.</p>
+
+<p>The City Officials and CAA pages use a ‘data’ layout, and merely direct jekyll to the database file used for each.  CAA is not fully implemented at this time, as interest seems to have waned.  City Officials is fully functional and meeets CPL specifications as decided by the August meeting, and is waiting on the MRC department to handle content cleanup and refreshing.</p>
+
+<p>The index page, like the ‘all’ page, is all iterative code, and so its *.md page is very simple as well.</p>
+
+<h4 id="layouts">_layouts</h4>
+
+<p>This folder holds the layout files that are referenced in the root *.md files.  Layout files are HTML files with Liquid elements.</p>
+
+<h5 id="layoutsabouthtml">_layouts/about.html</h5>
+
+<p>The About page is a good example, since it takes content from the *.md file and places it in the HTML, but doesn’t dig too deep into any other aspects of Jekyll.</p>
+
+<p>It starts with normal html header, and inserts the title from the root *.md file (line 4 in /about.md or /takedown.md).</p>
+
+<p>At this point, it invokes our first <em>include</em>: a reused file that is stored elsewhere, like a variable that stores html code.  We will address each ‘include’ file in that section of this guide, but for now, we’ll address them briefly as they’re used. The first <em>include</em> we use is a file that calls the various external libraries the site uses, since they are repeatedly reused.  These include jQuery, Bootstrap, Font Awesome, and others.</p>
+
+<p>Next we include the header, the sidebar, and then, finally get to placing the about page’s specific content.  We place a page title, some top text, show an image (which adds the mpu rights statement), and then the body text.</p>
+
+<p>After that, the blogs and events are added.  These two still present a substantial problem, which is addressed in their subsections below.</p>
+
+<p>Finally the footer is included.</p>
+
+<h5 id="layoutsallhtml">_layouts/all.html</h5>
+
+<p>The all.html layout demostrates a page which has no original content, and digs into the collection data.</p>
+
+<p>As with about, we surround our content with the frame: we include the libraries, header, sidebar, blogs/events, and footer.  The center content is the only meaningful difference between this page and the about.html layout (in fact, the two could share that frame, and may, someday).</p>
+
+<p>In the center content, starting around line 28, we can see that the code that draws the collections list is quite simple.  As mentioned above, we use Jekyll’s blogs functionality to store our collections; we will go into detail on what this means later, but for now, understand that we consider a collection a “post.”</p>
+
+<p>First, we sort all the posts, using a built in function.  Line 21:</p>
+
+<pre><code>{% assign sortedPosts = site.posts | sort: 'sortname' %}
+</code></pre>
+
+<p>We “assign” the variable sortedPosts the value of all the posts, after we run the operation called “sort,” and we tell that operation to sort our collections using the key “sortname” (we store sortname separately since we have some collections with human names, which we want sorted as Last Name, First Name, but the collection title should be stored as First Name, Last Name).</p>
+
+<p>Then, at line 28, we iterate through each post in the sortedPosts array.  If the post’s “type” value is “collection” or “subcollection” (like the pieces of the Northside Clubs/Orgs or the two collections within Theater), then they will be included.  (Naturally we want to exclude type values of “category” or “location”.)  We present the (sub)collection’s title, and in the case of collections, we link the title to the page.  In the case of the subcollection, we link to the anchor of the parent collection <em>on this page</em>.  Then we add the brief description, and then the categories, which have a small logical section because sometimes a collection will have 2 categories.</p>
+
+<h5 id="layoutscardpagehtml">_layouts/cardpage.html</h5>
+
+<p>The cardpage is the index page.  It has no sidebar or blogs/events, so it’s just libraries, header, and footer.  This page, however, <em>include</em>s the cards themselves, so we will address them specifically in that section.  However, note that we’re using the Masonry js library (instead of default css masonry) because the library allows for the cards to reposition when the window is resized.  It also enables access to the  “imagesLoaded” javascript sub-library.  When images load after the card is drawn, it can result in the cards lying on top of each other; imagesLoaded prevents that.  I use the jQuery implementation because we’re already using jquery all over the place (and it’s shorter), but these can be invoked without it.</p>
+
+<h5 id="layoutscontenthtml">_layouts/content.html</h5>
+
+<p>The content page is probably the largest and most complex page, but it’s not that challenging to understand from a conceptual perspective.  The complexity comes from handling the corner cases for when some content is there and other content is not.</p>
+
+<p>There are a few pieces of content that are presented in the collections pages:</p>
+
+<pre><code>Title
+Top Text (textlong)
+Main Image
+Thumbnails
+Rich Text (textrich)
+Highlights
+More CPL Resources (CPLRes)
+External Resources (ExRes)
+</code></pre>
+
+<p>Title, Top Text, and Main Image were deemed as mandatory, so they are always there; the rest are optional.  Note that when there are thumbnails, we decided there should always be no less than 3 and no more than 4.</p>
+
+<p>Main Image.</p>
+
+<p>Because older browsers (IE) don’t support css-based image cropping, we present each image as the background of an <img /> element.  The actual image is a one-pixel transparent image, presented like this:</p>
+
+<pre><code>data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+</code></pre>
+
+<p>The cropping is handled by inline styling.  The “mainimage” element of a collection’s data is an array that holds:</p>
+
+<pre><code>url *record number*
+collection
+size
+alignment ("align")
+text
+alt text
+</code></pre>
+
+<p>To address the possibility of URL changes (as happened when the responsive site launched), the image URLs are stored simply as the record number, and the actual URLs are constructed by a function (starting on line 19).</p>
+
+<pre><code>{% if page.mainimage.url contains '.jpg' %}
+    {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
+    {% assign mainimageUrl = page.mainimage.coll %}
+{% else %}
+    {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
+    {% assign mainimageUrl = 'https://cdm16818.contentdm.oclc.org/digital/collection/' | append: coll | append: '/id/' | append: page.mainimage.url %}
+{% endif %}
+</code></pre>
+
+<p>Some images aren’t pulled from ContentDM (like MRC’s image), so these are identified by having ‘.jpg’ in the data, in which case, the full value is assigned to the mainimage variable with jekyll’s asset path.  If there is no .jpg, we look for a value for the ‘coll’ key - locations and categories pull pictures from various collections, so I indicate the collection the image is from in this key; if there is no value for the ‘coll’ key, then the page should be a collection, so the function will use the page’s top level ‘coll’ value.</p>
+
+<p>Note that the image location and the link are different, since we want to link users to the ContentDM image page, not to the image itself.</p>
+
+<p>(All images are handled in a variant of this method: card images and thumbnails.)</p>
+
+<p>The ‘img’ is wrapped in an anchor (‘a’) element to enable the lightbox.  The lightbox we’re using takes a data-alt element from the anchor (‘a’) element and presents that as a caption.  In order to make the caption a link to the contentDM page for the image, I’ve embedded HTML directly in the data-alt element (so be careful with “ ‘ ` ‘ “).</p>
+
+<p>The ‘img’ itself is just a 1px transparent data element:</p>
+
+<pre><code>data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+</code></pre>
+
+<p>This means no actual 1px transparent image is actually stored anywhere.</p>
+
+<p>If the mainimage variable contains the string ‘mpu’ then the rights “i” will show up.</p>
+
+<p>For thumbnails, once you understand the main image logic, the thumbnails are basically just an interative presentation of the same logic.  Bootstrap will auto-hide the 4th and even 3rd thumbnails based on window width; see line 69:</p>
+
+<pre><code>&lt;div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}"&gt;
+</code></pre>
+
+<p>(I will probably change this to use the array index rather than an explicit counter variable.  Remember array indexes start counting at 0.)</p>
+
+<p>After the images, the content section is a set of if statements determining what content is present and placing it appropriately.  Many elements are sorted, but some are partially sorted (eg when More CPL Resources are present, Finding Aids will always appear at the top of the list, and and the list after that will be alphabetized; the FAs themselves will be alphabetized as well).</p>
+
+<p>Additionally there are minor language tweaks depending on what the collection is; for example, in the Civil War category page, there is language appended to the Sang Collection Finding Aid description to clarify that some of the Sang content is from the CW era.  (if page.title contains “Civil War” and findingaid.title contains “Sang”, then add “blah blah blah”.)</p>
+
+<h5 id="layoutsdatahtml">_layouts/data.html</h5>
+
+<p>Because the two data pages handle their databases so differently, this page is just a header/footer frame (no sidebar or blogs/events).</p>
+
+<h5 id="includes">_includes</h5>
+
+<p>The _includes folder contains html files that are expected to be included into full html pages, so these are all partial (no html header, no outer tags, etc).</p>
+
+<h5 id="includesblogshtml">_includes/blogs.html</h5>
+
+<p>The blogs and events are finally handled in JavaScript.</p>
+
+<p>The jqxhrBlogs() function uses an AJAX call to get the blog RSS.  In development, it’s important to have the CORS-anywhere url added to the beginning of the URL (“https://cors-anywhere.herokuapp.com/”), but it should be taken out before uploading to the ContentDM custom pages.  It then calls the blogerizer() function, which inserts the blog content into the HTML template, on each entry in the RSS until the returned html array has 3 entries (length of 2, because arrays start counting at 0).</p>
+
+<p>Events are handled the same way, but with 5 of them (length = 4) instead of 3.</p>
+
+<p>If the AJAX call receives an error message or otherwise fails to get the RSS, the error message will be printed to the console.</p>
+
+<h5 id="includescaahtml">_includes/caa.html</h5>
+
+<p>See separate guide for CAA and City Officials.</p>
+
+<h5 id="includescardshtml">_includes/cards.html</h5>
+
+<p>Collections that should have a card drawn have a number value in their ‘flag’ key, which is the order in which they will be sorted.  One could easily implement a _data solution to put the card orders in one file (see _data/cardflags.yml), but the collections already had their  flags in their data, so this implementation was simpler.</p>
+
+<p>The cards use the core Bootstrap ‘card’ class css.  Images are handled the same way as “main images” except with slightly different key/value pairs, and no lightbox.  Again, we look at the image path for the string ‘mpu’ to determine whther to add the rights ‘i’.  Slightly interestingly, if the category value is an array, we iterate over the array; otherwise, we just spit out the one. It might seem logical to make all categories arrays and just iterate once, but it’s slightly less complex this way, because the category presentation requires a pipe between items on the list (which is actually a css border, to match Bibliocommons).  Then it’s just collection title and “textshort”.</p>
+
+<h5 id="includescityofficialshtml">_includes/cityofficials.html</h5>
+
+<p>See separate guide for CAA and City Officials.</p>
+
+<h5 id="includeseventshtml">_includes/events.html</h5>
+
+<p>See _includes/blogs.html</p>
+
+<h5 id="includesfooterhtml">_includes/footer.html</h5>
+
+<p>The footer html is pretty straightforward.  It uses Font Awesome for the social media icons (matching Bibliocommons, who appears to use the same icons, but doesn’t credit FA, maybe a unique license?)  The sections of the footer should stack as the browser window shrinks, using Bootstrap responsive classes.</p>
+
+<h5 id="includesheaderhtml">_includes/header.html</h5>
+
+<p>The header is a bit more complex.  It includes a few javascript/jquery elements:</p>
+
+<p>Show/Hide the search input
+Activate the search
+Browse Dropdown
+Hotkeys
+Responsive…responses.</p>
+
+<h6 id="showhide-the-search-input">Show/Hide the search input:</h6>
+
+<p>Pretty simply, if you click on the search area, the input form appears.  When the window is “lg” or larger (width &gt;= 970), it remains in the header.  Like in Bibliocommons, there’s no way to close/hide it.  in “md” or smaller (width &lt; 970), clicking the search div drops an input form.  On content pages, both include a selection to limit your search to that page’s content, or all content.  This should not appear on the index, about, all, takedown, etc, pages.</p>
+
+<h6 id="activate-the-search">Activate the search:</h6>
+
+<p>Takes the search input (if length &gt; 0) and appends it to the search results string in contentdm.  When you search in contentDM, the url pattern is either:</p>
+
+<pre><code>http://digital.chipublib.org/digital/search/collection/[COLLECTION]/searchterm/[SEARCHINPUT]/field/all/mode/all/conn/all/order/nosort/ad/asc
+</code></pre>
+
+<p>or</p>
+
+<pre><code>http://digital.chipublib.org/digital/search/searchterm/[SEARCHINPUT]
+</code></pre>
+
+<p>so the function simply inserts the user’s input into those structures.  The former searches one or many collections (collection strings delimited with !, eg mpu!ChicagoParks, similar to the Browse button of the content pages), the latter searches all content.</p>
+
+<h6 id="browse-dropdown">Browse Dropdown:</h6>
+
+<p>Drops the Browse menu on click.  The Bibliocommons version disappears when you click off of the menu; I prefered to make it disappear when you click on the menu, but not on a link.</p>
+
+<p>This becomes a modal menu under 970px, like in bibliocommons.</p>
+
+<h6 id="hotkeys">Hotkeys:</h6>
+
+<p>There are event listeners for:
+    Pressing enter when the search div is focused
+        Expands the search input, calls the show/hide function
+        (Used for a11y)
+    Pressing enter when the search input field is focused
+        Activates the search 
+    Pressing escape when the Browse menu is visible 
+        Hides the browse menu</p>
+
+<h6 id="responsive-elements">Responsive elements:</h6>
+
+<p>Normal responsive elements are used: under a certain size, the CPL logo changes and the browse/events buttons change, matching Bibliocommons.  These use Bootstrap’s responsive classes (eg hidden-md-down). In addition to these Bootstrap responses, there are javascript listeners for window resizing.</p>
+
+<p>When a user resizes the window and crosses the 970px threshold, the browse dropdown will hide, and the search inputs, when visible, will hide again.  (The modal version of the browse menu is not responsive; it seemed too disorienting when it disappeared on resize.  This is in line with Bibliocommons.)</p>
+
+<h5 id="includeslibrarieshtml">_includes/libraries.html</h5>
+
+<p>The libraries file just adds the external libraries and frameworks that we use, including our own CSS and js files.</p>
+
+<h5 id="includessidebarhtml">_includes/sidebar.html</h5>
+
+<p>The sidebar has a couple of important functions.  The show/hide buttons are pretty straightforward, but there are also two types of sidebars, the collapsable one that can be seen on the home page, and the fixed one that can be seen on the landing pages.  However, when the page width gets to a certain breakpoint (970px), the fixed sidebar becomes collapsable.  This is handled in the switchLayoutF() and switchLayoutC() functions.  It is important to recognize that in the fixed layout, the sidebar is a part of the main frame (the bootstrap container); the collapsable sidebar is outside of the main frame.  The result is the entire sidebar has to be removed (.detach()) and placed somewhere else in the DOM, rather than just changing some of its CSS.</p>
+
+<p>The lists of subjects and locations are automagically created by iterating over the posts (see <a href="#posts">_posts</a>/ section).  This was initially done because of how it was handled in the PHP version, but given how infrequently subjects and locations will be added, it’s probably just as good to remove that complexity and make a standard HTML list.</p>
+
+<h4 id="posts">_posts/</h4>
+
+<p>This folder contains the landing pages.</p>
+
+<p>Jekyll is primarily used for blogs, so the easiest way to give it content is to pretend they’re blog posts.  (It can also be done with arrays in the _data folder, but it’s much more time consuming and provides no benefit other than conceptual cleanliness.)</p>
+
+<p>Each subject, location, colletion, and subcollection gets a file here.</p>
+
+<p>The formatting of these files is very specific; new lines and tabs are vital to how Jekyll processes the data, so if things don’t appear as expected, check that first.</p>
+
+<p>Also note that the date field and the date in the filename are required by Jekyll; they aren’t used in any way, but they need to be real dates.  They don’t have to be accurate, just real.</p>
+
+<p>Each piece of these files is used in the content page, so see the _layouts/content.html section for details.</p>
+
+<h4 id="sass-sassmainscss">_sass/, _sass/main.scss</h4>
+
+<p>Jekyll uses a Sass processor to handle CSS by default.  Sass simply extends the capabilities of CSS, enabling, for example, nesting, so, instead of:</p>
+
+<pre><code>.big-box {
+    background-color: blue;
+}
+.big-box &gt; .little-box {
+    background-color: orange;
+}
+</code></pre>
+
+<p>You can write:</p>
+
+<pre><code>.big-box {
+    background-color: blue;
+    .little-box {
+        background-color: orange;
+    }
+}
+</code></pre>
+
+<p>Given that all of the CSS was already written for the PHP version, which didn’t use Sass, Sass features aren’t actually used at all.</p>
+
+<h4 id="site">_site/</h4>
+
+<p>When you “build” a jekyll site, all of the layouts and included content are processed and straightforward .html, .css, and .js files are created.  _site/ is where that content will go.  When you make changes, and run ‘jekyll build’, and upload the output to the ContentDM custom pages, these files are the ones to upload.</p>
+
+<p>All of these files will be overwritten, so don’t bother to make changes to them.</p>
+
+<p>One note: when you upload the content, ContentDM does not understand tree structures in an upload, so you have to upload all of the HTML files first (the files in /site_), and then, in ContentDM, you have to navigate to assets/js/ and upload the contents of _site/assets/js/ there, then assets/css/ &amp; _site/assets/css, etc.  All files have to be uploaded to the correct folder.</p>
+
+<h4 id="sass-cache">.sass-cache/</h4>
+
+<p>This is for the sass processing.  Ignore/don’t touch.</p>
+
+<h4 id="assets">assets/</h4>
+
+<p>All collateral content is stored here.</p>
+
+<h5 id="assetscss">_assets/css/</h5>
+
+<p>The simpleLightbox that handles the images on the landing pages came with css; that file is here.  No need to mess with it unless you’re updating simpleLightbox.</p>
+
+<p>It’s also the location of the core .scss file, which simply tells Jekyll &amp; Sass what to process.</p>
+
+<h5 id="assetsimages">_assets/images/</h5>
+
+<p>Several images that we use aren’t actually in ContentDM; they’re here.  You shouldn’t have any trouble undertanding what they are by looking at them.</p>
+
+<p>The aldermen images are also here, in the Officials folder.</p>
+
+<h5 id="assetsjs">_assets/js/</h5>
+
+<p>This is where our javascript files are located.</p>
+
+<p><em>aldermen-db.js</em> &amp; <em>caa-db.js</em> are simply the data, not the actual functions that are used in the pages.  When updating the data via excel export, this is where those files should be placed.</p>
+
+<p><em>content.js</em> was recently split from cpldc.js to prevent large, heavyweight functions being called unnecessarily.  (The blogs and events were the main problem; you don’t need to go and get a 10,000 line events rss file when you aren’t using it, like on the home page or the city officials page.)</p>
+
+<p><em>cpldc.js</em> is the primary js file; almost all functions are here.  The code is explained in comments in the file, so there’s no need to go through it here.</p>
+
+<p><em>simpleLightbox.js</em> is worth mentioning because it’s been modified.  In line 286, we’ve added</p>
+
+<pre><code>onload="rightsInsertion(this)" 
+</code></pre>
+
+<p>which adds the little (i) on the MPU images in the lightbox.  These will probably be removed, however, because the event listeners for the image load have to be refreshed every time the user clicks, and this is expensive and complex behavior that’s offers information that’s redundant.  The rights (i) appears on the image before it’s opened in the lightbox, which is adequate.</p>
+
+<h4 id="configyml">/_config.yml</h4>
+
+<p>This is the core config file for Jekyll.  While there are a number of minor options, the most important aspect is the ‘baseurl’ which is the string that needs to be in every link.  While the field is called baseurl, it’s really the appended part of the url, so the url is actually:</p>
+
+<pre><code>url/baseurl
+</code></pre>
+
+<h4 id="aboutmd-allmd-caamd-etc">/_about.md, all.md, caa.md, etc</h4>
+
+<p>All the *.md files at the top level are the files which indicate what should be built.  Each unique page should have one. As you will see from looking at them, some are very simple pages; their core content is elsewhere.  Others have their content written in markdown in the file.</p>
+
+<p>Jekyll will, by default, process all *.md files in the root directory, so any new, unique pages you would like to add should be handled that way.  New collections, subjects, locations, etc, should be treated like the others, in the <a href="#posts">_posts</a>/ folder.</p>
+
+<h4 id="gemfile-gemfilelock">/Gemfile, /Gemfile.lock</h4>
+
+<p>These are ruby system files, no need to mess with them.</p>
+
+<h4 id="bl-ev-scriptphp">/bl-ev-script.php</h4>
+
+<p>This was a php file used to convert the php arrays into markdown and json.  Kept for historical purposes, and potential reuse.</p>
+
+<h1 id="page-data">Page Data</h1>
+
+<p>Here is the structure and meaning of the data fields in the landing page “post” files (found in <a href="#posts">_posts</a>/ folder).</p>
+
+<pre><code>date: self explanatory.  
+
+layout: which page layout (found in the  [_layouts](#layouts)/ folder) should be used for the page.  Generally for new landing pages, this should be 'content'.
+
+link: the slug the collection.  Generally the same as the 'coll' value, but can be anything, as long as it doesn't contain spaces or special characters.
+
+coll: the code for the landing page and collection.  It's used to locate the images in CDM, so it must be identical to the CDM code.
+
+flag: this is the flag indicating whether a page should have a card on the home page, and, if so, which order it should be.
+
+sidebartype: whether the sidebar shold collapse or not.  If 'fixed', the sidebar will still collapse on small screens.
+
+contenttype: collections, subjects, locations, etc
+
+title: the full version of the title; will be at the top of the landing page.
+
+type: collection, subject, location, subcollection
+
+sortname: the version of the title that should be used for alphabeticized pages, ie, the "a-z collections" page.  Invert people's names.
+
+cardpic: this is an array that contains the data for the card image.
+    pic: the url of the image.  This is an eplicit url, unlike the landing page images, because, often enough, these images don't come from our collections, but are cropped versions stored in the jekyll content folders ([assets/images](#assets-images)).
+    pich: the height of the image.  
+    size: the size of the image.  This is not how large the frame of the image will be, but rather how much/to what dimensions the image will be scaled, so, 100% is 100% of the image's natural size; 200% will scale the image 2x.  The image will still be contained by the card's normal width, as well as the height, given above.  It specifically refers to the 'background-size' css property.
+    pos: positioning of the image.  This can be done in pixels or percentages, and represents the location of the pixel that will be at the center of the card.  50% is the center; 0% 0% is top left.  It specifically refers to the 'background-position' css property.
+    alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+
+mainimage: the main image of the landing page.
+    url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
+    text: this is the text that will appear in the lightbox when the image is selected.
+    size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
+    align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
+    alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+
+thumbs: the thumbnails on the landing pages.  There should be at least 3, and not more than 4.  Each needs a section in the array, but we will only detail one instance of it.  (The arrays are handled identically to the mainimage.)
+    url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
+    text: this is the text that will appear in the lightbox when the image is selected.
+    size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
+    align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
+    alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+
+category: each category in which the collection is contained should have their codes listed here.  It should be a duplicate of the categoryFull, below, but the code, rather than the full name.
+- each
+- line
+- should
+- have
+- one
+- category
+
+categoryFull: unfortunately, accessing the full category name from the category code is overly complex, it is simpler to repeat them.
+- These Should Be
+- Title Case Versions
+- of the Category Names
+- Spaces Are Ok
+
+textshort: This is the text on the card.
+
+textlong: This is the text above the main image on the landing page.
+
+textrich: this is the text below the images on the landing pages.  It should contain links to filtered searches and should be written by a collection SME.  This should contain html.  (Markdown can probably be used, but I haven't tried it, since this was all taken from the php version.)
+
+highlights: rarely used (only on mpu?).  this is a section below the rich text intended to provide a simple 'highlights' link.  Like many of these sections, this is a description list, so it is made up of a 'dl' &gt; 'dt' + 'dd' sctructure, with a link on the 'dt'.
+- a: the link
+dt: the title of the section
+dd: the detail of the section
+
+findingaid: the link to the finding aid(s).  There can be many, in the case of collections which contain several archival collections (eg rhwc, ahs).  The finding aid gets standard text which is altered on a case-by-case basis in the content.html layout page.
+- link: url of the finding aid
+text: the text that will go in the anchor tag
+
+CPLRes: This contains the "more CPL resources" content - resources which are within cPL but not within the digital collections. Like many of these sections, this is a description list, so it is made up of a 'dl' &gt; 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
+- a: the link
+dt: the title of the section
+dd: the detail of the section
+
+ExRes: the "External Resources" section.  Resources from outside CPL.  Like many of these sections, this is a description list, so it is made up of a 'dl' &gt; 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
+- a: the link
+dt: the title of the section
+dd: the detail of the section
+
+rights: This is the rights statement that appears at the bottom of the landing page. It is currently only in use on the Millennium Park page.
+
+rights2: This is the rights statement that appears when you click on the 'i' on images (at this point, only on Millennium Park content)
+
+location: this is the array that contains information about location of the archival collection.  It is only used for the landing page sentence about the collection's meatspace location.  In the collections that existed in the php version of the site, these arrays were expanded to include all data from the location landing page arrays during the conversion to jekyll. That extra content is not necessary.  All that's needed is title.
+    title: the full name of the location, title case, spaces ok.
+
+homeloc: the jekyll slug/code for the location.  This value is used to create the list of digital collections at the location's landing page.
+</code></pre>

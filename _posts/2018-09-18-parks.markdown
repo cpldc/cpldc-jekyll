@@ -54,8 +54,8 @@ mainimage:
   url: '3708'
   coll: ChicagoParks
   text: Hula hooping in Horner Park, 1971
-  size: 110%
-  align: center
+  size: '470,'
+  align: '333,444,5724,4371'
   alt: A boy spins two large hoola hoops, one around each wrist, in Horner Park. Several
     children, one a girl on a bicycle, look on.
 thumbs:

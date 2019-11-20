@@ -1,306 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
-
-    <title>{{ page.title }} | Digital Collections | Chicago Public Library</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+        <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+    
+    <title>Digital Collections | Chicago Public Library</title>
     {% include libraries.html %}
 
-    <script src="assets/js/content.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 </head>
-<body class="{{ page.contenttype }}">
-    {% if page.mainimage.coll %}
-        {% assign coll = page.mainimage.coll %}
-    {% else %}
-        {% assign coll = page.coll %}
-    {% endif %}
-    {% if page.mainimage.url contains '.jpg' %}
-        {% assign mainimage = 'assets/images/' | append: page.mainimage.url %}
-        {% assign mainimageUrl = page.mainimage.coll %}
-    {% else %}
-        {% assign mainimage = 'http://digital.chipublib.org/digital/api/singleitem/image/' | append: coll | append: '/' | append: page.mainimage.url | append: '/default.jpg' %}
-        {% assign mainimageUrl = 'https://cdm16818.contentdm.oclc.org/digital/collection/' | append: coll | append: '/id/' | append: page.mainimage.url %}
-    {% endif %}
-    {% assign sortedPosts = site.posts | sort: 'sortname' %}
-    {% if page.type == 'collection' %}
-        {% assign allColls = page.coll %}
-    {% elsif page.type == 'category' or page.type == 'location' %}
-        {% for item in site.posts %}
-            {% if item.category contains page.slug %}
-                {% if allColls %}
-                    {% capture allColls %}{{allColls}}!{{item.coll}}{%endcapture%}
-                {% else %}
-                    {% assign allColls = item.coll %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    {% if page.type == 'collection' %}
-        {% if page.slug == 'rhwc' or page.slug == 'chiren' %}
-            {% capture locationLine %}Photographs in the {{page.title}} exhibit are housed in the {{page.location.longname}}.{% endcapture %}
-        {% elsif page.slug == 'examiner' %}
-            {% capture locationLine %}The {{ page.title }} is housed in the {{ page.location.longname }}; microfilm is available in the Newspapers Department at Harold Washington Library Center.{% endcapture %}
-        {% elsif page.slug == 'woop' %}
-            {% capture locationLine %}The {{page.title}} are housed in the {{page.location.longname}}.{% endcapture %}
-        {% elsif page.slug == 'wha' or page.slug == 'theater' %}
-            {% capture locationLine %}Artifacts from the {{page.creditname}} are housed in the {{page.location.longname}}.{% endcapture %}
-        {% elsif page.slug == 'hdg' %}
-            {% capture locationLine %}This collection is housed in the {{ page.location.longname }}.  Additional materials by Henry Delorval Green are held at the Chicago History Museum.{% endcapture %}
-        {% elsif page.slug == 'chicagoparks' %}
-            {% capture locationLine %}The {{page.title}} collection is housed in the {{ page.location.longname }}.{% endcapture %}
-        {% else %}
-            {% capture locationLine %}The {{page.title}} is housed in the {{page.location.longname}}.{% endcapture %}
-        {% endif %}
-    {% endif %}
+<body>
     {% include header.html %}
-    <main id="sidebar-c-target">
-        <div class="container fixed main-container">
-            <div class="row" id="sidebar-f-target">
-                {% include sidebar.html %}
-                <div id="content" class="content main-content col-xl-6 col-lg-8 col-12">
-                    <h1 class="page-title">{{ page.title }}</h1>
-                    <section class="intro">
-                        <div class="prosecontent">{{ page.textlong }}</div>
-                    </section>
-                    <section class="images">
-                        <div class="container-fluid lightbox imageGallery">
-                            <div class="row">
-                                <div class="col justify-content-center lightbox-mainimage">
-                                    <a href="{{ mainimage }}" title="<a href={{ mainimageUrl }}>{{ page.mainimage.text }}</a>" data-alt="{{ page.mainimage.alt }}" class="loading">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ page.mainimage.alt }}" style="background-image: url({{ mainimage }}); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ page.mainimage.size }}; background-position: {{ page.mainimage.align }}" />
-                                    </a>
-                                    {% if mainimage contains 'mpu' %}
-                                        <i class="rights-i rights-i-main fa fa-info-circle"></i>
-                                        <div class="rights-overlay rights-overlay-main">
-                                            <div class="rights-guts">
-                                                <span class="rights-statement">
-                                                    {% assign mpu = site.posts | where:'coll', 'mpu' | first %}
-                                                    {{ mpu.rights2 }}
-                                                </span>
-                                            </div>
-                                            <div class="rights-close">
-                                                <i class="rights-close-icon fa fa-times"></i>
-                                            </div>
-                                        </div>
-                                        {% endif %}
-                                </div>
-                            </div>
-                            {% if page.slug == 'mrc' %}{% elsif page.link == 'takedown' %}{% else %}
-                            <div class="row lightbox-thumbs justify-content-center">
-                                {% assign counter = 1 %}
-                                {% for thumb in page.thumbs %}
-                                    {% if thumb.coll %}
-                                        {% assign coll = thumb.coll %}
-                                    {% else %}
-                                        {% assign coll = page.coll %}
-                                    {% endif %}
-                                        <div class="col{% if counter == 3 %} hidden-sm-down{% endif %}{% if counter == 4 %} hidden-xs-down{% endif %}">
-                                            <a href="https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg" title="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ coll }}/id/{{ thumb.url }}>{{ thumb.text }}</a>" data-alt="{{ thumb.alt }}" class="loading">
-                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ thumb.alt }}" style="background-image: url('https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/{{ coll }}/{{ thumb.url }}/default.jpg'); background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: {{ thumb.size }}; background-position: {{ thumb.align }}" />
-                                            </a>
-                                        </div>
-                                    {% assign counter = counter | plus:1 %}
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-                        </div>
-                        <script>
-                            $('.imageGallery a').simpleLightbox();
-                        </script>
-                    </section>
-                    <section class="prosecontent" id="mainTextContent">
-                        {% if page.slug == 'mrc' %}{% elsif page.link == 'takedown' %}{% else %}
-                        <div class="center-button browseall" id="browseButton">
-                            <a href="http://digital.chipublib.org/digital/search/collection/{{ allColls }}/order/title/ad/asc" id="allButton" class="btn btn-primary">
-                                Browse All
-                            </a>
-                        </div>
-                        {% endif %}
-                        <div class="prosecontent" id="textAndLists">
-                            {% if page.textrich %}
-                                <div class="textblock">
-                                    <p>{{ page.textrich }}</p>
-                                    <p>{{ locationLine }}</p>
-                                    {% if page.title == 'Chicago Theater' %}
-                                        <h4 class='viewer-title'>New Image Viewer</h4>
-                                        <p>We're using the Chicago theater collections to showcase the Mirador image viewer, which has a number of new features we think you'll enjoy.</p>
-                                        <p>Please <a href="mailto:webmaster@chipublib.org">let us know</a> if you have any feedback on this new interface.</p>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            {% if page.highlights %}
-                                <div class="textblock{% if page.textrich %} {% else %} topborder{% endif %}">
-                                    {% if page.textrich %}{% else %}<h3>Collection Highlights</h3>{% endif %}
-                                    <dl>
-                                        {% for highlight in page.highlights %}
-                                            <dt>
-                                                <a href="{{ highlight.a }}">
-                                                        {{ highlight.dt }}
-                                                </a>
-                                            </dt>
-                                            <dd>
-                                                    {{ highlight.dd }}
-                                            </dd>
-                                        {% endfor %}
-                                    </dl>
-                                </div>
-                            {% endif %}
-                            {% if page.subcollections or page.type == 'category' or page.type == 'location' %}
-                                <div class="textblock">
-                                    <h3>Digital Collections</h3>
-                                    {% if page.slug == 'mrc' %}
-                                        <span>Digital collections from the Municipal Reference Collection are forthcoming.</span><p></p>
-                                    {% else %}
-                                    {% if page.type == 'location'  %}
-                                        {% assign sourceColl = 'from the ' | append: page.longname %}
-                                    {% elsif  page.subcollections  %}
-                                        {% assign sourceColl = 'from the ' | append: page.title | append: ' Collection' %}
-                                        {% endif %}
-                                    <span>Collections {{ page.catcoll }}  {{ sourceColl }} include:</span>
-                                    <dl>
-                                        {% if page.subcollections %}
-                                            {% for subcoll in page.subcollections %}
-                                                <dt><a href="{{ subcoll.browse }}">{{ subcoll.title }}</a></dt>
-                                                <dd>{{ subcoll.textshort }}</dd>
-                                            {% endfor %}
-                                        {% endif %}
-                                        {% for subcoll in sortedPosts %}
-                                            {% if page.type == 'category' and subcoll.category contains page.slug %}
-                                                <dt><a href="{{ subcoll.url | prepend:site.baseurl }}">{{ subcoll.title }}</a></dt>
-                                                <dd>
-                                                    {{ subcoll.textshort }}
-                                                    {% if subcoll.link == 'rvw' and page.slug == 'libed' %}
-                                                        This collection contains images of high schools in the neighborhoods.
-                                                    {% endif %}
-                                                    {% if subcoll.slug == 'p16818coll6' and page.slug == 'civilwar'%}
-                                                        A number of documents in the collection were created during the Civil War.
-                                                    {% endif %}
-                                                </dd>
-                                            {% elsif page.type == 'location' and subcoll.homeloc == page.shortname %}
-                                                <dt><a href="{{ subcoll.url | prepend:site.baseurl }}">{{ subcoll.title }}</a></dt>
-                                                <dd>
-                                                    {{ subcoll.textshort }}
-                                                </dd>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </dl>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            {% if page.CPLRes %}
-                                <div class="textblock">
-                                    <h3>More CPL Resources</h3>
-                                    <dl>
-                                        {% if page.findingaid %}
-                                            <dt>Finding Aids</dt>
-                                            <dd>
-                                                {% if page.link == 'rhwc' %}
-                                                    Chicago Public Library also holds extensive physical collections about Harold Washington, including his mayoral, congressional and state legislative years. Sample finding aids below.
-                                                {% else %}
-                                                    The descriptive inventories for other related archival collections.
-                                                {% endif %}
-                                            </dd>
-                                            <ul>
-                                                {% assign sortedFas = page.findingaid | sort: 'text' %}
-                                                {% for fa in sortedFas %}
-                                                    <li><a href="{{ fa.link }}">{{ fa.text }}</a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        {% endif %}
-                                        {% assign sortedCplres = page.CPLRes | sort: 'dt' %}
-                                        {% for listitem in page.CPLRes %}
-                                            <dt><a href="{{ listitem.a }}">{{ listitem.dt }}</a></dt>
-                                            <dd>{{ listitem.dd }}</dd>
-                                        {% endfor %}
-                                    </dl>
-                                </div>
-                            {% elsif page.findingaid %}
-                                <div class="textblock">
-                                    {% if page.findingaid.first %}
-                                        <h3>Finding Aids</h3>
-                                        <p>The descriptive inventories for their physical collections.</p>
-                                        <ul>
-                                            {% assign sortedFas = page.findingaid | sort: 'text' %}
-                                            {% for fa in sortedFas %}
-                                                <li><a href="{{ fa.link }}">{{ fa.text }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% else %}
-                                        <h3>Finding Aid</h3>
-                                        <dl>
-                                            <dt><a href="{{ page.findingaid.link }}">{{ page.findingaid.text }}</a></dt>
-                                            <dd>The descriptive inventory for the complete physical collection.</dd>
-                                        </dl>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            {% if page.ExRes %}
-                                <div class="textblock">
-                                    <h3>External Resources</h3>
-                                    <dl>
-                                        {% assign sortedLis = page.ExRes | sort: 'dt' %}
-                                        {% for listitem in sortedLis %}
-                                            <dt><a href="{{ listitem.a }}">{{ listitem.dt }}</a></dt>
-                                            <dd>{{ listitem.dd }}</dd>
-                                        {% endfor %}
-                                    </dl>
-                                </div>
-                            {% endif %}
-                            {% if page.rights %}
-                                <div class="textblock" aria-label="Additional Copyright Information">
-                                    <span class="rights">
-                                        {{ page.rights }}
-                                    </span>
-                                </div>
-                            {% endif %}
-                            {% if page.type == 'location' %}
-                                <div class="textblock" aria-label="Location"><dl>
-                                    <dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
-                                    <dd class="contact-list-item">Phone: {{ page.locphone }}</dd>
-                                    <dd class="contact-list-item">
-                                        <a href="mailto:{{ page.locemail }}">{{ page.locemail }}</a>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            {% endif %}
-                        </div>
-                    </section>
-                </div>
-                <div class="hidden-lg-down col-lg-3 right-sidebar">
-                    <div class="content blogs">
-                        <div class="blogs-title">
-                            <h2>Chicago History Blog</h2>
-                        </div>
-                        <aside id="bcBlogs">
-                        </aside>
-                        <div class="blogs-viewmore">
-                            <a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">
-                                View More 
-                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content events">
-                        <div class="events-title">
-                            <h2>History &amp; Genealogy Events</h2>
-                        </div>
-                        <aside id="bcEvents">
-                        </aside>
-                        <div class="events-viewmore">
-                            <a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">
-                                View More 
-                                <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <main class="no-fixed" id="sidebar-c-target">
+        {% include sidebar.html %}
+        <div class="main-container">
+            <div id="content" class="grid">
+                {% include cards.html %}
             </div>
         </div>
     </main>
-{% include footer.html %}
+    {% include footer.html %}
+    <script>
+        var $grid = $('.grid').masonry({
+            gutter: 15,
+            itemSelector: '.card',
+            fitWidth: true
+        });
+        // allows slow load times to not destroy the card layout; requires imagesloaded.pkgd.min.js; also makes cards flow when changing positions on resize
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
+    </script>
 </body>
 </html>

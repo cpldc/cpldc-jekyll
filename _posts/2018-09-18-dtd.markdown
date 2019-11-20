@@ -39,8 +39,8 @@ CPLRes:
 mainimage:
   url: '167'
   text: 103rd and Rockwell Streets, inspecting tile, 1936
-  size: ''
-  align: center
+  size: '470,'
+  align: '50,150,1628,832'
   alt: Two men peer into a section of large concrete pipe.  Two more men stand inside
     the section of pipe.
 thumbs:

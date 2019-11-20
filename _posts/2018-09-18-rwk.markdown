@@ -44,8 +44,8 @@ ExRes:
 mainimage:
   url: '414'
   text: 47th and 48th Ward cleanup on Clark Street, 1988
-  size: 150%
-  align: 50% 30%
+  size: '470,'
+  align: '300,350,2300,1800'
   alt: The front of a two-story duplex viewed from the street.  Two people sit at
     the entrance to one of the homes.
 thumbs:

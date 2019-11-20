@@ -51,8 +51,8 @@ CPLRes:
 mainimage:
   url: '1'
   text: Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944
-  size: 110%
-  align: 50% 0
+  size: full
+  align: '0,0,420,333'
   alt: Horace Cayton shows three paintings to two women. One of the paintings is Charles
     Sebree's &ldquo;Blue Boy.&rdquo;
 thumbs:

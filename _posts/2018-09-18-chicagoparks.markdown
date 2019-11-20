@@ -10,14 +10,14 @@ sortname: 'Chicago Park District Records: Photographs'
 cardpic:
   pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg
   pich: 250px
-  size: 250%
+  size: 470,
   pos: 87% 47%
 mainimage:
   url: '6155'
   text: Mayor Richard J. Daley and Dr. Paul White, Ogden Park, opening of bicycle
     program, 1956
-  size: 125%
-  align: 66% 50%
+  size: '470,'
+  align: '700,1000,5200,3200'
   alt: Two men in suits ride a tandem bicycle together on an outdoor track; another
     man stands with onlookers takes a photograph.
 thumbs:

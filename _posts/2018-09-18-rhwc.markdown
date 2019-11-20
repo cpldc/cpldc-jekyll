@@ -58,18 +58,16 @@ findingaid:
   text: Pre-Mayoral Photograph Collection Finding Aid
 mainimage:
   url: '73'
-  text: Mayor Washington addresses the International Circulation Managers Association,
-    1987
-  size: 130%
-  align: 80% 0
+  text: Mayor Washington addresses the International Circulation Managers Association, 1987
+  size: '470,'
+  align: '240,0,1706,1333'
   alt: Mayor Washington smiles and waves from podium.
 thumbs:
 - url: '72'
   text: Mayor Washington reads to Dominik Przekota and class, 1986
   size: 300%
   align: 0 20%
-  alt: Mayor Washington sits with book in front of a group of children in a library.
-    One boy stands at front, video cameraman stands at back.
+  alt: Mayor Washington sits with book in front of a group of children in a library. One boy stands at front, video cameraman stands at back.
 - url: '64'
   text: Mayor Washington at the KOCO groundbreaking ceremony, 1987
   size: ''

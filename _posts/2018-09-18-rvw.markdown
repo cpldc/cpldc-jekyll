@@ -47,8 +47,8 @@ ExRes:
 mainimage:
   url: '421'
   text: Lincoln &amp; Montrose Avenues, 1910
-  size: 110%
-  align: 50% 50%
+  size: '470,'
+  align: '0,0,2845,2262'
   alt: A man and woman sit on a bench facing the intersection of Lincoln and Montrose
     Avenues.  Retail businesses occupy the two- and three-story buildings on those
     streets.

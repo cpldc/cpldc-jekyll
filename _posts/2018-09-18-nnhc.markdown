@@ -17,8 +17,8 @@ mainimage:
   url: '1182'
   coll: rwk
   text: Lincoln Square, 4700 N. Lincoln Ave., 2002
-  size: 125%
-  align: 50% 50%
+  size: '470,'
+  align: '91,222,2766,1869'
 thumbs:
 - url: '902'
   coll: ahs

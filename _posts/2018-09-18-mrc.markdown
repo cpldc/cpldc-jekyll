@@ -12,8 +12,7 @@ sidebarname: Municipal Reference Collection
 pic: ''
 mainimage:
   url: Freight-Tunnel-Map.jpg
-  text: "<a>1932 Freight Tunnel Map from the Journal of Proceedings of the City Council
-    of the City of Chicago</a>"
+  text: "1932 Freight Tunnel Map from the Journal of Proceedings of the City Council of the City of Chicago"
   size: cover
   align: center
 textshort: at Harold Washington Library Center

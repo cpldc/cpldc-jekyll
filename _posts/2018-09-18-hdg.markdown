@@ -38,8 +38,8 @@ CPLRes:
 mainimage:
   url: '6'
   text: American Legion/Albany Park Post 24, undated
-  size: 110%
-  align: center
+  size: '470,'
+  align: '50,50,2889,2265'
   alt: Young men in baseball uniforms posed for a team picture in three rows. Three
     men also pictured seated with the team are not in uniform. Some of the team members
     in the front row are holding baseball bats. There are trees and a fieldhouse pictures

@@ -15,8 +15,8 @@ cardpic:
 mainimage:
   url: '24'
   text: Christian Fellowship Church, picnic at Schiller Park woods, 1930
-  size: 125%
-  align: 80% 40%
+  size: '470,'
+  align: '200,200,1015,600'
   alt: Members of the Christian Fellowship Church stand in a circle holding hands
     in Schiller Park.
 thumbs:

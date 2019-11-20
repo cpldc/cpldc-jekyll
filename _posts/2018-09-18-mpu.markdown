@@ -55,8 +55,8 @@ rights2: Courtesy of U.S. Equities Realty and the men and women who built Millen
 mainimage:
   url: '1297'
   text: Millennium Monument at Wrigley Square, circa 2003
-  size: 110%
-  align: center
+  size: '470,'
+  align: '0,0,2100,1498'
   alt: Stone marker with the words Millennium Park is in the foreground and the stone
     peristyle, Millennium Monument, is in the background. It is a winter scene with
     snow.
