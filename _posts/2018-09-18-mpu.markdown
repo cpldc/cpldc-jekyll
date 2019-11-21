@@ -63,28 +63,29 @@ mainimage:
 thumbs:
 - url: '1543'
   text: Cloud Gate, omphalos, 2004
-  size: 140%
-  align: 40% 50%
+  size: '200,'
+  # align: '386,0,822,1208'
+  align: '469,0,723,723'
   alt: Cloud Gate, also known as The Bean, is under construction outside on the park
     plaza, with steel plates being attached. A single white skyscraper is visible
     in the background.
 - url: '4390'
   text: Crown Fountain, gargoyle spray, 2004
-  size: 140%
-  align: 40% 60%
+  size: '200,'
+  align: '210,350,450,450'
   alt: Five children, dressed in shorts or summer clothes, huddle together under a
     spray of water from the lips of a woman in a video projected on Crown Fountain.
 - url: '4781'
   text: Jay Pritzker Pavilion, headdress, 2004
-  size: 160%
-  align: 70% 0
+  size: '200,'
+  align: '650,0,800,800'
   alt: " A view of the underside of the undulating ribbons on the headdress of Jay
     Prizker Pavillion, under construction in the park. A worker’s yellow hard hat
     is visible between the folds of steel."
 - url: '4662'
   text: Jay Pritzker Pavilion, structural steel for the headdress, 2003
-  size: ''
-  align: center
+  size: '200,'
+  align: '400,150,1400,1400'
   alt: Looking north toward the Jay Prizker Pavilion where the structural steel for
     the headdress is being installed. Construction equipment and a truck are in the
     foreground and tall buildings are in the background.

@@ -22,26 +22,26 @@ mainimage:
 thumbs:
 - url: '396'
   text: Members of the Girls&rsquo; Patriotic Service League at Portage Park, 1919
-  size: 450px
-  align: 17% 27%
+  size: '200,'
+  align: '425,250,375,375'
   alt: Five members of the Girls' Patriotic Service League in old-fashioned bathing
     costumes stand in a shallow pool of water.
 - url: '61'
   text: Mayor Harold Washington at the Ravenswood Manor Improvement Association, 70th
     anniversary celebration, 1984
-  size: 175%
-  align: 50% 50%
+  size: '200,'
+  align: '600,400,1800,1800'
   alt: Mayor Washington smiles and shakes hands with an older woman.
 - url: '144'
   text: Annual picnic, Ravenswood Manor Improvement Association, circa 1984
-  size: 375px
-  align: 60% 50%
+  size: '200,'
+  align: '85,0,475,475'
   alt: A clown and a group of children attend a picnic.  Balloons float above their
     heads.
 - url: '107'
   text: Cleanup Parade, Ravenswood Manor, 1965
-  size: 730px
-  align: 80% 40%
+  size: '200,'
+  align: '2123,872,240,240'
   alt: Parade participants include a fire truck, Boy Scouts on foot carrying flags,
     and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland,
     Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;

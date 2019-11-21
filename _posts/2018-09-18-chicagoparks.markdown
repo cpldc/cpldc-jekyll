@@ -23,25 +23,25 @@ mainimage:
 thumbs:
 - url: '6221'
   text: Palmer Park, archery, circa 1935
-  size: 350%
-  align: 35% 25%
+  size: '200,'
+  align: '646,681,600,600'
   alt: Two women in a park hold bows and arrows, ready to shoot.
 - url: '8690'
   text: Stanford Park, toy lending, 1938
-  size: 175%
-  align: 55% 18%
+  size: '200,'
+  align: '1750,1380,1200,1200'
   alt: An African American boy and two younger girls ride a large hobby horse.  Behind
     them is a cabinet full of toys and a toy tea set.
 - url: '112'
   text: Addams Park, undated
-  size: 190%
-  align: 55% 18%
+  size: '200,'
+  align: '1700,1232,1400,1400'
   alt: Three African American boys dressed in suits and vests stand at a microphone
     and play recorders.  African American men and women watch from off stage.
 - url: '8686'
   text: Stanford Park, junior garden club, 1937
-  size: 250%
-  align: 68% 18%
+  size: '200,'
+  align: '1541,550,300,300'
   alt: Young children tend plants in a narrow vegetable garden at the side of a building.
 category: parks
 categoryFull: Parks

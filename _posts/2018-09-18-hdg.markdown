@@ -47,26 +47,26 @@ mainimage:
 thumbs:
 - url: '174'
   text: Girl Scouts Troup 119 Tin Can Salvage, 1945
-  size: 130%
-  align: 40% 25%
+  size: '200,'
+  align: '527,240,900,900'
   alt: Six girls in girl scout uniforms, and three women and one man surround a pile
     of flattened tin cans
 - url: '669'
   text: Monadnock Coffee Shop, 1949
-  size: ''
-  align: 47% 57%
+  size: '200,'
+  align: '1832,1366,940,940'
   alt: Diner scene. Customers sit at the counter drnking coffee. A waitress takes
     orders. Cooks can be seen in the open kitchen at the back, flanked by display
     cases with baked goods. Décor includes plants and a clock.
 - url: '345'
   text: Portrait of Henry Delorval Green, 1949
-  size: 120%
-  align: 45% 27%
+  size: '200,'
+  align: '49,240,1875,1875'
   alt: A man in a suit and wearing glasses is pictured from his shoulders up.
 - url: '123'
   text: Chicago Fire Department, undated
-  size: 130%
-  align: center
+  size: '200,'
+  align: '400,1027,900,900'
   alt: Five men from the fire department pose with a fire engine. Three are standing,
     and two are riding in the vehicle. One of the men has a white shirt and tie. Part
     of the fire house and two neighboring houses are pictured in the background

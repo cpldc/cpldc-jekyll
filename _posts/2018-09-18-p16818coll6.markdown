@@ -10,7 +10,7 @@ sortname: Sang, Philip David Collection
 cardpic:
   pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg
   pich: 300px
-  size: 190%
+  size: '470,'
   pos: 20% 25%
   alt: Woodcut print featuring a portrait of a Black man surrounded with images of
     African Americans at work, at graduation, and walking around town. Image is from
@@ -25,19 +25,19 @@ mainimage:
 thumbs:
 - url: '165'
   text: Sheriff&rsquo;s bill of sale for two enslaved women, 1843
-  size: cover
-  align: auto 20%
+  size: '200,'
+  align: '3312,4236,1300,1300'
   alt: 1843 South Carolina sheriff's bill of sale for two enslaved women named Jane
     and Sarah.
 - url: '7'
   text: Runaway slave advertisement, 1855
-  size: cover
+  size: '200,'
   align: auto 15%
   alt: 1855 print advertisement offering up to $100 as a reward for the apprehension
     of a runaway enslaved man named Ben.
 - url: '691'
   text: Methodist worship booklet for Lincoln Day Sunday, 1930
-  size: 300%
+  size: '200,'
   align: 27% 25%
   alt: Cover page of Burdens Unbound, a 1930 Methodist worship booklet for Lincoln
     Day Sunday; features a woodcut print with a portrait of a Black man surrounded
@@ -45,7 +45,7 @@ thumbs:
 - url: '231'
   text: "&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved
     persons, 1854"
-  size: cover
+  size: '200,'
   align: center
   alt: 1854 poster advertising a marshal's sale, a public auction of enslaved persons.
 category:
@@ -108,48 +108,6 @@ location:
     Midwest, the Vivian G. Harsh Research Collection of Afro-American History and
     Literature at <a href="https://www.chipublib.org/locations/81">Woodson Regional
     Library</a> documents the black experience with a strong focus on Chicago.
-  mainimage:
-    url: ASNLH.jpg
-    coll: rwk
-    text: ASNLH 20th anniversary planning committee, 1936
-    size: auto 125%
-    align: center
-    alt: A group of 13 men and women sit and stand around a table; including Carter
-      G. Woodson and Vivian G. Harsh.
-  thumbs:
-  - url: '18'
-    coll: cr
-    text: U.S. Congressman William L. Dawson, 1940s
-    size: 200%
-    align: 50% 10%
-    alt: William Dawson stands in front of two microphones with an American flag and
-      a reelect Dawson for Congressman sign behind him.
-  - url: '405'
-    coll: p16818coll6
-    text: Note from Frederick Douglass regarding A. Lincoln&rsquo;s death, 1865
-    size: 400%
-    align: 29% 10%
-    alt: Portrait sketch of Frederick Douglass next to a 1865 letter by Douglass regarding
-      President Lincoln&lsquo;s death. Below the portrait is a typed transcription
-      of the handwritten letter. 
-  - url: '21'
-    coll: cr
-    text: Pamphlet, &ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943
-    size: 250%
-    align: 55% 75%
-    alt: Cover page of a pamphlet titled &rdquo;The War&lsquo;s Greatest Scandal.&ldquo;
-      A black and white sketch of a giant white person&lsquo;s fist on top of an African
-      American soldier. 
-  - url: '2'
-    coll: cr
-    text: "&ldquo;Self-portrait&rdquo; by Gordon Parks, 1941"
-    size: cover
-    align: 50% 40%
-    alt: Portrait photograph of Gordon Parks holding a cigarette. 
-  loclink: '81'
-  locname: Woodson Regional Library
-  locemail: harshcollection@chipublib.org
-  locphone: "(312) 745-2080"
   link: Harsh
   type: location
 homeloc: Harsh

@@ -46,27 +46,27 @@ mainimage:
 thumbs:
 - url: '150'
   text: Magnolia Avenue sewer system, 1933
-  size: 400%
-  align: 61% 37%
+  size: '200,'
+  align: '565,683,500,500'
   alt: A large sewer pipe splits into two directions.  Men are standing in both sections
     of the sewer with waste coming up above their knees.
 - url: '142'
   text: Broadway Street, sewer in Rokeby Street, 1927
-  size: 250%
-  align: 30% 50%
+  size: '200,'
+  align: '500,1000,800,800'
   alt: A construction worker is perched on top of a wooden fence,  operating a piece
     of machinery.  Another man stands on the ground and holds the machinery; a third
     man holds onto a metal pipe.
 - url: '144'
   text: Bryn Mawr Avenue, bricklayers, 1930
-  size: 250%
-  align: 0 50%
+  size: '200,'
+  align: '0,850,1150,1150'
   alt: A group of construction workers stand on wooden planks inside a large unfinished
     sewer pipe.  Bricks are scattered on the ground.
 - url: '155'
   text: 103rd and Rockwell Streets, pipe yard, 1936
-  size: 250%
-  align: 40% 35%
+  size: '200,'
+  align: '400,300,600,600'
   alt: Men walk among several sections of very large pipes covered with tarpaulins.  One
     man stands on top of a pipe and sprays it with water.
 link: dtd

@@ -24,28 +24,29 @@ thumbs:
 - url: '173'
   coll: wha
   text: Pauline Cushman, actress and Union spy, undated
-  size: 150%
-  align: center 30%
+  size: '200,'
+  align: '500,750,1500,1500'
   alt: Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss
     Major Pauline Cushman. Union spy&ldquo;
 - url: '314'
   coll: wha
   text: Sword, model 1850 staff and field officer, 1861-1865
-  size: auto 150px
-  align: 40% 30%
+  size: '200,'
+  # align: '550,550,3300,3300'
+  align: '1306,478,2400,2400'
   alt: Blade and handle of 1850 model sword.
 - url: '35'
   coll: wha
   text: Ulysses S. Grant, 1865
-  size: 120px auto
-  align: 50% 20%
+  size: '200,'
+  align: '182,312,1000,1000'
   alt: Portrait of Ulysses S. Grant, typed caption under the image is &rdquo;Lieut.
     Gen. U. S. Grant.&ldquo;
 - url: '422'
   coll: p16818coll6
   text: Letter from John Brown, Jr., 1859
-  size: 200px
-  align: 55% 5%
+  size: '200,'
+  align: '2980,650,1500,1500'
   alt: Handwritten 1859 letter from John Brown, Jr. to his uncle, aunt, and cousins.
 textshort: Personal narratives, artifacts and manuscripts tell the story of slaves
   and soldiers during the war that tore the nation apart.

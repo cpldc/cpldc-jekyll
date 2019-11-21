@@ -25,30 +25,30 @@ thumbs:
 - url: '426'
   coll: hdg
   text: Jamieson School, 1944
-  size: 130%
-  align: 50% 50%
+  size: '200,'
+  align: '1111,675,1050,1050'
   alt: Members of the Jamieson School student council pose in front of a school banner
     and an American flag.  Six are seated and behind them more students stand in a
     row.
 - url: '4097'
   coll: rvw
   text: Our Lady of Lourdes school library, circa 1942
-  size: 300%
-  align: 40% 40%
+  size: '200,'
+  align: '750,650,750,750'
   alt: Several students sit at tables studying in the library of Our Lady of Lourdes
     School.  A nun holding open a book stands next to a male student.
 - url: '721'
   coll: ahs
   text: Drum majorettes, Lave View High School, 1949
-  size: cover
-  align: center
+  size: '200,'
+  align: '375,100,1550,1550'
   alt: 'Five drum majorettes from Lake View High School in full uniform. Caption reads:
     Lois Dunston, Gerry Gruen, Lorette Loewe, Diane Baxter, Sandy Colby, May 1949'
 - url: '2'
   coll: woop
   text: Chicago Public Library bookmobile service, circa 1940
-  size: 150%
-  align: 27% 0%
+  size: '200,'
+  align: '850,125,5250,5250'
   alt: Four children stand in front of a bookmobile trailer, reading.  The bookmobile
     is hitched to a car.  The back of the trailer reads &rdquo;The Chicago Public
     Library Bookmobile.&ldquo;

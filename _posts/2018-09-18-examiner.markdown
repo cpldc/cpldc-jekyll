@@ -40,23 +40,23 @@ thumbs:
 - url: '51184'
   text: "&ldquo;Camera&rsquo;s Story of Day&rsquo;s Happenings in River Horror,&rdquo;
     <em>Chicago Examiner</em>, vol. 13 no. 187, 1915"
-  size: 110px auto
-  align: center
+  size: '200,'
+  align: '850,750,1550,1550'
 - url: '12357'
   text: "&ldquo;Cubs Gain Big Lead for World&rsquo;s Championship,&rdquo; <em>Chicago
     Examiner</em>, vol. 6 no. 253, 1908"
-  size: 500px auto
-  align: 10% 10%
+  size: '200,'
+  align: '1650,875,1375,1375'
 - url: '51163'
   text: "&ldquo;Unceasing Rescue Work on Eastland; Relief Efforts,&rdquo; <em>Chicago
     Examiner</em>, vol. 13 no. 186, 1915"
-  size: 350px auto
-  align: 90% 60%
+  size: '200,'
+  align: '2884,2447,2350,2350'
 - url: '477'
   text: "&ldquo;Men Clinging to Girders Drop Into Flames as the Steel Grows Red Hot,&rdquo;
     <em>Chicago Examiner</em>, vol. 7 no. 27, 1909"
-  size: 200px
-  align: 25% 10%
+  size: '200,'
+  align: '3615,1859,1360,1360'
 CPLRes:
 - dt: Chicago Newspapers
   a: https://www.chipublib.org/chicago-newspapers-on-microfilm/

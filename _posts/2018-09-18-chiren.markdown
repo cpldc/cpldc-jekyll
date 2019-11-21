@@ -56,29 +56,28 @@ mainimage:
   alt: Horace Cayton shows three paintings to two women. One of the paintings is Charles
     Sebree's &ldquo;Blue Boy.&rdquo;
 thumbs:
-- url: '11'
-  text: Langston Hughes and Gwendolyn Brooks, 1949
-  size: 100%
-  align: 50% 10%
-  alt: Langston Hughes and Gwendolyn Brooks. Hughes is holding a copy of the book
-    &ldquo;The Poetry of the Negro.&rdquo;"
 - url: '10'
   text: Richard Durham, 1948
-  size: 150%
-  align: center
+  size: '200,'
+  align: '85,176,300,300'
   alt: Richard Durham sits at a desk with a typewriter.  He is reading some loose
     pages and has a pencil in his right hand.
-- url: '15'
-  text: C.L. Cook and his Dreamland Orchestra, 1923
-  size: 150%
-  align: center
-  alt: An advertisement for &ldquo;Cook&rdquo; and his Dreamland Orchestra, now playing
-    at Harmon's Dreamland. Photos depict individual members of the band and the group.
 - url: '12'
   text: Margaret Walker, 1942
-  size: cover
-  align: 50% 25%
+  size: '200,'
+  align: '12,200,2000,2000'
   alt: Margaret Walker's face, smiling
+- url: '11'
+  text: Langston Hughes and Gwendolyn Brooks, 1949
+  size: '200,'
+  align: '0,30,288,288'
+  alt: Langston Hughes and Gwendolyn Brooks. Hughes is holding a copy of the book &ldquo;The Poetry of the Negro.&rdquo;"
+- url: '15'
+  text: C.L. Cook and his Dreamland Orchestra, 1923
+  size: '200,'
+  align: '55,0,390,390'
+  alt: An advertisement for &ldquo;Cook&rdquo; and his Dreamland Orchestra, now playing
+    at Harmon's Dreamland. Photos depict individual members of the band and the group.
 link: cr
 location:
   title: Vivian G. Harsh Research Collection

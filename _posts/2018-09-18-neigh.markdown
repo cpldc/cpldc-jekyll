@@ -44,15 +44,15 @@ thumbs:
 - url: '1248'
   coll: rwk
   text: Picasso statue unveiled, 1967
-  size: ''
-  align: 25% 60%
+  size: '200,'
+  align: '486,1000,1300,1300'
   alt: Elevated view of the Picasso statue at the Civic Center Plaza being unveiled.
     The plaza is completely filled with onlookers.
 - url: '782'
   coll: rwk
   text: Tin Man sculpture, Oz Park, 2001
-  size: ''
-  align: 57% 17%
+  size: '200,' #1331,597
+  align: '1206,475,400,400'
   alt: Tin Man sculpture in Oz Park.  It stands on top of a pedestal with a plaque
     that reads &ldquo;The Tin Man from The Wizard of Oz by Frank Baum Welcomes You
     to Oz Park, A Heartfelt Salute to the Community from the Lincoln Park Chamber
@@ -60,8 +60,8 @@ thumbs:
 - url: '157'
   coll: dtd
   text: 31st Street and Albany Avenue, repairing old brick outfall, 1936
-  size: ''
-  align: 62% 37%
+  size: '200,'
+  align: '579,316,600,600'
   alt: Three men repair a brick sewer outfall.
 link: Neigh
 type: category

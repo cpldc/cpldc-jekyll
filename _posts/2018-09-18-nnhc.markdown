@@ -23,24 +23,24 @@ thumbs:
 - url: '902'
   coll: ahs
   text: Mildred Douglas, drum majorette, Lake View High School, circa 1942
-  size: 400px
-  align: 65% 15%
+  size: '200,'
+  align: '902,400,800,800'
 - url: '567'
   coll: rwk
   text: Alderman Gene Schulter assists with installation of 47th Ward neighborhood
     watch sign, 1989
-  size: 500px
-  align: 57% 37%
+  size: '200,'
+  align: '608,1001,1100,1100'
 - url: '653'
   coll: rwk
   text: Complex Christmas star quilt by Sandy Escontrias, circa 1992
-  size: auto 130%
-  align: center
+  size: '200,'
+  align: '1210,515,700,700'
 - url: '661'
   coll: rwk
   text: Stained glass and door, 1518-20 W. Wilson Ave., circa 1985
-  size: 110%
-  align: 50% 25%
+  size: '200,'
+  align: '100,202,2000,2000'
 loclink: '67'
 locname: Sulzer Regional Library
 locemail: northsidehistory@chipublib.org

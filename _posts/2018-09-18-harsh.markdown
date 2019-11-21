@@ -26,31 +26,31 @@ thumbs:
 - url: '18'
   coll: cr
   text: U.S. Congressman William L. Dawson, 1940s
-  size: 200%
-  align: 50% 10%
+  size: '200,'
+  align: '34,44,350,350'
   alt: William Dawson stands in front of two microphones with an American flag and
     a reelect Dawson for Congressman sign behind him.
 - url: '405'
   coll: p16818coll6
   text: Note from Frederick Douglass regarding A. Lincoln&rsquo;s death, 1865
-  size: 400%
-  align: 29% 10%
+  size: '200,'
+  align: '1563,408,1300,1300'
   alt: Portrait sketch of Frederick Douglass next to a 1865 letter by Douglass regarding
     President Lincoln&lsquo;s death. Below the portrait is a typed transcription of
     the handwritten letter. 
 - url: '21'
   coll: cr
   text: Pamphlet, &ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943
-  size: 250%
-  align: 55% 75%
+  size: '200,'
+  align: '271,1800,3000,3000'
   alt: Cover page of a pamphlet titled &rdquo;The War&lsquo;s Greatest Scandal.&ldquo;
     A black and white sketch of a giant white person&lsquo;s fist on top of an African
     American soldier. 
 - url: '2'
   coll: cr
   text: "&ldquo;Self-portrait&rdquo; by Gordon Parks, 1941"
-  size: cover
-  align: 50% 40%
+  size: '200,'
+  align: '0,275,2400,2400'
   alt: Portrait photograph of Gordon Parks holding a cigarette. 
 loclink: '81'
 locname: Woodson Regional Library
