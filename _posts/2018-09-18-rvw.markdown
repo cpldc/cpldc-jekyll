@@ -55,28 +55,29 @@ mainimage:
 thumbs:
 - url: '1800'
   text: Arthur G. Bennett, undated
-  size: 110%
-  align: 60% 10%
+  size: '200,'
+  align: '250,50,850,850'
   alt: A young man dressed in form-fitting clothing and cap rides a bicycle.  The
     bicycle has a very large front tire and a small back tire.
 - url: '3142'
   text: Charles Perkins, undated
-  size: 200%
-  align: 50% 10%
+  size: '200,'
+  align: '25,25,1000,1000'
+  # align: '660,110,200,200'
   alt: A man steers an old-fashioned automobile using a long handle attached to the
     front axle.  A small engine is mounted on the rear axle.  In the background three
     boys stand under a tree looking at the car.
 - url: '933'
   text: Riverview Park, 1950s
-  size: 170%
-  align: 50% 50%
+  size: '200,'
+  align: '450,75,2000,2000'
   alt: An elevated view of an attraction at Riverview Park.  The facade of the building
     is the head of a genie with a thin moustache and a long thin beard.  He is wearing
     a turban and holding a lamp.
 - url: '1272'
   text: Klausen family salutes the American flag, 1918
-  size: 601px
-  align: 33% 20%
+  size: '200,'
+  align: '250,125,200,200'
   alt: A young man holds two small American flags while five women to his left salute.  They
     are standing in front of a house whose front porch is decorated with American
     flags.

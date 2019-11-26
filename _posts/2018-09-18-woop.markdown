@@ -38,8 +38,8 @@ mainimage:
 thumbs:
 - url: '5'
   text: English Book Donation bookplate given by Queen Victoria, 1871
-  size: cover
-  align: center
+  size: '200,'
+  align: '300,100,1400,1400'
   alt: 'The bookplate from a book donated by Queen Victoria reads: Presented to the
     City of Chicago, toward the formation of a free library after the great fire of
     1871, as a mark of English sympathy, by Her Majesty the Queen Victoria.'

@@ -53,25 +53,26 @@ mainimage:
 thumbs:
 - url: '116'
   text: Sword, model 1850 staff and field officer, circa 1860
-  size: auto 120px
-  align: center
+  size: '200,'
+  # align: '550,550,3300,3300'
+  align: '1306,478,2400,2400'
   alt: Close up of sword hilt, with blade extending out of the image
 - url: '721'
   text: Uniform, artillery jacket, 1862
-  size: auto 120px
-  align: 50% 15%
+  size: '200,'
+  align: 'square'
   alt: Dark blue uniform jacket with red piped detail on collar, cuffs, and seams.
     Gold buttons down the front
 - url: '35'
   text: Ulysses S. Grant, 1865
-  size: 120px auto
-  align: 50% 20%
+  size: '200,'
+  align: '182,312,1000,1000'
   alt: Sepia tone photograph of U.S. Grant in uniform. He is standing, right hand
     in pocket, left hand tucked into his vest at his breast.
 - url: '38'
   text: Union ticket, South Division, 1864
-  size: 110px auto
-  align: 55% 15%
+  size: '200,'
+  align: '150,300,1900,1900'
   alt: List of names on union ticket, decorative drawing of an eagle in a circle at
     the top of the page
 link: wha

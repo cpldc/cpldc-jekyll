@@ -65,23 +65,25 @@ mainimage:
 thumbs:
 - url: '72'
   text: Mayor Washington reads to Dominik Przekota and class, 1986
-  size: 300%
-  align: 0 20%
+  size: '200,'
+  # align: '25,75,1169,1169'
+  align: '25,200,570,570'
   alt: Mayor Washington sits with book in front of a group of children in a library. One boy stands at front, video cameraman stands at back.
 - url: '64'
   text: Mayor Washington at the KOCO groundbreaking ceremony, 1987
-  size: ''
-  align: 52% 15%
+  size: '200,'
+  align: '800,180,300,300'
   alt: Mayor Washington and six others pose holding shovels full of dirt.
 - url: '13'
   text: Mayor Washington with members of the Philippine Chamber of Commerce, 1987
-  size: 150%
-  align: 40% 40%
+  size: '200,'
+  align: '300,150,1150,1150'
   alt: Mayor Washington poses with three women, one of whom holds a plaque.
 - url: '30'
   text: Mayor Washington at the Bud Billiken Parade, 1987
-  size: 400%
-  align: 71% 30%
+  size: '200,'
+  align: '600,250,1100,1100'
+  # align: '1000,250,600,600'
   alt: Mayor Washington smiles and points to the crowd while riding on the back of
     a convertible.
 location:

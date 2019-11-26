@@ -56,8 +56,8 @@ thumbs:
 - url: '8601'
   coll: CPB01
   text: "<em>Evening with Columbine</em>, Chicago Little Theatre, 1913"
-  size: 200%
-  align: 50% 85%
+  size: '200,'
+  align: '450,1300,2200,2200'
   alt: Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with
     the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;.
     Black and white drawing depicts a woman in a short skirt, supported by two men,
@@ -65,30 +65,30 @@ thumbs:
 - url: '6272'
   coll: CPB01
   text: "<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903"
-  size: 110%
-  align: 50% 30%
+  size: '200,'
+  align: '20,150,3000,3000'
   alt: Theater program cover reads, &ldquo;Iroquois Theatre, Randolph St. between
     State and Dearborn Streets, Chicago,&rdquo; and depicts a Greek revival door,
     topped by an Iroquois face in headdress and flanked by Native American shields.
-- url: '6748'
-  coll: CPB01
-  text: Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896
-  size: 140%
-  align: 50% 40%
-  alt: Theater program cover reads, &rdquo;38th year, McVicker's Theatre, Bill of
-    the Play, 1857-1896,&rdquo; and depicts a bas relief, inside the theater, a scene
-    from the World's Columbian Exposition and a white haired man framed by a floral
-    motif.
 - url: '9755'
   coll: CPB01
   text: "<em>The Mikado</em>, Chicago Opera House, 1886"
-  size: 200%
-  align: 68% 47%
+  size: '200,'
+  align: '1500,1950,2500,2500'
   alt: Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo;
     and depicts a drawing of a stage with an actor downstage, and a large circle upstage
     showcasing a drawing of a person in Japanese-style dress. A woman holding a fan
     looks on from a balcony which is supported by a feminine stature. The stage is
     flanked by curtains and plants.
+- url: '6748'
+  coll: CPB01
+  text: Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896
+  size: '200,'
+  align: '450,1300,2600,2600'
+  alt: Theater program cover reads, &rdquo;38th year, McVicker's Theatre, Bill of
+    the Play, 1857-1896,&rdquo; and depicts a bas relief, inside the theater, a scene
+    from the World's Columbian Exposition and a white haired man framed by a floral
+    motif.
 link: CPB01
 coll: CPB01
 location:

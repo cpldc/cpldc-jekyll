@@ -51,29 +51,30 @@ mainimage:
 thumbs:
 - url: '412'
   text: German-American Festival, 1988
-  size: 300%
-  align: 50% 35%
+  size: '200,'
+  align: '1300,450,900,900'
   alt: Alderman Gene Schulter poses in the middle of a row of young women and and
     men.  The women are dressed in dirndls.  They are standing in front of a covered
     stage decorated with flags and pennants. A large sign at the back of the stage
     reads &rdquo;Welcome Ald. Gene Schluter.&ldquo;
 - url: '349'
   text: Picasso statue unveiled, 1967
-  size: 120%
-  align: center
+  size: '200,'
+  align: '150,300,2000,2000'
   alt: A bird&lsquo;s-eye view of thousands of people watching the unveiling of a
     large Picasso sculpture in the middle of Civic Center Plaza.  The tarp has been
     almost entirely removed but remains draped around the bottom of the sculpture.
 - url: '828'
   text: Henry Krueger, Marie and Lydia Wahl and a friend, 1923
-  size: 200%
-  align: 50% 25%
+  size: '200,'
+  align: '600,500,1200,1200'
   alt: A young man and young woman pose on the hood of an old-fashioned car.  Two
     other young women pose on the front fender of the car.
 - url: '1365'
   text: 1720-22 W. Leland Avenue, 1988
-  size: 140%
-  align: center
+  size: '200,'
+  align: '400,100,2100,2100'
+  # align: '1075,1550,325,325'
   alt: The front of a two-story duplex viewed from the street.  Two people sit at
     the entrance to one of the homes.
 link: rwk

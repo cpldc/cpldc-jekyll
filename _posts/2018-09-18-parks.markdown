@@ -62,8 +62,8 @@ thumbs:
 - url: '2239'
   coll: mpu
   text: Cloud Gate, assembly complete, 2004
-  size: cover
-  align: center
+  size: '200,'
+  align: '350,200,1325,1325'
   alt: Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park.
     SBC Plaza is still under construction and there is construction equipment scattered
     around. Two construction workers are working to the left of the sculpture and
@@ -71,24 +71,24 @@ thumbs:
 - url: '112'
   coll: ChicagoParks
   text: Addams Park, undated
-  size: 200%
-  align: 52% 17%
+  size: '200,'
+  align: '1700,1232,1400,1400'
   alt: Three boys in suits play recorders while standing  in a semi-circle around
     a microphone in a park building. Several adults standing together look on from
     behind them.
 - url: '4752'
   coll: ChicagoParks
   text: Red Saunders performs in Lake Meadow Park, 1970
-  size: 500px
-  align: 55% 25%
+  size: '200,'
+  align: '2000,900,2300,2300'
   alt: Musician, Red Saunders, stands on a stage and plays electric guitar in front
     of a microphone with a band sitting behind him on an outdoor stage in Lake Meadow
     Park. An audience, both sitting and standing, take in the performance.
 - url: '6209'
   coll: ChicagoParks
   text: Palmer Park, 1965
-  size: 140%
-  align: 50% 50%
+  size: '200,'
+  align: '550,375,4500,4500'
   alt: A group of approximately fifty girls in athletic uniform perform standing calisthenics
     with their arms over their heads in a field house gymnasium in Palmer Park. Three
     artistic murals are overhead on the wall behind them.
