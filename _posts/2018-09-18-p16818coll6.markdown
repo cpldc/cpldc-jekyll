@@ -8,9 +8,10 @@ coll: p16818coll6
 contenttype: collections
 sortname: Sang, Philip David Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg
+  pic: 691
+  region: '350,850,1875,1800'
+  size: '320,'
   pich: 300px
-  size: '470,'
   pos: 20% 25%
   alt: Woodcut print featuring a portrait of a Black man surrounded with images of
     African Americans at work, at graduation, and walking around town. Image is from

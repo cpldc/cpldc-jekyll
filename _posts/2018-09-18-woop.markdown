@@ -8,9 +8,10 @@ contenttype: collections
 coll: woop
 sortname: Chicago Public Library Archives
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg
+  pic: '45'
+  region: '20,150,2650,1700'
+  size: '320,'
   pich: 200px;
-  size: 100%
   pos: 50% -20px
   alt: View of Michigan Avenue and Washington Street sides of the original Chicago
     Public Library Central Library.
@@ -45,19 +46,19 @@ thumbs:
     1871, as a mark of English sympathy, by Her Majesty the Queen Victoria.'
 - url: '73'
   text: Trailer service from Legler Regional Library, circa 1940
-  size: 150%
-  align: 100% 50%
+  size: '200,'
+  align: '1100,200,1700,1700'
   alt: A trailer that reads &ldquo;The Chicago Public Library Bookmobile Traveling
     Library Service&rdquo; is hitched to the back of a car.
 - url: '41'
   text: Blackstone Memorial Branch Library, 1904
-  size: cover
-  align: '0% '
+  size: '200,'
+  align: '0,0,3550,3550'
   alt: The front of Blackstone Branch seen from 49th Street.
 - url: '74'
   text: Traveling branch, circa 1960s
-  size: cover
-  align: center
+  size: '200,'
+  align: '694,0,2000,2000'
   alt: Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo;
     with separate doors for Entrance and Exit.
 link: woop

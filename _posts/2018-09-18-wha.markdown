@@ -12,9 +12,10 @@ sortname: 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Repu
 creditname: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil
   War Collections
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg
+  pic: '341'
+  region: '310,375,3250,3100'
+  size: '320,'
   pich: 280px
-  size: 110%
   pos: 50% 40%
 category: civilwar
 categoryFull: Civil War

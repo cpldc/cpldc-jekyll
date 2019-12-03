@@ -16,7 +16,7 @@ mainimage:
   url: '634'
   text: Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942
   size: '470,'
-  align: '200,300,2000,2000'
+  align: '740,500,1650,1650'
   alt: Louis D. Walz poses with eight drum majorettes and one drum major.  They are all wearing marching band uniforms.
 thumbs:
 - url: '350'

@@ -9,9 +9,10 @@ flag: 8
 coll: cr
 sortname: Chicago Renaissance
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg
+  pic: '12'
+  region: '20,20,2000,2050'
+  size: '320,'
   pich: 20rem
-  size: 100%
   pos: auto
   alt: Margaret Walker's face, smiling
 category: afam

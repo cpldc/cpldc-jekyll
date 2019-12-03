@@ -8,9 +8,10 @@ title: 'Chicago Park District Records: Photographs'
 coll: ChicagoParks
 sortname: 'Chicago Park District Records: Photographs'
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg
+  pic: '1254'
+  region: '3271,1466,2750,2300'
+  size: '320,'
   pich: 250px
-  size: 470,
   pos: 87% 47%
 mainimage:
   url: '6155'

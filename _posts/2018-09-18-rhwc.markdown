@@ -11,9 +11,11 @@ sortname: Remembering Harold Washington
 shortname: Harold Washington
 sidebarname: Harold Washington
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg
+  pic: '30'
+  region: '950,280,650,500'
+  # region: '690,240,900,800'
+  size: '320,'
   pich: 250px
-  size: 200%
   pos: 75% 40%
   alt: Mayor Washington smiles and points to the crowd while riding on the back of
     a convertible.

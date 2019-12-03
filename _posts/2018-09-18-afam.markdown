@@ -43,27 +43,27 @@ thumbs:
   coll: cr
   text: All-black WAC band, 1944
   size: full
-  align: '0,50,150,200'
+  align: '0,50,200,200'
   alt: An African American Women's Army Corps band at a performance.
 - url: 8g8
   coll: cr
   text: Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948
   size: '150,'
-  align: '75,115,200,600'
+  align: '100,100,200,200'
   alt: Marian Campfield stands outside the Chicago Defender offices next to a press
     car.
 - url: '0'
   coll: cr
   text: Catalog, &rdquo;Exhibition of the Art of the American Negro,&ldquo; 1940
   size: '150,'
-  align: '261,901,1089,1660'
+  align: '261,901,1000,1000'
   alt: 'Cover of &rdquo;Exhibition of the Art of the American Negro&ldquo; catalog
     featuring an image of a painting by Charles White.  '
 - url: '6'
   coll: rhwc
   text: Mayor Washington at the 27th Annual International Folk Fair, 1986
   size: '150,'
-  align: '400,350,800,1000'
+  align: '450,350,750,750'
   alt: Mayor Washington stands with two men in front of three paintings at the DuSable
     Museum of African American History.
 link: AfAm

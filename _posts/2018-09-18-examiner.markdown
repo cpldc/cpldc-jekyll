@@ -9,9 +9,10 @@ coll: examiner
 sortname: Chicago Examiner
 sidebarname: Newspapers
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg
+  pic: '5449'
+  region: '180,160,4900,4700'
+  size: '320,'
   pich: 19rem
-  size: 110% auto
   pos: 50% -15px
 category: news
 categoryFull: Newspapers

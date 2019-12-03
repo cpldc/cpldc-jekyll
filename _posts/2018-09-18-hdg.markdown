@@ -8,9 +8,10 @@ title: Henry D. Green Photograph Collection
 coll: hdg
 sortname: Green, Henry D. Photograph Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg
+  pic: '123'
+  region: '400,1027,900,900'
+  size: '320,'
   pich: 250px
-  size: 110%
   pos: 50% 50%
   alt: Five men from the fire department pose with a fire engine. Three are standing,
     and two are riding in the vehicle. One of the men has a white shirt and tie. Part

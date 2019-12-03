@@ -8,9 +8,10 @@ title: Esther A. Barlow Collection
 coll: bar
 sortname: Barlow, Esther A. Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg
+  pic: '43'
+  region: '150,0,2200,2400'
+  size: '320,'
   pich: 20rem
-  size: '470,'
   pos: auto
   alt: Esther Barlow as a young woman.
 category: libed
@@ -40,13 +41,15 @@ thumbs:
 - url: '70'
   text: Esther Barlow at the circulation desk, Lake View Branch, 1951
   size: '200,'
-  align: '600,400,400,300'
+  # align: '600,400,400,300'
+  align: '666,380,280,280'
   alt: Esther Barlow sits at a desk. Next to her desk is a tall bookshelf filled with
     children's books.
 - url: '16'
   text: Esther Barlow and Buddy Flaskerud, 1913
   size: '200,'
-  align: '400,200,400,400'
+  # align: '450,170,400,400'
+  align: '305,115,800,800'
   alt: A baby Esther Barlow sits with a little boy in a small wagon hitched to a goat.
 link: bar
 location:

@@ -8,9 +8,11 @@ contenttype: collections
 coll: rwk
 sortname: Krueger, Robert W. Photograph Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg
+  pic: '1365'
+  region: '400,100,2100,2100'
+  # region: '1075,1550,325,325'
+  size: '320,'
   pich: 210px
-  size: 100%
   pos: 50% 50%
   alt: The front of a two-story duplex viewed from the street.  Two people sit at
     the entrance to one of the homes.

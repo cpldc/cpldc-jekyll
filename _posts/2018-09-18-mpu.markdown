@@ -8,9 +8,10 @@ title: Millennium Park U.S. Equities Realty Collection
 coll: mpu
 sortname: Millennium Park U.S. Equities Realty Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg
+  pic: 2239
+  region: '350,350,1400,1000'
+  size: '320,'
   pich: 240px
-  size: 130%
   pos: 35% 50%
   alt: Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium
     Park. SBC Plaza is still under construction and there is construction equipment

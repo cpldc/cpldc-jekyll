@@ -8,9 +8,10 @@ title: Chicago Sewers Collection
 coll: dtd
 sortname: Chicago Sewers Collection
 cardpic:
-  pic: https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg
+  pic: '157'
+  region: '666,327,666,500'
+  size: '320,'
   pich: 200px
-  size: 120%
   pos: 50% -20px
   alt: Three men working on an unfinished sewer.
 category: neigh
