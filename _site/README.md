@@ -426,91 +426,91 @@ This was a php file used to convert the php arrays into markdown and json.  Kept
 
 Here is the structure and meaning of the data fields in the landing page "post" files (found in [_posts](#posts)/ folder).  Please note that formatting, especially hyphens, spaces, and indenting, are vital, and aren't perfectly preserved here.  Model your additions after other functional pages rather than this list.
 
-    date: self explanatory.  
+* date: self explanatory.  
 
-    layout: which page layout (found in the  [_layouts](#layouts)/ folder) should be used for the page.  Generally for new landing pages, this should be 'content'.
+* layout: which page layout (found in the  [_layouts](#layouts)/ folder) should be used for the page.  Generally for new landing pages, this should be 'content'.
 
-    link: the slug the collection.  Generally the same as the 'coll' value, but can be anything, as long as it doesn't contain spaces or special characters.
+* link: the slug the collection.  Generally the same as the 'coll' value, but can be anything, as long as it doesn't contain spaces or special characters.
 
-    coll: the code for the landing page and collection.  It's used to locate the images in CDM, so it must be identical to the CDM code.
+* coll: the code for the landing page and collection.  It's used to locate the images in CDM, so it must be identical to the CDM code.
 
-    flag: this is the flag indicating whether a page should have a card on the home page, and, if so, which order it should be.
+* flag: this is the flag indicating whether a page should have a card on the home page, and, if so, which order it should be.
 
-    sidebartype: whether the sidebar shold collapse or not.  If 'fixed', the sidebar will still collapse on small screens.
+* sidebartype: whether the sidebar shold collapse or not.  If 'fixed', the sidebar will still collapse on small screens.
 
-    contenttype: collections, subjects, locations, etc
+* contenttype: collections, subjects, locations, etc
 
-    title: the full version of the title; will be at the top of the landing page.
+* title: the full version of the title; will be at the top of the landing page.
 
-    type: collection, subject, location, subcollection
+* type: collection, subject, location, subcollection
 
-    sortname: the version of the title that should be used for alphabeticized pages, ie, the "a-z collections" page.  Invert people's names.
+* sortname: the version of the title that should be used for alphabeticized pages, ie, the "a-z collections" page.  Invert people's names.
 
-    cardpic: this is an array that contains the data for the card image.
-        pic: the url of the image.  This is an eplicit url, unlike the landing page images, because, often enough, these images don't come from our collections, but are cropped versions stored in the jekyll content folders ([assets/images](#assets-images)).
-        pich: the height of the image.  
-        size: the size of the image.  This is not how large the frame of the image will be, but rather how much/to what dimensions the image will be scaled, so, 100% is 100% of the image's natural size; 200% will scale the image 2x.  The image will still be contained by the card's normal width, as well as the height, given above.  It specifically refers to the 'background-size' css property.
-        pos: positioning of the image.  This can be done in pixels or percentages, and represents the location of the pixel that will be at the center of the card.  50% is the center; 0% 0% is top left.  It specifically refers to the 'background-position' css property.
-        alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+* cardpic: this is an array that contains the data for the card image.
+ * pic: the url of the image.  This is an eplicit url, unlike the landing page images, because, often enough, these images don't come from our collections, but are cropped versions stored in the jekyll content folders ([assets/images](#assets-images)).
+ * pich: the height of the image.  
+ * size: the size of the image.  This is not how large the frame of the image will be, but rather how much/to what dimensions the image will be scaled, so, 100% is 100% of the image's natural size; 200% will scale the image 2x.  The image will still be contained by the card's normal width, as well as the height, given above.  It specifically refers to the 'background-size' css property.
+ * pos: positioning of the image.  This can be done in pixels or percentages, and represents the location of the pixel that will be at the center of the card.  50% is the center; 0% 0% is top left.  It specifically refers to the 'background-position' css property.
+ * alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
 
-    mainimage: the main image of the landing page.
-        url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
-        text: this is the text that will appear in the lightbox when the image is selected.
-        size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
-        align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
-        alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+* mainimage: the main image of the landing page.
+ * url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
+ * text: this is the text that will appear in the lightbox when the image is selected.
+ * size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
+ * align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
+ * alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
 
-    thumbs: the thumbnails on the landing pages.  There should be at least 3, and not more than 4.  Each needs a section in the array, but we will only detail one instance of it.  (The arrays are handled identically to the mainimage.)
-        url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
-        text: this is the text that will appear in the lightbox when the image is selected.
-        size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
-        align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
-        alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
+* thumbs: the thumbnails on the landing pages.  There should be at least 3, and not more than 4.  Each needs a section in the array, but we will only detail one instance of it.  (The arrays are handled identically to the mainimage.)
+ * url: this *only* is the item's id in CDM, eg: https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/id/4 in this url, '4' would be the url value
+ * text: this is the text that will appear in the lightbox when the image is selected.
+ * size: as with cardpic, this is the 'background-size' css property.  It does not change the size of the image's container, but rather how large the image within the container is - scaled up or down.  'cover' is a good place to start; that will make the image cover the image container, leaving no empty space.  
+ * align: this is the 'background-position' css property.  It refers, like 'pos' in cardpic, to how the image is positioned in the container. 50% is the middle; auto is also the middle.  0% auto is the top middle of the image.
+ * alt: the alt text of the image.  Per a11y requirements, alt texts need to be meaningful; no "" or generic values.
 
-    category: each category in which the collection is contained should have their codes listed here.  It should be a duplicate of the categoryFull, below, but the code, rather than the full name.
-    - each
-    - line
-    - should
-    - have
-    - one
-    - category
+* category: each category in which the collection is contained should have their codes listed here.  It should be a duplicate of the categoryFull, below, but the code, rather than the full name.
+ * each
+ * line
+ * should
+ * have
+ * one
+ * category
 
-    categoryFull: unfortunately, accessing the full category name from the category code is overly complex, it is simpler to repeat them.
-    - These Should Be
-    - Title Case Versions
-    - of the Category Names
-    - Spaces Are Ok
+* categoryFull: unfortunately, accessing the full category name from the category code is overly complex, it is simpler to repeat them.
+ * These Should Be
+ * Title Case Versions
+ * of the Category Names
+ * Spaces Are Ok
 
-    textshort: This is the text on the card.
+* textshort: This is the text on the card.
 
-    textlong: This is the text above the main image on the landing page.
+* textlong: This is the text above the main image on the landing page.
 
-    textrich: this is the text below the images on the landing pages.  It should contain links to filtered searches and should be written by a collection SME.  This should contain html.  (Markdown can probably be used, but I haven't tried it, since this was all taken from the php version.)
+* textrich: this is the text below the images on the landing pages.  It should contain links to filtered searches and should be written by a collection SME.  This should contain html.  (Markdown can probably be used, but I haven't tried it, since this was all taken from the php version.)
 
-    highlights: rarely used (only on mpu?).  this is a section below the rich text intended to provide a simple 'highlights' link.  Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.
-    - a: the link
-    dt: the title of the section
-    dd: the detail of the section
+* highlights: rarely used (only on mpu?).  this is a section below the rich text intended to provide a simple 'highlights' link.  Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.
+ * a: the link
+ * dt: the title of the section
+ * dd: the detail of the section
 
-    findingaid: the link to the finding aid(s).  There can be many, in the case of collections which contain several archival collections (eg rhwc, ahs).  The finding aid gets standard text which is altered on a case-by-case basis in the content.html layout page.
-    - link: url of the finding aid
-    text: the text that will go in the anchor tag
+* findingaid: the link to the finding aid(s).  There can be many, in the case of collections which contain several archival collections (eg rhwc, ahs).  The finding aid gets standard text which is altered on a case-by-case basis in the content.html layout page.
+ * link: url of the finding aid
+ * text: the text that will go in the anchor tag
 
-    CPLRes: This contains the "more CPL resources" content - resources which are within cPL but not within the digital collections. Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
-    - a: the link
-    dt: the title of the section
-    dd: the detail of the section
+* CPLRes: This contains the "more CPL resources" content - resources which are within cPL but not within the digital collections. Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
+ * a: the link
+ * dt: the title of the section
+ * dd: the detail of the section
 
-    ExRes: the "External Resources" section.  Resources from outside CPL.  Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
-    - a: the link
-    dt: the title of the section
-    dd: the detail of the section
+* ExRes: the "External Resources" section.  Resources from outside CPL.  Like many of these sections, this is a description list, so it is made up of a 'dl' > 'dt' + 'dd' sctructure, with a link on the 'dt'.  There is no limit how many you include.
+ * a: the link
+ * dt: the title of the section
+ * dd: the detail of the section
 
-    rights: This is the rights statement that appears at the bottom of the landing page. It is currently only in use on the Millennium Park page.
+* rights: This is the rights statement that appears at the bottom of the landing page. It is currently only in use on the Millennium Park page.
 
-    rights2: This is the rights statement that appears when you click on the 'i' on images (at this point, only on Millennium Park content)
+* rights2: This is the rights statement that appears when you click on the 'i' on images (at this point, only on Millennium Park content)
 
-    location: this is the array that contains information about location of the archival collection.  It is only used for the landing page sentence about the collection's meatspace location.  In the collections that existed in the php version of the site, these arrays were expanded to include all data from the location landing page arrays during the conversion to jekyll. That extra content is not necessary.  All that's needed is title.
-        title: the full name of the location, title case, spaces ok.
+* location: this is the array that contains information about location of the archival collection.  It is only used for the landing page sentence about the collection's meatspace location.  In the collections that existed in the php version of the site, these arrays were expanded to include all data from the location landing page arrays during the conversion to jekyll. That extra content is not necessary.  All that's needed is title.
+ * title: the full name of the location, title case, spaces ok.
 
-    homeloc: the jekyll slug/code for the location.  This value is used to create the list of digital collections at the location's landing page.
+* homeloc: the jekyll slug/code for the location.  This value is used to create the list of digital collections at the location's landing page.
