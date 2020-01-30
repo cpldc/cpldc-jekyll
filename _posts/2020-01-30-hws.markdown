@@ -1,0 +1,67 @@
+---
+date:   2020-01-30 13:08:29 -0500
+layout: content
+title: Harold Washington Speeches
+sidebartype: fixed
+categories: [collections, subjects]
+flag: 5
+link: hws
+coll: HWashington
+sortname: Washington, Harold Speeches
+cardpic:
+  pic: '30'
+  region: '950,280,650,500'
+  # region: '690,240,900,800'
+  size: '320,'
+  pich: 250px
+  pos: 75% 40%
+  alt: Mayor Washington smiles and points to the crowd while riding on the back of
+    a convertible.
+category: afam
+categoryFull: African Americans
+textshort: DRAFT Speeches from Chicago's first African American mayor.
+textlong: DRAFT Transcripts of many speeches given by Mayor Harold Washington, the first African American mayor of Chicago, 1983-1987.
+textrich: <p>NEED SME TO WRITE SOMETHING This collection showcases Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic
+  and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous
+  people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking
+  and development projects</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a>.</p><p>Chicago
+  Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold
+  Washington Reseach Collection</a>.  Selections from those collections can be found
+  in the Finding Aids section below.
+CPLRes:
+- a: https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/
+  dt: Municipal Reference Collection
+  dd: Collections include local government publications, city election results, maps,
+    municipal ordinances and more.
+- a: https://www.chipublib.org/fa-brenetta-howell-barrett-papers/
+  dt: Brenetta Howell Barrett Papers Finding Aid
+  dd: Barrett served in the mayoral administrations of Harold Washington and Eugene
+    Sawyer. She was a political activist for housing, environmental and civil liberties
+    issues.
+- a: https://www.chipublib.org/tag/harold-washington/
+  dt: Harold Washington Blog Posts
+  dd: Written by CPL librarians and staff.
+- a: https://www.chipublib.org/mayor-harold-washington-biography/
+  dt: Mayor Harold Washington Biography
+  dd: Information about Mayor Harold Washington&rsquo;s education, military service,
+    career and selected accomplishments.
+findingaid:
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-campaign-records/
+  text: Mayoral Campaign Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-records-press-office-records/
+  text: Mayoral Records, Press Office Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-illinois-state-representative-records/
+  text: Illinois State Representative Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/
+  text: Pre-Mayoral Photograph Collection Finding Aid
+mainimage:
+  url: '81'
+  text: Mayor Washington at Senn High School's Martin Luther King Jr.'s birthday celebration
+  size: '470,'
+  align: '240,0,1706,1333'
+  alt: Mayor Washington speaks at a podium.
+location:
+  title: Special Collections at HWLC
+homeloc: HWLCSC
+type: collection
+---
