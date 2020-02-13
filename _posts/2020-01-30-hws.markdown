@@ -55,11 +55,11 @@ findingaid:
 - link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/
   text: Pre-Mayoral Photograph Collection Finding Aid
 mainimage:
-  url: '81'
-  text: Mayor Washington at Senn High School's Martin Luther King Jr.'s birthday celebration
+  url: '2460'
+  text: Mayor Washington speech
   size: '470,'
-  align: '240,0,1706,1333'
-  alt: Mayor Washington speaks at a podium.
+  align: '550,350,5300,3200'
+  alt: Mayor Washington speech text.
 location:
   title: Special Collections at HWLC
 homeloc: HWLCSC
