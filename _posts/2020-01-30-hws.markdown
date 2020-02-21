@@ -27,11 +27,6 @@ CPLRes:
   dt: Municipal Reference Collection
   dd: Collections include local government publications, city election results, maps,
     municipal ordinances and more.
-- a: https://www.chipublib.org/fa-brenetta-howell-barrett-papers/
-  dt: Brenetta Howell Barrett Papers Finding Aid
-  dd: Barrett served in the mayoral administrations of Harold Washington and Eugene
-    Sawyer. She was a political activist for housing, environmental and civil liberties
-    issues.
 - a: https://www.chipublib.org/tag/harold-washington/
   dt: Harold Washington Blog Posts
   dd: Written by CPL librarians and staff.
@@ -40,14 +35,16 @@ CPLRes:
   dd: Information about Mayor Harold Washington&rsquo;s education, military service,
     career and selected accomplishments.
 findingaid:
-- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-campaign-records/
-  text: Mayoral Campaign Records Finding Aid
 - link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-records-press-office-records/
-  text: Mayoral Records, Press Office Records Finding Aid
-- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-illinois-state-representative-records/
-  text: Illinois State Representative Records Finding Aid
+  text: Harold Washington Archives and Collections, Mayoral Records, Press Office Records Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-records-press-office-photographs/
+  text: Harold Washington Archives and Collections, Mayoral Records, Press Office Photographs Finding Aid
+- link: https://www.chipublib.org/fa-harold-washington-archives-collections-mayoral-campaign-records/
+  text: Harold Washington Archives and Collections, Mayoral Records, Mayoral Campaign Records Finding Aid
 - link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/
-  text: Pre-Mayoral Photograph Collection Finding Aid
+  text: Harold Washington Archives and Collections, Pre-Mayoral Photograph Collection
+- link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-illinois-state-representative-records/
+  text: Harold Washington Archives and Collections, Illinois State Representative Records  
 mainimage:
   url: '2460'
   text: Mayor Washington speech
