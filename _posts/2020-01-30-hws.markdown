@@ -19,15 +19,9 @@ cardpic:
     a convertible.
 category: afam
 categoryFull: African Americans
-textshort: DRAFT Speeches from Chicago's first African American mayor.
-textlong: DRAFT Transcripts of many speeches given by Mayor Harold Washington, the first African American mayor of Chicago, 1983-1987.
-textrich: <p>NEED SME TO WRITE SOMETHING This collection showcases Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic
-  and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous
-  people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking
-  and development projects</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a>.</p><p>Chicago
-  Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold
-  Washington Reseach Collection</a>.  Selections from those collections can be found
-  in the Finding Aids section below.
+textshort: Speeches of Harold Washington.
+textlong: Harold Washington was a gifted orator and spoke at many public and private events, especially during his mayoral administration, 1983-1987. While audio recordings of his speeches are scarce, many of the original scripts survive.  
+textrich: <p>Harold Washington’s speeches were carefully crafted by him and his Press Office to convey political goals to his audience and to drum up support. He spoke at many important events including the annual <a href=https://cdm16818.contentdm.oclc.org/digital/collection/HWashington/search/searchterm/state%20of%20the%20city/field/title/mode/exact/conn/and/order/nosort/ad/asc">State of the City</a> address, the <a href="https://cdm16818.contentdm.oclc.org/digital/collection/HWashington/search/searchterm/conference%20of%20mayors/field/title/mode/exact/conn/and/order/nosort/ad/asc">U.S. Conference of Mayors</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/HWashington/search/searchterm/neighborhood%20forum/field/title/mode/exact/conn/and/order/nosort/ad/asc">neighborhood forums</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/HWashington/search/searchterm/black%20history%20month/field/title/mode/exact/conn/and/order/nosort/ad/asc">Black History Month celebrations</a>. Topics covered are wide-ranging and include city budgets, anti-gang initiatives, Black history, racial discrimination, economics, housing, transportation and many others.</p><p>The original speech scripts in this digital collection, as well as other speech scripts, are housed in Special Collections at the Harold Washington Library Center.</p>
 CPLRes:
 - a: https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/
   dt: Municipal Reference Collection
