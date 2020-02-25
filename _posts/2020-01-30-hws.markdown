@@ -9,14 +9,13 @@ link: hws
 coll: HWashington
 sortname: Washington, Harold Speeches
 cardpic:
-  pic: '30'
+  pic: '3184'
   region: '950,280,650,500'
   # region: '690,240,900,800'
   size: '320,'
   pich: 250px
-  pos: 75% 40%
-  alt: Mayor Washington smiles and points to the crowd while riding on the back of
-    a convertible.
+  pos: 206,554,869,1082
+  alt: Annotated transcript of speech
 category: afam
 categoryFull: African Americans
 textshort: Chicago's first African American mayor was a gifted orator who spoke at many public and private events.
@@ -46,11 +45,11 @@ findingaid:
 - link: https://www.chipublib.org/fa-harold-washington-archives-and-collections-illinois-state-representative-records/
   text: Harold Washington Archives and Collections, Illinois State Representative Records  
 mainimage:
-  url: '2460'
-  text: Mayor Washington speech
+  url: '3184'
+  text: State of the City (League of Women Voters,) 1985 April 11
   size: '470,'
-  align: '550,350,5300,3200'
-  alt: Mayor Washington speech text.
+  align: '206,554,869,1082'
+  alt: Annotated transcript of speech
 location:
   title: Special Collections at HWLC
 homeloc: HWLCSC
