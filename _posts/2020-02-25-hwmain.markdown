@@ -15,9 +15,7 @@ cardpic:
 textshort: NEED TEXT FROM SPE for card
 textlong: In 1983 Harold Washington made history by becoming the first African American mayor of the City of Chicago having served as an Illinois legislator and as a US Congressman.
 catcoll: NEED TEXT FROM SPE something like that feature Harold Washington's career in Chicago and Illinois politics
-textrich: <p>Explore the rich collections that document the career and achievements of Mayor Harold Washington, and some of the individuals who worked with him, from his time as an 
-Illinois State Representative in the 1960s to his sudden death on 25 November 1987, shortly after winning his second term. The collections consist of manuscripts, documents, photographs, 
-videotapes, artifacts and books from Washington’s personal library. </p>
+textrich: <p>Explore the rich collections that document the career and achievements of Mayor Harold Washington, and some of the individuals who worked with him, from his time as an Illinois State Representative in the 1960s to his sudden death on 25 November 1987, shortly after winning his second term. The collections consist of manuscripts, documents, photographs, videotapes, artifacts and books from Washington’s personal library. </p>
 CPLRes:
 - a: https://www.chipublib.org/blogs/category/chicago-history/
   dt: Chicago History Blog Posts
