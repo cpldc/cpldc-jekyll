@@ -26,34 +26,34 @@ CPLRes:
 mainimage:
   url: '81'
   coll: rhwc
-  text: MLK Day at Senn
-  size: '470,'???
-  align: '666,333,2296,1300'???
+  text:  Mayor Washington at Senn High School's Martin Luther King Jr.'s birthday celebration, Antonio B. Dickey, photographer
+  size: '470,'
+  align: '108,22,1760,1250'
   alt: NEED TO WRITE
 thumbs:
 - url: '54'
   coll: rhwc
-  text: Lakefront damage
-  size: '200,'???
-  align: '486,1000,1300,1300'???
+  text: Mayor Washington assessing damage from Lake Michigan's rising waters, Antonio B. Dickey, photographer
+  size: '200,'
+  align: '300,200,1245,900'
   alt: NEED TO WRITE
 - url: '91'
   coll: rhwc
-  text: Afghanistan
-  size: '200,' #1331,597 ???
-  align: '1206,475,400,400'???
+  text: Mayor Washington at a rally for Afghanistan, Peter J. Schulz, photographer
+  size: '200,'
+  align: '1050,160,1865,740'
   alt: NEED TO WRITE
 - url: '87'
   coll: rhwc
-  text: Cesar Chavez, Jesus Garcia
-  size: '200,'???
-  align: '579,316,600,600'???
+  text: Mayor Washington with Cesar Chavez and Jesus Garcia
+  size: '200,'
+  align: '1030,590,2750,1790'
   alt: NEED TO WRITE
 - url: '88'
   coll: rhwc
-  text: Bishop Tutu, Rev. Jackson
-  size: '200,'???
-  align: '579,316,600,600'???
+  text: Mayor Washington with Bishop Tutu and Rev. Jackson, Antonio B. Dickey, photographer
+  size: '200,'
+  align: '550,0,1857,930'
   alt: NEED TO WRITE
 link: hwmain
 type: category
